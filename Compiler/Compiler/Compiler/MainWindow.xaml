@@ -1,0 +1,10 @@
+﻿<Window x:Class="Compiler.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Button x:Name="buttonProgram" Content="Program" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="408,266,0,0" Click="buttonProgram_Click"/>
+        <TextBox x:Name="textSource" HorizontalAlignment="Left" Height="298" TextWrapping="Wrap" VerticalAlignment="Top" Width="403" FontFamily="Courier New" FontSize="14" AcceptsReturn="True"/>
+
+    </Grid>
+</Window>
