@@ -59,20 +59,28 @@ byte addr_bus[] = {
                     A7_PIN
                   };
 
+byte rxBuffer[256];
+
 void setup()
 {
-  pinMode(PRG_PIN, OUTPUT);
-  digitalWrite(PRG_PIN, LOW);
-
-  pinMode(WEN_PIN, OUTPUT); 
-  digitalWrite(WEN_PIN, HIGH);
  
+  Serial.begin(9600);
+  
 }
 
 void loop()
 {
+  while(!Serial.available())
+  {
+  }
+
+
+  pinMode(WEN_PIN, OUTPUT); 
+  digitalWrite(WEN_PIN, HIGH);
+    
   // Enter programming mode.
   // The board will release the buses.
+  pinMode(PRG_PIN, OUTPUT);
   digitalWrite(PRG_PIN, HIGH);
 
   // Take ownership of the buses setting all
@@ -83,16 +91,21 @@ void loop()
     pinMode(data_bus[ix], OUTPUT);
   } 
 
-  byte val=1;
+  // We need to first take the all input data in memory
+  // since the writing to the target takes 10mS we would
+  // overrun the buffer if we attempted to write directly.
   for(int address=0; address<256; address++)
   {
-    writeProgramByte(address, val);
-    if(val<128)
-      val=val<<1;
-    else
-      val=1;  
+    while(!Serial.available())
+    {}
+    rxBuffer[address]=Serial.read();
   }
-  
+ 
+  for(int address=0; address<256; address++)
+  {
+    writeProgramByte(address, rxBuffer[address]); 
+  }
+ 
   // Release the buses settings pins as inputs.
   for(int ix=0; ix<8; ix++)
   {
@@ -104,7 +117,9 @@ void loop()
   // take back control of the buses.
   digitalWrite(PRG_PIN, LOW);
 
-  while(1) {}
+  pinMode(WEN_PIN, INPUT); 
+  pinMode(PRG_PIN, INPUT);
+
 }
 
 void writeProgramByte(byte address, byte data)
