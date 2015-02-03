@@ -85,7 +85,7 @@ According to the 14500 datasheet there is a short transient time after the clock
 
 ![capture](documentation/monostable.png)
 
-The capture below shows the MC14500 WRITE line in blue and the output of the monostable feeding into the /E of the 4099 in yellow. As you can see there is just a short pulse on the rising edge of WRITE.
+The capture below shows the MC14500 WRITE line in blue and the output of the monostable feeding into the /E of the 4099 in yellow. As you can see there is just a short pulse on the rising edge of WRITE. So now values will be latched at the beginning of the WRITE pulse and the timing issue at the falling edge of the WRITE line become irrelevant.
 
 ![capture](documentation/capture2.png)
 
