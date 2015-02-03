@@ -83,6 +83,9 @@ At the first trial of the board I had timing issue when driving the CD4099, the 
 
 According to the 14500 datasheet there is a short transient time after the clock cycle following the STO begins before the WRITE line goes low, of course the not gate also added a bit delay but I am puzzled I haven't seen anything about this in any of the MC14500 example schematics from the time, so maybe it's an issue popping up by mixing different types of components (the 4099 was not in the example scheatics of the time). Anyhow, since the 4099 doesn't latch on the edge but on level of the /E pin I created a simple monostable that generates a short low pulse when the write line transitions from low to high and used that pulse to drive the 4099 /E pin so, in fact, I made it latch on the edge. This solved the issue. The monostable is simply a CR feeding a NOT gate as seen below.
 
+![capture](Documentation/monostable.png)
+
+The capture below shows the MC14500 WRITE line in blue and the output of the monostable feeding into the /E of the 4099 in yellow. As you can see there is just a short pulse on the rising edge of WRITE.
+
 ![capture](Documentation/capture2.png)
 
-The capture above instead shows the MC14500 WRITE line in blue and the output of the monostable feeding into the /E of the 4099 in yellow. As you can see there is just a short pulse on the rising edge of WRITE.
