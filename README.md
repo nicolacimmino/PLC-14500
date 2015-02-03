@@ -63,7 +63,7 @@ The eqivalent ladder diagram woul look something like this:
      +---| |------( )---------+
      |                        |
      - X1                     |
-     _                        |
+     -                        |
      |      X0       Y0   Y5  | 
      |--+---| |----+-( )--( )-+
      |  |          |          |
