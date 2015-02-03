@@ -74,6 +74,17 @@ void loop()
   {
   }
 
+  // We need to first take the all input data in memory
+  // since the writing to the target takes 10mS we would
+  // overrun the buffer if we attempted to write directly.
+  for(int address=0; address<256;)
+  {
+    if(Serial.available())
+    {
+      rxBuffer[address]=Serial.read();
+      address++;
+    }
+  }
 
   pinMode(WEN_PIN, OUTPUT); 
   digitalWrite(WEN_PIN, HIGH);
@@ -90,16 +101,6 @@ void loop()
     pinMode(addr_bus[ix], OUTPUT);
     pinMode(data_bus[ix], OUTPUT);
   } 
-
-  // We need to first take the all input data in memory
-  // since the writing to the target takes 10mS we would
-  // overrun the buffer if we attempted to write directly.
-  for(int address=0; address<256; address++)
-  {
-    while(!Serial.available())
-    {}
-    rxBuffer[address]=Serial.read();
-  }
  
   for(int address=0; address<256; address++)
   {
@@ -136,9 +137,9 @@ void writeProgramByte(byte address, byte data)
   {
     digitalWrite(data_bus[ix], (data>>ix)&1);
   }
-  
+  delay(1);
   digitalWrite(WEN_PIN, LOW);
-  delay(10);
+  delay(15);
   digitalWrite(WEN_PIN, HIGH);
 
 }
