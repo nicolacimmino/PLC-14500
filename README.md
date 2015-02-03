@@ -25,7 +25,7 @@ The programmer is an Arduino Nano that will just wait for a fixed size, 256 byte
 
 ## Program Example
 
-Below is an example of a test program I wrote just to try things out, the comments should be clear enough to walk you through. This is actually the application you can see in this [video](https://www.youtube.com/watch?v=2l-q3JkEEqE)
+Below is an example of a test program I wrote just to try things out, the comments should be clear enough to walk you through. This is actually the application you can see in this ![video](https://www.youtube.com/watch?v=2l-q3JkEEqE)
 
     ;
     ; This program implements a simple control
