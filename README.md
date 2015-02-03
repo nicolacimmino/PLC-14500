@@ -79,13 +79,13 @@ The eqivalent ladder diagram woul look something like this:
 
 At the first trial of the board I had timing issue when driving the CD4099, the output latch. Whenever I stored a value into one output it would get stored also on zero and, apparently in random way also in other outputs as well. After discarding eventual shorts or plain wrong wiring I set to analyze the timing on the CD4099 controls. And to my surprise I found out that the MC14500 write line, which goes into the /E line of the 4099, after being negated was staying high for a short moment while the address line was changing. In the capture below the blue line is the first address line to the 4099 and the yellow one is the /E signal. You can see that the first falling edge of /E is actually after the address transitioned from 1 to 0 (sorry not the best timebase to make it evident but it's there few pixel delay).
 
-![capture](Documentation/capture1.png)
+![capture](documentation/capture1.png)
 
 According to the 14500 datasheet there is a short transient time after the clock cycle following the STO begins before the WRITE line goes low, of course the not gate also added a bit delay but I am puzzled I haven't seen anything about this in any of the MC14500 example schematics from the time, so maybe it's an issue popping up by mixing different types of components (the 4099 was not in the example scheatics of the time). Anyhow, since the 4099 doesn't latch on the edge but on level of the /E pin I created a simple monostable that generates a short low pulse when the write line transitions from low to high and used that pulse to drive the 4099 /E pin so, in fact, I made it latch on the edge. This solved the issue. The monostable is simply a CR feeding a NOT gate as seen below.
 
-![capture](Documentation/monostable.png)
+![capture](documentation/monostable.png)
 
 The capture below shows the MC14500 WRITE line in blue and the output of the monostable feeding into the /E of the 4099 in yellow. As you can see there is just a short pulse on the rising edge of WRITE.
 
-![capture](Documentation/capture2.png)
+![capture](documentation/capture2.png)
 
