@@ -55,3 +55,22 @@ Below is an example of a test program I wrote just to try things out, the commen
     sto 6   ; Set Y6 (Ready Lamp, green)
     nopf    ; Reset and jump to start
 
+The eqivalent ladder diagram woul look something like this:
+
+
+     |                        |
+     |   X1       Y7          |
+     +---| |------( )---------+
+     |                        |
+     - X1                     |
+     _                        |
+     |      X0    Y0   Y5     | 
+     |--+---| |----+-( )--( )-+
+     |  |          |          |
+     |  +-| |--|/|-+          |
+     |    X3   X4             |
+     |                        |
+     |   X0       Y6          |
+     +---|/|------( )---------+
+     |                        |
+     
