@@ -39,6 +39,7 @@ namespace Compiler
     /// </summary>
     public partial class MainWindow : Window
     {
+        // We store here 
         byte[] txBuffer = new byte[256];
 
         public MainWindow()
@@ -48,10 +49,18 @@ namespace Compiler
 
         private void buttonProgram_Click(object sender, RoutedEventArgs e)
         {
+            // Clear buffer
+            for (int ix = 0; ix < txBuffer.Length;ix++ )
+            {
+                txBuffer[ix] = 0;
+            }
             compile();
             program();
         }
 
+        /*
+         * Process the input text and compile each line into assembled binary.
+         */
         private void compile()
         {
             int address = 0;
@@ -60,7 +69,7 @@ namespace Compiler
             {
                 List<String> tokens = line.Trim().ToUpper().Split(' ').ToList<String>();
 
-                if(tokens.Count ==0 || tokens[0].StartsWith("#") || tokens[0]=="")
+                if(tokens.Count ==0 || tokens[0].StartsWith(";") || tokens[0]=="")
                 {
                     continue;
                 }
@@ -76,7 +85,7 @@ namespace Compiler
                         case "ANDC": txBuffer[address] = 0x04; break;
                         case "OR": txBuffer[address] = 0x05; break;
                         case "ORC": txBuffer[address] = 0x06; break;
-                        case "XOR": txBuffer[address] = 0x07; break;
+                        case "XNOR": txBuffer[address] = 0x07; break;
                         case "STO": txBuffer[address] = 0x08; break;
                         case "STOC": txBuffer[address] = 0x09; break;
                         case "IEN": txBuffer[address] = 0x0A; break;
@@ -88,7 +97,7 @@ namespace Compiler
                         default: throw new ArgumentException();
                     }
 
-                    if (tokens.Count > 1 && !tokens[1].StartsWith(";"))
+                    if (tokens.Count > 1 && !tokens[1].StartsWith(";") && tokens[1]!="")
                     {
                         txBuffer[address] += (byte)(int.Parse(tokens[1]) << 4);
                     }
@@ -101,6 +110,10 @@ namespace Compiler
             }
         }
 
+        /*
+         *  Sends the binary over to the programmer.
+         *  The bootloader just expects a block of 256 bytes at the moment.
+         */
         private void program()
         {
             SerialPort port = new SerialPort("COM4");
@@ -108,6 +121,11 @@ namespace Compiler
             port.Open();
             port.Write(txBuffer, 0, 256);
             port.Close();
+        }
+
+        private void Window_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+
         }
     }
 }
