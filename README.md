@@ -3,13 +3,13 @@ Many years ago I came across an article on an electronics magazine that presente
 
 ![Board](documentation/board.jpg)
 
-[Full size photo](https://raw.githubusercontent.com/nicolacimmino/PLC-14500/master/documentation/board_full.jpg)
-
 ## Hardware 
 
 The board is now fully functional, after spending few hours to find a glitch and a couple of shorts and broken connections fixed. The glitch was on the control logic of the ouput latch and it quite surprised me since I have layed out this part exactly as it appears in many application notes of the time. More info about this below.
 
-I am in the process of creating the schematic, for now just know that there is fundametally an 8 bit counter working as Program Counter (PC), a 2K EEPROM with the higher 3 address bits controlled by a DIP-switch to allow 8 different programs, the actual MC14500 ICU, a CD4099 as output latch and a CD4051 as input selector. The rest is glue logic and some optocouplers and transistors to drive the relays.
+![Board](documentation/schematic.png)
+
+The above schematic includes most of the elements of the boarrd. I have omitted, to keep things more clean, the LEDs scattered on nearly any data pin for blinking effect. Also the input and output sections are 8 identical ones whereas only one appears in this schematic.
 
 I am clocking the board at the moment at few hundred hertz, which gives reasonable response time as the programs are naturally short. There is a DIP-switch allowing to run it to few hertz so you can see the lights on the buses and control lines moving.
 
