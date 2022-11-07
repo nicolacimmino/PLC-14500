@@ -5,8 +5,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 3
 Title "PLC14500 - Nano"
-Date "2022-11-03"
-Rev "0.1"
+Date "2022-11-07"
+Rev "0.3"
 Comp "Nicola Cimmino"
 Comment1 ""
 Comment2 ""
