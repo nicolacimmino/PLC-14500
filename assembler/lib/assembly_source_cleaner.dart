@@ -14,6 +14,9 @@ class AssemblySourceCleaner extends AssemblySourceProcessor {
             line.indexOf(";") > 0 ? line.substring(0, line.indexOf(";")) : line)
         .toList();
 
+    // Trim
+    source.content = source.content.map((line) => line.trim()).toList();
+
     // All uppercase
     source.content = source.content.map((line) => line.toUpperCase()).toList();
   }

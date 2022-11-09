@@ -1,5 +1,7 @@
 import 'dart:io' as io;
 
+import 'package:assembler/assembly_source_cleaner.dart';
+
 class AssemblySource {
   List<String> content = [];
 
@@ -9,5 +11,7 @@ class AssemblySource {
     }
 
     content = io.File(filename).readAsLinesSync();
+
+    AssemblySourceCleaner(this).process();
   }
 }
