@@ -5,8 +5,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 4
 Title "PLC14500 - Nano"
-Date "2022-11-07"
-Rev "0.3"
+Date "2022-11-09"
+Rev "0.4"
 Comp "Nicola Cimmino"
 Comment1 ""
 Comment2 ""
@@ -31,4 +31,61 @@ U 67425B3B
 F0 "SPRAM" 50
 F1 "SPRAM.sch" 50
 $EndSheet
+$Comp
+L power:GND #PWR?
+U 1 1 6817676E
+P 9075 2100
+AR Path="/67425B3B/6817676E" Ref="#PWR?"  Part="1" 
+AR Path="/6817676E" Ref="#PWR02"  Part="1" 
+F 0 "#PWR02" H 9075 1850 50  0001 C CNN
+F 1 "GND" H 9080 1927 50  0000 C CNN
+F 2 "" H 9075 2100 50  0001 C CNN
+F 3 "" H 9075 2100 50  0001 C CNN
+	1    9075 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG?
+U 1 1 68176774
+P 9075 2025
+AR Path="/67425B3B/68176774" Ref="#FLG?"  Part="1" 
+AR Path="/68176774" Ref="#FLG02"  Part="1" 
+F 0 "#FLG02" H 9075 2100 50  0001 C CNN
+F 1 "PWR_FLAG" H 9075 2198 50  0001 C CNN
+F 2 "" H 9075 2025 50  0001 C CNN
+F 3 "~" H 9075 2025 50  0001 C CNN
+	1    9075 2025
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9075 2100 9075 2025
+$Comp
+L power:PWR_FLAG #FLG?
+U 1 1 6817677B
+P 9075 1700
+AR Path="/67425B3B/6817677B" Ref="#FLG?"  Part="1" 
+AR Path="/6817677B" Ref="#FLG01"  Part="1" 
+F 0 "#FLG01" H 9075 1775 50  0001 C CNN
+F 1 "PWR_FLAG" H 9075 1873 50  0001 C CNN
+F 2 "" H 9075 1700 50  0001 C CNN
+F 3 "~" H 9075 1700 50  0001 C CNN
+	1    9075 1700
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+5V #PWR01
+U 1 1 68176781
+P 9075 1625
+AR Path="/68176781" Ref="#PWR01"  Part="1" 
+AR Path="/63B4BDA9/68176781" Ref="#PWR?"  Part="1" 
+AR Path="/67425B3B/68176781" Ref="#PWR?"  Part="1" 
+F 0 "#PWR01" H 9075 1475 50  0001 C CNN
+F 1 "+5V" H 9090 1798 50  0000 C CNN
+F 2 "" H 9075 1625 50  0001 C CNN
+F 3 "" H 9075 1625 50  0001 C CNN
+	1    9075 1625
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9075 1700 9075 1625
 $EndSCHEMATC
