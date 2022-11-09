@@ -1300,15 +1300,8 @@ F 3 "" H 5775 5425 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	5775 5425 5775 5900
-Text GLabel 9025 2425 3    50   Output ~ 0
+Text GLabel 10750 2175 2    50   Output ~ 0
 TMR0-TRIG
-Wire Wire Line
-	9025 2425 9025 2175
-Wire Wire Line
-	8950 2175 9025 2175
-Connection ~ 9025 2175
-Wire Wire Line
-	9025 2175 9350 2175
 Text GLabel 4550 6500 0    50   Input ~ 0
 TMR0-TRIG
 Wire Wire Line
@@ -2952,6 +2945,11 @@ Wire Wire Line
 Connection ~ 10400 1575
 Wire Wire Line
 	10575 1475 10750 1475
+Connection ~ 10575 1475
+Wire Wire Line
+	8950 2175 9350 2175
+Wire Wire Line
+	9350 2175 10750 2175
 Wire Bus Line
 	7950 2025 7950 2275
 Wire Bus Line
@@ -2966,5 +2964,5 @@ Wire Bus Line
 	7725 5100 7725 6100
 Wire Bus Line
 	2925 725  2925 6575
-Connection ~ 10575 1475
+Connection ~ 9350 2175
 $EndSCHEMATC
