@@ -3,6 +3,10 @@ Many years ago I came across an article on an electronics magazine that presente
 
 ![Board](documentation/board.jpg)
 
+A rendering of the upcoming board.
+
+![Board](documentation/board.png)
+
 ## Hardware 
 
 The board is now fully functional, after spending few hours to find a glitch and a couple of shorts and broken connections fixed. The glitch was on the control logic of the ouput latch and it quite surprised me since I have layed out this part exactly as it appears in many application notes of the time. More info about this below.
