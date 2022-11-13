@@ -207,8 +207,8 @@ Wire Wire Line
 	2400 3750 2325 3750
 Wire Wire Line
 	2325 3750 2325 3775
-Text GLabel 2000 4250 0    50   Input ~ 0
-RES
+Text GLabel 1300 4250 0    50   Input ~ 0
+JMP
 Wire Wire Line
 	2400 4250 2000 4250
 Wire Wire Line
@@ -1131,8 +1131,6 @@ Wire Wire Line
 	2200 1950 2200 2125
 Wire Wire Line
 	2400 1750 2400 2125
-Text Notes 10800 6500 2    50   ~ 0
-*2) The resistor limits current when there's a bus contention between FLAGF and the onboard reset\nbutton/programmer output
 Text Label 5125 5800 2    50   ~ 0
 D6
 Text Label 4950 5800 2    50   ~ 0
@@ -1843,31 +1841,16 @@ DATA
 $Comp
 L SparkFun-LED:LED5MM D?
 U 1 1 63B91CBF
-P 9925 4950
+P 10075 4950
 AR Path="/63B91CBF" Ref="D?"  Part="1" 
 AR Path="/6394A5B3/63B91CBF" Ref="D39"  Part="1" 
-F 0 "D39" H 9950 5025 45  0000 L CNN
-F 1 "LED 5MM Red" H 10003 4911 45  0001 L CNN
-F 2 "plc14500:LED_3MM" V 9725 4950 20  0001 C CNN
-F 3 "" H 9925 4950 50  0001 C CNN
-F 4 "XXX-00000" H 10003 4816 60  0001 L CNN "Field4"
-F 5 "0.01" H 9925 4950 50  0001 C CNN "Price"
-	1    9925 4950
-	1    0    0    -1  
-$EndComp
-$Comp
-L SparkFun-LED:LED5MM D?
-U 1 1 63B91CC6
-P 10100 4950
-AR Path="/63B91CC6" Ref="D?"  Part="1" 
-AR Path="/6394A5B3/63B91CC6" Ref="D40"  Part="1" 
-F 0 "D40" H 10125 5025 45  0000 L CNN
-F 1 "LED 5MM Red" H 10178 4911 45  0001 L CNN
-F 2 "plc14500:LED_3MM" V 9900 4950 20  0001 C CNN
-F 3 "" H 10100 4950 50  0001 C CNN
-F 4 "XXX-00000" H 10178 4816 60  0001 L CNN "Field4"
-F 5 "0.01" H 10100 4950 50  0001 C CNN "Price"
-	1    10100 4950
+F 0 "D39" H 10100 5025 45  0000 L CNN
+F 1 "LED 5MM Red" H 10153 4911 45  0001 L CNN
+F 2 "plc14500:LED_3MM" V 9875 4950 20  0001 C CNN
+F 3 "" H 10075 4950 50  0001 C CNN
+F 4 "XXX-00000" H 10153 4816 60  0001 L CNN "Field4"
+F 5 "0.01" H 10075 4950 50  0001 C CNN "Price"
+	1    10075 4950
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1903,29 +1886,15 @@ $EndComp
 $Comp
 L Device:R R?
 U 1 1 63B91CDA
-P 9925 5400
+P 10075 5400
 AR Path="/63B91CDA" Ref="R?"  Part="1" 
 AR Path="/6394A5B3/63B91CDA" Ref="R55"  Part="1" 
-F 0 "R55" H 9900 5250 50  0000 R CNN
-F 1 "680R" V 9825 5500 50  0000 R CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 9855 5400 50  0001 C CNN
-F 3 "~" H 9925 5400 50  0001 C CNN
-F 4 "0.01" H 9925 5400 50  0001 C CNN "Price"
-	1    9925 5400
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:R R?
-U 1 1 63B91CE0
-P 10100 5400
-AR Path="/63B91CE0" Ref="R?"  Part="1" 
-AR Path="/6394A5B3/63B91CE0" Ref="R56"  Part="1" 
-F 0 "R56" H 10075 5250 50  0000 R CNN
-F 1 "680R" V 10000 5500 50  0000 R CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 10030 5400 50  0001 C CNN
-F 3 "~" H 10100 5400 50  0001 C CNN
-F 4 "0.01" H 10100 5400 50  0001 C CNN "Price"
-	1    10100 5400
+F 0 "R55" H 10050 5250 50  0000 R CNN
+F 1 "680R" V 9975 5500 50  0000 R CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 10005 5400 50  0001 C CNN
+F 3 "~" H 10075 5400 50  0001 C CNN
+F 4 "0.01" H 10075 5400 50  0001 C CNN "Price"
+	1    10075 5400
 	-1   0    0    1   
 $EndComp
 $Comp
@@ -1957,9 +1926,7 @@ F 4 "0.01" H 10450 5400 50  0001 C CNN "Price"
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	9925 5150 9925 5250
-Wire Wire Line
-	10100 5150 10100 5250
+	10075 5150 10075 5250
 Wire Wire Line
 	10275 5150 10275 5250
 Wire Wire Line
@@ -1969,15 +1936,7 @@ Wire Wire Line
 Wire Wire Line
 	10275 5550 10275 5700
 Wire Wire Line
-	10100 5550 10100 5700
-Wire Wire Line
-	9925 5550 9925 5700
-Wire Wire Line
-	9925 4500 9925 4850
-Wire Wire Line
-	10100 4350 9300 4350
-Wire Wire Line
-	10100 4350 10100 4850
+	10075 5550 10075 5700
 Wire Wire Line
 	9300 3900 10275 3900
 Wire Wire Line
@@ -1999,16 +1958,11 @@ F 3 "" H 10200 5750 50  0001 C CNN
 	1    10200 5750
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	9925 5700 10100 5700
-Connection ~ 10100 5700
 Connection ~ 10275 5700
 Wire Wire Line
 	10275 5700 10450 5700
 Wire Wire Line
 	10200 5750 10200 5700
-Wire Wire Line
-	10100 5700 10200 5700
 Connection ~ 10200 5700
 Wire Wire Line
 	10200 5700 10275 5700
@@ -2018,7 +1972,7 @@ Connection ~ 10450 3750
 Text Notes 9950 3275 2    89   ~ 0
 Processor
 NoConn ~ 9300 4200
-NoConn ~ 9300 4050
+NoConn ~ 9300 4350
 Text GLabel 3750 6950 2    50   Input ~ 0
 WEN
 Wire Wire Line
@@ -2209,35 +2163,6 @@ Wire Wire Line
 	1325 2150 1475 2150
 Wire Wire Line
 	8650 5750 8650 5700
-Text GLabel 9475 5000 2    50   Output ~ 0
-RES
-Wire Wire Line
-	9300 4500 9400 4500
-$Comp
-L Device:R R?
-U 1 1 64EB521E
-P 9400 4725
-AR Path="/64EB521E" Ref="R?"  Part="1" 
-AR Path="/6394A5B3/64EB521E" Ref="R54"  Part="1" 
-F 0 "R54" H 9375 4575 50  0000 R CNN
-F 1 "1K" V 9300 4825 50  0000 R CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 9330 4725 50  0001 C CNN
-F 3 "~" H 9400 4725 50  0001 C CNN
-F 4 "0.01" H 9400 4725 50  0001 C CNN "Price"
-	1    9400 4725
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	9400 4500 9400 4575
-Connection ~ 9400 4500
-Wire Wire Line
-	9400 4500 9925 4500
-Wire Wire Line
-	9400 4875 9400 5000
-Wire Wire Line
-	9400 5000 9475 5000
-Text Notes 9575 4700 2    50   ~ 0
-*2
 Text Notes 10750 6300 2    50   ~ 0
 *1) Why A13 to one? This allows to use both 32Kx8 and 8Kx8 (that have pin 13 as a second CE)
 Connection ~ 1875 5575
@@ -2333,6 +2258,36 @@ F 3 "~" H 1325 2525 50  0001 C CNN
 	1    1325 2525
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	10075 5700 10200 5700
+NoConn ~ 9300 4500
+Wire Wire Line
+	9300 4050 10075 4050
+Text GLabel 9925 4500 0    50   Output ~ 0
+JMP
+Wire Wire Line
+	10075 4050 10075 4500
+Wire Wire Line
+	9925 4500 10075 4500
+Connection ~ 10075 4500
+Wire Wire Line
+	10075 4500 10075 4850
+$Comp
+L 74xx:74HC14 U?
+U 2 1 637C3E72
+P 1700 4250
+AR Path="/637C3E72" Ref="U?"  Part="1" 
+AR Path="/6394A5B3/637C3E72" Ref="U11"  Part="2" 
+F 0 "U11" H 1750 4400 50  0000 C CNN
+F 1 "74HC14" H 1550 4050 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 1700 4250 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74HC14" H 1700 4250 50  0001 C CNN
+F 4 "0.16" H 1700 4250 50  0001 C CNN "Price"
+	2    1700 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1300 4250 1400 4250
 Wire Bus Line
 	7800 3650 7800 4100
 Wire Bus Line
