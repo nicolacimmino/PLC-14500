@@ -8,7 +8,7 @@ void main() {
 
       sourceCode.load("test/data/test1.asm");
 
-      expect(sourceCode.content.length, 15);
+      expect(sourceCode.content.length, 14);
     });
   });
 }
