@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
 class OutputIndicator extends StatefulWidget {
-  OutputIndicator({super.key});
+  final bool status;
+
+  const OutputIndicator({super.key, required this.status});
 
   @override
   State<StatefulWidget> createState() => _OutputIndicatorState();
 }
 
 class _OutputIndicatorState extends State<OutputIndicator> {
-  bool _status = false;
-
   @override
   void initState() {
     super.initState();
@@ -18,12 +18,7 @@ class _OutputIndicatorState extends State<OutputIndicator> {
   @override
   Widget build(BuildContext context) {
     return Text("X",
-        style: TextStyle(backgroundColor: _status ? Colors.red : Colors.blue));
-  }
-
-  void setStatus(bool status) {
-    setState(() {
-      _status = status;
-    });
+        style: TextStyle(
+            backgroundColor: widget.status ? Colors.red : Colors.blue));
   }
 }

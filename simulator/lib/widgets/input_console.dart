@@ -23,8 +23,8 @@ class _InputConsoleState extends State<InputConsole> {
         (index) => InputControl(inputNumber: index, onToggle: onToggle));
   }
 
-  void onToggle(int input_number, bool status) {
-    print('$input_number $status');
-    widget.inputRegister.setStatus(input_number, status);
+  void onToggle(int inputNumber, bool status) {
+    print('$inputNumber $status');
+    widget.inputRegister.setStatus(inputNumber, status);
   }
 }

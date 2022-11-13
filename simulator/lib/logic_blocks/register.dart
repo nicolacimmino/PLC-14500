@@ -1,19 +1,19 @@
 class Register {
   late int _size;
-  late final List<bool> _status;
+  late final List<bool> status;
+  late Function(int index, bool status)? onChange;
 
-  Register({int size = 8}) {
+  Register({int size = 8, this.onChange}) {
     _size = size;
-    _status = List<bool>.filled(_size, false);
+    status = List<bool>.filled(_size, false);
   }
 
-  bool getStatus(int index) {
-    return _status[index];
-  }
+  setStatus(int index, bool newStatus) {
+    status[index] = newStatus;
 
-  setStatus(int index, bool status) {
-    _status[index] = status;
-    print(_status.toString());
+    if (onChange != null) {
+      onChange!(index, newStatus);
+    }
   }
 
   int getSize() {
