@@ -25,4 +25,3 @@ xnor 6  ; Negate, X1 is always zero
 and 1   ; AND with X1 (Master)
 sto 6   ; Set Y6 (Ready Lamp, green)
 nopf    ; Reset and jump to start
-nopf

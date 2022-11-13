@@ -1,7 +1,5 @@
 import 'dart:io' as io;
 
-import 'package:assembler/assembly_source_cleaner.dart';
-
 class AssemblySource {
   List<String> content = [];
 
@@ -12,6 +10,23 @@ class AssemblySource {
 
     content = io.File(filename).readAsLinesSync();
 
-    AssemblySourceCleaner(this).process();
+    _clean();
+  }
+
+  void _clean() {
+    // Remove comment lines
+    content.retainWhere((line) => !line.trim().startsWith(";"));
+
+    // Remove comments from lines
+    content = content
+        .map((line) =>
+            line.indexOf(";") > 0 ? line.substring(0, line.indexOf(";")) : line)
+        .toList();
+
+    // Trim
+    content = content.map((line) => line.trim()).toList();
+
+    // All uppercase
+    content = content.map((line) => line.toUpperCase()).toList();
   }
 }
