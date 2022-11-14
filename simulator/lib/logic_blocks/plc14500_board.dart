@@ -7,7 +7,7 @@ class PLC14500Board {
 
   void clock() {
     for (int ix = 0; ix < inputRegister.getSize(); ix++) {
-      outputRegister.status[ix] = inputRegister.status[ix];
+      outputRegister.setBit(ix, inputRegister.getBit(ix));
     }
   }
 }

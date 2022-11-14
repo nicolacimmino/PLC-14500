@@ -16,8 +16,8 @@ class _OutputConsoleState extends State<OutputConsole> {
   @override
   Widget build(BuildContext context) {
     return Row(
-        children: widget.outputRegister.status
+        children: widget.outputRegister.getStatus()
             .map((e) => OutputIndicator(status: e))
-            .toList());
+            .toList().cast<Widget>());
   }
 }
