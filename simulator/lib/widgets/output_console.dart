@@ -15,9 +15,9 @@ class OutputConsole extends StatefulWidget {
 class _OutputConsoleState extends State<OutputConsole> {
   @override
   Widget build(BuildContext context) {
-    return Row(
-        children: widget.outputRegister.getStatus()
-            .map((e) => OutputIndicator(status: e))
-            .toList().cast<Widget>());
+    return Row(children: [
+      for (int ix = 0; ix < widget.outputRegister.getSize(); ix++)
+        OutputIndicator(status: widget.outputRegister.getBit(ix))
+    ]);
   }
 }

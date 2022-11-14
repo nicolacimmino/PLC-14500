@@ -4,10 +4,6 @@ class Register {
   late final int _size;
   late final List<bool> _status;
 
-  getStatus() {
-    return _status;
-  }
-
   Register({int size = 8}) {
     _size = size;
     _status = List<bool>.filled(_size, false);

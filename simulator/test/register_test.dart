@@ -25,7 +25,7 @@ void main() {
         register.setValue(value);
 
         for (var ix = 0; ix < expectedBits.length; ix++) {
-          expect(register.getStatus()[ix], expectedBits[ix],
+          expect(register.getBit(ix), expectedBits[ix],
               reason: "bit $ix of $value");
         }
       }
@@ -42,7 +42,7 @@ void main() {
         var expectedValue = testDataPoint['expected'];
 
         for (var ix = 0; ix < register.getSize(); ix++) {
-          register.getStatus()[ix] = bits[ix];
+          register.setBit(ix, bits[ix]);
         }
 
         expect(register.getValue(), expectedValue);
