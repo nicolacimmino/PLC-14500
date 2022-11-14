@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:simulator/logic_blocks/plc14500_board.dart';
 import 'package:simulator/widgets/input_console.dart';
@@ -13,6 +15,14 @@ class PLC14500Simulator extends StatefulWidget {
 }
 
 class _PLC14500SimulatorState extends State<PLC14500Simulator> {
+  late final Timer clockTimer;
+
+  _PLC14500SimulatorState() {
+    clockTimer = Timer.periodic(const Duration(milliseconds: 10), (timer) {
+      _onClock();
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -25,7 +35,7 @@ class _PLC14500SimulatorState extends State<PLC14500Simulator> {
             children: [
               InputConsole(inputRegister: widget.board.inputRegister),
               OutputConsole(outputRegister: widget.board.outputRegister),
-              FloatingActionButton(onPressed: _onClock)
+              FloatingActionButton(onPressed: _onClock, child: const Text('CLK')),
             ],
           ),
         ));

@@ -24,6 +24,6 @@ class _InputConsoleState extends State<InputConsole> {
   }
 
   void onToggle(int inputNumber, bool status) {
-    widget.inputRegister.setStatus(inputNumber, status);
+    widget.inputRegister.setBit(inputNumber, status);
   }
 }

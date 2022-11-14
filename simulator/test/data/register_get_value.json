@@ -1,0 +1,56 @@
+[
+  {
+    "expected": 0,
+    "value": [
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  {
+    "expected": 1,
+    "value": [
+      true,
+      false,
+      false,
+      false
+    ]
+  },
+  {
+    "expected": 2,
+    "value": [
+      false,
+      true,
+      false,
+      false
+    ]
+  },
+  {
+    "expected": 4,
+    "value": [
+      false,
+      false,
+      true,
+      false
+    ]
+  },
+  {
+    "expected": 8,
+    "value": [
+      false,
+      false,
+      false,
+      true
+    ]
+  },
+  {
+    "expected": 15,
+    "value": [
+      true,
+      true,
+      true,
+      true
+    ]
+  }
+]
