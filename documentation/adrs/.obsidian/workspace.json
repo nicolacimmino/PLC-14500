@@ -1,0 +1,169 @@
+{
+  "main": {
+    "id": "aaf390b40514bd1c",
+    "type": "split",
+    "children": [
+      {
+        "id": "4a5b4d2b0da75072",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5f3580a877ee1079",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ADR-001 JMP Support in Nano.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "284a7d25b46c503e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "READ.ME.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "d387e62ee33ad75c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ADR-TEMPLATE.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "d6c00ee878cbd8d6",
+    "type": "split",
+    "children": [
+      {
+        "id": "a5eaa214b9bcc06b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c84a9b78769ef005",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "3ef951aaef9391bd",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "5b4e722e8db73f47",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "0bd8620d4e3a8a38",
+    "type": "split",
+    "children": [
+      {
+        "id": "0894086adec1c38c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "661ec05644a39cc3",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "ADR-001 JMP Support in Nano.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "bc5d9622880214fd",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "ADR-001 JMP Support in Nano.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "79dfda3b0496c4a4",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "d08d5acbe13586f7",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "ADR-001 JMP Support in Nano.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "5f3580a877ee1079",
+  "lastOpenFiles": [
+    "ADR-TEMPLATE.md",
+    "READ.ME.md",
+    "ADR-001 JMP Support in Nano.md"
+  ]
+}
