@@ -11,13 +11,10 @@ class MC14500 {
   bool w = false;
   bool flagO = false;
   bool flagF = false;
-  bool _clockPhase = false;
   bool _skipNext = false;
 
-  clock() {
-    _clockPhase = !_clockPhase;
-
-    if (_clockPhase) {
+  clock(bool clockPhase) {
+    if (clockPhase) {
       if (_skipNext) {
         _skipNext = false;
         rtn = false;
