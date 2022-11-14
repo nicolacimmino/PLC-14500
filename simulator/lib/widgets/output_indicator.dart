@@ -11,13 +11,8 @@ class OutputIndicator extends StatefulWidget {
 
 class _OutputIndicatorState extends State<OutputIndicator> {
   @override
-  void initState() {
-    super.initState();
-  }
-
-  @override
   Widget build(BuildContext context) {
-    return Text("X",
+    return Text('X',
         style: TextStyle(
             backgroundColor: widget.status ? Colors.red : Colors.blue));
   }

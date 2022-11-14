@@ -5,14 +5,9 @@ class PLC14500Board {
   Register outputRegister = Register(size: 8);
 
   void clock() {
-      for(int ix=0; ix<inputRegister.getSize(); ix++) {
-          outputRegister.status[ix] = inputRegister.status[ix];
-          print("clock $ix ${inputRegister.status[ix]} ${outputRegister.status[ix]}");
+    for (int ix = 0; ix < inputRegister.getSize(); ix++) {
+      outputRegister.status[ix] = inputRegister.status[ix];
+      print("clock $ix");
     }
   }
-
-  // PLC14500Board() {
-  //   inputRegister.onChange =
-  //       (index, status) => {outputRegister.setStatus(index, status)};
-  // }
 }

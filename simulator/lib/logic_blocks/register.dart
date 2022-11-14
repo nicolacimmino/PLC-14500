@@ -1,7 +1,7 @@
 class Register {
   late int _size;
   late List<bool> status;
-  //late Function(int index, bool status)? onChange;
+  late Function(int index, bool status)? onChange;
 
   Register({int size = 8}) {
     _size = size;
@@ -11,9 +11,9 @@ class Register {
   setStatus(int index, bool newStatus) {
     status[index] = newStatus;
 
-    // if (onChange != null) {
-    //   onChange!(index, newStatus);
-    // }
+    if (onChange != null) {
+      onChange!(index, newStatus);
+    }
   }
 
   int getSize() {

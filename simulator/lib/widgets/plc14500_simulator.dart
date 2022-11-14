@@ -5,8 +5,11 @@ import 'package:simulator/widgets/output_console.dart';
 
 class PLC14500Simulator extends StatefulWidget {
   final board = PLC14500Board();
+  late List<bool> outputRegisterStatus;
 
-  PLC14500Simulator({super.key});
+  PLC14500Simulator({super.key}) {
+    outputRegisterStatus = board.inputRegister.status;
+  }
 
   @override
   State<StatefulWidget> createState() => _PLC14500SimulatorState();
@@ -24,10 +27,17 @@ class _PLC14500SimulatorState extends State<PLC14500Simulator> {
           body: Row(
             children: [
               InputConsole(inputRegister: widget.board.inputRegister),
-              OutputConsole(outputRegister: widget.board.outputRegister),
-              FloatingActionButton(onPressed: widget.board.clock)
+              OutputConsole(outputRegisterStatus: widget.outputRegisterStatus),
+              FloatingActionButton(onPressed: _onClock)
             ],
           ),
         ));
+  }
+
+  _onClock() {
+    widget.board.clock();
+    setState(() {
+      widget.outputRegisterStatus = widget.board.outputRegister.status;
+    });
   }
 }

@@ -1,13 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:simulator/logic_blocks/register.dart';
 import 'package:simulator/widgets/output_indicator.dart';
 
 class OutputConsole extends StatefulWidget {
-  late final List<OutputIndicator> outputIndicators;
-  late final Register outputRegister;
+  final List<bool> outputRegisterStatus;
 
-  OutputConsole({super.key, required this.outputRegister});
+  const OutputConsole({super.key, required this.outputRegisterStatus});
 
   @override
   State<StatefulWidget> createState() => _OutputConsoleState();
@@ -17,8 +15,8 @@ class _OutputConsoleState extends State<OutputConsole> {
   @override
   Widget build(BuildContext context) {
     return Row(children: [
-      for (final status in widget.outputRegister.status)
-        OutputIndicator(status: status)
+      for (var ix = 0; ix < widget.outputRegisterStatus.length; ix++)
+        OutputIndicator(status: widget.outputRegisterStatus[ix])
     ]);
   }
 }
