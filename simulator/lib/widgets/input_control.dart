@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class InputControl extends StatefulWidget {
   final Function(int inputNumber, bool status) onToggle;
-  late int _inputNumber;
+  late final int _inputNumber;
 
   InputControl({super.key, required this.onToggle, required int inputNumber}) {
     _inputNumber = inputNumber;
@@ -31,7 +31,7 @@ class _InputControlState extends State<InputControl> {
       },
       style: ElevatedButton.styleFrom(
           backgroundColor: _status ? Colors.red : Colors.blue),
-      child: Text('IN'),
+      child: const Text('IN'),
     );
   }
 }

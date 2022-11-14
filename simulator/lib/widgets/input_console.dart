@@ -4,9 +4,9 @@ import 'package:simulator/logic_blocks/register.dart';
 import 'package:simulator/widgets/input_control.dart';
 
 class InputConsole extends StatefulWidget {
-  InputConsole({super.key, required this.inputRegister});
+  const InputConsole({super.key, required this.inputRegister});
 
-  Register inputRegister;
+  final Register inputRegister;
 
   @override
   State<StatefulWidget> createState() => _InputConsoleState();
@@ -24,7 +24,6 @@ class _InputConsoleState extends State<InputConsole> {
   }
 
   void onToggle(int inputNumber, bool status) {
-    print('$inputNumber $status');
     widget.inputRegister.setStatus(inputNumber, status);
   }
 }

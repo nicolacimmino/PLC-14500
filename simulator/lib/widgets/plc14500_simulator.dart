@@ -24,8 +24,7 @@ class _PLC14500SimulatorState extends State<PLC14500Simulator> {
           body: Row(
             children: [
               InputConsole(inputRegister: widget.board.inputRegister),
-              OutputConsole(
-                  outputRegisterStatus: widget.board.outputRegister.status),
+              OutputConsole(outputRegister: widget.board.outputRegister),
               FloatingActionButton(onPressed: _onClock)
             ],
           ),
@@ -35,7 +34,7 @@ class _PLC14500SimulatorState extends State<PLC14500Simulator> {
   _onClock() {
     widget.board.clock();
     setState(() {
-      widget.board.outputRegister.status = widget.board.outputRegister.status;
+      widget.board.outputRegister = widget.board.outputRegister;
     });
   }
 }
