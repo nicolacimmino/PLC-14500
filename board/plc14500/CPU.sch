@@ -207,7 +207,7 @@ Wire Wire Line
 	2400 3750 2325 3750
 Wire Wire Line
 	2325 3750 2325 3775
-Text GLabel 1300 4250 0    50   Input ~ 0
+Text GLabel 750  4250 0    50   Input ~ 0
 JMP
 Wire Wire Line
 	2400 4250 2000 4250
@@ -2286,8 +2286,75 @@ F 4 "0.16" H 1700 4250 50  0001 C CNN "Price"
 	2    1700 4250
 	1    0    0    -1  
 $EndComp
+$Comp
+L Diode:1N4148 D40
+U 1 1 637ECCA3
+P 1075 4250
+F 0 "D40" H 1175 4025 50  0000 C CNN
+F 1 "1N4148" H 1075 4124 50  0000 C CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 1075 4075 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 1075 4250 50  0001 C CNN
+	1    1075 4250
+	-1   0    0    1   
+$EndComp
+$Comp
+L Diode:1N4148 D51
+U 1 1 637EEA46
+P 1075 4425
+F 0 "D51" H 1175 4600 50  0000 C CNN
+F 1 "1N4148" H 1075 4525 50  0000 C CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 1075 4250 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 1075 4425 50  0001 C CNN
+	1    1075 4425
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 637FFB15
+P 1325 4750
+AR Path="/637FFB15" Ref="R?"  Part="1" 
+AR Path="/6394A5B3/637FFB15" Ref="R54"  Part="1" 
+F 0 "R54" H 1300 4600 50  0000 R CNN
+F 1 "10K" V 1225 4850 50  0000 R CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 1255 4750 50  0001 C CNN
+F 3 "~" H 1325 4750 50  0001 C CNN
+F 4 "0.01" H 1325 4750 50  0001 C CNN "Price"
+	1    1325 4750
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 63800447
+P 1325 4975
+AR Path="/63800447" Ref="#PWR?"  Part="1" 
+AR Path="/6394A5B3/63800447" Ref="#PWR078"  Part="1" 
+F 0 "#PWR078" H 1325 4725 50  0001 C CNN
+F 1 "GND" H 1330 4802 50  0000 C CNN
+F 2 "" H 1325 4975 50  0001 C CNN
+F 3 "" H 1325 4975 50  0001 C CNN
+	1    1325 4975
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
-	1300 4250 1400 4250
+	750  4250 925  4250
+Wire Wire Line
+	1225 4250 1325 4250
+Wire Wire Line
+	1225 4425 1325 4425
+Wire Wire Line
+	1325 4425 1325 4250
+Connection ~ 1325 4250
+Wire Wire Line
+	1325 4250 1400 4250
+Text GLabel 750  4425 0    50   Input ~ 0
+RES
+Wire Wire Line
+	750  4425 925  4425
+Wire Wire Line
+	1325 4600 1325 4425
+Connection ~ 1325 4425
+Wire Wire Line
+	1325 4975 1325 4900
 Wire Bus Line
 	7800 3650 7800 4100
 Wire Bus Line

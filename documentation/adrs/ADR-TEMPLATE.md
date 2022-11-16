@@ -1,5 +1,5 @@
-Status: #Accepted or #Proposal or #Rejected
-
+Status: #Accepted | #Proposed | #Deprecated | #Superseded
+ 
 ## Context
 
 
