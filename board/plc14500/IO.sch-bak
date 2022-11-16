@@ -2265,24 +2265,8 @@ Text GLabel 6900 1400 0    50   Input ~ 0
 OUT-WD
 Wire Wire Line
 	6900 1400 7075 1400
-$Comp
-L Device:R R22
-U 1 1 68128BF1
-P 8600 3300
-F 0 "R22" V 8700 3300 50  0000 R CNN
-F 1 "0R" V 8500 3300 50  0000 R CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 8530 3300 50  0001 C CNN
-F 3 "~" H 8600 3300 50  0001 C CNN
-F 4 "0.01" H 8600 3300 50  0001 C CNN "Price"
-	1    8600 3300
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	8300 3400 8300 3300
-Wire Wire Line
-	8300 3300 8450 3300
-Wire Wire Line
-	8750 3300 8925 3300
 Wire Wire Line
 	8925 3300 8925 3225
 $Comp
@@ -2298,6 +2282,8 @@ F 3 "~" H 4825 7175 50  0001 C CNN
 	1    4825 7175
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	8300 3300 8925 3300
 Wire Bus Line
 	6825 1750 6825 2000
 Wire Bus Line

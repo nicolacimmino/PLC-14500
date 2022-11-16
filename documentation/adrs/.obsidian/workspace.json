@@ -20,6 +20,18 @@
             }
           },
           {
+            "id": "e17a0d8a76023397",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ADR-002 Silk Screen in Nano.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "284a7d25b46c503e",
             "type": "leaf",
             "state": {
@@ -43,7 +55,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -109,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ADR-001 JMP Support in Nano.md",
+                "file": "ADR-002 Silk Screen in Nano.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ADR-001 JMP Support in Nano.md",
+                "file": "ADR-002 Silk Screen in Nano.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -149,7 +162,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ADR-001 JMP Support in Nano.md"
+                "file": "ADR-002 Silk Screen in Nano.md"
               }
             }
           }
@@ -160,10 +173,10 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "c84a9b78769ef005",
+  "active": "e17a0d8a76023397",
   "lastOpenFiles": [
+    "ADR-001 JMP Support in Nano.md",
     "ADR-TEMPLATE.md",
-    "README.md",
-    "ADR-001 JMP Support in Nano.md"
+    "README.md"
   ]
 }
