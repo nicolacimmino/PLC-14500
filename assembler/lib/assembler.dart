@@ -28,10 +28,10 @@ class Assembler {
   void assemble() {
     for (var line in source.content) {
       var tokens = line.split(' ');
-      int result = _getOpCode(tokens[0]) << 4;
+      int result = _getOpCode(tokens[0]);
 
       if (tokens.length == 2) {
-        result = result | int.parse(tokens[1]);
+        result = result | int.parse(tokens[1]) << 4;
       }
 
       byteCode.content.add(result);

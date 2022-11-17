@@ -1,7 +1,4 @@
-import 'dart:math';
-
 import 'package:flutter_test/flutter_test.dart';
-import 'package:simulator/logic_blocks/counter.dart';
 import 'package:simulator/logic_blocks/ram.dart';
 
 void main() {
@@ -24,7 +21,5 @@ void main() {
       ram.address = 1;
       expect(ram.read(), 12);
     });
-
-
   });
 }

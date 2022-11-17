@@ -17,6 +17,9 @@ class AssemblySource {
     // Remove comment lines
     content.retainWhere((line) => !line.trim().startsWith(";"));
 
+    // Remove empty lines
+    content.retainWhere((line) => line.trim().isNotEmpty);
+
     // Remove comments from lines
     content = content
         .map((line) =>

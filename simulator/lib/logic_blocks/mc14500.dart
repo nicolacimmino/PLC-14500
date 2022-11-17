@@ -33,6 +33,7 @@ class MC14500 {
     flagO = false;
     flagF = false;
     jmp = false;
+    w= false;
   }
 
   _clockHi() {
