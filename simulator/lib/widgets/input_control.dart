@@ -22,6 +22,7 @@ class _InputControlState extends State<InputControl> {
 
   @override
   Widget build(BuildContext context) {
+    precacheImage(const AssetImage('assets/switchon.png'), context);
     return Column(children: [
       GestureDetector(
         child: const Image(image: AssetImage('assets/button.png')),

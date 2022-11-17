@@ -18,9 +18,9 @@ class _OutputConsoleState extends State<OutputConsole> {
   @override
   Widget build(BuildContext context) {
     return Row(children: [
-      Text(widget.label),
       for (int ix = 0; ix < widget.outputRegister.getSize(); ix++)
-        OutputIndicator(status: widget.outputRegister.getBit(ix))
+        OutputIndicator(status: widget.outputRegister.getBit(ix)),
+      Text(widget.label)
     ]);
   }
 }
