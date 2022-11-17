@@ -12,8 +12,9 @@ class OutputIndicator extends StatefulWidget {
 class _OutputIndicatorState extends State<OutputIndicator> {
   @override
   Widget build(BuildContext context) {
-    return Text('X',
-        style: TextStyle(
-            backgroundColor: widget.status ? Colors.red : Colors.blue));
+    return Image(
+        image: widget.status
+            ? const AssetImage('assets/ledon.png')
+            : const AssetImage('assets/ledoff.png'));
   }
 }

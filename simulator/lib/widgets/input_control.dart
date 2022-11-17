@@ -23,35 +23,45 @@ class _InputControlState extends State<InputControl> {
   @override
   Widget build(BuildContext context) {
     return Column(children: [
-      Container(
-          height: 50,
-          width: 50,
-          color: Colors.black,
-          child: GestureDetector(
-            onTapDown: (details) {
-              setState(() {
-                _status = true;
-                widget.onToggle(widget._inputNumber, _status);
-              });
-            },
-            onTapUp: (details) {
-              setState(() {
-                _status = false;
-                widget.onToggle(widget._inputNumber, _status);
-              });
-            },
-          )),
-      ElevatedButton(
-        onPressed: () {
+      GestureDetector(
+        child: const Image(image: AssetImage('assets/button.png')),
+        onTapDown: (details) {
+          setState(() {
+            _status = true;
+            widget.onToggle(widget._inputNumber, _status);
+          });
+        },
+        onTapUp: (details) {
+          setState(() {
+            _status = false;
+            widget.onToggle(widget._inputNumber, _status);
+          });
+        },
+      ),
+      GestureDetector(
+        child: Image(
+            image: _status
+                ? const AssetImage('assets/switchon.png')
+                : const AssetImage('assets/switchoff.png')),
+        onTapDown: (details) {
           setState(() {
             _status = !_status;
+            widget.onToggle(widget._inputNumber, _status);
           });
-          widget.onToggle(widget._inputNumber, _status);
         },
-        style: ElevatedButton.styleFrom(
-            backgroundColor: _status ? Colors.red : Colors.blue),
-        child: const Text('IN'),
-      )
+      ),
+      // ElevatedButton(
+      //   onPressed: () {
+      //     setState(() {
+      //       _status = !_status;
+      //     });
+      //     widget.onToggle(widget._inputNumber, _status);
+      //   },
+      //   child: Image(
+      //       image: _status
+      //           ? const AssetImage('assets/switchon.png')
+      //           : const AssetImage('assets/switchoff.png')),
+      // )
     ]);
   }
 }

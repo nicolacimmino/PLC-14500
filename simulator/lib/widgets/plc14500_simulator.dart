@@ -36,9 +36,11 @@ class _PLC14500SimulatorState extends State<PLC14500Simulator> {
             children: [
               InputConsole(inputRegister: widget.board.inputRegister),
               OutputConsole(
-                  label: "OUT", outputRegister: widget.board.outputRegister),
+                  label: "IN", outputRegister: widget.board.inputRegister),
               OutputConsole(
                   label: "SPR", outputRegister: widget.board.scratchpadRAM),
+              OutputConsole(
+                  label: "OUT", outputRegister: widget.board.outputRegister),
               FloatingActionButton(
                   onPressed: _onClock, child: const Text('CLK')),
               FloatingActionButton(onPressed: _load, child: const Text('LOAD')),
