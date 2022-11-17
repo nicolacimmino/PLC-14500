@@ -33,7 +33,7 @@ class MC14500 {
     flagO = false;
     flagF = false;
     jmp = false;
-    w= false;
+    w = false;
   }
 
   _clockHi() {
@@ -42,32 +42,32 @@ class MC14500 {
         flagO = true;
         break;
       case 0x01: // LD
-        rr = d;
+        rr = _readD();
         break;
       case 0x02: // LDC
-        rr = !d;
+        rr = !_readD();
         break;
       case 0x03: // AND
-        rr = rr && d;
+        rr = rr && _readD();
         break;
       case 0x04: // ANDC
-        rr = rr && !d;
+        rr = rr && !_readD();
         break;
       case 0x05: // OR
-        rr = rr || d;
+        rr = rr || _readD();
         break;
       case 0x06: // ORC
-        rr = rr || !d;
+        rr = rr || !_readD();
         break;
       case 0x07: // XNOR
-        rr = rr ^ !d;
+        rr = !(rr ^ _readD());
         break;
       case 0x08: // STO
-        d = rr;
+        _writeD(rr);
         w = true;
         break;
       case 0x09: // STOC
-        d = !rr;
+        _writeD(!rr);
         w = true;
         break;
       case 0x0A: // IEN
@@ -94,5 +94,21 @@ class MC14500 {
       default:
         print("Wierd, we got opcode $i");
     }
+  }
+
+  bool _readD() {
+    if (!ien) {
+      return false;
+    }
+
+    return d;
+  }
+
+  _writeD(bool value) {
+    if (!oen) {
+      d = false;
+    }
+
+    d = value;
   }
 }

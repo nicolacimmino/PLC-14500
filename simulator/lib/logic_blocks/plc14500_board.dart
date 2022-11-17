@@ -25,14 +25,25 @@ class PLC14500Board {
     ram.address = programCounter.getValue();
 
     if (!mc14500.w) {
-      mc14500.d = inputRegister.getBit((ram.read() & 0xF0) >> 4);
+      var readAddress = (ram.read() & 0xF0) >> 4;
+      if (readAddress < 8) {
+        mc14500.d = inputRegister.getBit(readAddress);
+      } else {
+        mc14500.d = inputRegister.getBit(readAddress - 8);
+      }
     }
 
     mc14500.i.setValue(ram.read() & 0xF);
     mc14500.clock(_clockPhase);
 
     if (mc14500.w) {
-      outputRegister.setBit((ram.read() & 0xF0) >> 4, mc14500.d);
+      var writeAddress = (ram.read() & 0xF0) >> 4;
+
+      if (writeAddress < 8) {
+        outputRegister.setBit(writeAddress, mc14500.d);
+      } else {
+        scratchpadRAM.setBit(writeAddress - 8, mc14500.d);
+      }
     }
 
     if (_clockPhase == true) {
