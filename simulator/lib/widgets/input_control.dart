@@ -22,16 +22,36 @@ class _InputControlState extends State<InputControl> {
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
-      onPressed: () {
-        setState(() {
-          _status = !_status;
-        });
-        widget.onToggle(widget._inputNumber, _status);
-      },
-      style: ElevatedButton.styleFrom(
-          backgroundColor: _status ? Colors.red : Colors.blue),
-      child: const Text('IN'),
-    );
+    return Column(children: [
+      Container(
+          height: 50,
+          width: 50,
+          color: Colors.black,
+          child: GestureDetector(
+            onTapDown: (details) {
+              setState(() {
+                _status = true;
+                widget.onToggle(widget._inputNumber, _status);
+              });
+            },
+            onTapUp: (details) {
+              setState(() {
+                _status = false;
+                widget.onToggle(widget._inputNumber, _status);
+              });
+            },
+          )),
+      ElevatedButton(
+        onPressed: () {
+          setState(() {
+            _status = !_status;
+          });
+          widget.onToggle(widget._inputNumber, _status);
+        },
+        style: ElevatedButton.styleFrom(
+            backgroundColor: _status ? Colors.red : Colors.blue),
+        child: const Text('IN'),
+      )
+    ]);
   }
 }

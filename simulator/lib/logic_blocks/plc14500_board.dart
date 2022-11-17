@@ -6,7 +6,7 @@ import 'package:simulator/logic_blocks/register.dart';
 import 'package:simulator/logic_blocks/timer.dart';
 
 class PLC14500Board {
-  Register inputRegister = Register(size: 8);
+  Register inputRegister = Register(size: 7);
   Register outputRegister = Register(size: 8);
   Register scratchpadRAM = Register(size: 8);
   Counter programCounter = Counter(size: 8);

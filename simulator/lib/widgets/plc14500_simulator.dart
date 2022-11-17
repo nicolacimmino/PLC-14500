@@ -60,6 +60,7 @@ class _PLC14500SimulatorState extends State<PLC14500Simulator> {
     widget.board.clock();
     setState(() {
       widget.board.outputRegister = widget.board.outputRegister;
+      widget.board.scratchpadRAM = widget.board.scratchpadRAM;
     });
   }
 }
