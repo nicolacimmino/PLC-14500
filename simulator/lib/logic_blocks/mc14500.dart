@@ -63,12 +63,12 @@ class MC14500 {
         rr = !(rr ^ _readD());
         break;
       case 0x08: // STO
-        _writeD(rr);
-        w = true;
+        d = rr;
+        w = oen ? true : false;
         break;
       case 0x09: // STOC
-        _writeD(!rr);
-        w = true;
+        d = !rr;
+        w = oen ? true : false;
         break;
       case 0x0A: // IEN
         ien = d;
@@ -102,13 +102,5 @@ class MC14500 {
     }
 
     return d;
-  }
-
-  _writeD(bool value) {
-    if (!oen) {
-      d = false;
-    }
-
-    d = value;
   }
 }
