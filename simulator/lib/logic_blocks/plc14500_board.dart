@@ -3,12 +3,14 @@ import 'package:simulator/logic_blocks/counter.dart';
 import 'package:simulator/logic_blocks/mc14500.dart';
 import 'package:simulator/logic_blocks/ram.dart';
 import 'package:simulator/logic_blocks/register.dart';
+import 'package:simulator/logic_blocks/timer.dart';
 
 class PLC14500Board {
   Register inputRegister = Register(size: 8);
   Register outputRegister = Register(size: 8);
   Register scratchpadRAM = Register(size: 8);
   Counter programCounter = Counter(size: 8);
+  Timer tmr0 = Timer();
 
   Ram ram = Ram(size: 256);
   MC14500 mc14500 = MC14500();
@@ -26,7 +28,10 @@ class PLC14500Board {
 
     if (!mc14500.w) {
       var readAddress = (ram.read() & 0xF0) >> 4;
-      if (readAddress < 8) {
+
+      if (readAddress == 7) {
+        mc14500.d = tmr0.read();
+      } else if (readAddress < 7) {
         mc14500.d = inputRegister.getBit(readAddress);
       } else {
         mc14500.d = inputRegister.getBit(readAddress - 8);
@@ -41,6 +46,9 @@ class PLC14500Board {
 
       if (writeAddress < 8) {
         outputRegister.setBit(writeAddress, mc14500.d);
+        if (writeAddress == 7) {
+          tmr0.setTrigger(mc14500.d);
+        }
       } else {
         scratchpadRAM.setBit(writeAddress - 8, mc14500.d);
       }
