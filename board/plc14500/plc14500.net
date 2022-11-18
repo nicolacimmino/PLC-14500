@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source C:\Users\nicola\git\PLC-14500\board\plc14500\plc14500.sch)
-    (date "16/11/2022 14:24:05")
+    (date "18/11/2022 22:15:45")
     (tool "Eeschema (5.1.9)-1")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -293,7 +293,7 @@
       (tstamp 637178D2))
     (comp (ref S1)
       (value "Push Button")
-      (footprint Button_Switch_THT:SW_Tactile_Straight_KSA0Axx1LFTR)
+      (footprint plc14500:SW_Tactile_THT)
       (datasheet ~)
       (fields
         (field (name Price) 0.01))
@@ -391,7 +391,7 @@
       (tstamp 655C3647))
     (comp (ref RV1)
       (value 10K)
-      (footprint Potentiometer_THT:Potentiometer_ACP_CA9-H5_Horizontal)
+      (footprint plc14500:HORIZONTAL_POT)
       (datasheet ~)
       (fields
         (field (name Order) https://www.aliexpress.com/item/1005002935520232.html?spm=a2g0o.productlist.0.0.7a175d89PQda4t&algo_pvid=cfb4e09e-1f4a-43cf-8ff1-6fc20f5cfef2&algo_exp_id=cfb4e09e-1f4a-43cf-8ff1-6fc20f5cfef2-21&pdp_ext_f=%7B%22sku_id%22%3A%2212000022869515902%22%7D&pdp_npi=2%40dis%21EUR%211.49%210.96%21%21%210.35%21%21%400b0a187916678365874186066efa27%2112000022869515902%21sea&curPageLogUid=goQ0aTpXJyrn)
@@ -419,7 +419,7 @@
       (tstamp 6458A3D8))
     (comp (ref S15)
       (value "Push Button")
-      (footprint Button_Switch_THT:SW_Tactile_Straight_KSA0Axx1LFTR)
+      (footprint plc14500:SW_Tactile_THT)
       (datasheet ~)
       (fields
         (field (name Price) 0.01))
@@ -462,7 +462,7 @@
       (tstamp 67F00BA5))
     (comp (ref S2)
       (value "Push Button")
-      (footprint Button_Switch_THT:SW_Tactile_Straight_KSA0Axx1LFTR)
+      (footprint plc14500:SW_Tactile_THT)
       (datasheet ~)
       (fields
         (field (name Price) 0.01))
@@ -507,7 +507,7 @@
       (tstamp 67F0FC9F))
     (comp (ref S3)
       (value "Push Button")
-      (footprint Button_Switch_THT:SW_Tactile_Straight_KSA0Axx1LFTR)
+      (footprint plc14500:SW_Tactile_THT)
       (datasheet ~)
       (fields
         (field (name Price) 0.01))
@@ -552,7 +552,7 @@
       (tstamp 67F20B4D))
     (comp (ref S4)
       (value "Push Button")
-      (footprint Button_Switch_THT:SW_Tactile_Straight_KSA0Axx1LFTR)
+      (footprint plc14500:SW_Tactile_THT)
       (datasheet ~)
       (fields
         (field (name Price) 0.01))
@@ -597,7 +597,7 @@
       (tstamp 67F36739))
     (comp (ref S9)
       (value "Push Button")
-      (footprint Button_Switch_THT:SW_Tactile_Straight_KSA0Axx1LFTR)
+      (footprint plc14500:SW_Tactile_THT)
       (datasheet ~)
       (fields
         (field (name Price) 0.01))
@@ -642,7 +642,7 @@
       (tstamp 67F4EAB6))
     (comp (ref S10)
       (value "Push Button")
-      (footprint Button_Switch_THT:SW_Tactile_Straight_KSA0Axx1LFTR)
+      (footprint plc14500:SW_Tactile_THT)
       (datasheet ~)
       (fields
         (field (name Price) 0.01))
@@ -687,7 +687,7 @@
       (tstamp 67F6A401))
     (comp (ref S11)
       (value "Push Button")
-      (footprint Button_Switch_THT:SW_Tactile_Straight_KSA0Axx1LFTR)
+      (footprint plc14500:SW_Tactile_THT)
       (datasheet ~)
       (fields
         (field (name Price) 0.01))
@@ -1008,7 +1008,7 @@
       (tstamp 6398078B))
     (comp (ref S17)
       (value "Push Button")
-      (footprint Button_Switch_THT:SW_Tactile_Straight_KSA0Axx1LFTR)
+      (footprint plc14500:SW_Tactile_THT)
       (datasheet ~)
       (fields
         (field (name Price) 0.01))

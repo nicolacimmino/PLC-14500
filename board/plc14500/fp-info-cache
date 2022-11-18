@@ -1,4 +1,11 @@
-5004552339396
+8342361890157
+plc14500
+HORIZONTAL_POT
+Potentiometer, horizontal, ACP CA9-H5, http://www.acptechnologies.com/wp-content/uploads/2017/05/02-ACP-CA9-CE9.pdf
+Potentiometer horizontal ACP CA9-H5
+0
+3
+3
 plc14500
 LED_3MM
 LED, diameter 3.0mm, 2 pins
@@ -20,3 +27,10 @@ SWITCH_DPDT
 0
 8
 8
+plc14500
+SW_Tactile_THT
+SW PUSH SMALL http://www.ckswitches.com/media/1457/ksa_ksl.pdf
+SW PUSH SMALL Tactile C&K
+0
+4
+2
