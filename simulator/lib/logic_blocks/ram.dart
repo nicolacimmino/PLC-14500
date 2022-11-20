@@ -19,4 +19,10 @@ class Ram {
   write(int value) {
     _content[address] = value;
   }
+
+  writeBulk(List<int> values) {
+    for (int ix = 0; ix < values.length; ix++) {
+      write(values[ix]);
+    }
+  }
 }
