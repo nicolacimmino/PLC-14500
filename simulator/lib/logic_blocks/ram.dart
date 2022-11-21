@@ -22,7 +22,7 @@ class Ram {
 
   writeBulk(List<int> values) {
     for (int ix = 0; ix < values.length; ix++) {
-      write(values[ix]);
+      _content[ix] = values[ix];
     }
   }
 }

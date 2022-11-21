@@ -13,6 +13,98 @@ class MC14500 {
   bool flagF = false;
   bool _skipNext = false;
 
+  late List<void Function()> _instructions;
+
+  MC14500() {
+    _instructions = List<void Function()>.from([
+      _nopo,
+      _ld,
+      _ldc,
+      _and,
+      _andc,
+      _or,
+      _orc,
+      _xnor,
+      _sto,
+      _stoc,
+      _ien,
+      _oen,
+      _jmp,
+      _rtn,
+      _skz,
+      _nopf
+    ]);
+  }
+
+  void _nopo() {
+    flagO = true;
+  }
+
+  void _ld() {
+    rr = _readD();
+  }
+
+  void _ldc() {
+    rr = !_readD();
+  }
+
+  void _and() {
+    rr = rr && _readD();
+  }
+
+  void _andc() {
+    rr = rr && !_readD();
+  }
+
+  void _or() {
+    rr = rr || _readD();
+  }
+
+  void _orc() {
+    rr = rr || !_readD();
+  }
+
+  void _xnor() {
+    rr = !(rr ^ _readD());
+  }
+
+  void _sto() {
+    d = rr;
+    w = oen ? true : false;
+  }
+
+  void _stoc() {
+    d = !rr;
+    w = oen ? true : false;
+  }
+
+  void _ien() {
+    ien = d;
+  }
+
+  void _oen() {
+    oen = d;
+  }
+
+  void _jmp() {
+    jmp = true;
+  }
+
+  void _rtn() {
+    rtn = true;
+    _skipNext = true;
+  }
+
+  void _skz() {
+    if (rr == false) {
+      _skipNext = true;
+    }
+  }
+
+  void _nopf() {
+    flagF = true;
+  }
+
   clock(bool clockPhase) {
     if (clockPhase) {
       if (_skipNext) {
@@ -37,63 +129,7 @@ class MC14500 {
   }
 
   _clockHi() {
-    switch (i.getValue()) {
-      case 0x00: // NOPO
-        flagO = true;
-        break;
-      case 0x01: // LD
-        rr = _readD();
-        break;
-      case 0x02: // LDC
-        rr = !_readD();
-        break;
-      case 0x03: // AND
-        rr = rr && _readD();
-        break;
-      case 0x04: // ANDC
-        rr = rr && !_readD();
-        break;
-      case 0x05: // OR
-        rr = rr || _readD();
-        break;
-      case 0x06: // ORC
-        rr = rr || !_readD();
-        break;
-      case 0x07: // XNOR
-        rr = !(rr ^ _readD());
-        break;
-      case 0x08: // STO
-        d = rr;
-        w = oen ? true : false;
-        break;
-      case 0x09: // STOC
-        d = !rr;
-        w = oen ? true : false;
-        break;
-      case 0x0A: // IEN
-        ien = d;
-        break;
-      case 0x0B: // OEN
-        oen = d;
-        break;
-      case 0x0C: // JMP
-        jmp = true;
-        break;
-      case 0x0D: // RTN
-        rtn = true;
-        _skipNext = true;
-        break;
-      case 0x0E: // SKZ
-        if (rr == false) {
-          _skipNext = true;
-        }
-        break;
-      case 0x0F: // NOPF
-        flagF = true;
-        break;
-      default:
-        print("Wierd, we got opcode $i");
-    }
+    _instructions[i.getValue()]();
   }
 
   bool _readD() {
