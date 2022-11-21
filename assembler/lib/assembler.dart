@@ -26,7 +26,7 @@ class Assembler {
   Assembler(this.source);
 
   void assemble() {
-    for (var line in source.content) {
+    for (var line in source.source) {
       var tokens = line.split(' ');
       int result = _getOpCode(tokens[0]);
 

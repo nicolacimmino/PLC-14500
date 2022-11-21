@@ -11,6 +11,9 @@
 ; Y6 Green lamp, idicates machine is ready
 ; Y7 Red lamp, indicates machine power is on
 ;
+
+.board=plc14500_nano
+
 ien 7   ; Enable inputs, 7 is hardwired to 1
 oen 7   ; Enable outputs
 ld 1    ; Load X1 (Master)

@@ -2,6 +2,8 @@ import 'dart:io' as io;
 
 class AssemblySource {
   List<String> content = [];
+  List<String> source = [];
+  Map<String, String> metaData = {};
 
   load(String filename) {
     if (!io.File(filename).existsSync()) {
@@ -10,26 +12,48 @@ class AssemblySource {
 
     content = io.File(filename).readAsLinesSync();
 
-    _clean();
+    _extractSource();
+    _extractMetadata();
   }
 
-  void _clean() {
-    // Remove comment lines
-    content.retainWhere((line) => !line.trim().startsWith(";"));
+  void _extractMetadata() {
+    var metaDataLines = content.map((item) => item.toString()).toList();
 
-    // Remove empty lines
-    content.retainWhere((line) => line.trim().isNotEmpty);
+    // Keep only .xxxx
+    metaDataLines.retainWhere((line) => line.trim().startsWith("."));
+
+    for (var metadataLine in metaDataLines) {
+      var tokens = metadataLine.split("=");
+
+      if (tokens.length != 2) {
+        throw Exception("invalid meta content: $metadataLine");
+      }
+
+      metaData[tokens[0].replaceFirst(".", "").trim().toUpperCase()] =
+          tokens[1].trim().toUpperCase();
+    }
+
+    print(metaData);
+  }
+
+  void _extractSource() {
+    source = content.map((item) => item.toString()).toList();
+
+    // Remove lines not starting with A-z
+    source.retainWhere((line) => line.trim().startsWith(RegExp("[a-zA-Z]")));
 
     // Remove comments from lines
-    content = content
+    source = source
         .map((line) =>
             line.indexOf(";") > 0 ? line.substring(0, line.indexOf(";")) : line)
         .toList();
 
     // Trim
-    content = content.map((line) => line.trim()).toList();
+    source = source.map((line) => line.trim()).toList();
 
     // All uppercase
-    content = content.map((line) => line.toUpperCase()).toList();
+    source = source.map((line) => line.toUpperCase()).toList();
+
+    print(source);
   }
 }

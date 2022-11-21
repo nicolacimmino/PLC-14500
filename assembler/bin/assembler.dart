@@ -3,15 +3,15 @@ import 'package:assembler/assembly_source.dart';
 
 void main(List<String> arguments) {
   if (arguments.length != 1) {
-    _printUsage();
+    _printUsage("");
 
     return;
   }
 
   var sourceFile = arguments[0];
 
-  if (!sourceFile.contains(".asm")) {
-    _printUsage();
+  if (!sourceFile.endsWith(".asm")) {
+    _printUsage("Invalid input file");
 
     return;
   }
@@ -20,11 +20,19 @@ void main(List<String> arguments) {
   var source = AssemblySource();
   var assembler = Assembler(source);
 
-  source.load(sourceFile);
-  assembler.assemble();
-  assembler.byteCode.save(outFile);
+  try {
+    source.load(sourceFile);
+    assembler.assemble();
+    assembler.byteCode.save(outFile);
+  } catch (e) {
+    print(e.toString());
+  }
 }
 
-void _printUsage() {
+void _printUsage(String issue) {
+  if (issue.isNotEmpty) {
+    print(issue);
+  }
+
   print("Usage: assembler <file.asm>");
 }
