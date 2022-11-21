@@ -1,13 +1,12 @@
 name: assembler
 description: A sample command-line application.
 version: 1.0.0
-# homepage: https://www.example.com
 
 environment:
   sdk: '>=2.18.2 <3.0.0'
 
-# dependencies:
-#   path: ^1.8.0
+dependencies: 
+  libserialport: ^0.3.0+1 
 
 dev_dependencies:
   lints: ^2.0.0

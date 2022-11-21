@@ -37,58 +37,65 @@
 #define PRG_PIN A4
 #define WEN_PIN A5
 
-byte data_bus[] = { 
-                    D0_PIN,
-                    D1_PIN,
-                    D2_PIN,
-                    D3_PIN,
-                    D4_PIN,
-                    D5_PIN,
-                    D6_PIN,
-                    D7_PIN
-                  };
+#include <EEPROM.h>
 
-byte addr_bus[] = { 
-                    A0_PIN,
-                    A1_PIN,
-                    A2_PIN,
-                    A3_PIN,
-                    A4_PIN,
-                    A5_PIN,
-                    A6_PIN,
-                    A7_PIN
-                  };
+byte data_bus[] = {
+    D0_PIN,
+    D1_PIN,
+    D2_PIN,
+    D3_PIN,
+    D4_PIN,
+    D5_PIN,
+    D6_PIN,
+    D7_PIN};
+
+byte addr_bus[] = {
+    A0_PIN,
+    A1_PIN,
+    A2_PIN,
+    A3_PIN,
+    A4_PIN,
+    A5_PIN,
+    A6_PIN,
+    A7_PIN};
 
 byte rxBuffer[256];
 
+// REMINDER! Write again 0 on first EEPROM byte com3!!!!
+
 void setup()
 {
- 
+
   Serial.begin(9600);
-  
 }
 
 void loop()
 {
-  while(!Serial.available())
+  for (uint8_t ix = 0; ix < 255; ix++)
+  {
+    Serial.print(EEPROM.read(ix), 16);
+    Serial.print(",");
+  }
+
+  while (!Serial.available())
   {
   }
 
   // We need to first take the all input data in memory
   // since the writing to the target takes 10mS we would
   // overrun the buffer if we attempted to write directly.
-  for(int address=0; address<256;)
+  for (int address = 0; address < 256;)
   {
-    if(Serial.available())
+    if (Serial.available())
     {
-      rxBuffer[address]=Serial.read();
+      rxBuffer[address] = Serial.read();
       address++;
     }
   }
 
-  pinMode(WEN_PIN, OUTPUT); 
+  pinMode(WEN_PIN, OUTPUT);
   digitalWrite(WEN_PIN, HIGH);
-    
+
   // Enter programming mode.
   // The board will release the buses.
   pinMode(PRG_PIN, OUTPUT);
@@ -96,31 +103,30 @@ void loop()
 
   // Take ownership of the buses setting all
   // data and address pins as outputs.
-  for(int ix=0; ix<8; ix++)
+  for (int ix = 0; ix < 8; ix++)
   {
     pinMode(addr_bus[ix], OUTPUT);
     pinMode(data_bus[ix], OUTPUT);
-  } 
- 
-  for(int address=0; address<256; address++)
-  {
-    writeProgramByte(address, rxBuffer[address]); 
   }
- 
+
+  for (int address = 0; address < 256; address++)
+  {
+    writeProgramByte(address, rxBuffer[address]);
+  }
+
   // Release the buses settings pins as inputs.
-  for(int ix=0; ix<8; ix++)
+  for (int ix = 0; ix < 8; ix++)
   {
     pinMode(addr_bus[ix], INPUT);
     pinMode(data_bus[ix], INPUT);
-  } 
+  }
 
   // Exit progriamming mode the board will
   // take back control of the buses.
   digitalWrite(PRG_PIN, LOW);
 
-  pinMode(WEN_PIN, INPUT); 
+  pinMode(WEN_PIN, INPUT);
   pinMode(PRG_PIN, INPUT);
-
 }
 
 void writeProgramByte(byte address, byte data)
@@ -128,19 +134,19 @@ void writeProgramByte(byte address, byte data)
   pinMode(WEN_PIN, OUTPUT);
   digitalWrite(WEN_PIN, HIGH);
 
-  for(int ix=0; ix<8; ix++)
+  for (int ix = 0; ix < 8; ix++)
   {
-    digitalWrite(addr_bus[ix], (address>>ix)&1);
-  } 
+    digitalWrite(addr_bus[ix], (address >> ix) & 1);
+  }
 
-  for(int ix=0; ix<8; ix++)
+  for (int ix = 0; ix < 8; ix++)
   {
-    digitalWrite(data_bus[ix], (data>>ix)&1);
+    digitalWrite(data_bus[ix], (data >> ix) & 1);
   }
   delay(1);
   digitalWrite(WEN_PIN, LOW);
   delay(15);
   digitalWrite(WEN_PIN, HIGH);
 
+  EEPROM.write(address, data);
 }
-

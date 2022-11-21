@@ -36,6 +36,10 @@ class Assembler {
 
       byteCode.content.add(result);
     }
+
+    while (byteCode.content.length < 256) {
+      byteCode.content.add(255);
+    }
   }
 
   int _getOpCode(String mnemonic) {

@@ -1,2 +1,7 @@
-A sample command-line application with an entrypoint in `bin/`, library code
-in `lib/`, and example unit test in `test/`.
+
+To upload a bin file, while waiting the programmer to be ready:
+
+````
+copy test1.bin com3 /B
+````
+
