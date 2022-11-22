@@ -57,7 +57,7 @@ class PLC14500Board {
       return;
     }
 
-    mc14500.d = inputRegister.getBit(readAddress - 8);
+    mc14500.d = scratchpadRAM.getBit(readAddress - 8);
   }
 
   void _doWriteCycle() {
