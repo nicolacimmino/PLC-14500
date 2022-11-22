@@ -61,8 +61,6 @@ byte addr_bus[] = {
 
 byte rxBuffer[256];
 
-// REMINDER! Write again 0 on first EEPROM byte com3!!!!
-
 void setup()
 {
 
