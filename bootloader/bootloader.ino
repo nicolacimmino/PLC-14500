@@ -1,5 +1,5 @@
-// Programmer implements the firmware of a programmer for the PLC-14500 board.
-//  Copyright (C) 2015 Nicola Cimmino
+// Bootloader PLC14500-Nano board.
+//  Copyright (C) 2022 Nicola Cimmino
 //
 //    This program is free software: you can redistribute it and/or modify
 //    it under the terms of the GNU General Public License as published by
