@@ -30,8 +30,13 @@ class _PLC14500SimulatorState extends State<PLC14500Simulator> {
         title: 'PLC-14500 Simulator',
         home: Scaffold(
           appBar: AppBar(
-            title: const Text('PLC14500 Simulator'),
-          ),
+              title: const Text('PLC14500 Simulator'),
+              actions: <Widget>[
+                IconButton(
+                    icon: const Icon(Icons.file_open),
+                    tooltip: 'Load',
+                    onPressed: _load)
+              ]),
           body: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisSize: MainAxisSize.max,
@@ -43,9 +48,6 @@ class _PLC14500SimulatorState extends State<PLC14500Simulator> {
                   label: "SPR", outputRegister: widget.board.scratchpadRAM),
               OutputConsole(
                   label: "OUT", outputRegister: widget.board.outputRegister),
-              FloatingActionButton(
-                  onPressed: _onClock, child: const Text('CLK')),
-              FloatingActionButton(onPressed: _load, child: const Text('LOAD')),
             ],
           ),
         ));
