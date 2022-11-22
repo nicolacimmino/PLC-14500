@@ -33,6 +33,8 @@ class _PLC14500SimulatorState extends State<PLC14500Simulator> {
             title: const Text('PLC14500 Simulator'),
           ),
           body: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisSize: MainAxisSize.max,
             children: [
               InputConsole(inputRegister: widget.board.inputRegister),
               OutputConsole(

@@ -23,7 +23,8 @@ flutter:
   uses-material-design: true
   assets:
     - assets/button.png
-    - assets/ledon.png
-    - assets/ledoff.png
-    - assets/switchon.png
-    - assets/switchoff.png
+    - assets/led_on.png
+    - assets/led_off.png
+    - assets/led_placeholder.png
+    - assets/switch_on.png
+    - assets/switch_off.png

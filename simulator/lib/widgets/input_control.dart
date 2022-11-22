@@ -22,7 +22,7 @@ class _InputControlState extends State<InputControl> {
 
   @override
   Widget build(BuildContext context) {
-    precacheImage(const AssetImage('assets/switchon.png'), context);
+    precacheImage(const AssetImage('assets/switch_on.png'), context);
     return Column(children: [
       GestureDetector(
         child: const Image(image: AssetImage('assets/button.png')),
@@ -42,8 +42,8 @@ class _InputControlState extends State<InputControl> {
       GestureDetector(
         child: Image(
             image: _status
-                ? const AssetImage('assets/switchon.png')
-                : const AssetImage('assets/switchoff.png')),
+                ? const AssetImage('assets/switch_on.png')
+                : const AssetImage('assets/switch_off.png')),
         onTapDown: (details) {
           setState(() {
             _status = !_status;
@@ -51,18 +51,6 @@ class _InputControlState extends State<InputControl> {
           });
         },
       ),
-      // ElevatedButton(
-      //   onPressed: () {
-      //     setState(() {
-      //       _status = !_status;
-      //     });
-      //     widget.onToggle(widget._inputNumber, _status);
-      //   },
-      //   child: Image(
-      //       image: _status
-      //           ? const AssetImage('assets/switchon.png')
-      //           : const AssetImage('assets/switchoff.png')),
-      // )
     ]);
   }
 }
