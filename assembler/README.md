@@ -43,7 +43,7 @@ nopf    ; Reset and jump to start
 
 ## Transferring to the board
 
-The toolchain doesn't currently provide a method of sending out software to the board. Since the bootloader just expects 256 bytes to load in RAM, in Windoes you can send the bin file simply with:
+The toolchain doesn't currently provide a method of sending out software to the board. Since the bootloader just expects 256 bytes to load in RAM, in Windows you can send the bin file simply with:
 
 ````
 copy test1.bin com3 /B
