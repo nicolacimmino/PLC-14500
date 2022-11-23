@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source C:\Users\nicola\git\PLC-14500\board\plc14500\plc14500.sch)
-    (date "18/11/2022 22:15:45")
+    (date "23/11/2022 15:39:04")
     (tool "Eeschema (5.1.9)-1")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -363,7 +363,7 @@
       (sheetpath (names /Input/Output/) (tstamps /63B4BDA9/))
       (tstamp 6525796B))
     (comp (ref R15)
-      (value 680R)
+      (value 2K2)
       (footprint Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal)
       (datasheet ~)
       (fields
@@ -713,14 +713,14 @@
       (sheetpath (names /Input/Output/) (tstamps /63B4BDA9/))
       (tstamp 67F6A423))
     (comp (ref C4)
-      (value 10uF)
+      (value 470uF)
       (footprint Capacitor_THT:CP_Radial_D8.0mm_P5.00mm)
       (datasheet ~)
       (libsource (lib Device) (part CP) (description "Polarized capacitor"))
       (sheetpath (names /Input/Output/) (tstamps /63B4BDA9/))
       (tstamp 6376CD92))
     (comp (ref R31)
-      (value 680R)
+      (value 1K)
       (footprint Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal)
       (datasheet ~)
       (fields
@@ -729,7 +729,7 @@
       (sheetpath (names /CPU/) (tstamps /6394A5B3/))
       (tstamp 639805F9))
     (comp (ref R30)
-      (value 680R)
+      (value 1K)
       (footprint Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal)
       (datasheet ~)
       (fields
@@ -1321,7 +1321,7 @@
       (sheetpath (names /CPU/) (tstamps /6394A5B3/))
       (tstamp 68179590))
     (comp (ref C7)
-      (value 10uF)
+      (value 470uF)
       (footprint Capacitor_THT:CP_Radial_D8.0mm_P5.00mm)
       (datasheet ~)
       (libsource (lib Device) (part CP) (description "Polarized capacitor"))
