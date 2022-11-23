@@ -6,7 +6,7 @@
 Silk
 
 
-![TopCopper](/documentation/rav_a-assembly.svg)
+![Assembly](/documentation/rev_a-assembly.svg)
 Assembly
 
 
