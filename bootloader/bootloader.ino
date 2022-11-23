@@ -37,8 +37,6 @@
 #define PRG_PIN A4
 #define WEN_PIN A5
 
-#include <EEPROM.h>
-
 byte data_bus[] = {
     D0_PIN,
     D1_PIN,
@@ -69,12 +67,6 @@ void setup()
 
 void loop()
 {
-  for (uint8_t ix = 0; ix < 255; ix++)
-  {
-    Serial.print(EEPROM.read(ix), 16);
-    Serial.print(",");
-  }
-
   while (!Serial.available())
   {
   }
@@ -145,6 +137,4 @@ void writeProgramByte(byte address, byte data)
   digitalWrite(WEN_PIN, LOW);
   delay(15);
   digitalWrite(WEN_PIN, HIGH);
-
-  EEPROM.write(address, data);
 }
