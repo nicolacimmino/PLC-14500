@@ -2,5 +2,5 @@
     "configuration": "cpu=atmega328",
     "board": "arduino:avr:nano",
     "port": "COM3",
-    "sketch": "programmer.ino"
+    "sketch": "bootloader.ino"
 }

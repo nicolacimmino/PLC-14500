@@ -2355,6 +2355,8 @@ Wire Wire Line
 Connection ~ 1325 4425
 Wire Wire Line
 	1325 4975 1325 4900
+Text Notes 750  3250 0    50   ~ 0
+Fhi = 1.44 / (R30+2×R31) × C10\nFhi = 4.8KHz\n\nFlo = 1.44 / (R30+2×R31) × (C10+C7)\nFlo = 1Hz
 Wire Bus Line
 	7800 3650 7800 4100
 Wire Bus Line
@@ -2371,6 +2373,4 @@ Wire Bus Line
 	3475 3800 5150 3800
 Wire Bus Line
 	3475 3800 3475 4975
-Text Notes 750  3250 0    50   ~ 0
-Fhi = 1.44 / (R30+2×R31) × C10\nFhi = 4.8KHz\n\nFlo = 1.44 / (R30+2×R31) × (C10+C7)\nFlo = 1Hz
 $EndSCHEMATC

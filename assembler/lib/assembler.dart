@@ -31,7 +31,7 @@ class Assembler {
       int result = _getOpCode(tokens[0]);
 
       if (tokens.length == 2) {
-        result = result | int.parse(tokens[1]) << 4;
+        result = result | _argToIOAddress(tokens[1]) << 4;
       }
 
       byteCode.content.add(result);
@@ -40,6 +40,28 @@ class Assembler {
     while (byteCode.content.length < 256) {
       byteCode.content.add(255);
     }
+  }
+
+  int _argToIOAddress(String arg) {
+    var argValue = int.tryParse(arg);
+
+    if (argValue != null) {
+      return argValue;
+    }
+
+    if (arg.startsWith("IN")) {
+      return 8 + int.parse(arg.substring(2));
+    }
+
+    if (arg.startsWith("OUT")) {
+      return 8 + int.parse(arg.substring(3));
+    }
+
+    if (arg.startsWith("SPR")) {
+      return int.parse(arg.substring(3));
+    }
+
+    throw Exception("Invalid label $arg");
   }
 
   int _getOpCode(String mnemonic) {
