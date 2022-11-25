@@ -92,7 +92,7 @@ To transfer it to the board program RAM, make sure the USB cable is plugged in a
 your board got mapped to in the Arduino IDE. You can then upload the file with:
 
 ````windows
-mode COM3 9600
+mode COM3 dtr=off rts=off baud=9600 parity=n data=8 stop=1
 copy test.bin COM3 /B
 ````
 
