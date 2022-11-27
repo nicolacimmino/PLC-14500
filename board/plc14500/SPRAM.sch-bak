@@ -608,7 +608,7 @@ P 1475 3375
 AR Path="/63B4BDA9/67AF2AD4" Ref="R?"  Part="1" 
 AR Path="/67425B3B/67AF2AD4" Ref="R59"  Part="1" 
 F 0 "R59" H 1450 3225 50  0000 R CNN
-F 1 "47K" V 1375 3475 50  0000 R CNN
+F 1 "3K3" V 1375 3475 50  0000 R CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 1405 3375 50  0001 C CNN
 F 3 "~" H 1475 3375 50  0001 C CNN
 F 4 "0.01" H 1475 3375 50  0001 C CNN "Price"
@@ -920,8 +920,8 @@ Text Notes 3900 5950 2    50   ~ 0
 Read Inputs
 Text Notes 4275 6075 2    50   ~ 0
 Write Scratchpad RAM
-Text Notes 3900 6200 2    50   ~ 0
-Write Inputs
+Text Notes 3950 6200 2    50   ~ 0
+Write Outputs
 Text Notes 8775 2100 2    89   ~ 0
 Scratchpad RAM
 Text Notes 2875 2400 2    89   ~ 0

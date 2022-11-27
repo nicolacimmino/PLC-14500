@@ -2284,6 +2284,8 @@ F 3 "~" H 4825 7175 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	8300 3300 8925 3300
+Text Notes 5900 6150 0    50   ~ 0
+T= 1-7s\nT = 1.1 * C4 * (RV1+R15)
 Wire Bus Line
 	6825 1750 6825 2000
 Wire Bus Line
@@ -2298,6 +2300,4 @@ Wire Bus Line
 	2925 725  2925 6575
 Wire Bus Line
 	7300 4700 7300 5700
-Text Notes 5900 6150 0    50   ~ 0
-T= 1-7s\nT = 1.1 * C4 * (RV1+R15)
 $EndSCHEMATC

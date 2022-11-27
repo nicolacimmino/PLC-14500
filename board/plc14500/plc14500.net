@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source C:\Users\nicola\git\PLC-14500\board\plc14500\plc14500.sch)
-    (date "25/11/2022 10:56:14")
+    (date "26/11/2022 16:59:21")
     (tool "Eeschema (5.1.9)-1")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -1204,7 +1204,7 @@
       (sheetpath (names /CPU/) (tstamps /6394A5B3/))
       (tstamp 63980933))
     (comp (ref R53)
-      (value 1M)
+      (value 10K)
       (footprint Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal)
       (datasheet ~)
       (fields
@@ -1532,7 +1532,7 @@
       (sheetpath (names /SPRAM/) (tstamps /67425B3B/))
       (tstamp 675FAF3F))
     (comp (ref R59)
-      (value 47K)
+      (value 3K3)
       (footprint Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal)
       (datasheet ~)
       (fields
