@@ -32,8 +32,6 @@ class AssemblySource {
       metaData[tokens[0].replaceFirst(".", "").trim().toUpperCase()] =
           tokens[1].trim().toUpperCase();
     }
-
-    print(metaData);
   }
 
   void _extractSource() {
@@ -53,7 +51,5 @@ class AssemblySource {
 
     // All uppercase
     source = source.map((line) => line.toUpperCase()).toList();
-
-    print(source);
   }
 }
