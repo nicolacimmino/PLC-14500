@@ -63,17 +63,17 @@ You can write your programs in any text editor of your choice, as long as you sa
 extension. This is a first example program to make sure your board is correctly assembled and functioning.
 
 ````
-ien 6   ; IN6 acts as master switch 
-oen 6   ; to enable/disable all I/O
+ien IN6   ; IN6 acts as master switch 
+oen IN6   ; to enable/disable all I/O
 
-ld 0    ; Load IN0,
-and 1   ; logical AND it with IN1
-sto 0   ; and show the result in OUT0.
+ld IN0    ; Load IN0,
+and IN1   ; logical AND it with IN1
+sto OUT0  ; and show the result in OUT0.
 
-ld 2    ; Load IN2    
-sto 7   ; use it to trigger TMR0.
-ld 7    ; Read the output of TMR0
-sto 3   ; and store in OUT3.
+ld IN2    ; Load IN2    
+sto OUT7  ; use it to trigger TMR0.
+ld IN7    ; Read the output of TMR0
+sto OUT3  ; and store in OUT3.
 
 jmp 0   ; Repeat.
 ````
