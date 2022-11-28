@@ -49,6 +49,9 @@ class AssemblySource {
     // Trim
     source = source.map((line) => line.trim()).toList();
 
+    // Get rid of multiple spaces
+    source = source.map((line) => line.replaceAll(RegExp(r"\s+"), " ")).toList();
+
     // All uppercase
     source = source.map((line) => line.toUpperCase()).toList();
   }

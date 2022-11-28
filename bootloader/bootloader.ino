@@ -1,4 +1,4 @@
-// Bootloader PLC14500-Nano board.
+// Bootloader for PLC14500-Nano board.
 //  Copyright (C) 2022 Nicola Cimmino
 //
 //    This program is free software: you can redistribute it and/or modify
@@ -37,6 +37,10 @@
 #define PRG_PIN A4
 #define WEN_PIN A5
 
+#define PROGRAM_MEMOMORY_SIZE 256
+
+#define RX_TIMEOUT_MS 1000
+
 #include "EEPROM.h"
 
 byte data_bus[] = {
@@ -59,11 +63,17 @@ byte addr_bus[] = {
     A6_PIN,
     A7_PIN};
 
-byte rxBuffer[256];
+byte rxBuffer[PROGRAM_MEMOMORY_SIZE];
+
+/**********************************************************************
+ *  Acquire the PLC14500 data and address buses by setting the 
+ *  program counter and RAM to High-Z outputs (WEN and PRG pin),
+ *  and then setting our lines to output (avoid bus contention).
+ */
 
 void acquireBus()
 {
-  digitalWrite(WEN_PIN, HIGH);  
+  digitalWrite(WEN_PIN, HIGH);
   digitalWrite(PRG_PIN, HIGH);
 
   for (int ix = 0; ix < 8; ix++)
@@ -73,6 +83,15 @@ void acquireBus()
   }
 }
 
+/*
+ **********************************************************************/
+
+/**********************************************************************
+ *  Release the PLC14500 data and address buses by setting the 
+ *  program counter and RAM to active outputs (WEN and PRG pin),
+ *  after setting our lines to input (avoid bus contention).
+ */
+
 void releaseBus()
 {
   for (int ix = 0; ix < 8; ix++)
@@ -81,67 +100,42 @@ void releaseBus()
     pinMode(data_bus[ix], INPUT);
   }
 
-  digitalWrite(WEN_PIN, HIGH);  
-  digitalWrite(PRG_PIN, LOW);  
+  digitalWrite(WEN_PIN, HIGH);
+  digitalWrite(PRG_PIN, LOW);
 }
 
-void setup()
+/*
+ **********************************************************************/
+
+/**********************************************************************
+ * Bootstrap the PLC14500 program memory writing the last received
+ * program stored in EEPROM.
+ */
+
+void bootstrapPLC14500Board()
 {
-  pinMode(WEN_PIN, OUTPUT);
-  pinMode(PRG_PIN, OUTPUT);
-  
-  releaseBus();
-
-  Serial.begin(9600);
-}
-
-void loop()
-{
-
   acquireBus();
 
-  for (int address = 0; address < 256; address++)
+  for (int address = 0; address < PROGRAM_MEMOMORY_SIZE; address++)
   {
     writeProgramByte(address, EEPROM.read(address));
-    Serial.print(EEPROM.read(address), 16);
-    
-    if(address % 16 == 15) {
-      Serial.println("");
-    } else {
-      Serial.print(".");
-    }
-  }
-
-  releaseBus();
-
-  while (!Serial.available())
-  {
-  }
-
-  // We need to first take the all input data in memory
-  // since the writing to the target takes 10mS we would
-  // overrun the buffer if we attempted to write directly.
-  for (int address = 0; address < 256;)
-  {
-    if (Serial.available())
-    {
-      rxBuffer[address] = Serial.read();
-      address++;
-    }
-  }
-
-  acquireBus();
-
-  for (int address = 0; address < 256; address++)
-  {
-    writeProgramByte(address, rxBuffer[address]);
   }
 
   releaseBus();
 }
 
+/*
+ **********************************************************************/
+
+/**********************************************************************
+ * Write one byte to the PLC14500 program memory.
+ * 
+ * NOTE! If you opt for an EEPROM you will need to change the delay below
+ *  to 15mS to give time to the EEPROM to correctly write.
+ */
+
 void writeProgramByte(byte address, byte data)
-{  
+{
   digitalWrite(WEN_PIN, HIGH);
 
   for (int ix = 0; ix < 8; ix++)
@@ -153,13 +147,59 @@ void writeProgramByte(byte address, byte data)
   {
     digitalWrite(data_bus[ix], (data >> ix) & 1);
   }
-  
+
   delay(1);
   digitalWrite(WEN_PIN, LOW);
-  // Note this needs to be 15mS for EEPROMs.
-  // One possibility would be to have a flag over the wire to indicate RAM/EEPROM
+  // Note: this needs to be 15mS for EEPROMs.
   delay(1);
   digitalWrite(WEN_PIN, HIGH);
-
-  EEPROM.write(address,data);
 }
+
+/*
+ **********************************************************************/
+
+void setup()
+{
+  pinMode(WEN_PIN, OUTPUT);
+  pinMode(PRG_PIN, OUTPUT);
+
+  bootstrapPLC14500Board();
+
+  Serial.begin(9600);
+}
+
+void loop()
+{
+  while (!Serial.available())
+  {
+  }
+
+  // Wait for PROGRAM_MEMOMORY_SIZE (or timeout). We need to
+  //  store the program in RAM first as writing it to the board
+  //  and local EEPROM would cause the Arduino serial RX buffer
+  //  to overflow.
+
+  unsigned long rxStartTime = millis();
+  for (int address = 0; address < PROGRAM_MEMOMORY_SIZE;)
+  {
+    if (millis() - rxStartTime > RX_TIMEOUT_MS)
+    {      
+      return;
+    }
+
+    if (Serial.available())
+    {
+      rxBuffer[address] = Serial.read();
+      address++;
+    }
+  }
+
+  // Persist the program to the arduino EEPROM so we can bootstrap the board on powerup.
+  for (int address = 0; address < PROGRAM_MEMOMORY_SIZE; address++)
+  {
+    EEPROM.write(address, rxBuffer[address]);
+  }
+
+  bootstrapPLC14500Board();
+}
+

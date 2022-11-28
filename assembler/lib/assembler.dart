@@ -26,11 +26,27 @@ class Assembler {
   Assembler(this.source);
 
   void assemble() {
+    var board = source.metaData["BOARD"] ?? "";
+
+    // For now we just mandate PLC14500-NANO but it's the only one we support,
+    //  helps the ASM files in the wild be ready for multiple boards.
+
+    if (board != "PLC14500-NANO") {
+      throw Exception(
+          "Invalid .board $board\nPlease add a valid .board directive.");
+    }
+
     for (var line in source.source) {
       var tokens = line.split(' ');
       int result = _getOpCode(tokens[0]);
 
       if (tokens.length == 2) {
+        // Avoid confusion. This is to be refactored into board
+        //  specific code when the time comes.
+        if (result == 0xC && _argToIOAddress(tokens[1]) != 0) {
+          throw Exception("PLC14500-Nano can only JMP 0");
+        }
+
         result = result | _argToIOAddress(tokens[1]) << 4;
       }
 
@@ -43,6 +59,17 @@ class Assembler {
   }
 
   int _argToIOAddress(String arg) {
+    // Allow IO friendly names such as:
+    //  .io_door_switch=in6
+    //  .io_door_light=out3
+    //
+    //  ld door_switch
+    //  sto door_light
+
+    if (source.metaData["IO_$arg"] != null) {
+      arg = source.metaData["IO_$arg"] ?? "";
+    }
+
     var argValue = int.tryParse(arg);
 
     if (argValue != null) {
@@ -66,7 +93,7 @@ class Assembler {
 
   int _getOpCode(String mnemonic) {
     if (!_opcodes.keys.contains(mnemonic)) {
-      throw Exception("invalid mnemonic: $mnemonic");
+      throw Exception("Invalid mnemonic: $mnemonic");
     }
 
     return _opcodes[mnemonic] ?? 0;

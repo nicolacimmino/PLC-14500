@@ -25,7 +25,7 @@ void main(List<String> arguments) {
     assembler.assemble();
     assembler.byteCode.save(outFile);
   } catch (e) {
-    print(e.toString());
+    print(e.toString().replaceFirst("Exception: ", ""));
   }
 }
 
