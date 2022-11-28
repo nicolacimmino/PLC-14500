@@ -18,7 +18,7 @@ Main features:
 
 
 True to its retro style PLC14500 Nano sports exclusively through-hole components and chips in DIP packages.
-You might notice an intruder in the Bill of Materials, an Arduino Nano. It's there purely to act as a
+You might notice an intruder in the Bill of Materials, an Arduino Nano! It's there purely to act as a
 bootloader, with a convenient USB interface that surely is easy to connect to modern PCs. However,
 to not spoil the illusion, the Arduino is mounted on the bottom side of the PCB, so it won't be visible when 
 using the board.
@@ -40,12 +40,8 @@ As usual start from the lower profile components (such as resistors and ICs), an
 profile ones, to finish with large caps and the trimmer. 
 
 **NOTE** The Arduino Nano is to be assembled on the bottom side of the board, opposite the components,
-as indicated in the silk screen.
-
-For a pure retro vibe, or if you decide to use the board as a display item, you
-could assemble the Arduino on a row of female pin-headers and plug it only to program the board. In this
-case you will need to replace the RAM with an EEPROM (the bootloader is already capable of driving it),
-so the program will be persisted and the Arduino board won't need to be permanently installed.
+as indicated in the silk screen. Also, make sure D40, D51, R54, C7 are soldered BEFORE you solder the 
+Arduino as their PINs are under the Arduino board.
 
 # Getting started
 
@@ -62,7 +58,7 @@ Unless there will be an update to the bootloader you won't need to repeat this s
 
 # Assembling a program
 
-You can write your programs in any text editor of your choice, as long as you save them with a `.asm`
+You can write your programs in a text editor of your choice, as long as you save them with a `.asm`
 extension. This is a first example program to make sure your board is correctly assembled and functioning.
 You can find this code also in the release zip file under `examples\smoketest.asm`.
 
@@ -130,12 +126,12 @@ your board got mapped to in the Arduino IDE. You can then upload the flash comma
 .\flash14500 test.bin COM3
 ````
 
-Replacing `COM3` with the correct port number for your board. Also remember to press the RST button on the board once the upload is done and verify
-that the top switches are in the "HI" and "RUN" positions respectively.
+Replacing `COM3` with the correct port number for your board. Also remember to press the RST button on the board once the upload is done, and verify
+that the top switches are in the "HI" and "RUN" positions respectively so the program runs.
 
 # Testing
 
 If you uploaded the above example program you can verify the board correct functioning by following the steps in the sourcecode that will guide you
-through the expected settings and actions and expected outcomes.
+through the needed settings and actions and expected outcomes.
 
 
