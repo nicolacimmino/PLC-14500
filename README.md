@@ -49,11 +49,14 @@ so the program will be persisted and the Arduino board won't need to be permanen
 
 # Getting started
 
+Download the latest toolchain (Windows only at the moment) from this Git repo releases and unzip it.
+
 Before starting writing your programs and testing them on the board, you will need to flash the bootloader
-into the Arduino. This can be easily done with the Arduino IDE. Load the sketch you find in the `bootloader`
-folder and make sure the board selected is "Arduino Nano". Connect the board to your PC with a USB cable
-and select, in the Arduino IDE, the new serial port that will be assigned to the board. Upload the sketch
-and you are ready to go.
+into the Arduino. This can be easily done with the Arduino IDE. Load the sketch `bootloader.ino` from  the
+release zip and make sure the board selected in the Arduino IDE is "Arduino Nano". Connect the board to your PC 
+with a USB cable and select, in the Arduino IDE, the new serial port that will be assigned to the board. 
+Upload the sketch and you are ready to go. Take note of the serial port name as you will need it to flash the
+programs later.
 
 Unless there will be an update to the bootloader you won't need to repeat this step in the future.
 
@@ -61,26 +64,58 @@ Unless there will be an update to the bootloader you won't need to repeat this s
 
 You can write your programs in any text editor of your choice, as long as you save them with a `.asm`
 extension. This is a first example program to make sure your board is correctly assembled and functioning.
+You can find this code also in the release zip file under `examples\smoketest.asm`.
 
 ````
-ien IN6   ; IN6 acts as master switch 
-oen IN6   ; to enable/disable all I/O
+.board=PLC14500-Nano
 
-ld IN0    ; Load IN0,
-and IN1   ; logical AND it with IN1
-sto OUT0  ; and show the result in OUT0.
+; *************************************************
+; Prepare:
+; All inputs off except IN6 (master switch) and
+;   IN2 (TMR0 trigger, active low).
+; *************************************************
 
-ld IN2    ; Load IN2    
-sto OUT7  ; use it to trigger TMR0.
-ld IN7    ; Read the output of TMR0
-sto OUT3  ; and store in OUT3.
+IEN IN6   ; IN6 acts as master switch
+OEN IN6   ; to enable/disable all I/O
 
-jmp 0   ; Repeat.
+; *************************************************
+; Test: Input and outputs are working correctly
+
+LD  IN0   ; Load IN0,
+AND IN1   ; logical AND it with IN1
+STO OUT0  ; and show the result in OUT0.
+
+; Expect: OUT0 is on only when both IN0 and IN1 are on.
+; *************************************************
+
+; *************************************************
+; Test: TMR0 is working correctly
+
+LD  IN2   ; Load IN2
+STO OUT7  ; use it to trigger TMR0.
+
+; Expect: Clicking IN2 off turns on IN7 (TMR0 output)
+;   and, after few seconds, IN7 returns off.
+; *************************************************
+
+; *************************************************
+; Test: Scratchpad RAM is working correctly.
+
+LD  IN3    ; Copy IN3 to SPR0
+STO SPR0
+
+LD  SPR0   ; Copy SPR0 to SPR1
+STO SPR1
+
+; Expect: Clicking IN3 turns on SPR0 and SPR1
+; *************************************************
+
+JMP 0     ; Repeat.
 ````
 
-Save it to a `test.asm` file and assemble it into a binary with the assembler found in the `assembler` folder:
+Save it to a `test.asm` file and assemble it into a binary with the assembler found in the release zip file:
 
-````windows
+````
 .\asm14500.exe .\test.asm
 ````
 
@@ -88,29 +123,19 @@ This will produce a `test.bin` file, which should be 256 bytes in size.
 
 # Transferring a program to the board
 
-To transfer it to the board program RAM, make sure the USB cable is plugged in and take note of which serial port 
-your board got mapped to in the Arduino IDE. You can then upload the file with:
+To transfer the assembled `.bin` file to the board program RAM, make sure the USB cable is plugged in and take note of which serial port 
+your board got mapped to in the Arduino IDE. You can then upload the flash command found in the release zip file:
 
-````windows
-mode COM3 dtr=off rts=off baud=9600 parity=n data=8 stop=1
-copy test.bin COM3 /B
+````
+.\flash14500 test.bin COM3
 ````
 
-Replacing `COM3` with the correct port number for your board.
+Replacing `COM3` with the correct port number for your board. Also remember to press the RST button on the board once the upload is done and verify
+that the top switches are in the "HI" and "RUN" positions respectively.
 
 # Testing
 
-If you uploaded the above example program you can verify the board correct functioning by following these
-steps:
-
-* Ensure all inputs are switched toward zero except IN6
-* Adjust the trimmer controlling TMR0 about half way
-* All OUTn should be off
-* Switch on IN0 and IN1
-* OUT0 should be on (OUT0 = INO AND IN1)
-* Press briefly on IN2
-* OUT3 should be on and go back off after about 10s (depending on the trimmer position)
-* If you switch off IN6 the outputs should not change even if you change IN0/IN1 or trigger TMR0
-* Switching back on IN6 should resume all functionality
+If you uploaded the above example program you can verify the board correct functioning by following the steps in the sourcecode that will guide you
+through the expected settings and actions and expected outcomes.
 
 
