@@ -13,11 +13,16 @@ class InputControl extends StatefulWidget {
 }
 
 class _InputControlState extends State<InputControl> {
-  bool _status = false;
+  bool _toggleStatus = false;
+  bool _buttonStatus = false;
 
   @override
   void initState() {
     super.initState();
+  }
+
+  _reportChange() {
+    widget.onToggle(widget._inputNumber, _buttonStatus ? !_toggleStatus : _toggleStatus);
   }
 
   @override
@@ -28,26 +33,26 @@ class _InputControlState extends State<InputControl> {
         child: const Image(image: AssetImage('assets/button.png')),
         onTapDown: (details) {
           setState(() {
-            _status = true;
-            widget.onToggle(widget._inputNumber, _status);
+            _buttonStatus = true;
+            _reportChange();
           });
         },
         onTapUp: (details) {
           setState(() {
-            _status = false;
-            widget.onToggle(widget._inputNumber, _status);
+            _buttonStatus = false;
+            _reportChange();
           });
         },
       ),
       GestureDetector(
         child: Image(
-            image: _status
+            image: _toggleStatus
                 ? const AssetImage('assets/switch_on.png')
                 : const AssetImage('assets/switch_off.png')),
         onTapDown: (details) {
           setState(() {
-            _status = !_status;
-            widget.onToggle(widget._inputNumber, _status);
+            _toggleStatus = !_toggleStatus;
+            _reportChange();
           });
         },
       ),
