@@ -25,6 +25,10 @@ using the board.
 
 ![Board](documentation/board.png)
 
+This project is Open Source Hardware [Certified](https://certification.oshwa.org/pl000011.html)
+
+![oshw_PL000011](documentation/oshw_cert_small.png)
+
 # Assembling the board
 
 To keep the assembled board visually free from clutter, and to give more prominence to the labels
