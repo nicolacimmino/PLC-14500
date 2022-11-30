@@ -144,7 +144,7 @@ causes them to be on (and for this reason, depending on the program, this is dep
 
 # What's next
 
-Read more about the assembler and the `.asm` file syntax in the assembler folder [READ.me](assembler/READ.me).
+Read more about the assembler and the `.asm` file syntax in the assembler folder [README.md](assembler/README.md).
 
 To get started with programming your board and for some ideas of new programs you can try to make yourself, read the [Programmers Guide](assembler/programmers_guide.md).
 
