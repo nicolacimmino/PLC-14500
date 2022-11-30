@@ -4,7 +4,7 @@ In this guide I will assume you are familiar with Ladder Logic diagram symbols. 
 first familiarize with the symbology. One good starting point is this
 Wikipedia [article](https://en.wikipedia.org/wiki/Ladder_logic).
 
-I will also assume you have assembled and tested the board following the instructions in the [READ.me](../README.md)
+I will also assume you have assembled and tested the board following the instructions in the [READ.me](../../README.md)
 file.
 
 ## Reading Inputs and controlling outputs
