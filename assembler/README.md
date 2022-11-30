@@ -82,3 +82,4 @@ RTS circuit:     OFF
 are toggled (as the serial port is open). Because of the reset delay your bootloader won't have a chance to see the
 bytes you are about to spit out.
 
+To get started with programming your board and for some ideas of new programs you can try to make yourself, read the [Programmers Guide](programmers_guide.md).

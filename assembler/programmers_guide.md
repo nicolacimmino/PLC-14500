@@ -12,7 +12,7 @@ file.
 In this first example we will be simply reading the status of one of the inputs and mirroring it to an output. A ladder
 diagram for such application would look something like this:
 
-![example_1](../../documentation/ex1_load_and_store.png)
+![example_1](../documentation/ex1_load_and_store.png)
 
 This can be translated to MC14500 assembly (with some extra code, we will get to that in a moment).
 
@@ -179,7 +179,7 @@ in different parts of our program.
 
 The ladder diagram for an industrial motor start/stop contol would look like this:
 
-![example_3](../../documentation/ex3_latch.png)
+![example_3](../documentation/ex3_latch.png)
 
 `START` is our start button and `STOP` the stop button. `MOTOR` is, you guessed it, the motor. Things get interesting
 with `RUN`. This is not an actual button or actuator, this represents what you would achieve with a relay. When the coil

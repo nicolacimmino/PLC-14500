@@ -1,16 +1,12 @@
-# simulator
+# Simulator
 
-Simulator for PLC-14500
+Simulator for PLC14500-Nano board.
 
-## Getting Started
+This is Work Heavily in Progress. 
 
-This project is a starting point for a Flutter application.
+A flutter application to toy around with the board while you wait to receive the kit. The app roughly works and basic programs seem to run. Nothing is tested properly though and layout is still a mess.
 
-A few resources to get you started if this is your first Flutter project:
+This will not be part of the first release. However, I plan to polish it later and make a static website out of it for people to play around.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
