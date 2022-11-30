@@ -137,4 +137,9 @@ that the top switches are in the "HI" and "RUN" positions respectively so the pr
 If you uploaded the above example program you can verify the board correct functioning by following the steps in the sourcecode that will guide you
 through the needed settings and actions and expected outcomes.
 
+**Help!!** some LEDs like `J`, `RR` or `W` randomly change intensity when I click other buttons. Do I have have a short somewhere? Did I break something? **no**,
+don't worry. This is absolutely normal when the board is running on the normal clock (`HI` and `RUN`), this is because those LEDs are actually flashing on and off
+as the MC14500 executes instructions. Because of the high clock speed you don't see the actual flickering but the resulting intensity depends on how often your program
+causes them to be on (and for this reason, depending on the program, this is dependent on status of the inputs). This is also true for the `ADDR`, `DATA` and `SPR` LEDs when running with full clock. To convience yourself about this, and for a cool blinking effect, turn the clock to `LO` and watch, just don't expect outputs to react to your clicks promptly!
+
 
