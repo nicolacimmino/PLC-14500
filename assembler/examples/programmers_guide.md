@@ -41,17 +41,16 @@ value read from the inputs and any write operation to the outputs. This is a bit
 such instructions in every program or the program would do nothing at all. For simplicity, we tell the MC14500 to
 enable input/output operations on the status of input IN6, so we will need to make sure this is flipped to ON.
 
-The next to lines are the actual representation of our ladder diagram. The `LD` instruction will load the value of IN0
+The next two lines are the actual representation of our ladder diagram. The `LD` instruction will load the value of IN0
 into the only register `RR`. After this, `STO` will store the value in `RR` into `OUT0` so, in practice, OUT0 will
 reflect the status of `IN0`.
 
 The last instruction `JMP 0`, jumps at the start of the program. **Note!** The PLC14500-Nano doesn't have a pre-settable
-Program Counter, for this reason it allow jumping only to 0. The assembler will error if you try to do otherwise.
+Program Counter, for this reason it allows jumping only to 0. The assembler will error if you try to do otherwise.
 However, worry not, with the `IEN`/`OEN` instructions and the `SKZ` conditional there are plenty of options to have more
 complex flows than just a single loop.
 
-Let's go ahead and assemble the program. I'm assuming here you downloaded the release zip and unzipped it on a folder
-`C:\plc14500`, adjust your paths if needed:
+Let's go ahead and assemble the program. I'm assuming here you downloaded the release zip and unzipped it in a folder.
 
 ````
 asm14500.exe examples\example1.asm
@@ -71,7 +70,7 @@ Offset(h) 00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
 ````
 
 Before we can test the program on the board we will need to identify which COM port gets assigned to our board. Also,
-ensured you followed the board assembly instructions and burned the bootloader into the Arduino Nano. The easiest way
+ensure you followed the board assembly instructions and burned the bootloader into the Arduino Nano. The easiest way
 to find out the right COM port is to open the Arduino IDE, open the `Tools\Port` menu and take a note of what ports
 are available (possibly none), then plug in the PLC14500-Nano and check again `Tools\Port` to determine the new one
 that appeared. In this guide I will assume `COM3`, adjust examples as needed.
@@ -92,8 +91,7 @@ if you now press momentarily the `IN0` button you will notice the `OUT0` LED wil
 Go ahead and turn off `IN6`, now regardless of the state of `IN0` the `OUT0` will not change.
 
 Congratulations! You wrote your first PLC14500 assembly program! In truth, it could be the second if you did the
-smoketest
-in the assembly instructions, but this is the first one you, hopefully, understand.
+smoke test in the assembly instructions, but this is the first one you, hopefully, understand.
 
 ## Logic operations
 
@@ -125,7 +123,7 @@ result will be stored in `RR` and, on the next line, stored in `OUT0`.
 
 If you assemble and load the program above you will notice you need to have both `IN0` and `IN1` on for `OUT0` to go on.
 
-There's not much point in providing examples for other logical operations, there will be many occasions later on, to use
+There's not much point in providing examples for other logical operations, there will be many occasions later on to use
 them directly in various applications. I will just list below all logical operations provided by the MC14500 for
 reference.
 
@@ -139,7 +137,7 @@ reference.
 
 ## Latch and Reset
 
-With the next example things will start to get more interesting and will move a step further than something that can be
+With the next example things will start to get more interesting and will move a step further from something that can be
 achieved by just wiring buttons and LEDs. From here I will start also to introduce the examples in terms of real life
 applications instead of abstract "the output will be on when this and that happens".
 
@@ -183,7 +181,7 @@ The ladder diagram for an industrial motor start/stop contol would look like thi
 
 ![example_3](../../documentation/ex3_latch.png)
 
-`START` is our start button and `STOP` the stop button. `MOTOR` is, you guessed it the motor. Things get interesting
+`START` is our start button and `STOP` the stop button. `MOTOR` is, you guessed it, the motor. Things get interesting
 with `RUN`. This is not an actual button or actuator, this represents what you would achieve with a relay. When the coil
 of the hypothetical `RUN` relay is energized the `RUN` contactor would be closed. This, in practice, will keep energized
 the `RUN` relay coil even when `START` is released. This allows us to achieve one of the goals: latch `RUN` when `START`
