@@ -1,51 +1,84 @@
 
+# PLC14500 Assembler
 
-## Compling
+You can find a precompiled version of the assembler and a batch file to flash the programs into the board in the
+[releases](https://github.com/nicolacimmino/PLC-14500/tags) zip file. If you prefer to build your own, or you want
+to build for something else than Windows, you will need to have a properly configured Dart development environment
+and build with:
 
 ````
-.\asm14500.exe {file.asm}
+dart compile exe "assembler\bin\assembler.dart" -o "asm14500.exe"
 ````
+
+## Assembling
+
+````
+asm14500.exe test.asm
+````
+
+The output will be a `.bin` file of the same name. The output file is always 256 bytes for a PLC14500-Nano, your program
+will be starting from offset 0x00 and will be padded to 256 with 0x0Fs (`NOPF`).
 
 ## Source format
 
 ````
 ;
-; This program implements a simple control
-; logic for an hypotetical machine with the
-; following controls:
-;
-; X1 on/off switch controls the machine power
-; X3 start button
-; X4 stop button
-;
-; Y5 Yellow lamp, indicates machine is started
-; Y6 Green lamp, idicates machine is ready
-; Y7 Red lamp, indicates machine power is on
-;
+; Comments are preceeded by semicolon, they can be at the beginning of
+;   a line inline or after an instruction.
 
-.board=plc14500_nano
+; This is metadata for the preprocessor. You MUST specify the target board.
+.board=PLC14500-Nano
 
-ien 7   ; Enable inputs, 7 is hardwired to 1
-oen 7   ; Enable outputs
-ld 1    ; Load X1 (Master)
-sto 7   ; Set Y7 (Power Lamp, red)
-ld 3    ; Load X3 (Start button)
-or 0    ; OR with X0 (wired to Y0, latch)
-andc 4  ; AND with X4 negated (stop button)
-and 1   ; AND with X1 (Master)
-sto 5   ; Set Y5 (Running Lamp, yellow)
-sto 0   ; Set Y0 (wired to X0, latch state)
-xnor 6  ; Negate, X1 is always zero
-and 1   ; AND with X1 (Master)
-sto 6   ; Set Y6 (Ready Lamp, green)
-nopf    ; Reset and jump to start
+; These are friendly names. They allow to write code like STO MOTOR instead of STO OUT0
+.io_MASTER=IN6
+.io_START=IN0
+.io_STOP=IN1
+.io_RUN=SPR0
+.io_MOTOR=OUT0
+
+; The actual code has every line with one MC14500 instruction and paramter.
+IEN MASTER
+OEN MASTER
+
+LD START    ; This is an inline comment
+OR RUN
+ANDC STOP
+STO RUN
+
+STO MOTOR
+
+JMP 0
 ````
 
 ## Transferring to the board
 
-The toolchain doesn't currently provide a method of sending out software to the board. Since the bootloader just expects 256 bytes to load in RAM, in Windows you can send the bin file simply with:
+Identify which COM port gets assigned to the board when plugged in and then transfer the binary file.
 
 ````
-copy test1.bin com3 /B
+flash14500.cmd examples\example3.bin COM3
 ````
+
+*Note* you should always press `RST` on the board once upload is done to clear the SPR and output latches, this will 
+avoid confusion that previously stored values might cause.
+
+If you want to load programs to the board on systems other than Windows you will need to send the `.bin` file raw on a
+serial port with the following settings:
+
+````
+Baud:            9600
+Parity:          None
+Data Bits:       8
+Stop Bits:       1
+Timeout:         OFF
+XON/XOFF:        OFF
+CTS handshaking: OFF
+DSR handshaking: OFF
+DSR sensitivity: OFF
+DTR circuit:     OFF
+RTS circuit:     OFF
+````
+
+*Note* you must ensure DTR/RTS are off. The bootloader runs on an Arduino and the Arduino will reset when these signals
+are toggled (as the serial port is open). Because of the reset delay your bootloader won't have a chance to see the
+bytes you are about to spit out.
 

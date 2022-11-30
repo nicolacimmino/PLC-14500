@@ -142,4 +142,12 @@ don't worry. This is absolutely normal when the board is running on the normal c
 as the MC14500 executes instructions. Because of the high clock speed you don't see the actual flickering but the resulting intensity depends on how often your program
 causes them to be on (and for this reason, depending on the program, this is dependent on status of the inputs). This is also true for the `ADDR`, `DATA` and `SPR` LEDs when running with full clock. To convience yourself about this, and for a cool blinking effect, turn the clock to `LO` and watch, just don't expect outputs to react to your clicks promptly!
 
+# What's next
+
+Read more about the assembler and the `.asm` file syntax in the assembler folder [READ.me](assembler/READ.me).
+
+To get started with programming your board and for some ideas of new programs you can try to make yourself, read the [Programmers Guide](assembler/programmers_guide.md).
+
+If you find any issues, or want to contribute code/comments please feel free to use the "Issues" tool here on GitHub.
+
 
