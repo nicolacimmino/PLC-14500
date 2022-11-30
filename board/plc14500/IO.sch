@@ -2286,6 +2286,21 @@ Wire Wire Line
 	8300 3300 8925 3300
 Text Notes 5900 6150 0    50   ~ 0
 T= 1-7s\nT = 1.1 * C4 * (RV1+R15)
+$Comp
+L 74xx:74HC14 U?
+U 3 1 6389547C
+P 4350 6475
+AR Path="/6389547C" Ref="U?"  Part="1" 
+AR Path="/6394A5B3/6389547C" Ref="U?"  Part="2" 
+AR Path="/63B4BDA9/6389547C" Ref="U11"  Part="3" 
+F 0 "U11" H 4400 6625 50  0000 C CNN
+F 1 "74HC14" H 4200 6275 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 4350 6475 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74HC14" H 4350 6475 50  0001 C CNN
+F 4 "0.16" H 4350 6475 50  0001 C CNN "Price"
+	3    4350 6475
+	1    0    0    -1  
+$EndComp
 Wire Bus Line
 	6825 1750 6825 2000
 Wire Bus Line

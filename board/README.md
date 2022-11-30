@@ -1,4 +1,14 @@
 
+## REV_A -> REV_B
+
+- Move LED labelled HI to the left of LO (to match switch direction)
+
+- Add 47K in series to U2 Pin3 OUT (to remove gosthing of outputs on inputs LEDs due to MC14500 W line timing)
+
+- Pass OUT7 through a NOT before triggering TMR0, leave LED direct to OUT7 (NE555 triggers on low which makes it hakward without negation as the monostable triggers always once on reset)
+
+- Swap RV1 Pin3 and Pin1 (so clockwise rotation increases time)
+
 
 ## REV_A Artifacts
 
