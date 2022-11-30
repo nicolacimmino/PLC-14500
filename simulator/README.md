@@ -9,4 +9,5 @@ A flutter application to toy around with the board while you wait to receive the
 This will not be part of the first release. However, I plan to polish it later and make a static website out of it for people to play around.
 
 
+![simulator](../documentation/simulator.png)
 
