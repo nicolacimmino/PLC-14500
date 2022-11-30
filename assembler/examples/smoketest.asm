@@ -6,8 +6,7 @@
 
 ; *************************************************
 ; Prepare:
-; All inputs off except IN6 (master switch) and
-;   IN2 (TMR0 trigger, active low).
+; All inputs off except IN6 (master switch).
 ; *************************************************
 
 IEN IN6   ; IN6 acts as master switch

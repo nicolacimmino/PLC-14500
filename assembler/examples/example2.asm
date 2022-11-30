@@ -1,52 +1,15 @@
 ;
 ; Example 2
-;
-; Timed lights with multiple buttons (eg block of flats staircase)
-;
-;   |                                          |
-;   +--------[ ]-------+-------------( )-------+
-;   |     BUTTON_A     |          TMR0-TRIG    |
-;   |                  |                       |
-;   +--------[ ]-------+                       |
-;   |     BUTTON_B     |                       |
-;   |                  |                       |
-;   +--------[ ]-------+                       |
-;   |     BUTTON_C     |                       |
-;   |                  |                       |
-;   +--------[ ]-------+                       |
-;   |     BUTTON_D                             |
-;   |                                          |
-;   +--------[ ]---------------------( )-------|
-;           TMR0-OUT                LIGHT
-;
-; TMR0-TRIG = BUTTON_A OR BUTTON_B OR BUTTON_C OR BUTTON_D
-; LIGHT = TMR0-OUT
-;
+; Basic program switching on OUT0 only when both IN0 and IN1 are on.
 
 .board=PLC14500-Nano
 
-.io_MASTER=IN6
-.io_SWITCH_A=IN0
-.io_SWITCH_B=IN1
-.io_SWITCH_C=IN2
-.io_SWITCH_D=IN3
-.io_LIGHT=SPR0
+IEN IN6
+OEN IN6
 
-IEN   MASTER
-OEN   MASTER
+LD  IN0
+AND IN1
+STO OUT0
 
-LD   SWITCH_A
-OR   SWITCH_B
-OR   SWITCH_C
-OR   SWITCH_D
-
-STO OUT7
-
-LD   IN7
-STO  LIGHT
-
-JMP  0
-
-
-
+JMP 0
 
