@@ -7,6 +7,57 @@ Wikipedia [article](https://en.wikipedia.org/wiki/Ladder_logic).
 I will also assume you have assembled and tested the board following the instructions in the [READ.me](../../README.md)
 file.
 
+## The Board
+
+### Clock Modes
+
+Before heading into the actual programming of the board, let's familiarize with the hardware. On the top side of
+the board you have two switches labelled `HI/LO` and `RUN/STEP` respectively. These control the clock generator. In run
+mode the clock runs freely and can be configured between two speeds. `HI` is the "normal" running speed, which is
+suitable for running programs and see inputs and outputs being processed timely. `LO` is a 1Hz clock which is mostly
+suitable for a majestic display of blinking lights. If you run your program at this clock speed remember you might need
+to wait seconds between applying inputs and seeing the effects on the output so, generally, you won't use it for testing
+purposes.
+
+In `STEP` mode the clock generator is stopped, so `HI/LO` has no effect. You will be providing clock pulses by
+pressing the `STEP` button. This mode is very useful for following your program step by step and seeing exactly how the
+various registers change as instructions are executed.
+
+On the board you will find the `RST` button. This resets the Program Counter to zero and also clears all outputs and
+the `SPR` registers. It's always a good idea to press `RST` after uploading a new program, this will ensure the program
+starts from a clean state and is not affected by the settings left by the previous one.
+
+*Note* the Program Counter is reset to zero when you press `RST` but, due to the nature of the counter, you won't see
+this relected in the `ADDR` bus until you `STEP` once.
+
+### Inputs/Outputs
+
+The board provides 7 "inputs". They are not actual external inputs but a combination of switch and button that can be
+used to simulate an external "Normal Open" or "Normal Closed" switch or button. By moving the switch you can change the
+input "normal" state to either on or off, as shown by the related LED on the board (`IN0-IN6`). The button always
+negates the current status. So, for instance, if you set the switch so that the input in on, by pressing the button it
+will go off.
+
+Similarly, the board provides 7 outputs which are LEDs (`OUT0-OUT6`) that can be set on or off under software control.
+
+### Onboard Timer
+
+There is a timer onboard that can be set from a short, about 0.5s, duration to about 10s through `RV1`. This timer is
+triggered by an additional output, not available as a general output (`OUT7`). The output of the timer is wired to an
+input which also cannot be set like the others with the switch and button (`IN7`).
+
+### Status LEDs
+
+There is no shortage of LEDs on the board. The `ADDR` and `DATA` section show the status of the RAM Address and Data
+bus. Here you can see the location in the program being executed and the actual instruction and its argument.
+
+The `J`, `RR` and `W` LEDs show the internal status of registers in the MC14500. They are respectively Jump, which goes
+high when a `JMP` instruction is executed; `RR` which contains the result of the last operation; `W` which goes high
+when a `STO` instruction writes to the outputs.
+
+The rest of the LEDs should be self-explanatory as they give a visual feedback on the status of the switches (such as)
+`LO`, `HI`, `R` for `RUN` and `ST` for step.
+
 ## Reading Inputs and controlling outputs
 
 In this first example we will be simply reading the status of one of the inputs and mirroring it to an output. A ladder
@@ -229,4 +280,63 @@ this will always result in off, regardless of the status of `START` and `RUN`).
 
 With a bit of exercise you should be able to read the ladder diagram from top to bottom and type accordingly the
 assembly code.
+
+## Using the timer
+
+PLC14500-Nano comes with one analog onboard timer. The timer (`TMR-0`) can be triggered with a high pulse on `OUT7`. The
+output of the timer output can be read on `IN7`. Once the timer is triggered, `IN7` will go high for a time that can be
+set with `RV1`, after this time has elapsed `IN7` will go back to low until the timer is triggered again.
+
+We can use the timer to implement, for instance, the controller for a set of lights on the staircase of a block of
+flats. We will assume 4 buttons, one per floor. The desired behaviour is that which ever button is pressed will cause
+the lights to turn on and, after a preset time the lights will go off.
+
+````
+.board=PLC14500-Nano
+
+.io_MASTER=IN6
+.io_BUTTON_A=IN0
+.io_BUTTON_B=IN1
+.io_BUTTON_C=IN2
+.io_BUTTON_D=IN3
+.io_LIGHT=OUT0
+
+IEN   MASTER
+OEN   MASTER
+
+LD   BUTTON_A
+OR   BUTTON_B
+OR   BUTTON_C
+OR   BUTTON_D
+
+STO  OUT7
+
+LD   IN7
+STO  LIGHT
+
+JMP  0
+````
+
+The buttons handling should be clear by now, we just load each button status and OR it into a final status that we use
+to trigger `TMR-0` (by storing it in `OUT7`). We then store into `LIGHT` the status of `IN7`, which is the timer output.
+
+If you load this program you will notice that by pressing any buttons `IN0`-`IN3` will cause `OUT0` to become high.
+After a time, dependent on the setting of `RV1`, `OUT0` will go off.
+
+## Next Steps
+
+Given the nature of the board I won't include more examples in this guide as, I believe, most will build this for the
+fun of writing new programs and figure out things on their own. The above should have provided enough info to
+familiarize with elements specific to the board and toolchain.
+
+I suggest you get familiar with the Motorola "MC14500B Industrial Control Unit Handbook" that provides a plethora of
+information on the processors itself and on its programming model. In particular, you can find there sections on how
+to implement conditionals and how to unleash all the power of the `IEN`/`OEN` instructions for conditional loops. 
+
+Some ideas of programs you might want to try to write, in no particular order:
+
+* Motorized gate with limit switches on open/closed and an obstruction sensor that will cause the gate to re-open.
+* A two floors goods lift, with UP/DOWN buttons, sensors to ensure the doors are closed and floor switches
+* A motor START/STOP controller with a overcurrent protection switch that will prevent restarting the motor for a
+  certain time if triggered
 
