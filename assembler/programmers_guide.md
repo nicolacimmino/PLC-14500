@@ -339,4 +339,4 @@ Some ideas of programs you might want to try to write, in no particular order:
 * A two floors goods lift, with UP/DOWN buttons, sensors to ensure the doors are closed and floor switches
 * A motor START/STOP controller with a overcurrent protection switch that will prevent restarting the motor for a
   certain time if triggered
-
+* A delayed on timer for a bathroom fan, so that the fan only starts after some delay after the lights are on
