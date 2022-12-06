@@ -1,0 +1,20 @@
+
+.board=PLC14500-Nano
+
+IEN  IN6
+OEN  IN6
+
+LD IN7
+STOC OUT7
+SKZ
+JMP 0
+
+LD SPR0
+STOC SPR0
+
+JMP 0
+
+
+
+
+

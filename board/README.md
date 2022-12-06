@@ -9,6 +9,23 @@
 
 - Swap RV1 Pin3 and Pin1 (so clockwise rotation increases time)
 
+## REV_B Artifacts
+
+![Silk](/documentation/rev_b-silk.svg)
+Silk
+
+
+![Assembly](/documentation/rev_b-assembly.svg)
+Assembly
+
+
+![TopCopper](/documentation/rev_b-top.svg)
+Top
+
+
+![BottomCopper](/documentation/rev_b-bottom.svg)
+Bottom
+
 
 ## REV_A Artifacts
 
