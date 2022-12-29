@@ -4,7 +4,8 @@ import 'package:simulator/logic_blocks/register.dart';
 import 'package:simulator/widgets/input_control.dart';
 
 class InputConsole extends StatefulWidget {
-  const InputConsole({super.key, required this.inputRegister});
+  const InputConsole(
+      {super.key, required this.inputRegister});
 
   final Register inputRegister;
 
@@ -15,7 +16,11 @@ class InputConsole extends StatefulWidget {
 class _InputConsoleState extends State<InputConsole> {
   @override
   Widget build(BuildContext context) {
-    return Row(children: _getInputControls());
+    return Padding(
+        padding: const EdgeInsets.all(10),
+        child: Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: _getInputControls()));
   }
 
   List<Widget> _getInputControls() {

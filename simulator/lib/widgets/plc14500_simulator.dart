@@ -28,29 +28,36 @@ class _PLC14500SimulatorState extends State<PLC14500Simulator> {
   Widget build(BuildContext context) {
     return MaterialApp(
         title: 'PLC-14500 Simulator',
-        home: Scaffold(
-          appBar: AppBar(
-              title: const Text('PLC14500 Simulator'),
-              actions: <Widget>[
-                IconButton(
-                    icon: const Icon(Icons.file_open),
-                    tooltip: 'Load',
-                    onPressed: _load)
-              ]),
-          body: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisSize: MainAxisSize.max,
-            children: [
-              InputConsole(inputRegister: widget.board.inputRegister),
-              OutputConsole(
-                  label: "IN", outputRegister: widget.board.inputRegister),
-              OutputConsole(
-                  label: "SPR", outputRegister: widget.board.scratchpadRAM),
-              OutputConsole(
-                  label: "OUT", outputRegister: widget.board.outputRegister),
-            ],
-          ),
-        ));
+        debugShowCheckedModeBanner: false,
+        home: SafeArea(
+            child: Scaffold(
+                appBar: AppBar(
+                    title: const Text('PLC14500 Simulator'),
+                    actions: <Widget>[
+                      IconButton(
+                          icon: const Icon(Icons.file_open),
+                          tooltip: 'Load',
+                          onPressed: _load)
+                    ]),
+                body: Center(
+                    child: SizedBox(
+                  width: 600,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      InputConsole(inputRegister: widget.board.inputRegister),
+                      OutputConsole(
+                          label: "IN",
+                          outputRegister: widget.board.inputRegister),
+                      OutputConsole(
+                          label: "SPR",
+                          outputRegister: widget.board.scratchpadRAM),
+                      OutputConsole(
+                          label: "OUT",
+                          outputRegister: widget.board.outputRegister),
+                    ],
+                  ),
+                )))));
   }
 
   _load() async {

@@ -5,8 +5,8 @@ import 'package:simulator/widgets/output_indicator.dart';
 
 class OutputConsole extends StatefulWidget {
   final Register outputRegister;
-  final String label;
   final double? ledRadius;
+  final String label;
 
   const OutputConsole(
       {super.key,
@@ -21,17 +21,19 @@ class OutputConsole extends StatefulWidget {
 class _OutputConsoleState extends State<OutputConsole> {
   @override
   Widget build(BuildContext context) {
-    return Row(children: [
-      for (var ix = 0; ix < widget.outputRegister.getSize(); ix++)
-        OutputIndicator(
-          status: widget.outputRegister.getBit(ix),
-          ledRadius: widget.ledRadius,
-        ),
-      for (var ix = widget.outputRegister.getSize(); ix < 8; ix++)
-        Image(
-            width: widget.ledRadius,
-            image: const AssetImage('assets/led_placeholder.png')),
-      Text(widget.label)
-    ]);
+    return Padding(
+        padding: const EdgeInsets.all(10),
+        child: Row(children: [
+          for (var ix = 0; ix < widget.outputRegister.getSize(); ix++)
+            OutputIndicator(
+              label: "${widget.label} $ix",
+              status: widget.outputRegister.getBit(ix),
+              ledRadius: widget.ledRadius,
+            ),
+          for (var ix = widget.outputRegister.getSize(); ix < 8; ix++)
+            Image(
+                width: widget.ledRadius,
+                image: const AssetImage('assets/led_placeholder.png')),
+        ]));
   }
 }

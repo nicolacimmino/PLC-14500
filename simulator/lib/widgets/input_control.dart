@@ -22,15 +22,17 @@ class _InputControlState extends State<InputControl> {
   }
 
   _reportChange() {
-    widget.onToggle(widget._inputNumber, _buttonStatus ? !_toggleStatus : _toggleStatus);
+    widget.onToggle(
+        widget._inputNumber, _buttonStatus ? !_toggleStatus : _toggleStatus);
   }
 
   @override
   Widget build(BuildContext context) {
     precacheImage(const AssetImage('assets/switch_on.png'), context);
     return Column(children: [
+      Text("IN ${widget._inputNumber}"),
       GestureDetector(
-        child: const Image(image: AssetImage('assets/button.png')),
+        child: const Image(width: 40, image: AssetImage('assets/button.png')),
         onTapDown: (details) {
           setState(() {
             _buttonStatus = true;
@@ -46,6 +48,7 @@ class _InputControlState extends State<InputControl> {
       ),
       GestureDetector(
         child: Image(
+            width: 40,
             image: _toggleStatus
                 ? const AssetImage('assets/switch_on.png')
                 : const AssetImage('assets/switch_off.png')),
