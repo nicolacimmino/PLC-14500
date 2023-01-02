@@ -28,7 +28,7 @@ STO OUT0  ; and show the result in OUT0.
 LD  IN2   ; Load IN2
 STO OUT7  ; use it to trigger TMR0.
 
-; Expect: Clicking IN2 off turns on IN7 (TMR0 output)
+; Expect: Clicking IN2 on turns on IN7 (TMR0 output)
 ;   and, after few seconds, IN7 returns off.
 ; *************************************************
 
