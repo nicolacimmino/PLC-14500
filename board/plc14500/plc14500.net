@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source C:\Users\nicola\git\PLC-14500\board\plc14500\plc14500.sch)
-    (date "06/12/2022 18:08:09")
+    (date "02/01/2023 11:11:28")
     (tool "Eeschema (5.1.9)-1")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -184,7 +184,7 @@
       (sheetpath (names /Input/Output/) (tstamps /63B4BDA9/))
       (tstamp 63B7B620))
     (comp (ref R17)
-      (value 680R)
+      (value 820R)
       (footprint Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal)
       (datasheet ~)
       (fields
@@ -193,7 +193,7 @@
       (sheetpath (names /Input/Output/) (tstamps /63B4BDA9/))
       (tstamp 63B7B62D))
     (comp (ref R18)
-      (value 680R)
+      (value 820R)
       (footprint Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal)
       (datasheet ~)
       (fields
@@ -202,7 +202,7 @@
       (sheetpath (names /Input/Output/) (tstamps /63B4BDA9/))
       (tstamp 63B7B633))
     (comp (ref R19)
-      (value 680R)
+      (value 820R)
       (footprint Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal)
       (datasheet ~)
       (fields
@@ -211,7 +211,7 @@
       (sheetpath (names /Input/Output/) (tstamps /63B4BDA9/))
       (tstamp 63B7B639))
     (comp (ref R20)
-      (value 680R)
+      (value 820R)
       (footprint Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal)
       (datasheet ~)
       (fields
@@ -220,7 +220,7 @@
       (sheetpath (names /Input/Output/) (tstamps /63B4BDA9/))
       (tstamp 63B7B63F))
     (comp (ref R21)
-      (value 680R)
+      (value 820R)
       (footprint Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal)
       (datasheet ~)
       (fields
@@ -229,7 +229,7 @@
       (sheetpath (names /Input/Output/) (tstamps /63B4BDA9/))
       (tstamp 63B7B645))
     (comp (ref R23)
-      (value 680R)
+      (value 820R)
       (footprint Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal)
       (datasheet ~)
       (fields
@@ -238,7 +238,7 @@
       (sheetpath (names /Input/Output/) (tstamps /63B4BDA9/))
       (tstamp 63B7B64B))
     (comp (ref R24)
-      (value 680R)
+      (value 820R)
       (footprint Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal)
       (datasheet ~)
       (fields
@@ -256,7 +256,7 @@
       (sheetpath (names /Input/Output/) (tstamps /63B4BDA9/))
       (tstamp 6364A55C))
     (comp (ref R25)
-      (value 680R)
+      (value 820R)
       (footprint Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal)
       (datasheet ~)
       (fields
@@ -310,7 +310,7 @@
       (sheetpath (names /Input/Output/) (tstamps /63B4BDA9/))
       (tstamp 6373C762))
     (comp (ref R5)
-      (value 680R)
+      (value 820R)
       (footprint Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal)
       (datasheet ~)
       (fields
@@ -381,7 +381,7 @@
       (sheetpath (names /Input/Output/) (tstamps /63B4BDA9/))
       (tstamp 655C29A5))
     (comp (ref R16)
-      (value 680R)
+      (value 820R)
       (footprint Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal)
       (datasheet ~)
       (fields
@@ -400,7 +400,7 @@
       (sheetpath (names /Input/Output/) (tstamps /63B4BDA9/))
       (tstamp 659A0786))
     (comp (ref R27)
-      (value 680R)
+      (value 820R)
       (footprint Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal)
       (datasheet ~)
       (fields
@@ -479,7 +479,7 @@
       (sheetpath (names /Input/Output/) (tstamps /63B4BDA9/))
       (tstamp 67F00BC1))
     (comp (ref R6)
-      (value 680R)
+      (value 820R)
       (footprint Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal)
       (datasheet ~)
       (fields
@@ -524,7 +524,7 @@
       (sheetpath (names /Input/Output/) (tstamps /63B4BDA9/))
       (tstamp 67F0FCBB))
     (comp (ref R7)
-      (value 680R)
+      (value 820R)
       (footprint Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal)
       (datasheet ~)
       (fields
@@ -569,7 +569,7 @@
       (sheetpath (names /Input/Output/) (tstamps /63B4BDA9/))
       (tstamp 67F20B69))
     (comp (ref R8)
-      (value 680R)
+      (value 820R)
       (footprint Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal)
       (datasheet ~)
       (fields
@@ -614,7 +614,7 @@
       (sheetpath (names /Input/Output/) (tstamps /63B4BDA9/))
       (tstamp 67F36755))
     (comp (ref R12)
-      (value 680R)
+      (value 820R)
       (footprint Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal)
       (datasheet ~)
       (fields
@@ -659,7 +659,7 @@
       (sheetpath (names /Input/Output/) (tstamps /63B4BDA9/))
       (tstamp 67F4EAD2))
     (comp (ref R13)
-      (value 680R)
+      (value 820R)
       (footprint Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal)
       (datasheet ~)
       (fields
@@ -704,7 +704,7 @@
       (sheetpath (names /Input/Output/) (tstamps /63B4BDA9/))
       (tstamp 67F6A41D))
     (comp (ref R14)
-      (value 680R)
+      (value 820R)
       (footprint Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal)
       (datasheet ~)
       (fields
@@ -863,7 +863,7 @@
       (sheetpath (names /CPU/) (tstamps /6394A5B3/))
       (tstamp 639806BC))
     (comp (ref R32)
-      (value 680R)
+      (value 820R)
       (footprint Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal)
       (datasheet ~)
       (fields
@@ -872,7 +872,7 @@
       (sheetpath (names /CPU/) (tstamps /6394A5B3/))
       (tstamp 639806CA))
     (comp (ref R34)
-      (value 680R)
+      (value 820R)
       (footprint Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal)
       (datasheet ~)
       (fields
@@ -881,7 +881,7 @@
       (sheetpath (names /CPU/) (tstamps /6394A5B3/))
       (tstamp 639806D0))
     (comp (ref R36)
-      (value 680R)
+      (value 820R)
       (footprint Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal)
       (datasheet ~)
       (fields
@@ -890,7 +890,7 @@
       (sheetpath (names /CPU/) (tstamps /6394A5B3/))
       (tstamp 639806D6))
     (comp (ref R38)
-      (value 680R)
+      (value 820R)
       (footprint Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal)
       (datasheet ~)
       (fields
@@ -899,7 +899,7 @@
       (sheetpath (names /CPU/) (tstamps /6394A5B3/))
       (tstamp 639806DC))
     (comp (ref R41)
-      (value 680R)
+      (value 820R)
       (footprint Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal)
       (datasheet ~)
       (fields
@@ -908,7 +908,7 @@
       (sheetpath (names /CPU/) (tstamps /6394A5B3/))
       (tstamp 639806E2))
     (comp (ref R43)
-      (value 680R)
+      (value 820R)
       (footprint Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal)
       (datasheet ~)
       (fields
@@ -917,7 +917,7 @@
       (sheetpath (names /CPU/) (tstamps /6394A5B3/))
       (tstamp 639806E8))
     (comp (ref R46)
-      (value 680R)
+      (value 820R)
       (footprint Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal)
       (datasheet ~)
       (fields
@@ -926,7 +926,7 @@
       (sheetpath (names /CPU/) (tstamps /6394A5B3/))
       (tstamp 639806EE))
     (comp (ref R48)
-      (value 680R)
+      (value 820R)
       (footprint Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal)
       (datasheet ~)
       (fields
@@ -962,7 +962,7 @@
       (sheetpath (names /CPU/) (tstamps /6394A5B3/))
       (tstamp 6398074E))
     (comp (ref R40)
-      (value 680R)
+      (value 820R)
       (footprint Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal)
       (datasheet ~)
       (fields
@@ -980,7 +980,7 @@
       (sheetpath (names /CPU/) (tstamps /6394A5B3/))
       (tstamp 63980763))
     (comp (ref R45)
-      (value 680R)
+      (value 820R)
       (footprint Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal)
       (datasheet ~)
       (fields
@@ -1052,7 +1052,7 @@
       (sheetpath (names /CPU/) (tstamps /6394A5B3/))
       (tstamp 639807F6))
     (comp (ref R29)
-      (value 680R)
+      (value 820R)
       (footprint Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal)
       (datasheet ~)
       (fields
@@ -1061,7 +1061,7 @@
       (sheetpath (names /CPU/) (tstamps /6394A5B3/))
       (tstamp 63980802))
     (comp (ref R47)
-      (value 680R)
+      (value 820R)
       (footprint Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal)
       (datasheet ~)
       (fields
@@ -1070,7 +1070,7 @@
       (sheetpath (names /CPU/) (tstamps /6394A5B3/))
       (tstamp 6398085B))
     (comp (ref R44)
-      (value 680R)
+      (value 820R)
       (footprint Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal)
       (datasheet ~)
       (fields
@@ -1079,7 +1079,7 @@
       (sheetpath (names /CPU/) (tstamps /6394A5B3/))
       (tstamp 63980861))
     (comp (ref R42)
-      (value 680R)
+      (value 820R)
       (footprint Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal)
       (datasheet ~)
       (fields
@@ -1088,7 +1088,7 @@
       (sheetpath (names /CPU/) (tstamps /6394A5B3/))
       (tstamp 63980867))
     (comp (ref R39)
-      (value 680R)
+      (value 820R)
       (footprint Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal)
       (datasheet ~)
       (fields
@@ -1097,7 +1097,7 @@
       (sheetpath (names /CPU/) (tstamps /6394A5B3/))
       (tstamp 6398086D))
     (comp (ref R37)
-      (value 680R)
+      (value 820R)
       (footprint Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal)
       (datasheet ~)
       (fields
@@ -1106,7 +1106,7 @@
       (sheetpath (names /CPU/) (tstamps /6394A5B3/))
       (tstamp 63980873))
     (comp (ref R35)
-      (value 680R)
+      (value 820R)
       (footprint Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal)
       (datasheet ~)
       (fields
@@ -1115,7 +1115,7 @@
       (sheetpath (names /CPU/) (tstamps /6394A5B3/))
       (tstamp 63980879))
     (comp (ref R33)
-      (value 680R)
+      (value 820R)
       (footprint Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal)
       (datasheet ~)
       (fields
@@ -1258,7 +1258,7 @@
       (sheetpath (names /CPU/) (tstamps /6394A5B3/))
       (tstamp 63B91CD4))
     (comp (ref R55)
-      (value 680R)
+      (value 820R)
       (footprint Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal)
       (datasheet ~)
       (fields
@@ -1267,7 +1267,7 @@
       (sheetpath (names /CPU/) (tstamps /6394A5B3/))
       (tstamp 63B91CDA))
     (comp (ref R57)
-      (value 680R)
+      (value 820R)
       (footprint Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal)
       (datasheet ~)
       (fields
@@ -1276,7 +1276,7 @@
       (sheetpath (names /CPU/) (tstamps /6394A5B3/))
       (tstamp 63B91CE6))
     (comp (ref R58)
-      (value 680R)
+      (value 820R)
       (footprint Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal)
       (datasheet ~)
       (fields
@@ -1294,7 +1294,7 @@
       (sheetpath (names /CPU/) (tstamps /6394A5B3/))
       (tstamp 64D892FF))
     (comp (ref R52)
-      (value 680R)
+      (value 820R)
       (footprint Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal)
       (datasheet ~)
       (fields
@@ -1303,7 +1303,7 @@
       (sheetpath (names /CPU/) (tstamps /6394A5B3/))
       (tstamp 64D8A141))
     (comp (ref R28)
-      (value 680R)
+      (value 820R)
       (footprint Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal)
       (datasheet ~)
       (fields
@@ -1321,7 +1321,7 @@
       (sheetpath (names /CPU/) (tstamps /6394A5B3/))
       (tstamp 6817902A))
     (comp (ref R49)
-      (value 680R)
+      (value 820R)
       (footprint Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal)
       (datasheet ~)
       (fields
@@ -1423,7 +1423,7 @@
       (sheetpath (names /SPRAM/) (tstamps /67425B3B/))
       (tstamp 674297F3))
     (comp (ref R60)
-      (value 680R)
+      (value 820R)
       (footprint Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal)
       (datasheet ~)
       (fields
@@ -1432,7 +1432,7 @@
       (sheetpath (names /SPRAM/) (tstamps /67425B3B/))
       (tstamp 674297F9))
     (comp (ref R61)
-      (value 680R)
+      (value 820R)
       (footprint Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal)
       (datasheet ~)
       (fields
@@ -1441,7 +1441,7 @@
       (sheetpath (names /SPRAM/) (tstamps /67425B3B/))
       (tstamp 674297FF))
     (comp (ref R62)
-      (value 680R)
+      (value 820R)
       (footprint Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal)
       (datasheet ~)
       (fields
@@ -1450,7 +1450,7 @@
       (sheetpath (names /SPRAM/) (tstamps /67425B3B/))
       (tstamp 67429805))
     (comp (ref R63)
-      (value 680R)
+      (value 820R)
       (footprint Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal)
       (datasheet ~)
       (fields
@@ -1459,7 +1459,7 @@
       (sheetpath (names /SPRAM/) (tstamps /67425B3B/))
       (tstamp 6742980B))
     (comp (ref R64)
-      (value 680R)
+      (value 820R)
       (footprint Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal)
       (datasheet ~)
       (fields
@@ -1468,7 +1468,7 @@
       (sheetpath (names /SPRAM/) (tstamps /67425B3B/))
       (tstamp 67429811))
     (comp (ref R65)
-      (value 680R)
+      (value 820R)
       (footprint Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal)
       (datasheet ~)
       (fields
@@ -1477,7 +1477,7 @@
       (sheetpath (names /SPRAM/) (tstamps /67425B3B/))
       (tstamp 67429817))
     (comp (ref R66)
-      (value 680R)
+      (value 820R)
       (footprint Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal)
       (datasheet ~)
       (fields
@@ -1495,7 +1495,7 @@
       (sheetpath (names /SPRAM/) (tstamps /67425B3B/))
       (tstamp 67429845))
     (comp (ref R67)
-      (value 680R)
+      (value 820R)
       (footprint Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal)
       (datasheet ~)
       (fields
