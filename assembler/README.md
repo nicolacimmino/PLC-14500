@@ -2,7 +2,7 @@
 # PLC14500 Assembler
 
 You can find a precompiled version of the assembler and a batch file to flash the programs into the board in the
-[releases](https://github.com/nicolacimmino/PLC-14500/tags) zip file. If you prefer to build your own, or you want
+[releases](https://github.com/nicolacimmino/PLC-14500/releases) zip file. If you prefer to build your own, or you want
 to build for something else than Windows, you will need to have a properly configured Dart development environment
 and build with:
 
