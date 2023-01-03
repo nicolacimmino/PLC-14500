@@ -1,4 +1,4 @@
-**NEW** You can now buy this as a ready to assemble kit on [tindie.com](https://www.tindie.com/products/nicola_cimmino/plc14500-nano-1-bit-single-board-computer-kit).
+**NEW!** You can now buy this as a ready to assemble kit on [tindie.com](https://www.tindie.com/products/nicola_cimmino/plc14500-nano-1-bit-single-board-computer-kit).
 
 # Introduction
 
