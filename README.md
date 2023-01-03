@@ -1,3 +1,5 @@
+**NEW** You can now buy this as a ready to assemble kit on [tindie.com](https://www.tindie.com/products/nicola_cimmino/plc14500-nano-1-bit-single-board-computer-kit).
+
 # Introduction
 
 The PLC14500 Nano is a retro-style trainer board intended for the user to familiarize with the Motorola MC14500 1-bit
