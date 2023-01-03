@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source C:\Users\nicola\git\PLC-14500\board\plc14500\plc14500.sch)
-    (date "02/01/2023 11:11:28")
+    (date "03/01/2023 14:54:20")
     (tool "Eeschema (5.1.9)-1")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -1213,7 +1213,7 @@
       (sheetpath (names /CPU/) (tstamps /6394A5B3/))
       (tstamp 63980933))
     (comp (ref R53)
-      (value 10K)
+      (value 820R)
       (footprint Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal)
       (datasheet ~)
       (fields
