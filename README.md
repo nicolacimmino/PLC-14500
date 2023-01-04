@@ -1,3 +1,5 @@
+**NEW!** You can now buy this as a ready to assemble kit on [tindie.com](https://www.tindie.com/products/nicola_cimmino/plc14500-nano-1-bit-single-board-computer-kit).
+
 # Introduction
 
 The PLC14500 Nano is a retro-style trainer board intended for the user to familiarize with the Motorola MC14500 1-bit
@@ -49,7 +51,7 @@ Arduino as their PINs are under the Arduino board.
 
 # Getting started
 
-Download the latest toolchain (Windows only at the moment) from this Git repo releases and unzip it.
+Download the latest toolchain (Windows only at the moment) from this Git repo [releases folder](https://github.com/nicolacimmino/PLC-14500/releases) and unzip it.
 
 Before starting writing your programs and testing them on the board, you will need to flash the bootloader
 into the Arduino. This can be easily done with the Arduino IDE. Load the sketch `bootloader.ino` from  the
