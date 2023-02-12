@@ -2,7 +2,7 @@
 <export version="D">
   <design>
     <source>C:\Users\nicola\git\PLC-14500\board\plc14500\plc14500.sch</source>
-    <date>02/01/2023 11:27:10</date>
+    <date>05/02/2023 19:18:00</date>
     <tool>Eeschema (5.1.9)-1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -153,7 +153,7 @@
         <field name="Field4">XXX-00000</field>
         <field name="Price">0.01</field>
       </fields>
-      <libsource lib="SparkFun-LED" part="LED5MM" description="&lt;b&gt;LED (Generic)&lt;/b&gt;Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LEDs. Generic LEDs with no color specified."/>
+      <libsource lib="" part="LED5MM" description=""/>
       <sheetpath names="/Input/Output/" tstamps="/63B4BDA9/"/>
       <tstamp>63B7B5F6</tstamp>
     </comp>
@@ -164,7 +164,7 @@
         <field name="Field4">XXX-00000</field>
         <field name="Price">0.01</field>
       </fields>
-      <libsource lib="SparkFun-LED" part="LED5MM" description="&lt;b&gt;LED (Generic)&lt;/b&gt;Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LEDs. Generic LEDs with no color specified."/>
+      <libsource lib="" part="LED5MM" description=""/>
       <sheetpath names="/Input/Output/" tstamps="/63B4BDA9/"/>
       <tstamp>63B7B5FD</tstamp>
     </comp>
@@ -175,7 +175,7 @@
         <field name="Field4">XXX-00000</field>
         <field name="Price">0.01</field>
       </fields>
-      <libsource lib="SparkFun-LED" part="LED5MM" description="&lt;b&gt;LED (Generic)&lt;/b&gt;Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LEDs. Generic LEDs with no color specified."/>
+      <libsource lib="" part="LED5MM" description=""/>
       <sheetpath names="/Input/Output/" tstamps="/63B4BDA9/"/>
       <tstamp>63B7B604</tstamp>
     </comp>
@@ -186,7 +186,7 @@
         <field name="Field4">XXX-00000</field>
         <field name="Price">0.01</field>
       </fields>
-      <libsource lib="SparkFun-LED" part="LED5MM" description="&lt;b&gt;LED (Generic)&lt;/b&gt;Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LEDs. Generic LEDs with no color specified."/>
+      <libsource lib="" part="LED5MM" description=""/>
       <sheetpath names="/Input/Output/" tstamps="/63B4BDA9/"/>
       <tstamp>63B7B60B</tstamp>
     </comp>
@@ -197,7 +197,7 @@
         <field name="Field4">XXX-00000</field>
         <field name="Price">0.01</field>
       </fields>
-      <libsource lib="SparkFun-LED" part="LED5MM" description="&lt;b&gt;LED (Generic)&lt;/b&gt;Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LEDs. Generic LEDs with no color specified."/>
+      <libsource lib="" part="LED5MM" description=""/>
       <sheetpath names="/Input/Output/" tstamps="/63B4BDA9/"/>
       <tstamp>63B7B612</tstamp>
     </comp>
@@ -208,7 +208,7 @@
         <field name="Field4">XXX-00000</field>
         <field name="Price">0.01</field>
       </fields>
-      <libsource lib="SparkFun-LED" part="LED5MM" description="&lt;b&gt;LED (Generic)&lt;/b&gt;Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LEDs. Generic LEDs with no color specified."/>
+      <libsource lib="" part="LED5MM" description=""/>
       <sheetpath names="/Input/Output/" tstamps="/63B4BDA9/"/>
       <tstamp>63B7B619</tstamp>
     </comp>
@@ -219,7 +219,7 @@
         <field name="Field4">XXX-00000</field>
         <field name="Price">0.01</field>
       </fields>
-      <libsource lib="SparkFun-LED" part="LED5MM" description="&lt;b&gt;LED (Generic)&lt;/b&gt;Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LEDs. Generic LEDs with no color specified."/>
+      <libsource lib="" part="LED5MM" description=""/>
       <sheetpath names="/Input/Output/" tstamps="/63B4BDA9/"/>
       <tstamp>63B7B620</tstamp>
     </comp>
@@ -307,7 +307,7 @@
         <field name="Field4">XXX-00000</field>
         <field name="Price">0.01</field>
       </fields>
-      <libsource lib="SparkFun-LED" part="LED5MM" description="&lt;b&gt;LED (Generic)&lt;/b&gt;Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LEDs. Generic LEDs with no color specified."/>
+      <libsource lib="" part="LED5MM" description=""/>
       <sheetpath names="/Input/Output/" tstamps="/63B4BDA9/"/>
       <tstamp>6364A55C</tstamp>
     </comp>
@@ -340,7 +340,7 @@
         <field name="Field4">SWCH-10554</field>
         <field name="Price">0.69</field>
       </fields>
-      <libsource lib="SparkFun-Switches" part="SWITCH-DPDT-PTH-GPI-152-3013" description="Double-Pole, Double-Throw (DPDT) Switch Double-pole, double-throw switches. &lt;h4&gt;Variant Overview&lt;/h4&gt;&lt;h5&gt;PTH-GPI-152-3013&lt;/h5&gt;&lt;ul&gt;&lt;li&gt;Used on &lt;a href=&quot;https://www.sparkfun.com/products/11345&quot;&gt;SparkFun Geiger Counter&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;h5&gt;SMD-AY0202&lt;/h5&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://www.sparkfun.com/products/597&quot;&gt;Surface Mount DPDT Switch&lt;/a&gt; (COM-00597)&lt;/li&gt;&lt;li&gt;Used on e.g. &lt;a href=&quot;https://www.sparkfun.com/products/12049&quot;&gt;LilyPad Arduino USB - ATmega32U4 Board&lt;/a&gt;&lt;/ul&gt;"/>
+      <libsource lib="" part="SWITCH-DPDT-PTH-GPI-152-3013" description=""/>
       <sheetpath names="/Input/Output/" tstamps="/63B4BDA9/"/>
       <tstamp>63712537</tstamp>
     </comp>
@@ -373,7 +373,7 @@
         <field name="Field4">XXX-00000</field>
         <field name="Price">0.01</field>
       </fields>
-      <libsource lib="SparkFun-LED" part="LED5MM" description="&lt;b&gt;LED (Generic)&lt;/b&gt;Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LEDs. Generic LEDs with no color specified."/>
+      <libsource lib="" part="LED5MM" description=""/>
       <sheetpath names="/Input/Output/" tstamps="/63B4BDA9/"/>
       <tstamp>6373C762</tstamp>
     </comp>
@@ -427,7 +427,7 @@
       <fields>
         <field name="Price">0.07</field>
       </fields>
-      <libsource lib="SparkFun-IC-Special-Function" part="555D" description="General purpose bipolar Timer &lt;a href=&quot;http://www.sparkfun.com/datasheets/Components/General/ne555.pdf&quot;&gt;Datasheet&lt;/a&gt; &lt;h4&gt;SparkFun Products&lt;/h4&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://www.sparkfun.com/products/12707&quot;&gt;SparkFun SparkPunk Sequencer Kit&lt;/a&gt; (KIT-12707)&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://www.sparkfun.com/products/9273&quot;&gt;Storefront Component: 555 Timer&lt;/a&gt; (COM-09273)&lt;/li&gt;&lt;/ul&gt;Two parts valid for production:&lt;br&gt;&lt;br&gt;VFP: IC-11930 (M7555 PTH)&lt;br&gt;VFP: IC-09173 (555 PTH) - &lt;b&gt;Preferred&lt;/b&gt;&lt;br&gt;"/>
+      <libsource lib="" part="555D" description=""/>
       <sheetpath names="/Input/Output/" tstamps="/63B4BDA9/"/>
       <tstamp>65241B0B</tstamp>
     </comp>
@@ -460,7 +460,7 @@
         <field name="Field4">XXX-00000</field>
         <field name="Price">0.01</field>
       </fields>
-      <libsource lib="SparkFun-LED" part="LED5MM" description="&lt;b&gt;LED (Generic)&lt;/b&gt;Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LEDs. Generic LEDs with no color specified."/>
+      <libsource lib="" part="LED5MM" description=""/>
       <sheetpath names="/Input/Output/" tstamps="/63B4BDA9/"/>
       <tstamp>655C29A5</tstamp>
     </comp>
@@ -505,7 +505,7 @@
         <field name="Field4">XXX-00000</field>
         <field name="Price">0.01</field>
       </fields>
-      <libsource lib="SparkFun-LED" part="LED5MM" description="&lt;b&gt;LED (Generic)&lt;/b&gt;Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LEDs. Generic LEDs with no color specified."/>
+      <libsource lib="" part="LED5MM" description=""/>
       <sheetpath names="/Input/Output/" tstamps="/63B4BDA9/"/>
       <tstamp>6458A3D8</tstamp>
     </comp>
@@ -546,7 +546,7 @@
         <field name="Field4">SWCH-10554</field>
         <field name="Price">0.69</field>
       </fields>
-      <libsource lib="SparkFun-Switches" part="SWITCH-DPDT-PTH-GPI-152-3013" description="Double-Pole, Double-Throw (DPDT) Switch Double-pole, double-throw switches. &lt;h4&gt;Variant Overview&lt;/h4&gt;&lt;h5&gt;PTH-GPI-152-3013&lt;/h5&gt;&lt;ul&gt;&lt;li&gt;Used on &lt;a href=&quot;https://www.sparkfun.com/products/11345&quot;&gt;SparkFun Geiger Counter&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;h5&gt;SMD-AY0202&lt;/h5&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://www.sparkfun.com/products/597&quot;&gt;Surface Mount DPDT Switch&lt;/a&gt; (COM-00597)&lt;/li&gt;&lt;li&gt;Used on e.g. &lt;a href=&quot;https://www.sparkfun.com/products/12049&quot;&gt;LilyPad Arduino USB - ATmega32U4 Board&lt;/a&gt;&lt;/ul&gt;"/>
+      <libsource lib="" part="SWITCH-DPDT-PTH-GPI-152-3013" description=""/>
       <sheetpath names="/Input/Output/" tstamps="/63B4BDA9/"/>
       <tstamp>67F00B9F</tstamp>
     </comp>
@@ -579,7 +579,7 @@
         <field name="Field4">XXX-00000</field>
         <field name="Price">0.01</field>
       </fields>
-      <libsource lib="SparkFun-LED" part="LED5MM" description="&lt;b&gt;LED (Generic)&lt;/b&gt;Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LEDs. Generic LEDs with no color specified."/>
+      <libsource lib="" part="LED5MM" description=""/>
       <sheetpath names="/Input/Output/" tstamps="/63B4BDA9/"/>
       <tstamp>67F00BC1</tstamp>
     </comp>
@@ -601,7 +601,7 @@
         <field name="Field4">SWCH-10554</field>
         <field name="Price">0.69</field>
       </fields>
-      <libsource lib="SparkFun-Switches" part="SWITCH-DPDT-PTH-GPI-152-3013" description="Double-Pole, Double-Throw (DPDT) Switch Double-pole, double-throw switches. &lt;h4&gt;Variant Overview&lt;/h4&gt;&lt;h5&gt;PTH-GPI-152-3013&lt;/h5&gt;&lt;ul&gt;&lt;li&gt;Used on &lt;a href=&quot;https://www.sparkfun.com/products/11345&quot;&gt;SparkFun Geiger Counter&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;h5&gt;SMD-AY0202&lt;/h5&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://www.sparkfun.com/products/597&quot;&gt;Surface Mount DPDT Switch&lt;/a&gt; (COM-00597)&lt;/li&gt;&lt;li&gt;Used on e.g. &lt;a href=&quot;https://www.sparkfun.com/products/12049&quot;&gt;LilyPad Arduino USB - ATmega32U4 Board&lt;/a&gt;&lt;/ul&gt;"/>
+      <libsource lib="" part="SWITCH-DPDT-PTH-GPI-152-3013" description=""/>
       <sheetpath names="/Input/Output/" tstamps="/63B4BDA9/"/>
       <tstamp>67F0FC99</tstamp>
     </comp>
@@ -634,7 +634,7 @@
         <field name="Field4">XXX-00000</field>
         <field name="Price">0.01</field>
       </fields>
-      <libsource lib="SparkFun-LED" part="LED5MM" description="&lt;b&gt;LED (Generic)&lt;/b&gt;Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LEDs. Generic LEDs with no color specified."/>
+      <libsource lib="" part="LED5MM" description=""/>
       <sheetpath names="/Input/Output/" tstamps="/63B4BDA9/"/>
       <tstamp>67F0FCBB</tstamp>
     </comp>
@@ -656,7 +656,7 @@
         <field name="Field4">SWCH-10554</field>
         <field name="Price">0.69</field>
       </fields>
-      <libsource lib="SparkFun-Switches" part="SWITCH-DPDT-PTH-GPI-152-3013" description="Double-Pole, Double-Throw (DPDT) Switch Double-pole, double-throw switches. &lt;h4&gt;Variant Overview&lt;/h4&gt;&lt;h5&gt;PTH-GPI-152-3013&lt;/h5&gt;&lt;ul&gt;&lt;li&gt;Used on &lt;a href=&quot;https://www.sparkfun.com/products/11345&quot;&gt;SparkFun Geiger Counter&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;h5&gt;SMD-AY0202&lt;/h5&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://www.sparkfun.com/products/597&quot;&gt;Surface Mount DPDT Switch&lt;/a&gt; (COM-00597)&lt;/li&gt;&lt;li&gt;Used on e.g. &lt;a href=&quot;https://www.sparkfun.com/products/12049&quot;&gt;LilyPad Arduino USB - ATmega32U4 Board&lt;/a&gt;&lt;/ul&gt;"/>
+      <libsource lib="" part="SWITCH-DPDT-PTH-GPI-152-3013" description=""/>
       <sheetpath names="/Input/Output/" tstamps="/63B4BDA9/"/>
       <tstamp>67F20B47</tstamp>
     </comp>
@@ -689,7 +689,7 @@
         <field name="Field4">XXX-00000</field>
         <field name="Price">0.01</field>
       </fields>
-      <libsource lib="SparkFun-LED" part="LED5MM" description="&lt;b&gt;LED (Generic)&lt;/b&gt;Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LEDs. Generic LEDs with no color specified."/>
+      <libsource lib="" part="LED5MM" description=""/>
       <sheetpath names="/Input/Output/" tstamps="/63B4BDA9/"/>
       <tstamp>67F20B69</tstamp>
     </comp>
@@ -711,7 +711,7 @@
         <field name="Field4">SWCH-10554</field>
         <field name="Price">0.69</field>
       </fields>
-      <libsource lib="SparkFun-Switches" part="SWITCH-DPDT-PTH-GPI-152-3013" description="Double-Pole, Double-Throw (DPDT) Switch Double-pole, double-throw switches. &lt;h4&gt;Variant Overview&lt;/h4&gt;&lt;h5&gt;PTH-GPI-152-3013&lt;/h5&gt;&lt;ul&gt;&lt;li&gt;Used on &lt;a href=&quot;https://www.sparkfun.com/products/11345&quot;&gt;SparkFun Geiger Counter&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;h5&gt;SMD-AY0202&lt;/h5&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://www.sparkfun.com/products/597&quot;&gt;Surface Mount DPDT Switch&lt;/a&gt; (COM-00597)&lt;/li&gt;&lt;li&gt;Used on e.g. &lt;a href=&quot;https://www.sparkfun.com/products/12049&quot;&gt;LilyPad Arduino USB - ATmega32U4 Board&lt;/a&gt;&lt;/ul&gt;"/>
+      <libsource lib="" part="SWITCH-DPDT-PTH-GPI-152-3013" description=""/>
       <sheetpath names="/Input/Output/" tstamps="/63B4BDA9/"/>
       <tstamp>67F36733</tstamp>
     </comp>
@@ -744,7 +744,7 @@
         <field name="Field4">XXX-00000</field>
         <field name="Price">0.01</field>
       </fields>
-      <libsource lib="SparkFun-LED" part="LED5MM" description="&lt;b&gt;LED (Generic)&lt;/b&gt;Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LEDs. Generic LEDs with no color specified."/>
+      <libsource lib="" part="LED5MM" description=""/>
       <sheetpath names="/Input/Output/" tstamps="/63B4BDA9/"/>
       <tstamp>67F36755</tstamp>
     </comp>
@@ -766,7 +766,7 @@
         <field name="Field4">SWCH-10554</field>
         <field name="Price">0.69</field>
       </fields>
-      <libsource lib="SparkFun-Switches" part="SWITCH-DPDT-PTH-GPI-152-3013" description="Double-Pole, Double-Throw (DPDT) Switch Double-pole, double-throw switches. &lt;h4&gt;Variant Overview&lt;/h4&gt;&lt;h5&gt;PTH-GPI-152-3013&lt;/h5&gt;&lt;ul&gt;&lt;li&gt;Used on &lt;a href=&quot;https://www.sparkfun.com/products/11345&quot;&gt;SparkFun Geiger Counter&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;h5&gt;SMD-AY0202&lt;/h5&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://www.sparkfun.com/products/597&quot;&gt;Surface Mount DPDT Switch&lt;/a&gt; (COM-00597)&lt;/li&gt;&lt;li&gt;Used on e.g. &lt;a href=&quot;https://www.sparkfun.com/products/12049&quot;&gt;LilyPad Arduino USB - ATmega32U4 Board&lt;/a&gt;&lt;/ul&gt;"/>
+      <libsource lib="" part="SWITCH-DPDT-PTH-GPI-152-3013" description=""/>
       <sheetpath names="/Input/Output/" tstamps="/63B4BDA9/"/>
       <tstamp>67F4EAB0</tstamp>
     </comp>
@@ -799,7 +799,7 @@
         <field name="Field4">XXX-00000</field>
         <field name="Price">0.01</field>
       </fields>
-      <libsource lib="SparkFun-LED" part="LED5MM" description="&lt;b&gt;LED (Generic)&lt;/b&gt;Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LEDs. Generic LEDs with no color specified."/>
+      <libsource lib="" part="LED5MM" description=""/>
       <sheetpath names="/Input/Output/" tstamps="/63B4BDA9/"/>
       <tstamp>67F4EAD2</tstamp>
     </comp>
@@ -821,7 +821,7 @@
         <field name="Field4">SWCH-10554</field>
         <field name="Price">0.69</field>
       </fields>
-      <libsource lib="SparkFun-Switches" part="SWITCH-DPDT-PTH-GPI-152-3013" description="Double-Pole, Double-Throw (DPDT) Switch Double-pole, double-throw switches. &lt;h4&gt;Variant Overview&lt;/h4&gt;&lt;h5&gt;PTH-GPI-152-3013&lt;/h5&gt;&lt;ul&gt;&lt;li&gt;Used on &lt;a href=&quot;https://www.sparkfun.com/products/11345&quot;&gt;SparkFun Geiger Counter&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;h5&gt;SMD-AY0202&lt;/h5&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://www.sparkfun.com/products/597&quot;&gt;Surface Mount DPDT Switch&lt;/a&gt; (COM-00597)&lt;/li&gt;&lt;li&gt;Used on e.g. &lt;a href=&quot;https://www.sparkfun.com/products/12049&quot;&gt;LilyPad Arduino USB - ATmega32U4 Board&lt;/a&gt;&lt;/ul&gt;"/>
+      <libsource lib="" part="SWITCH-DPDT-PTH-GPI-152-3013" description=""/>
       <sheetpath names="/Input/Output/" tstamps="/63B4BDA9/"/>
       <tstamp>67F6A3FB</tstamp>
     </comp>
@@ -854,7 +854,7 @@
         <field name="Field4">XXX-00000</field>
         <field name="Price">0.01</field>
       </fields>
-      <libsource lib="SparkFun-LED" part="LED5MM" description="&lt;b&gt;LED (Generic)&lt;/b&gt;Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LEDs. Generic LEDs with no color specified."/>
+      <libsource lib="" part="LED5MM" description=""/>
       <sheetpath names="/Input/Output/" tstamps="/63B4BDA9/"/>
       <tstamp>67F6A41D</tstamp>
     </comp>
@@ -916,7 +916,7 @@
       <fields>
         <field name="Price">0.07</field>
       </fields>
-      <libsource lib="SparkFun-IC-Special-Function" part="555D" description="General purpose bipolar Timer &lt;a href=&quot;http://www.sparkfun.com/datasheets/Components/General/ne555.pdf&quot;&gt;Datasheet&lt;/a&gt; &lt;h4&gt;SparkFun Products&lt;/h4&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://www.sparkfun.com/products/12707&quot;&gt;SparkFun SparkPunk Sequencer Kit&lt;/a&gt; (KIT-12707)&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://www.sparkfun.com/products/9273&quot;&gt;Storefront Component: 555 Timer&lt;/a&gt; (COM-09273)&lt;/li&gt;&lt;/ul&gt;Two parts valid for production:&lt;br&gt;&lt;br&gt;VFP: IC-11930 (M7555 PTH)&lt;br&gt;VFP: IC-09173 (555 PTH) - &lt;b&gt;Preferred&lt;/b&gt;&lt;br&gt;"/>
+      <libsource lib="" part="555D" description=""/>
       <sheetpath names="/CPU/" tstamps="/6394A5B3/"/>
       <tstamp>63980606</tstamp>
     </comp>
@@ -971,7 +971,7 @@
         <field name="Field4">XXX-00000</field>
         <field name="Price">0.01</field>
       </fields>
-      <libsource lib="SparkFun-LED" part="LED5MM" description="&lt;b&gt;LED (Generic)&lt;/b&gt;Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LEDs. Generic LEDs with no color specified."/>
+      <libsource lib="" part="LED5MM" description=""/>
       <sheetpath names="/CPU/" tstamps="/6394A5B3/"/>
       <tstamp>6398068B</tstamp>
     </comp>
@@ -982,7 +982,7 @@
         <field name="Field4">XXX-00000</field>
         <field name="Price">0.01</field>
       </fields>
-      <libsource lib="SparkFun-LED" part="LED5MM" description="&lt;b&gt;LED (Generic)&lt;/b&gt;Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LEDs. Generic LEDs with no color specified."/>
+      <libsource lib="" part="LED5MM" description=""/>
       <sheetpath names="/CPU/" tstamps="/6394A5B3/"/>
       <tstamp>63980692</tstamp>
     </comp>
@@ -993,7 +993,7 @@
         <field name="Field4">XXX-00000</field>
         <field name="Price">0.01</field>
       </fields>
-      <libsource lib="SparkFun-LED" part="LED5MM" description="&lt;b&gt;LED (Generic)&lt;/b&gt;Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LEDs. Generic LEDs with no color specified."/>
+      <libsource lib="" part="LED5MM" description=""/>
       <sheetpath names="/CPU/" tstamps="/6394A5B3/"/>
       <tstamp>63980699</tstamp>
     </comp>
@@ -1004,7 +1004,7 @@
         <field name="Field4">XXX-00000</field>
         <field name="Price">0.01</field>
       </fields>
-      <libsource lib="SparkFun-LED" part="LED5MM" description="&lt;b&gt;LED (Generic)&lt;/b&gt;Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LEDs. Generic LEDs with no color specified."/>
+      <libsource lib="" part="LED5MM" description=""/>
       <sheetpath names="/CPU/" tstamps="/6394A5B3/"/>
       <tstamp>639806A0</tstamp>
     </comp>
@@ -1015,7 +1015,7 @@
         <field name="Field4">XXX-00000</field>
         <field name="Price">0.01</field>
       </fields>
-      <libsource lib="SparkFun-LED" part="LED5MM" description="&lt;b&gt;LED (Generic)&lt;/b&gt;Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LEDs. Generic LEDs with no color specified."/>
+      <libsource lib="" part="LED5MM" description=""/>
       <sheetpath names="/CPU/" tstamps="/6394A5B3/"/>
       <tstamp>639806A7</tstamp>
     </comp>
@@ -1026,7 +1026,7 @@
         <field name="Field4">XXX-00000</field>
         <field name="Price">0.01</field>
       </fields>
-      <libsource lib="SparkFun-LED" part="LED5MM" description="&lt;b&gt;LED (Generic)&lt;/b&gt;Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LEDs. Generic LEDs with no color specified."/>
+      <libsource lib="" part="LED5MM" description=""/>
       <sheetpath names="/CPU/" tstamps="/6394A5B3/"/>
       <tstamp>639806AE</tstamp>
     </comp>
@@ -1037,7 +1037,7 @@
         <field name="Field4">XXX-00000</field>
         <field name="Price">0.01</field>
       </fields>
-      <libsource lib="SparkFun-LED" part="LED5MM" description="&lt;b&gt;LED (Generic)&lt;/b&gt;Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LEDs. Generic LEDs with no color specified."/>
+      <libsource lib="" part="LED5MM" description=""/>
       <sheetpath names="/CPU/" tstamps="/6394A5B3/"/>
       <tstamp>639806B5</tstamp>
     </comp>
@@ -1048,7 +1048,7 @@
         <field name="Field4">XXX-00000</field>
         <field name="Price">0.01</field>
       </fields>
-      <libsource lib="SparkFun-LED" part="LED5MM" description="&lt;b&gt;LED (Generic)&lt;/b&gt;Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LEDs. Generic LEDs with no color specified."/>
+      <libsource lib="" part="LED5MM" description=""/>
       <sheetpath names="/CPU/" tstamps="/6394A5B3/"/>
       <tstamp>639806BC</tstamp>
     </comp>
@@ -1158,7 +1158,7 @@
         <field name="Field4">SWCH-10554</field>
         <field name="Price">0.69</field>
       </fields>
-      <libsource lib="SparkFun-Switches" part="SWITCH-DPDT-PTH-GPI-152-3013" description="Double-Pole, Double-Throw (DPDT) Switch Double-pole, double-throw switches. &lt;h4&gt;Variant Overview&lt;/h4&gt;&lt;h5&gt;PTH-GPI-152-3013&lt;/h5&gt;&lt;ul&gt;&lt;li&gt;Used on &lt;a href=&quot;https://www.sparkfun.com/products/11345&quot;&gt;SparkFun Geiger Counter&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;h5&gt;SMD-AY0202&lt;/h5&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://www.sparkfun.com/products/597&quot;&gt;Surface Mount DPDT Switch&lt;/a&gt; (COM-00597)&lt;/li&gt;&lt;li&gt;Used on e.g. &lt;a href=&quot;https://www.sparkfun.com/products/12049&quot;&gt;LilyPad Arduino USB - ATmega32U4 Board&lt;/a&gt;&lt;/ul&gt;"/>
+      <libsource lib="" part="SWITCH-DPDT-PTH-GPI-152-3013" description=""/>
       <sheetpath names="/CPU/" tstamps="/6394A5B3/"/>
       <tstamp>63980747</tstamp>
     </comp>
@@ -1169,7 +1169,7 @@
         <field name="Field4">XXX-00000</field>
         <field name="Price">0.01</field>
       </fields>
-      <libsource lib="SparkFun-LED" part="LED5MM" description="&lt;b&gt;LED (Generic)&lt;/b&gt;Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LEDs. Generic LEDs with no color specified."/>
+      <libsource lib="" part="LED5MM" description=""/>
       <sheetpath names="/CPU/" tstamps="/6394A5B3/"/>
       <tstamp>6398074E</tstamp>
     </comp>
@@ -1191,7 +1191,7 @@
         <field name="Field4">XXX-00000</field>
         <field name="Price">0.01</field>
       </fields>
-      <libsource lib="SparkFun-LED" part="LED5MM" description="&lt;b&gt;LED (Generic)&lt;/b&gt;Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LEDs. Generic LEDs with no color specified."/>
+      <libsource lib="" part="LED5MM" description=""/>
       <sheetpath names="/CPU/" tstamps="/6394A5B3/"/>
       <tstamp>63980763</tstamp>
     </comp>
@@ -1257,7 +1257,7 @@
         <field name="Field4">SWCH-10554</field>
         <field name="Price">0.69</field>
       </fields>
-      <libsource lib="SparkFun-Switches" part="SWITCH-DPDT-PTH-GPI-152-3013" description="Double-Pole, Double-Throw (DPDT) Switch Double-pole, double-throw switches. &lt;h4&gt;Variant Overview&lt;/h4&gt;&lt;h5&gt;PTH-GPI-152-3013&lt;/h5&gt;&lt;ul&gt;&lt;li&gt;Used on &lt;a href=&quot;https://www.sparkfun.com/products/11345&quot;&gt;SparkFun Geiger Counter&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;h5&gt;SMD-AY0202&lt;/h5&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://www.sparkfun.com/products/597&quot;&gt;Surface Mount DPDT Switch&lt;/a&gt; (COM-00597)&lt;/li&gt;&lt;li&gt;Used on e.g. &lt;a href=&quot;https://www.sparkfun.com/products/12049&quot;&gt;LilyPad Arduino USB - ATmega32U4 Board&lt;/a&gt;&lt;/ul&gt;"/>
+      <libsource lib="" part="SWITCH-DPDT-PTH-GPI-152-3013" description=""/>
       <sheetpath names="/CPU/" tstamps="/6394A5B3/"/>
       <tstamp>639807D9</tstamp>
     </comp>
@@ -1268,7 +1268,7 @@
         <field name="Field4">XXX-00000</field>
         <field name="Price">0.01</field>
       </fields>
-      <libsource lib="SparkFun-LED" part="LED5MM" description="&lt;b&gt;LED (Generic)&lt;/b&gt;Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LEDs. Generic LEDs with no color specified."/>
+      <libsource lib="" part="LED5MM" description=""/>
       <sheetpath names="/CPU/" tstamps="/6394A5B3/"/>
       <tstamp>639807EF</tstamp>
     </comp>
@@ -1279,7 +1279,7 @@
         <field name="Field4">XXX-00000</field>
         <field name="Price">0.01</field>
       </fields>
-      <libsource lib="SparkFun-LED" part="LED5MM" description="&lt;b&gt;LED (Generic)&lt;/b&gt;Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LEDs. Generic LEDs with no color specified."/>
+      <libsource lib="" part="LED5MM" description=""/>
       <sheetpath names="/CPU/" tstamps="/6394A5B3/"/>
       <tstamp>639807F6</tstamp>
     </comp>
@@ -1378,7 +1378,7 @@
         <field name="Field4">XXX-00000</field>
         <field name="Price">0.01</field>
       </fields>
-      <libsource lib="SparkFun-LED" part="LED5MM" description="&lt;b&gt;LED (Generic)&lt;/b&gt;Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LEDs. Generic LEDs with no color specified."/>
+      <libsource lib="" part="LED5MM" description=""/>
       <sheetpath names="/CPU/" tstamps="/6394A5B3/"/>
       <tstamp>63980886</tstamp>
     </comp>
@@ -1389,7 +1389,7 @@
         <field name="Field4">XXX-00000</field>
         <field name="Price">0.01</field>
       </fields>
-      <libsource lib="SparkFun-LED" part="LED5MM" description="&lt;b&gt;LED (Generic)&lt;/b&gt;Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LEDs. Generic LEDs with no color specified."/>
+      <libsource lib="" part="LED5MM" description=""/>
       <sheetpath names="/CPU/" tstamps="/6394A5B3/"/>
       <tstamp>6398088D</tstamp>
     </comp>
@@ -1400,7 +1400,7 @@
         <field name="Field4">XXX-00000</field>
         <field name="Price">0.01</field>
       </fields>
-      <libsource lib="SparkFun-LED" part="LED5MM" description="&lt;b&gt;LED (Generic)&lt;/b&gt;Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LEDs. Generic LEDs with no color specified."/>
+      <libsource lib="" part="LED5MM" description=""/>
       <sheetpath names="/CPU/" tstamps="/6394A5B3/"/>
       <tstamp>63980894</tstamp>
     </comp>
@@ -1411,7 +1411,7 @@
         <field name="Field4">XXX-00000</field>
         <field name="Price">0.01</field>
       </fields>
-      <libsource lib="SparkFun-LED" part="LED5MM" description="&lt;b&gt;LED (Generic)&lt;/b&gt;Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LEDs. Generic LEDs with no color specified."/>
+      <libsource lib="" part="LED5MM" description=""/>
       <sheetpath names="/CPU/" tstamps="/6394A5B3/"/>
       <tstamp>6398089B</tstamp>
     </comp>
@@ -1422,7 +1422,7 @@
         <field name="Field4">XXX-00000</field>
         <field name="Price">0.01</field>
       </fields>
-      <libsource lib="SparkFun-LED" part="LED5MM" description="&lt;b&gt;LED (Generic)&lt;/b&gt;Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LEDs. Generic LEDs with no color specified."/>
+      <libsource lib="" part="LED5MM" description=""/>
       <sheetpath names="/CPU/" tstamps="/6394A5B3/"/>
       <tstamp>639808A2</tstamp>
     </comp>
@@ -1433,7 +1433,7 @@
         <field name="Field4">XXX-00000</field>
         <field name="Price">0.01</field>
       </fields>
-      <libsource lib="SparkFun-LED" part="LED5MM" description="&lt;b&gt;LED (Generic)&lt;/b&gt;Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LEDs. Generic LEDs with no color specified."/>
+      <libsource lib="" part="LED5MM" description=""/>
       <sheetpath names="/CPU/" tstamps="/6394A5B3/"/>
       <tstamp>639808A9</tstamp>
     </comp>
@@ -1444,7 +1444,7 @@
         <field name="Field4">XXX-00000</field>
         <field name="Price">0.01</field>
       </fields>
-      <libsource lib="SparkFun-LED" part="LED5MM" description="&lt;b&gt;LED (Generic)&lt;/b&gt;Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LEDs. Generic LEDs with no color specified."/>
+      <libsource lib="" part="LED5MM" description=""/>
       <sheetpath names="/CPU/" tstamps="/6394A5B3/"/>
       <tstamp>639808B0</tstamp>
     </comp>
@@ -1481,7 +1481,7 @@
       <tstamp>63980933</tstamp>
     </comp>
     <comp ref="R53">
-      <value>10K</value>
+      <value>820R</value>
       <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
       <datasheet>~</datasheet>
       <fields>
@@ -1509,7 +1509,7 @@
         <field name="Field4">XXX-00000</field>
         <field name="Price">0.01</field>
       </fields>
-      <libsource lib="SparkFun-LED" part="LED5MM" description="&lt;b&gt;LED (Generic)&lt;/b&gt;Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LEDs. Generic LEDs with no color specified."/>
+      <libsource lib="" part="LED5MM" description=""/>
       <sheetpath names="/CPU/" tstamps="/6394A5B3/"/>
       <tstamp>63B91CBF</tstamp>
     </comp>
@@ -1520,7 +1520,7 @@
         <field name="Field4">XXX-00000</field>
         <field name="Price">0.01</field>
       </fields>
-      <libsource lib="SparkFun-LED" part="LED5MM" description="&lt;b&gt;LED (Generic)&lt;/b&gt;Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LEDs. Generic LEDs with no color specified."/>
+      <libsource lib="" part="LED5MM" description=""/>
       <sheetpath names="/CPU/" tstamps="/6394A5B3/"/>
       <tstamp>63B91CCD</tstamp>
     </comp>
@@ -1531,7 +1531,7 @@
         <field name="Field4">XXX-00000</field>
         <field name="Price">0.01</field>
       </fields>
-      <libsource lib="SparkFun-LED" part="LED5MM" description="&lt;b&gt;LED (Generic)&lt;/b&gt;Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LEDs. Generic LEDs with no color specified."/>
+      <libsource lib="" part="LED5MM" description=""/>
       <sheetpath names="/CPU/" tstamps="/6394A5B3/"/>
       <tstamp>63B91CD4</tstamp>
     </comp>
@@ -1575,7 +1575,7 @@
         <field name="Field4">XXX-00000</field>
         <field name="Price">0.01</field>
       </fields>
-      <libsource lib="SparkFun-LED" part="LED5MM" description="&lt;b&gt;LED (Generic)&lt;/b&gt;Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LEDs. Generic LEDs with no color specified."/>
+      <libsource lib="" part="LED5MM" description=""/>
       <sheetpath names="/CPU/" tstamps="/6394A5B3/"/>
       <tstamp>64D892FF</tstamp>
     </comp>
@@ -1608,7 +1608,7 @@
         <field name="Field4">XXX-00000</field>
         <field name="Price">0.01</field>
       </fields>
-      <libsource lib="SparkFun-LED" part="LED5MM" description="&lt;b&gt;LED (Generic)&lt;/b&gt;Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LEDs. Generic LEDs with no color specified."/>
+      <libsource lib="" part="LED5MM" description=""/>
       <sheetpath names="/CPU/" tstamps="/6394A5B3/"/>
       <tstamp>6817902A</tstamp>
     </comp>
@@ -1665,7 +1665,7 @@
         <field name="Field4">XXX-00000</field>
         <field name="Price">0.01</field>
       </fields>
-      <libsource lib="SparkFun-LED" part="LED5MM" description="&lt;b&gt;LED (Generic)&lt;/b&gt;Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LEDs. Generic LEDs with no color specified."/>
+      <libsource lib="" part="LED5MM" description=""/>
       <sheetpath names="/SPRAM/" tstamps="/67425B3B/"/>
       <tstamp>674297C9</tstamp>
     </comp>
@@ -1676,7 +1676,7 @@
         <field name="Field4">XXX-00000</field>
         <field name="Price">0.01</field>
       </fields>
-      <libsource lib="SparkFun-LED" part="LED5MM" description="&lt;b&gt;LED (Generic)&lt;/b&gt;Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LEDs. Generic LEDs with no color specified."/>
+      <libsource lib="" part="LED5MM" description=""/>
       <sheetpath names="/SPRAM/" tstamps="/67425B3B/"/>
       <tstamp>674297D0</tstamp>
     </comp>
@@ -1687,7 +1687,7 @@
         <field name="Field4">XXX-00000</field>
         <field name="Price">0.01</field>
       </fields>
-      <libsource lib="SparkFun-LED" part="LED5MM" description="&lt;b&gt;LED (Generic)&lt;/b&gt;Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LEDs. Generic LEDs with no color specified."/>
+      <libsource lib="" part="LED5MM" description=""/>
       <sheetpath names="/SPRAM/" tstamps="/67425B3B/"/>
       <tstamp>674297D7</tstamp>
     </comp>
@@ -1698,7 +1698,7 @@
         <field name="Field4">XXX-00000</field>
         <field name="Price">0.01</field>
       </fields>
-      <libsource lib="SparkFun-LED" part="LED5MM" description="&lt;b&gt;LED (Generic)&lt;/b&gt;Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LEDs. Generic LEDs with no color specified."/>
+      <libsource lib="" part="LED5MM" description=""/>
       <sheetpath names="/SPRAM/" tstamps="/67425B3B/"/>
       <tstamp>674297DE</tstamp>
     </comp>
@@ -1709,7 +1709,7 @@
         <field name="Field4">XXX-00000</field>
         <field name="Price">0.01</field>
       </fields>
-      <libsource lib="SparkFun-LED" part="LED5MM" description="&lt;b&gt;LED (Generic)&lt;/b&gt;Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LEDs. Generic LEDs with no color specified."/>
+      <libsource lib="" part="LED5MM" description=""/>
       <sheetpath names="/SPRAM/" tstamps="/67425B3B/"/>
       <tstamp>674297E5</tstamp>
     </comp>
@@ -1720,7 +1720,7 @@
         <field name="Field4">XXX-00000</field>
         <field name="Price">0.01</field>
       </fields>
-      <libsource lib="SparkFun-LED" part="LED5MM" description="&lt;b&gt;LED (Generic)&lt;/b&gt;Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LEDs. Generic LEDs with no color specified."/>
+      <libsource lib="" part="LED5MM" description=""/>
       <sheetpath names="/SPRAM/" tstamps="/67425B3B/"/>
       <tstamp>674297EC</tstamp>
     </comp>
@@ -1731,7 +1731,7 @@
         <field name="Field4">XXX-00000</field>
         <field name="Price">0.01</field>
       </fields>
-      <libsource lib="SparkFun-LED" part="LED5MM" description="&lt;b&gt;LED (Generic)&lt;/b&gt;Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LEDs. Generic LEDs with no color specified."/>
+      <libsource lib="" part="LED5MM" description=""/>
       <sheetpath names="/SPRAM/" tstamps="/67425B3B/"/>
       <tstamp>674297F3</tstamp>
     </comp>
@@ -1819,7 +1819,7 @@
         <field name="Field4">XXX-00000</field>
         <field name="Price">0.01</field>
       </fields>
-      <libsource lib="SparkFun-LED" part="LED5MM" description="&lt;b&gt;LED (Generic)&lt;/b&gt;Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LEDs. Generic LEDs with no color specified."/>
+      <libsource lib="" part="LED5MM" description=""/>
       <sheetpath names="/SPRAM/" tstamps="/67425B3B/"/>
       <tstamp>67429845</tstamp>
     </comp>
@@ -1903,6 +1903,63 @@
     </comp>
   </components>
   <libparts>
+    <libpart lib="" part="SparkFun-IC-Special-Function_555D">
+      <footprints>
+        <fp>*SO08*</fp>
+        <fp>*DIP08-KIT*</fp>
+        <fp>*DIP08*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">SparkFun-IC-Special-Function_555D</field>
+        <field name="Footprint">SO08</field>
+        <field name="Field4">NA-XXXXX</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="power_in"/>
+        <pin num="2" name="TRI" type="input"/>
+        <pin num="3" name="OUT" type="output"/>
+        <pin num="4" name="/RES" type="input"/>
+        <pin num="5" name="CON" type="input"/>
+        <pin num="6" name="TRE" type="input"/>
+        <pin num="7" name="DIS" type="input"/>
+        <pin num="8" name="VCC+" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="" part="SparkFun-LED_LED5MM">
+      <footprints>
+        <fp>*LED_5MM*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">SparkFun-LED_LED5MM</field>
+        <field name="Footprint">LED_5MM</field>
+        <field name="Field4">XXX-00000</field>
+      </fields>
+      <pins>
+        <pin num="A" name="A" type="passive"/>
+        <pin num="K" name="C" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="" part="SparkFun-Switches_SWITCH-DPDT-PTH-GPI-152-3013">
+      <footprints>
+        <fp>*SWITCH_DPDT_PTH_GPI-152-3013*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">S</field>
+        <field name="Value">SparkFun-Switches_SWITCH-DPDT-PTH-GPI-152-3013</field>
+        <field name="Footprint">SWITCH_DPDT_PTH_GPI-152-3013</field>
+        <field name="Field4">SWCH-10554</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="BiDi"/>
+        <pin num="2" name="2" type="BiDi"/>
+        <pin num="3" name="3" type="BiDi"/>
+        <pin num="5" name="5" type="BiDi"/>
+        <pin num="6" name="6" type="BiDi"/>
+        <pin num="7" name="7" type="BiDi"/>
+      </pins>
+    </libpart>
     <libpart lib="4xxx" part="4011">
       <description>Quad Nand 2 inputs</description>
       <docs>http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4011bms-12bms-23bms.pdf</docs>
@@ -2214,66 +2271,6 @@
         <pin num="28" name="VCC" type="power_in"/>
       </pins>
     </libpart>
-    <libpart lib="SparkFun-IC-Special-Function" part="555D">
-      <description>General purpose bipolar Timer &lt;a href="http://www.sparkfun.com/datasheets/Components/General/ne555.pdf"&gt;Datasheet&lt;/a&gt; &lt;h4&gt;SparkFun Products&lt;/h4&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://www.sparkfun.com/products/12707"&gt;SparkFun SparkPunk Sequencer Kit&lt;/a&gt; (KIT-12707)&lt;/li&gt;&lt;li&gt;&lt;a href="https://www.sparkfun.com/products/9273"&gt;Storefront Component: 555 Timer&lt;/a&gt; (COM-09273)&lt;/li&gt;&lt;/ul&gt;Two parts valid for production:&lt;br&gt;&lt;br&gt;VFP: IC-11930 (M7555 PTH)&lt;br&gt;VFP: IC-09173 (555 PTH) - &lt;b&gt;Preferred&lt;/b&gt;&lt;br&gt;</description>
-      <footprints>
-        <fp>*SO08*</fp>
-        <fp>*DIP08-KIT*</fp>
-        <fp>*DIP08*</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">U</field>
-        <field name="Value">555D</field>
-        <field name="Footprint">SO08</field>
-        <field name="Field4">NA-XXXXX</field>
-      </fields>
-      <pins>
-        <pin num="1" name="GND" type="power_in"/>
-        <pin num="2" name="TRI" type="input"/>
-        <pin num="3" name="OUT" type="output"/>
-        <pin num="4" name="/RES" type="input"/>
-        <pin num="5" name="CON" type="input"/>
-        <pin num="6" name="TRE" type="input"/>
-        <pin num="7" name="DIS" type="input"/>
-        <pin num="8" name="VCC+" type="power_in"/>
-      </pins>
-    </libpart>
-    <libpart lib="SparkFun-LED" part="LED5MM">
-      <description>&lt;b&gt;LED (Generic)&lt;/b&gt;Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LEDs. Generic LEDs with no color specified.</description>
-      <footprints>
-        <fp>*LED_5MM*</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">D</field>
-        <field name="Value">LED5MM</field>
-        <field name="Footprint">LED_5MM</field>
-        <field name="Field4">XXX-00000</field>
-      </fields>
-      <pins>
-        <pin num="A" name="A" type="passive"/>
-        <pin num="K" name="C" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="SparkFun-Switches" part="SWITCH-DPDT-PTH-GPI-152-3013">
-      <description>Double-Pole, Double-Throw (DPDT) Switch Double-pole, double-throw switches. &lt;h4&gt;Variant Overview&lt;/h4&gt;&lt;h5&gt;PTH-GPI-152-3013&lt;/h5&gt;&lt;ul&gt;&lt;li&gt;Used on &lt;a href="https://www.sparkfun.com/products/11345"&gt;SparkFun Geiger Counter&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;h5&gt;SMD-AY0202&lt;/h5&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://www.sparkfun.com/products/597"&gt;Surface Mount DPDT Switch&lt;/a&gt; (COM-00597)&lt;/li&gt;&lt;li&gt;Used on e.g. &lt;a href="https://www.sparkfun.com/products/12049"&gt;LilyPad Arduino USB - ATmega32U4 Board&lt;/a&gt;&lt;/ul&gt;</description>
-      <footprints>
-        <fp>*SWITCH_DPDT_PTH_GPI-152-3013*</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">S</field>
-        <field name="Value">SWITCH-DPDT-PTH-GPI-152-3013</field>
-        <field name="Footprint">SWITCH_DPDT_PTH_GPI-152-3013</field>
-        <field name="Field4">SWCH-10554</field>
-      </fields>
-      <pins>
-        <pin num="1" name="1" type="BiDi"/>
-        <pin num="2" name="2" type="BiDi"/>
-        <pin num="3" name="3" type="BiDi"/>
-        <pin num="5" name="5" type="BiDi"/>
-        <pin num="6" name="6" type="BiDi"/>
-        <pin num="7" name="7" type="BiDi"/>
-      </pins>
-    </libpart>
     <libpart lib="Switch" part="SW_Push">
       <description>Push button switch, generic, two pins</description>
       <docs>~</docs>
@@ -2353,15 +2350,6 @@
     </library>
     <library logical="Memory_RAM">
       <uri>C:\Program Files\KiCad\share\kicad\library/Memory_RAM.lib</uri>
-    </library>
-    <library logical="SparkFun-IC-Special-Function">
-      <uri>C:/Users/nicola/Downloads/SparkFun-KiCad-Libraries-master/Libraries/SparkFun-IC-Special-Function.lib</uri>
-    </library>
-    <library logical="SparkFun-LED">
-      <uri>C:/Users/nicola/Downloads/SparkFun-KiCad-Libraries-master/Libraries/SparkFun-LED.lib</uri>
-    </library>
-    <library logical="SparkFun-Switches">
-      <uri>C:/Users/nicola/Downloads/SparkFun-KiCad-Libraries-master/Libraries/SparkFun-Switches.lib</uri>
     </library>
     <library logical="Switch">
       <uri>C:\Program Files\KiCad\share\kicad\library/Switch.lib</uri>
