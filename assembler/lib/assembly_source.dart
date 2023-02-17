@@ -22,6 +22,15 @@ class AssemblySource {
     // Keep only .xxxx
     metaDataLines.retainWhere((line) => line.trim().startsWith("."));
 
+    // Remove comments from lines
+    metaDataLines = metaDataLines
+        .map((line) =>
+    line.indexOf(";") > 0 ? line.substring(0, line.indexOf(";")) : line)
+        .toList();
+
+    // Trim
+    metaDataLines = metaDataLines.map((line) => line.trim()).toList();
+
     for (var metadataLine in metaDataLines) {
       var tokens = metadataLine.split("=");
 

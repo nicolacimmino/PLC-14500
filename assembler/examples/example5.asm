@@ -6,7 +6,7 @@
 
 .io_MASTER=IN6
 .io_BUTTON_A=IN0
-.io_LIGHT_ON=SPR0
+.io_LIGHT_ON=SPR1
 .io_LIGHT=OUT0
 .io_FAN=OUT1
 
