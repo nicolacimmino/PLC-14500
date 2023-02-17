@@ -83,6 +83,6 @@ STO  GAME_BIT1
 LD   SWAP
 STO  GAME_BIT0
 
-; Don't JMP 0 here, the rest of the code will
+; Don't JMP 0 here, the rest of the code will be
 ;   filled with NOPF and act as a delay, otherwise the
-;   game will be too slow even on the slow clock.
+;   game will be too fast even on the slow clock.
