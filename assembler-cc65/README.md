@@ -9,10 +9,6 @@ The magic is done mostly in `plc14500-nano-b.inc`. This file is heavily based on
 (original: https://github.com/veremenko-y/mc14500-programs/blob/main/sbc1/system.inc ). I modified the IN/OUT/SPR 
 addresses to match the PLC14500 I/O layout and swapped the command/address nibbles as these are in opposite order.
 
-Macros are case-sensitive so, for the time being, you will need to type your assembly in lcase. Perhaps because I moved
-my first steps in assembly on the C64, which defaulted to uppercase for anything you typed, I find this odd. I'll look
-more into this and either create duplicate macros(!), or enable some case insenstive switch if it exists.
-
 `build.cmd` contains all you need to assemble a `.asm` file. Just invoke it with:
 
 `build.cmd test.asm`

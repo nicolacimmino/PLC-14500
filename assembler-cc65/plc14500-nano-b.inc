@@ -8,6 +8,7 @@
 .feature ubiquitous_idents
 .feature string_escapes
 .setcpu "none"
+.case   -
 
 ; 0000 0: NOP0 = No change in registers. RR -> RR. FLG0 high.
 ; 0001 1: LD   = Data -> RR
