@@ -9,7 +9,6 @@
 
 - Swapped RV1 Pin3 and Pin1 (so clockwise rotation increases time)
 
-
 *NOTE* REV.A was never on sale, it was a pre-production proto. If you have got a REV.A you either got a
 knockoff by someone who got the gerbers in the early days or somehow you got hold of a display unit
 from a museum.

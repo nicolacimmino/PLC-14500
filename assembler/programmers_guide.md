@@ -323,6 +323,21 @@ to trigger `TMR-0` (by storing it in `OUT7`). We then store into `LIGHT` the sta
 If you load this program you will notice that by pressing any buttons `IN0`-`IN3` will cause `OUT0` to become high.
 After a time, dependent on the setting of `RV1`, `OUT0` will go off.
 
+## I/O Map
+
+Below is the PLC14500-Nano I/O map.
+
+![io_map](../documentation/PLC14500-Nano IO Map.png)
+
+*NOTE:* Before REV.C, $7 was a general Scratchpad RAM location and the board provided no means to read RR. Having RR 
+mapped to an input allows to unleash the full power of IEN/OEN operations.
+
+If you have a pre REV.C board fear not! You can enable the same feature with a very simple mod, follow these steps:
+
+- Cut pin 1 of U13 (isolates the Q7 output of the CD4099, leaving what used to be SPR7 floating )
+- Connect pin 1 of U13 to pin 15 of U10 (thus connecting the MC14500 RR to what used to be SPR7 input)
+- If having the SPR7 LED confuses you, or you fear overload on the MC14500 output, cut LED D50
+
 ## Next Steps
 
 Given the nature of the board I won't include more examples in this guide as, I believe, most will build this for the
