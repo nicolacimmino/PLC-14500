@@ -6,9 +6,9 @@ encoding utf-8
 Sheet 4 4
 Title "Scratchpad RAM"
 Date "2022-11-09"
-Rev "0.4"
+Rev "0.5"
 Comp ""
-Comment1 ""
+Comment1 "REV.C"
 Comment2 ""
 Comment3 ""
 Comment4 ""
@@ -284,43 +284,6 @@ Wire Wire Line
 Connection ~ 7675 4400
 Wire Wire Line
 	7675 4400 7850 4400
-$Comp
-L plc14500-rescue:LED5MM-SparkFun-LED D?
-U 1 1 67429845
-P 8725 3650
-AR Path="/63B4BDA9/67429845" Ref="D?"  Part="1" 
-AR Path="/67425B3B/67429845" Ref="D50"  Part="1" 
-AR Path="/67429845" Ref="D50"  Part="1" 
-F 0 "D50" H 8725 3475 45  0000 L CNN
-F 1 "LED 3MM Red" H 8803 3611 45  0001 L CNN
-F 2 "plc14500:LED_3MM" V 8525 3650 20  0001 C CNN
-F 3 "" H 8725 3650 50  0001 C CNN
-F 4 "XXX-00000" H 8803 3516 60  0001 L CNN "Field4"
-F 5 "0.01" H 8725 3650 50  0001 C CNN "Price"
-	1    8725 3650
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R?
-U 1 1 6742984B
-P 8725 4100
-AR Path="/63B4BDA9/6742984B" Ref="R?"  Part="1" 
-AR Path="/67425B3B/6742984B" Ref="R67"  Part="1" 
-F 0 "R67" H 8700 3950 50  0000 R CNN
-F 1 "820R" V 8625 4200 50  0000 R CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 8655 4100 50  0001 C CNN
-F 3 "~" H 8725 4100 50  0001 C CNN
-F 4 "0.01" H 8725 4100 50  0001 C CNN "Price"
-	1    8725 4100
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	8550 4400 8725 4400
-Wire Wire Line
-	8725 4400 8725 4250
-Connection ~ 8550 4400
-Wire Wire Line
-	8725 3950 8725 3850
 Wire Wire Line
 	6400 3050 6250 3050
 Text Label 6275 3050 0    50   ~ 0
@@ -445,8 +408,6 @@ Wire Wire Line
 Wire Wire Line
 	7150 3100 8375 3100
 Wire Wire Line
-	7150 3300 8725 3300
-Wire Wire Line
 	7500 3550 7500 2600
 Wire Wire Line
 	7150 2600 7500 2600
@@ -487,11 +448,6 @@ Wire Wire Line
 Connection ~ 8550 3200
 Wire Wire Line
 	8550 3200 9525 3200
-Wire Wire Line
-	8725 3550 8725 3300
-Connection ~ 8725 3300
-Wire Wire Line
-	8725 3300 9525 3300
 Wire Wire Line
 	9525 3600 9400 3600
 Wire Wire Line
@@ -987,8 +943,17 @@ F 4 "0.16" H 2450 3100 50  0001 C CNN "Price"
 	4    2450 3100
 	1    0    0    -1  
 $EndComp
+Text GLabel 9350 3300 0    50   Input ~ 0
+RR
+Wire Wire Line
+	9350 3300 9525 3300
+NoConn ~ 7150 3300
 Wire Bus Line
 	9300 3700 9300 4100
 Wire Bus Line
 	6150 3150 6150 4150
+Text Notes 9075 3350 0    50   ~ 0
+*1
+Text Notes 9000 4725 0    50   ~ 0
+*1) Prior to REV.C this was a generic SPR \nand connected to Q7 of U13
 $EndSCHEMATC

@@ -5,10 +5,10 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 3 4
 Title "PLC14500 - Nano"
-Date "2022-11-09"
-Rev "0.4"
+Date "2023-03-04"
+Rev "0.5"
 Comp "Nicola Cimmino"
-Comment1 ""
+Comment1 "REV.C"
 Comment2 ""
 Comment3 ""
 Comment4 ""
@@ -2357,6 +2357,10 @@ Wire Wire Line
 	1325 4975 1325 4900
 Text Notes 750  3250 0    50   ~ 0
 Fhi = 1.44 / (R30+2×R31) × C10\nFhi = 4.8KHz\n\nFlo = 1.44 / (R30+2×R31) × (C10+C7)\nFlo = 1Hz
+Text GLabel 10550 3900 2    50   Output ~ 0
+RR
+Wire Wire Line
+	10275 3900 10550 3900
 Wire Bus Line
 	7800 3650 7800 4100
 Wire Bus Line
@@ -2373,4 +2377,5 @@ Wire Bus Line
 	3475 3800 5150 3800
 Wire Bus Line
 	3475 3800 3475 4975
+Connection ~ 10275 3900
 $EndSCHEMATC
