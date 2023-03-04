@@ -327,7 +327,7 @@ After a time, dependent on the setting of `RV1`, `OUT0` will go off.
 
 Below is the PLC14500-Nano I/O map.
 
-![io_map](../documentation/PLC14500-Nano IO Map.png)
+![io_map](../documentation/PLC14500-Nano_IO_Map.png)
 
 *NOTE:* Before REV.C, $7 was a general Scratchpad RAM location and the board provided no means to read RR. Having RR 
 mapped to an input allows to unleash the full power of IEN/OEN operations.
