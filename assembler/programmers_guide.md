@@ -335,8 +335,8 @@ mapped to an input allows to unleash the full power of IEN/OEN operations.
 If you have a pre REV.C board fear not! You can enable the same feature with a very simple mod, follow these steps:
 
 - Cut pin 1 of U13 (isolates the Q7 output of the CD4099, leaving what used to be SPR7 floating )
-- Connect pin 1 of U13 to pin 15 of U10 (thus connecting the MC14500 RR to what used to be SPR7 input)
-- If having the SPR7 LED confuses you, or you fear overload on the MC14500 output, cut LED D50
+- Connect the *pad* of pin 1 of U13 to pin 15 of U10 (thus connecting the MC14500 RR to what used to be SPR7 input)
+- If having the SPR7 LED confuses you, cut LED D50
 
 ## Next Steps
 
