@@ -90,7 +90,9 @@ practice, surf over (skip) a block of code. But, for the time being, let's not d
 enough to know that, after reset, the MC14500 "disables" its input and output or, in other words, ignores any actual
 value read from the inputs and any write operation to the outputs. This is a bit unfortunate as it means we must have
 such instructions in every program or the program would do nothing at all. For simplicity, we tell the MC14500 to
-enable input/output operations on the status of input IN6, so we will need to make sure this is flipped to ON.
+enable input/output operations on the status of input IN6, so we will need to make sure this is flipped to ON. This
+is not how usually programs are written, as this wastes one input. However, for simplicity, the examples in this guide
+will use this construct until logical operations are explained later.
 
 The next two lines are the actual representation of our ladder diagram. The `LD` instruction will load the value of IN0
 into the only register `RR`. After this, `STO` will store the value in `RR` into `OUT0` so, in practice, OUT0 will
@@ -109,8 +111,7 @@ asm14500.exe examples\example1.asm
 
 If you now look into the `examples` folder you should have a 256-bytes file named `example1.bin`. The file is 256 bytes
 because that's what the bootloader of a PLC14500-Nano expects, your program is just 5 bytes long, the rest has been
-padded
-with `0x0F`. You can see this with a binary editor:
+padded with `0x0F`. You can see this with a binary editor:
 
 ````
 Offset(h) 00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
@@ -186,6 +187,36 @@ reference.
 | ORC         | RR = !Data OR RR  |
 | XNOR        | RR = !(Data XOR RR) |
 
+## IEN/OEN
+
+We've seen, out of necessity, `IEN` and `OEN` instructions above. In the examples so far both commands were just run at the
+start of the program and the argument was always `IN6`. This is perfectly fine for many programs you might want to write
+on your trainer board. However, not only this wastes one input, it also fails to make use of the instructions for their
+intended purpose. To enable unconditionally inputs and outputs, as we do in these simple examples, you can do the following:
+
+````
+  ORC RR
+  IEN RR
+  OEN RR
+````
+
+`RR` refers to the result register of the MC14500 which is, conveniently, mapped as an input, so it can be addressed
+by instructions as if it was an input/output. To understand this block of code, refer above to the `ORC` operation in the table above. This is
+an `OR` operation between the value in `RR` and the complement of whatever is currently on the `RR` input which, of course,
+is `RR` itself. This means that, regardless of the value of `RR` we will always be making an `OR` operation between the
+value and its negation, ie always between a `0` and a `1`, hence the result will always be `1`.
+
+If you really want to dive deeper, you might think this is faulty because, on reset, inputs are disabled so the `ORC`
+wouldn't be able to read `RR`. This is true, however, at reset `RR` is initialized to `0`, and reading an input when
+inputs are disabled reads always a zero. For this reason, at reset, we will still be making an `OR` between `0` (`RR`)
+and the complement of the read input, which will result in a `1`.
+
+**NOTE** Boards up to REV.B (included) didn't have RR mapped to the I/O space and, for this reason, were not able to 
+use `IEN`/`OEN` instructions driven by the application status, as described here. If you have a `REV.B` board you can easily enable this 
+functionality with a simple mod. See instructions in the [/board](../board) folder. If you don't wish to modify your 
+board, please keep using the `IEN IN6`/`OEN IN6` construct also in the code in the next sections. You will not be able,
+however, to follow more advanced techniques to create `IF`/`ELSE`/`ENDIF` blocks.
+
 ## Latch and Reset
 
 With the next example things will start to get more interesting and will move a step further from something that can be
@@ -228,7 +259,7 @@ can read it back later on in the program. This is not true for `IN` and `OUT` th
 in `OUT0` doesn't affect `IN0`, as one would expect.). The `SPR` is useful to store values we want to persist and use
 in different parts of our program.
 
-The ladder diagram for an industrial motor start/stop contol would look like this:
+The ladder diagram for an industrial motor start/stop control would look like this:
 
 ![example_3](../documentation/ex3_latch.png)
 
@@ -245,23 +276,23 @@ we just learned, the `SPR` is there exactly for this purpose. The code below imp
 
 ````
 .board=PLC14500-Nano
-.io_MASTER=IN6
 .io_START=IN0
 .io_STOP=IN1
 .io_RUN=SPR0
 .io_MOTOR=OUT0
 
-IEN MASTER
-OEN MASTER
+ORC  RR
+IEN  RR
+OEN  RR
 
-LD START
-OR RUN
+LD   START
+OR   RUN
 ANDC STOP
-STO RUN
+STO  RUN
 
-STO MOTOR
+STO  MOTOR
 
-JMP 0
+JMP  0
 ````
 
 I won't go into too much detail of the code as the operations are like those described previously. What is to be noted
@@ -294,15 +325,15 @@ the lights to turn on and, after a preset time the lights will go off.
 ````
 .board=PLC14500-Nano
 
-.io_MASTER=IN6
 .io_BUTTON_A=IN0
 .io_BUTTON_B=IN1
 .io_BUTTON_C=IN2
 .io_BUTTON_D=IN3
 .io_LIGHT=OUT0
 
-IEN   MASTER
-OEN   MASTER
+ORC  RR
+IEN  RR
+OEN  RR
 
 LD   BUTTON_A
 OR   BUTTON_B
@@ -330,13 +361,8 @@ Below is the PLC14500-Nano I/O map.
 ![io_map](../documentation/PLC14500-Nano_IO_Map.png)
 
 *NOTE:* Before REV.C, $7 was a general Scratchpad RAM location and the board provided no means to read RR. Having RR 
-mapped to an input allows to unleash the full power of IEN/OEN operations.
-
-If you have a pre REV.C board fear not! You can enable the same feature with a very simple mod, follow these steps:
-
-- Cut pin 1 of U13 (isolates the Q7 output of the CD4099, leaving what used to be SPR7 floating )
-- Connect the *pad* of pin 1 of U13 to pin 15 of U10 (thus connecting the MC14500 RR to what used to be SPR7 input)
-- If having the SPR7 LED confuses you, cut LED D50
+mapped to an input allows to unleash the full power of IEN/OEN operations.  If you have a pre REV.C board fear not! 
+You can enable the same feature with a very simple mod, see instructions in the [/board](../board) folder.
 
 ## Next Steps
 
@@ -345,13 +371,13 @@ fun of writing new programs and figure out things on their own. The above should
 familiarize with elements specific to the board and toolchain.
 
 I suggest you get familiar with the Motorola "MC14500B Industrial Control Unit Handbook" that provides a plethora of
-information on the processors itself and on its programming model. In particular, you can find there sections on how
+information on the processor itself and on its programming model. In particular, you can find there sections on how
 to implement conditionals and how to unleash all the power of the `IEN`/`OEN` instructions for conditional loops. 
 
 Some ideas of programs you might want to try to write, in no particular order:
 
 * Motorized gate with limit switches on open/closed and an obstruction sensor that will cause the gate to re-open.
 * A two floors goods lift, with UP/DOWN buttons, sensors to ensure the doors are closed and floor switches
-* A motor START/STOP controller with a overcurrent protection switch that will prevent restarting the motor for a
+* A motor START/STOP controller with an over-current protection switch that will prevent restarting the motor for a
   certain time if triggered
-* A delayed on timer for a bathroom fan, so that the fan only starts after some delay after the lights are on
+* A delayed on timer for a bathroom fan, so that the fan only starts after some delay after the lights are on and keeps running for some time after the lights have been switched off

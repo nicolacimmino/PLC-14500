@@ -16,8 +16,9 @@
 .io_FANTON=SPR2
 .io_FANTOFF=SPR1
 
-IEN  IN6
-OEN  IN6
+ORC  RR
+IEN  RR
+OEN  RR
 
 LD   SWITCH         ; Lights always follow the switch.
 STO  LIGHT

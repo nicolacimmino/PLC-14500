@@ -4,11 +4,11 @@
 
 .board=PLC14500-Nano
 
-IEN IN6
-OEN IN6
+IEN  IN6
+OEN  IN6
 
-LD  IN0
-STO OUT0
+LD   IN0
+STO  OUT0
 
-JMP 0
+JMP  0
 
