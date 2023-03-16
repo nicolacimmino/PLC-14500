@@ -48,31 +48,5 @@ void writeProgramByte(byte address, byte data)
   digitalWrite(WEN_PIN, HIGH);
 }
 
-void readProgramMemory()
-{
-  byte data = 0;
-  byte address = 0;
-
-  unsigned long startTime = millis();
-
-  while (millis() - startTime < 2000)
-  {
-    data = 0;
-    address = 0;
-
-    for (int ix = 0; ix < 8; ix++)
-    {
-      address = address | (digitalRead(addr_bus[ix]) << ix);
-    }
-
-    for (int ix = 0; ix < 8; ix++)
-    {
-      data = data | (digitalRead(data_bus[ix]) << ix);
-    }
-
-    rxBuffer[address] = data;
-  }
-}
-
 /*
  **********************************************************************/

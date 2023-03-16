@@ -31,6 +31,30 @@ void acquireBusForRead()
   }
 }
 
+byte readAddressFromBus()
+{
+  byte address = 0;
+
+  for (int ix = 0; ix < 8; ix++)
+  {
+    address = address | (digitalRead(addr_bus[ix]) << ix);
+  }
+
+  return address;
+}
+
+byte readDataFromBus()
+{
+  byte data = 0;
+
+  for (int ix = 0; ix < 8; ix++)
+  {
+    data = data | (digitalRead(data_bus[ix]) << ix);
+  }
+
+  return data;
+}
+
 /*
  **********************************************************************/
 

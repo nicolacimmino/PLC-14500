@@ -16,12 +16,32 @@
 //
 //
 
+#define D0_PIN 2
+#define D1_PIN 3
+#define D2_PIN 4
+#define D3_PIN 5
+#define D4_PIN 6
+#define D5_PIN 7
+#define D6_PIN 8
+#define D7_PIN 9
+
+#define A0_PIN 10
+#define A1_PIN 11
+#define A2_PIN 12
+#define A3_PIN 13
+#define A4_PIN A0
+#define A5_PIN A1
+#define A6_PIN A2
+#define A7_PIN A3
+
+#define PRG_PIN A4
+#define WEN_PIN A5
+
+#define PROGRAM_MEMOMORY_SIZE 256
+
 #define RX_TIMEOUT_MS 1000
 
-#include <EEPROM.h>
-#include "src/hardware.h"
-#include "src/assembler.h"
-#include "src/bootloader.h"
+#include "EEPROM.h"
 
 byte data_bus[] = {
     D0_PIN,
@@ -45,6 +65,99 @@ byte addr_bus[] = {
 
 byte rxBuffer[PROGRAM_MEMOMORY_SIZE];
 
+/**********************************************************************
+ *  Acquire the PLC14500 data and address buses by setting the
+ *  program counter and RAM to High-Z outputs (WEN and PRG pin),
+ *  and then setting our lines to output (avoid bus contention).
+ */
+
+void acquireBus()
+{
+  digitalWrite(WEN_PIN, HIGH);
+  digitalWrite(PRG_PIN, HIGH);
+
+  for (int ix = 0; ix < 8; ix++)
+  {
+    pinMode(addr_bus[ix], OUTPUT);
+    pinMode(data_bus[ix], OUTPUT);
+  }
+}
+
+/*
+ **********************************************************************/
+
+/**********************************************************************
+ *  Release the PLC14500 data and address buses by setting the
+ *  program counter and RAM to active outputs (WEN and PRG pin),
+ *  after setting our lines to input (avoid bus contention).
+ */
+
+void releaseBus()
+{
+  for (int ix = 0; ix < 8; ix++)
+  {
+    pinMode(addr_bus[ix], INPUT);
+    pinMode(data_bus[ix], INPUT);
+  }
+
+  digitalWrite(WEN_PIN, HIGH);
+  digitalWrite(PRG_PIN, LOW);
+}
+
+/*
+ **********************************************************************/
+
+/**********************************************************************
+ * Bootstrap the PLC14500 program memory writing the last received
+ * program stored in EEPROM.
+ */
+
+void bootstrapPLC14500Board()
+{
+  acquireBus();
+
+  for (int address = 0; address < PROGRAM_MEMOMORY_SIZE; address++)
+  {
+    writeProgramByte(address, EEPROM.read(address));
+  }
+
+  releaseBus();
+}
+
+/*
+ **********************************************************************/
+
+/**********************************************************************
+ * Write one byte to the PLC14500 program memory.
+ *
+ * NOTE! If you opt for an EEPROM you will need to change the delay below
+ *  to 15mS to give time to the EEPROM to correctly write.
+ */
+
+void writeProgramByte(byte address, byte data)
+{
+  digitalWrite(WEN_PIN, HIGH);
+
+  for (int ix = 0; ix < 8; ix++)
+  {
+    digitalWrite(addr_bus[ix], (address >> ix) & 1);
+  }
+
+  for (int ix = 0; ix < 8; ix++)
+  {
+    digitalWrite(data_bus[ix], (data >> ix) & 1);
+  }
+
+  delay(1);
+  digitalWrite(WEN_PIN, LOW);
+  // Note: this needs to be 15mS for EEPROMs.
+  delay(1);
+  digitalWrite(WEN_PIN, HIGH);
+}
+
+/*
+ **********************************************************************/
+
 void setup()
 {
   pinMode(WEN_PIN, OUTPUT);
@@ -57,9 +170,6 @@ void setup()
 
 void loop()
 {
-  Serial.println("PLC14500-Nano");
-  Serial.println("Bootloader V0.2");
-
   while (!Serial.available())
   {
   }
@@ -74,10 +184,6 @@ void loop()
   {
     if (millis() - rxStartTime > RX_TIMEOUT_MS)
     {
-      if (rxBuffer[address] == '\r')
-      {
-        enterAssembler();
-      }
       return;
     }
 

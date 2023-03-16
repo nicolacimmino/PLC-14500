@@ -33,5 +33,7 @@ extern byte rxBuffer[];
 void acquireBusForWrite();
 void acquireBusForRead();
 void releaseBus();
+byte readAddressFromBus();
+byte readDataFromBus();
 
 #endif
