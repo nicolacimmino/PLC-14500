@@ -72,6 +72,8 @@ uint8_t processCommand()
 
 void watchStatus()
 {
+  unsigned long lastChangeTime = 0;
+
   acquireBusForRead();
 
   Serial.println("ADDR  DATA  OP    ARG");
@@ -116,6 +118,14 @@ void watchStatus()
         return;
       }
     }
+
+    if (millis() - lastChangeTime < 10)
+    {
+      Serial.println("Too fast, can't keep up. Turn clock to LO or STEP.");
+      return;
+    }
+
+    lastChangeTime = millis();
   }
 
   releaseBus();
@@ -175,6 +185,7 @@ void enterAssembler()
   {
     uint8_t ix = 0;
     Serial.println("Assembler v0.1");
+    Serial.print(">");
 
     while (true)
     {
@@ -193,7 +204,7 @@ void enterAssembler()
           }
 
           ix = 0;
-
+          Serial.print(">");
           continue;
         }
 
