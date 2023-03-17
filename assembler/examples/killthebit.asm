@@ -28,14 +28,15 @@
 .io_GAME_BIT1=SPR1  ; Game bit 1
 .io_GAME_BIT2=SPR2  ; Game bit 2
 .io_GAME_BIT3=SPR3  ; Game bit 3
-.io_GAME_DLY0=SPR4  ; Game delay bits used as a 2-bit counter
-.io_GAME_DLY1=SPR5  ;   to shift the bit only once every 4 rounds.
+.io_GAME_BIT4=SPR4  ; Game bit 4
+.io_GAME_BIT5=SPR5  ; Game bit 5
 .io_SWAP=SPR6       ; Swap bit used for temporary storage
 .io_GAME_LED0=OUT0  ; Game LED 0
 .io_GAME_LED1=OUT1  ; Game LED 1
 .io_GAME_LED2=OUT2  ; Game LED 2
 .io_GAME_LED3=OUT3  ; Game LED 3
 .io_GAME_LED4=OUT4  ; Game LED 4
+.io_GAME_LED5=OUT5  ; Game LED 5
 .io_GAME_BUTTON=IN0 ; Game only button
 
 STO     SWAP        ; Save RR
@@ -56,19 +57,28 @@ STO     GAME_BIT0   ; initialise memory with 1 initial bit
 LD      GAME_BUTTON
 XNOR    GAME_BIT0
 STOC    GAME_BIT0
+STOC    GAME_LED0       ; Reflect immediately on output for visual feedback
+
+LD      GAME_BUTTON     ; Prevent rotation until the button is released,
+SKZ                     ;   keeps the display more clean.
+JMP     0               ; RR is always 1 if we come here, so init will be skipped.
 
 ; Rotate all bits forward (and last back to first).
-;   But only every 4 rounds to slow down the action.
-LD      GAME_DLY0   ; Negate GAME_DLY0
-STOC    GAME_DLY0
-OEN     RR          ; If GAME_DLY0 transitioned to 0
-LD      GAME_DLY1   ; negate GAME_DLY1
-STOC    GAME_DLY1
-AND     GAME_DLY0
-OEN     RR          ; endif if GAME_DLY1 and GAME_DLY0 are 1
+;   But only when TMR0 expires so we keep the speed
+;   reasonable for humans to play. Also, with RV1
+;   the difficulty of the game can be adjusted.
 
-LD      GAME_BIT3
+LDC     TMR0-OUT    ; If TMR0 expired
+OEN     RR
+STO     TMR0-TRIG   ; Pulse TMR0 trigger
+STOC    TMR0-TRIG
+
+LD      GAME_BIT5
 STO     SWAP
+LD      GAME_BIT4
+STO     GAME_BIT5
+LD      GAME_BIT3
+STO     GAME_BIT4
 LD      GAME_BIT2
 STO     GAME_BIT3
 LD      GAME_BIT1
@@ -77,9 +87,6 @@ LD      GAME_BIT0
 STO     GAME_BIT1
 LD      SWAP
 STO     GAME_BIT0
-
-ORC     RR          ; RR=RR|!RR (always 1)
-OEN     RR          ; endif always
 
 ; Display the game status by showing on the outputs the values stored in SPR.
 ; Note: we don't play directly on SPR as that would be confusing as some bits
@@ -92,11 +99,16 @@ LD      GAME_BIT2
 STO     GAME_LED2
 LD      GAME_BIT3
 STO     GAME_LED3
+LD      GAME_BIT4
+STO     GAME_LED4
+LD      GAME_BIT5
+STO     GAME_LED5
+
+ORC     RR          ; RR=RR|!RR (always 1)
+OEN     RR          ; endif
 
 ORC     RR          ; RR=RR|!RR (always 1)
                     ; This will cause the code that initialises the game bit
                     ;   to be skipped.
 
-; Don't JMP 0 here, the rest of the code will be
-;   filled with NOPF and act as a delay, otherwise the
-;   game will be too fast.
+JMP 0

@@ -15,7 +15,10 @@ from a museum.
 
 ## REV_B -> REV_C
 
-- Replaced SPR7 with RR so that RR can be read at IO $7 
+- Replaced SPR7 with RR so that RR can be read at IO $7
+- Replaced C4 with a 10uF and RV1 with 1M. Similar timing but more consistent when triggered by short pulses.
+
+  (Thanks to [wrh3c](https://github.com/wrh3c) for the suggestion).
 
 If you have a REV.B and you are interested in experimenting with the ION/OEN driven if/else structures
 described in the Motorola's own MC14500 Handbook, you will need a tiny modification to the board. This

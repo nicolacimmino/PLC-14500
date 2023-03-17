@@ -2247,17 +2247,6 @@ D7
 Connection ~ 6025 5600
 Wire Bus Line
 	6025 5600 6150 5600
-$Comp
-L Device:CP C7
-U 1 1 63766840
-P 1325 2525
-F 0 "C7" H 1443 2571 50  0000 L CNN
-F 1 "470uF" H 1443 2480 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D8.0mm_P5.00mm" H 1363 2375 50  0001 C CNN
-F 3 "~" H 1325 2525 50  0001 C CNN
-	1    1325 2525
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	10075 5700 10200 5700
 NoConn ~ 9300 4500
@@ -2361,6 +2350,7 @@ Text GLabel 10550 3900 2    50   Output ~ 0
 RR
 Wire Wire Line
 	10275 3900 10550 3900
+Connection ~ 10275 3900
 Wire Bus Line
 	7800 3650 7800 4100
 Wire Bus Line
@@ -2377,5 +2367,15 @@ Wire Bus Line
 	3475 3800 5150 3800
 Wire Bus Line
 	3475 3800 3475 4975
-Connection ~ 10275 3900
+$Comp
+L Device:CP C7
+U 1 1 63766840
+P 1325 2525
+F 0 "C7" H 1443 2571 50  0000 L CNN
+F 1 "470uF" H 1443 2480 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D8.0mm_P5.00mm" H 1363 2375 50  0001 C CNN
+F 3 "~" H 1325 2525 50  0001 C CNN
+	1    1325 2525
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
