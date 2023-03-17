@@ -5,8 +5,7 @@
 ;   on the standard clock (R30=1K, 4.8KHz) as opposed to the version for REV.B
 ;   that required the clock to be dropped to make the game playable.
 ;   This is one example of the power of the IEN/OEN instructions that allow us
-;   to execute conditionally the bit shift block only every 4 rounds of the
-;   program, thus introducing the delay.
+;   to execute conditionally the bit shift block only when TMR0 timeouts.
 ;
 ; The game idea itself is from a game for the Altair by Dean McDaniel in 1975.
 ; Original Description:
