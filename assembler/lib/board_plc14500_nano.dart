@@ -10,7 +10,7 @@ class BoardPlc14500Nano extends Board {
   @override
   validateBytecode(int bytecode) {
     if ((bytecode & 0xF) == 0xC && (bytecode & 0xF0) != 0) {
-      throw Exception("PLC14500-Nano can only JMP 0");
+      print("Warning: PLC14500-Nano can only JMP 0, operand value has no effect.");
     }
   }
 
