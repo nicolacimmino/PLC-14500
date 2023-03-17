@@ -1,5 +1,5 @@
 // Bootloader for PLC14500-Nano board.
-//  Copyright (C) 2022 Nicola Cimmino
+//  Copyright (C) 2023 Nicola Cimmino
 //
 //    This program is free software: you can redistribute it and/or modify
 //    it under the terms of the GNU General Public License as published by
@@ -66,7 +66,7 @@ byte addr_bus[] = {
 byte rxBuffer[PROGRAM_MEMOMORY_SIZE];
 
 /**********************************************************************
- *  Acquire the PLC14500 data and address buses by setting the 
+ *  Acquire the PLC14500 data and address buses by setting the
  *  program counter and RAM to High-Z outputs (WEN and PRG pin),
  *  and then setting our lines to output (avoid bus contention).
  */
@@ -87,7 +87,7 @@ void acquireBus()
  **********************************************************************/
 
 /**********************************************************************
- *  Release the PLC14500 data and address buses by setting the 
+ *  Release the PLC14500 data and address buses by setting the
  *  program counter and RAM to active outputs (WEN and PRG pin),
  *  after setting our lines to input (avoid bus contention).
  */
@@ -129,7 +129,7 @@ void bootstrapPLC14500Board()
 
 /**********************************************************************
  * Write one byte to the PLC14500 program memory.
- * 
+ *
  * NOTE! If you opt for an EEPROM you will need to change the delay below
  *  to 15mS to give time to the EEPROM to correctly write.
  */
@@ -183,7 +183,7 @@ void loop()
   for (int address = 0; address < PROGRAM_MEMOMORY_SIZE;)
   {
     if (millis() - rxStartTime > RX_TIMEOUT_MS)
-    {      
+    {
       return;
     }
 
@@ -202,4 +202,3 @@ void loop()
 
   bootstrapPLC14500Board();
 }
-

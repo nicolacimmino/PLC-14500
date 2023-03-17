@@ -3,21 +3,21 @@
 ; A motor with separate start and stop buttons.
 
 .board=PLC14500-Nano
-.io_MASTER=IN6
+
 .io_START=IN0
 .io_STOP=IN1
 .io_RUN=SPR1
 .io_MOTOR=OUT0
 
-IEN MASTER
-OEN MASTER
+ORC  RR
+IEN  RR
+OEN  RR
 
-LD START
-OR RUN
+LD   START
+OR   RUN
 ANDC STOP
-STO RUN
+STO  RUN
 
-STO MOTOR
+STO  MOTOR
 
-JMP 0
-
+JMP  0

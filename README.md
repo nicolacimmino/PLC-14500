@@ -16,9 +16,9 @@ Main features:
 
 * 256 Bytes of program RAM (can be replaced with an EEPROM)
 * 7 Inputs each with toggle and momentary switch capability
-* 7 Outputs
-* 1 Timer mapped to the I/O bus (0.5 to 30s, adjustable via a trimmer)
-* 8 bits scratchpad RAM
+* 7 Outputs (LEDs)
+* 1 Timer mapped to the I/O bus (0.5 to 11s, adjustable via a trimmer)
+* 7 bits scratchpad RAM
 * 3 clock modes (fast, slow, manual step)
 
 

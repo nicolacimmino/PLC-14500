@@ -5,10 +5,10 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 3 4
 Title "PLC14500 - Nano"
-Date "2022-11-09"
-Rev "0.4"
+Date "2023-03-04"
+Rev "0.5"
 Comp "Nicola Cimmino"
-Comment1 ""
+Comment1 "REV.C"
 Comment2 ""
 Comment3 ""
 Comment4 ""
@@ -42,7 +42,7 @@ F 4 "0.01" H 2450 1600 50  0001 C CNN "Price"
 	-1   0    0    1   
 $EndComp
 $Comp
-L SparkFun-IC-Special-Function:555D U?
+L plc14500-rescue:555D-SparkFun-IC-Special-Function U?
 U 1 1 63980606
 P 3325 1750
 AR Path="/63980606" Ref="U?"  Part="1" 
@@ -301,7 +301,7 @@ Connection ~ 2800 3425
 Wire Wire Line
 	2800 3425 2800 3375
 $Comp
-L SparkFun-LED:LED5MM D?
+L plc14500-rescue:LED5MM-SparkFun-LED D?
 U 1 1 6398068B
 P 4025 4125
 AR Path="/6398068B" Ref="D?"  Part="1" 
@@ -316,7 +316,7 @@ F 5 "0.01" H 4025 4125 50  0001 C CNN "Price"
 	1    0    0    -1  
 $EndComp
 $Comp
-L SparkFun-LED:LED5MM D?
+L plc14500-rescue:LED5MM-SparkFun-LED D?
 U 1 1 63980692
 P 4200 4125
 AR Path="/63980692" Ref="D?"  Part="1" 
@@ -331,7 +331,7 @@ F 5 "0.01" H 4200 4125 50  0001 C CNN "Price"
 	1    0    0    -1  
 $EndComp
 $Comp
-L SparkFun-LED:LED5MM D?
+L plc14500-rescue:LED5MM-SparkFun-LED D?
 U 1 1 63980699
 P 4375 4125
 AR Path="/63980699" Ref="D?"  Part="1" 
@@ -346,7 +346,7 @@ F 5 "0.01" H 4375 4125 50  0001 C CNN "Price"
 	1    0    0    -1  
 $EndComp
 $Comp
-L SparkFun-LED:LED5MM D?
+L plc14500-rescue:LED5MM-SparkFun-LED D?
 U 1 1 639806A0
 P 4550 4125
 AR Path="/639806A0" Ref="D?"  Part="1" 
@@ -361,7 +361,7 @@ F 5 "0.01" H 4550 4125 50  0001 C CNN "Price"
 	1    0    0    -1  
 $EndComp
 $Comp
-L SparkFun-LED:LED5MM D?
+L plc14500-rescue:LED5MM-SparkFun-LED D?
 U 1 1 639806A7
 P 4725 4125
 AR Path="/639806A7" Ref="D?"  Part="1" 
@@ -376,7 +376,7 @@ F 5 "0.01" H 4725 4125 50  0001 C CNN "Price"
 	1    0    0    -1  
 $EndComp
 $Comp
-L SparkFun-LED:LED5MM D?
+L plc14500-rescue:LED5MM-SparkFun-LED D?
 U 1 1 639806AE
 P 4900 4125
 AR Path="/639806AE" Ref="D?"  Part="1" 
@@ -391,7 +391,7 @@ F 5 "0.01" H 4900 4125 50  0001 C CNN "Price"
 	1    0    0    -1  
 $EndComp
 $Comp
-L SparkFun-LED:LED5MM D?
+L plc14500-rescue:LED5MM-SparkFun-LED D?
 U 1 1 639806B5
 P 5075 4125
 AR Path="/639806B5" Ref="D?"  Part="1" 
@@ -406,7 +406,7 @@ F 5 "0.01" H 5075 4125 50  0001 C CNN "Price"
 	1    0    0    -1  
 $EndComp
 $Comp
-L SparkFun-LED:LED5MM D?
+L plc14500-rescue:LED5MM-SparkFun-LED D?
 U 1 1 639806BC
 P 5250 4125
 AR Path="/639806BC" Ref="D?"  Part="1" 
@@ -698,7 +698,7 @@ $EndComp
 Wire Wire Line
 	4325 2675 4325 2375
 $Comp
-L SparkFun-Switches:SWITCH-DPDT-PTH-GPI-152-3013 S?
+L plc14500-rescue:SWITCH-DPDT-PTH-GPI-152-3013-SparkFun-Switches S?
 U 1 1 63980747
 P 6800 1700
 AR Path="/63980747" Ref="S?"  Part="1" 
@@ -713,7 +713,7 @@ F 5 "0.69" H 6800 1700 50  0001 C CNN "Price"
 	-1   0    0    1   
 $EndComp
 $Comp
-L SparkFun-LED:LED5MM D?
+L plc14500-rescue:LED5MM-SparkFun-LED D?
 U 1 1 6398074E
 P 4675 1575
 AR Path="/6398074E" Ref="D?"  Part="1" 
@@ -759,7 +759,7 @@ Wire Wire Line
 Wire Wire Line
 	4675 2150 4675 2675
 $Comp
-L SparkFun-LED:LED5MM D?
+L plc14500-rescue:LED5MM-SparkFun-LED D?
 U 1 1 63980763
 P 4975 1575
 AR Path="/63980763" Ref="D?"  Part="1" 
@@ -1004,7 +1004,7 @@ Wire Wire Line
 Wire Wire Line
 	7050 1500 7050 1100
 $Comp
-L SparkFun-Switches:SWITCH-DPDT-PTH-GPI-152-3013 S?
+L plc14500-rescue:SWITCH-DPDT-PTH-GPI-152-3013-SparkFun-Switches S?
 U 1 1 639807D9
 P 1675 1950
 AR Path="/639807D9" Ref="S?"  Part="1" 
@@ -1035,7 +1035,7 @@ F 3 "" H 1325 2675 50  0001 C CNN
 $EndComp
 NoConn ~ 1875 2250
 $Comp
-L SparkFun-LED:LED5MM D?
+L plc14500-rescue:LED5MM-SparkFun-LED D?
 U 1 1 639807EF
 P 2200 2225
 AR Path="/639807EF" Ref="D?"  Part="1" 
@@ -1050,7 +1050,7 @@ F 5 "0.01" H 2200 2225 50  0001 C CNN "Price"
 	1    0    0    -1  
 $EndComp
 $Comp
-L SparkFun-LED:LED5MM D?
+L plc14500-rescue:LED5MM-SparkFun-LED D?
 U 1 1 639807F6
 P 2400 2225
 AR Path="/639807F6" Ref="D?"  Part="1" 
@@ -1333,7 +1333,7 @@ F 4 "0.01" H 4075 6375 50  0001 C CNN "Price"
 	-1   0    0    1   
 $EndComp
 $Comp
-L SparkFun-LED:LED5MM D?
+L plc14500-rescue:LED5MM-SparkFun-LED D?
 U 1 1 63980886
 P 5125 5925
 AR Path="/63980886" Ref="D?"  Part="1" 
@@ -1348,7 +1348,7 @@ F 5 "0.01" H 5125 5925 50  0001 C CNN "Price"
 	1    0    0    -1  
 $EndComp
 $Comp
-L SparkFun-LED:LED5MM D?
+L plc14500-rescue:LED5MM-SparkFun-LED D?
 U 1 1 6398088D
 P 4950 5925
 AR Path="/6398088D" Ref="D?"  Part="1" 
@@ -1363,7 +1363,7 @@ F 5 "0.01" H 4950 5925 50  0001 C CNN "Price"
 	1    0    0    -1  
 $EndComp
 $Comp
-L SparkFun-LED:LED5MM D?
+L plc14500-rescue:LED5MM-SparkFun-LED D?
 U 1 1 63980894
 P 4775 5925
 AR Path="/63980894" Ref="D?"  Part="1" 
@@ -1378,7 +1378,7 @@ F 5 "0.01" H 4775 5925 50  0001 C CNN "Price"
 	1    0    0    -1  
 $EndComp
 $Comp
-L SparkFun-LED:LED5MM D?
+L plc14500-rescue:LED5MM-SparkFun-LED D?
 U 1 1 6398089B
 P 4600 5925
 AR Path="/6398089B" Ref="D?"  Part="1" 
@@ -1393,7 +1393,7 @@ F 5 "0.01" H 4600 5925 50  0001 C CNN "Price"
 	1    0    0    -1  
 $EndComp
 $Comp
-L SparkFun-LED:LED5MM D?
+L plc14500-rescue:LED5MM-SparkFun-LED D?
 U 1 1 639808A2
 P 4425 5925
 AR Path="/639808A2" Ref="D?"  Part="1" 
@@ -1408,7 +1408,7 @@ F 5 "0.01" H 4425 5925 50  0001 C CNN "Price"
 	1    0    0    -1  
 $EndComp
 $Comp
-L SparkFun-LED:LED5MM D?
+L plc14500-rescue:LED5MM-SparkFun-LED D?
 U 1 1 639808A9
 P 4250 5925
 AR Path="/639808A9" Ref="D?"  Part="1" 
@@ -1423,7 +1423,7 @@ F 5 "0.01" H 4250 5925 50  0001 C CNN "Price"
 	1    0    0    -1  
 $EndComp
 $Comp
-L SparkFun-LED:LED5MM D?
+L plc14500-rescue:LED5MM-SparkFun-LED D?
 U 1 1 639808B0
 P 4075 5925
 AR Path="/639808B0" Ref="D?"  Part="1" 
@@ -1839,7 +1839,7 @@ Wire Bus Line
 Text GLabel 7375 3650 0    50   Input ~ 0
 DATA
 $Comp
-L SparkFun-LED:LED5MM D?
+L plc14500-rescue:LED5MM-SparkFun-LED D?
 U 1 1 63B91CBF
 P 10075 4950
 AR Path="/63B91CBF" Ref="D?"  Part="1" 
@@ -1854,7 +1854,7 @@ F 5 "0.01" H 10075 4950 50  0001 C CNN "Price"
 	1    0    0    -1  
 $EndComp
 $Comp
-L SparkFun-LED:LED5MM D?
+L plc14500-rescue:LED5MM-SparkFun-LED D?
 U 1 1 63B91CCD
 P 10275 4950
 AR Path="/63B91CCD" Ref="D?"  Part="1" 
@@ -1869,7 +1869,7 @@ F 5 "0.01" H 10275 4950 50  0001 C CNN "Price"
 	1    0    0    -1  
 $EndComp
 $Comp
-L SparkFun-LED:LED5MM D?
+L plc14500-rescue:LED5MM-SparkFun-LED D?
 U 1 1 63B91CD4
 P 10450 4950
 AR Path="/63B91CD4" Ref="D?"  Part="1" 
@@ -2100,7 +2100,7 @@ D6
 Wire Wire Line
 	2925 7350 2925 7400
 $Comp
-L SparkFun-LED:LED5MM D?
+L plc14500-rescue:LED5MM-SparkFun-LED D?
 U 1 1 64D892FF
 P 7250 2050
 AR Path="/64D892FF" Ref="D?"  Part="1" 
@@ -2203,7 +2203,7 @@ Entry Wire Line
 Wire Wire Line
 	5700 6550 5925 6550
 $Comp
-L SparkFun-LED:LED5MM D?
+L plc14500-rescue:LED5MM-SparkFun-LED D?
 U 1 1 6817902A
 P 5300 5925
 AR Path="/6817902A" Ref="D?"  Part="1" 
@@ -2357,6 +2357,10 @@ Wire Wire Line
 	1325 4975 1325 4900
 Text Notes 750  3250 0    50   ~ 0
 Fhi = 1.44 / (R30+2×R31) × C10\nFhi = 4.8KHz\n\nFlo = 1.44 / (R30+2×R31) × (C10+C7)\nFlo = 1Hz
+Text GLabel 10550 3900 2    50   Output ~ 0
+RR
+Wire Wire Line
+	10275 3900 10550 3900
 Wire Bus Line
 	7800 3650 7800 4100
 Wire Bus Line
@@ -2373,4 +2377,5 @@ Wire Bus Line
 	3475 3800 5150 3800
 Wire Bus Line
 	3475 3800 3475 4975
+Connection ~ 10275 3900
 $EndSCHEMATC

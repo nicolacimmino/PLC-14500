@@ -6,9 +6,9 @@ encoding utf-8
 Sheet 1 4
 Title "PLC14500 - Nano"
 Date "2022-11-09"
-Rev "0.4"
+Rev "0.5"
 Comp "Nicola Cimmino"
-Comment1 ""
+Comment1 "REV.C"
 Comment2 ""
 Comment3 ""
 Comment4 ""
