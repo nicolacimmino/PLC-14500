@@ -4,85 +4,60 @@ char printBuffer[32];
 
 uint8_t processCommand()
 {
-  char *token;
+  char *token = strtok(rxBuffer, " ");
 
-  token = strtok(rxBuffer, " ");
-
-  if (strncmp(token, ".X", 2) == 0)
+  byte command = CMD_MAX;
+  for (byte ix = 0; ix < CMD_MAX; ix++)
   {
-    Serial.println("Bye!");
-    return RES_LEAVE_ASSEMBLER;
-  }
-
-  if (strncmp(token, ".H", 2) == 0)
-  {
-    printMessage(MESSAGE_HELP_IX);
-  }
-
-  if (strncmp(token, ".S", 2) == 0)
-  {
-    watchStatus();
-
-    return RES_OK;
+    if (strncmp(token, commands + (2 * ix), 2) == 0)
+    {
+      command = ix;
+      break;
+    }
   }
 
   int start = 0;
   int end = PROGRAM_MEMOMORY_SIZE - 1;
 
-  if (strncmp(token, ".M", 2) == 0)
+  token = strtok(NULL, " ");
+  if (token != NULL)
   {
-    token = strtok(NULL, " ");
-    if (token != NULL)
-    {
-      start = atoi(token);
-    }
-
-    token = strtok(NULL, " ");
-    if (token != NULL)
-    {
-      end = atoi(token);
-    }
-
-    dumpMemory(start, end);
-
-    return RES_OK;
+    start = atoi(token);
   }
 
-  if (strncmp(token, ".D", 2) == 0)
+  token = strtok(NULL, " ");
+  if (token != NULL)
   {
-    token = strtok(NULL, " ");
-    if (token != NULL)
-    {
-      start = atoi(token);
-    }
-
-    token = strtok(NULL, " ");
-    if (token != NULL)
-    {
-      end = atoi(token);
-    }
-
-    disassemble(start, end);
-
-    return RES_OK;
+    end = atoi(token);
   }
 
-  if (strncmp(token, ".A", 2) == 0)
+  switch(command)
   {
-    token = strtok(NULL, " ");
-    if (token != NULL)
-    {
-      start = atoi(token);
-    }
-
+  case CMD_ASSEMBLE:
     assemble(start);
-
-    return RES_OK;
+    break;
+  case CMD_DISSASEMBLE:
+    disassemble(start, end);
+    break;
+  case CMD_MEMORY:
+    dumpMemory(start, end);
+    break;
+  case CMD_HELP:
+    printMessage(MESSAGE_HELP_IX);
+    break;
+  case CMD_OBSERVE:
+    watchStatus();
+    break;
+  case CMD_EXIT:
+    Serial.println("Bye!");
+    return RES_LEAVE_ASSEMBLER;
+    break;
+  default:
+    Serial.println("Unknonw command.");
+    return RES_ERR;
   }
 
-  Serial.println("Unknonw command.");
-
-  return RES_ERR;
+  return RES_OK;
 }
 
 void watchStatus()
@@ -161,7 +136,7 @@ void assemble(int address)
   byte rxBufferIx = 0;
 
   while (true)
-  {        
+  {
     printDisassemblyLine(address);
     Serial.print(">");
 
