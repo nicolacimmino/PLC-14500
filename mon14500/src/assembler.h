@@ -20,6 +20,7 @@ void dumpMemory(int start, int end);
 void disassemble(int start, int end);
 void assemble(int address);
 void watchStatus();
+void printDisassemblyLine(int address, bool printNewLine = false);
 
 const char mnemonics[] = "NOP0\0LD  \0LDC \0AND \0ANDC\0OR  \0ORC \0XNOR\0STO \0STOC\0IEN \0OEN \0JMP \0RTN \0SKZ \0NOPF";
 

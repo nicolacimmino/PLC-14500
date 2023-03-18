@@ -97,27 +97,9 @@ void watchStatus()
 
   while (true)
   {
-    byte byteCode = readDataFromBus();
-    byte opcode = byteCode & 0xF;
     byte address = readAddressFromBus();
 
-    if (opcode == 0 || opcode > 12)
-    {
-      sprintf(printBuffer, "%04X  %02X    %s           \r",
-              address,
-              byteCode,
-              mnemonics + (5 * (byteCode & 0xF)));
-    }
-    else
-    {
-      sprintf(printBuffer, "%04X  %02X    %s  %01X     \r",
-              address,
-              byteCode,
-              mnemonics + (5 * (byteCode & 0xF)),
-              byteCode >> 4);
-    }
-
-    Serial.println(printBuffer);
+    printDisassemblyLine(address, true);
 
     lastAddress = address;
 
@@ -146,50 +128,53 @@ void watchStatus()
   releaseBus();
 }
 
-void disassemble(int start, int end)
+void disassemble(int address, int end)
 {
-  for (int ix = start; ix < end + 1; ix++)
+  for (; address < end + 1; address++)
   {
-    byte byteCode = EEPROM.read(ix);
-    byte opcode = byteCode & 0xF;
-
-    sprintf(printBuffer, "%04X  %02X  %s ", ix, byteCode, mnemonics + (5 * opcode));
-    Serial.print(printBuffer);
-
-    if (opcode == 0 || opcode > 12)
-    {
-      Serial.println("");
-      continue;
-    }
-
-    Serial.println(byteCode >> 4);
+    printDisassemblyLine(address, true);
   }
+}
+
+void printDisassemblyLine(int address, bool printNewLine = false)
+{
+  byte byteCode = EEPROM.read(address);
+  byte opcode = byteCode & 0xF;
+
+  sprintf(printBuffer, "%04X  %02X    %s", address, byteCode, mnemonics + (5 * opcode));
+  Serial.print(printBuffer);
+
+  if (opcode == 0 || opcode > 12)
+  {
+    Serial.print(printNewLine ? "   \r\n" : "   ");
+
+    return;
+  }
+
+  sprintf(printBuffer, " %02X%s", byteCode >> 4, (printNewLine ? "   \r\n" : "   "));
+  Serial.print(printBuffer);
 }
 
 void assemble(int address)
 {
+  char *token;
+  byte rxBufferIx = 0;
+
   while (true)
-  {
-    char *token;
-
-    byte ix = 0;
-
-    byte byteCode = EEPROM.read(address);
-    byte opcode = byteCode & 0xF;
-
-    sprintf(printBuffer, "%04X  %02X  %s >", address, byteCode, mnemonics + (5 * opcode));
-    Serial.print(printBuffer);
+  {        
+    printDisassemblyLine(address);
+    Serial.print(">");
 
     while (true)
     {
 
       while (Serial.available())
       {
-        rxBuffer[ix] = toupper(Serial.read());
+        rxBuffer[rxBufferIx] = toupper(Serial.read());
 
-        Serial.print((char)rxBuffer[ix]);
+        Serial.print((char)rxBuffer[rxBufferIx]);
 
-        if (rxBuffer[ix] == '\r')
+        if (rxBuffer[rxBufferIx] == '\r')
         {
           token = strtok(rxBuffer, " ");
 
@@ -217,21 +202,17 @@ void assemble(int address)
             }
           }
 
-          ix = 0;
+          rxBufferIx = 0;
           address = (address + 1) % PROGRAM_MEMOMORY_SIZE;
 
           Serial.println("");
-          // TODO: dedup code
-          byte byteCode = EEPROM.read(address);
-          byte opcode = byteCode & 0xF;
-
-          sprintf(printBuffer, "%04X  %02X  %s >", address, byteCode, mnemonics + (5 * opcode));
-          Serial.print(printBuffer);
+          printDisassemblyLine(address);
+          Serial.print(">");
 
           break;
         }
 
-        ix++;
+        rxBufferIx++;
       }
     }
   }
