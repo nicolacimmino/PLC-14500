@@ -23,7 +23,7 @@ void watchStatus();
 void printDisassemblyLine(int address, bool printNewLine = false);
 
 const char mnemonics[] = "NOP0\0LD  \0LDC \0AND \0ANDC\0OR  \0ORC \0XNOR\0STO \0STOC\0IEN \0OEN \0JMP \0RTN \0SKZ \0NOPF";
-const char commands[] = ".A.D.M.H.O.X";
+const char commands[] = "ADMHOX";
 
 #define CMD_ASSEMBLE 0
 #define CMD_DISSASEMBLE 1
@@ -32,5 +32,7 @@ const char commands[] = ".A.D.M.H.O.X";
 #define CMD_OBSERVE 4
 #define CMD_EXIT 5
 #define CMD_MAX 6
+
+#define TERMINAL_KEY_BACKSPACE 0x7F
 
 #endif

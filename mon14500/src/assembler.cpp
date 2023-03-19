@@ -9,7 +9,7 @@ uint8_t processCommand()
   byte command = CMD_MAX;
   for (byte ix = 0; ix < CMD_MAX; ix++)
   {
-    if (strncmp(token, commands + (2 * ix), 2) == 0)
+    if (strncmp(token, commands + ix, 1) == 0)
     {
       command = ix;
       break;
@@ -22,16 +22,16 @@ uint8_t processCommand()
   token = strtok(NULL, " ");
   if (token != NULL)
   {
-    start = atoi(token);
+    start = strtoul(token, NULL, 16);
   }
 
   token = strtok(NULL, " ");
   if (token != NULL)
   {
-    end = atoi(token);
+    end = strtoul(token, NULL, 16);
   }
 
-  switch(command)
+  switch (command)
   {
   case CMD_ASSEMBLE:
     assemble(start);
@@ -121,12 +121,12 @@ void printDisassemblyLine(int address, bool printNewLine = false)
 
   if (opcode == 0 || opcode > 12)
   {
-    Serial.print(printNewLine ? "   \r\n" : "   ");
+    Serial.print(printNewLine ? "    \r\n" : "    ");
 
     return;
   }
 
-  sprintf(printBuffer, " %02X%s", byteCode >> 4, (printNewLine ? "   \r\n" : "   "));
+  sprintf(printBuffer, " %02X%s", byteCode >> 4, (printNewLine ? " \r\n" : " "));
   Serial.print(printBuffer);
 }
 
@@ -138,7 +138,7 @@ void assemble(int address)
   while (true)
   {
     printDisassemblyLine(address);
-    Serial.print(">");
+    Serial.print(".");
 
     while (true)
     {
@@ -147,19 +147,27 @@ void assemble(int address)
       {
         rxBuffer[rxBufferIx] = toupper(Serial.read());
 
+        if (rxBuffer[rxBufferIx] == TERMINAL_KEY_BACKSPACE && rxBufferIx > 0)
+        {
+          rxBufferIx--;
+          Serial.print((char)TERMINAL_KEY_BACKSPACE);
+          continue;
+        }
+
         Serial.print((char)rxBuffer[rxBufferIx]);
 
         if (rxBuffer[rxBufferIx] == '\r')
         {
           token = strtok(rxBuffer, " ");
 
-          if (strncmp(token, ".X", 2) == 0)
+          if (strncmp(token, "X", 1) == 0)
           {
             Serial.println("");
 
             return;
           }
 
+          bool success = false;
           for (byte opcode = 0; opcode < 16; opcode++)
           {
             if (strncmp(token, mnemonics + (5 * opcode), strlen(token)) == 0)
@@ -173,16 +181,29 @@ void assemble(int address)
 
               EEPROM.write(address, opcode | (arg << 4));
 
+              success = true;
               break;
             }
           }
 
           rxBufferIx = 0;
-          address = (address + 1) % PROGRAM_MEMOMORY_SIZE;
 
-          Serial.println("");
+          if (rxBuffer[rxBufferIx] == '\r')
+          {
+            success = true;
+          }
+
+          if (success)
+          {
+            address = (address + 1) % PROGRAM_MEMOMORY_SIZE;
+            Serial.println("");
+          }
+          else
+          {
+            Serial.println("\r\nERROR");
+          }
           printDisassemblyLine(address);
-          Serial.print(">");
+          Serial.print(".");
 
           break;
         }
@@ -227,13 +248,20 @@ void enterAssembler()
   {
     uint8_t ix = 0;
     Serial.println("Assembler v0.1");
-    Serial.print(">");
+    Serial.print(".");
 
     while (true)
     {
       while (Serial.available())
       {
         rxBuffer[ix] = toupper(Serial.read());
+
+        if (rxBuffer[ix] == TERMINAL_KEY_BACKSPACE && ix > 0)
+        {
+          ix--;
+          Serial.print((char)TERMINAL_KEY_BACKSPACE);
+          continue;
+        }
 
         Serial.print((char)rxBuffer[ix]);
 
@@ -246,7 +274,7 @@ void enterAssembler()
           }
 
           ix = 0;
-          Serial.print(">");
+          Serial.print(".");
           continue;
         }
 
