@@ -1,4 +1,4 @@
-#include "assembler.h"
+#include "monitor.h"
 
 char printBuffer[32];
 
@@ -39,34 +39,97 @@ uint8_t processCommand()
   case CMD_DISSASEMBLE:
     disassemble(start, end);
     break;
+  case CMD_BOOTSTRAP:
+    bootstrapPLC14500Board();
+    break;
   case CMD_MEMORY:
     dumpMemory(start, end);
     break;
   case CMD_HELP:
     printMessage(MESSAGE_HELP_IX);
     break;
-  case CMD_OBSERVE:
-    watchStatus();
+  case CMD_TRACE:
+    trace();
+    break;
+  case CMD_WRITE:
+    writeMemory(start);
     break;
   case CMD_EXIT:
-    Serial.println("Bye!");
+    Serial.println("BYE!");
     return RES_LEAVE_ASSEMBLER;
     break;
   default:
-    Serial.println("Unknonw command.");
+    Serial.println("UNKNOWN COMMAD.");
     return RES_ERR;
   }
 
   return RES_OK;
 }
 
-void watchStatus()
+void writeMemory(int address)
+{
+  byte rxBufferIx = 0;
+  char *token;
+
+  printSingleMemoryLocation(address);
+
+  while (true)
+  {
+
+    while (Serial.available())
+    {
+      rxBuffer[rxBufferIx] = toupper(Serial.read());
+
+      if (rxBuffer[rxBufferIx] == TERMINAL_KEY_BACKSPACE && rxBufferIx > 0)
+      {
+        rxBufferIx--;
+        Serial.print((char)TERMINAL_KEY_BACKSPACE);
+        continue;
+      }
+
+      Serial.print((char)rxBuffer[rxBufferIx]);
+
+      if (rxBuffer[rxBufferIx] == '\r')
+      {
+        token = strtok(rxBuffer, " ");
+
+        if (strncmp(token, "X", 1) == 0)
+        {
+          Serial.println("");
+
+          return;
+        }
+
+        EEPROM.write(address, strtoul(token, NULL, 16));
+
+        rxBufferIx = 0;
+
+        address = (address + 1) % PROGRAM_MEMOMORY_SIZE;
+        Serial.println("");
+
+        printSingleMemoryLocation(address);
+
+        continue;
+      }
+
+      rxBufferIx++;
+    }
+  }
+}
+
+void printSingleMemoryLocation(int address)
+{
+  sprintf(printBuffer, "%04X  %02X .", address, EEPROM.read(address));
+  Serial.print(printBuffer);
+}
+
+void trace()
 {
   unsigned long lastChangeTime = 0;
 
   acquireBusForRead();
 
-  Serial.println("ADDR  DATA  OP    ARG");
+  Serial.println("ADDR  DATA  OP   ARG");
 
   byte lastAddress = 0;
 
@@ -142,7 +205,6 @@ void assemble(int address)
 
     while (true)
     {
-
       while (Serial.available())
       {
         rxBuffer[rxBufferIx] = toupper(Serial.read());
@@ -247,13 +309,21 @@ void enterAssembler()
   while (!Serial.available())
   {
     uint8_t ix = 0;
-    Serial.println("Assembler v0.1");
+    Serial.println("14500MON V0.1");
     Serial.print(".");
+    unsigned long lastActive = millis();
 
     while (true)
     {
+      if (millis() - lastActive > MON_MAX_INACTIVE_MS)
+      {
+        Serial.println("");
+        return;
+      }
+
       while (Serial.available())
       {
+        lastActive = millis();
         rxBuffer[ix] = toupper(Serial.read());
 
         if (rxBuffer[ix] == TERMINAL_KEY_BACKSPACE && ix > 0)

@@ -5,13 +5,23 @@
 #include <Arduino.h>
 
 const char messageHelp[] PROGMEM =
-    ".d Disassemble\r\n"
-    ".m Dump Memory\r\n"
-    ".x Exit\r\n";
+    "A [START]       ASSEMBLE\r\n"
+    "D [START] [END] DISSASSEMBLE\r\n"
+    "M [START] [END] DUMP MEMORY\r\n"
+    "T               TRACE\r\n"
+    "Q [START]       WRITE MEMORY\r\n"
+    "X EXIT\r\n";
 
-const char *const messages[] PROGMEM = {messageHelp};
+const char messageBanner[] PROGMEM =
+    "PLC14500-NANO\r\n"
+    "BOOTLOADER V0.2\r\n"
+    "WAITING FOR 256BYTES OF PROGRAM\r\n"
+    "PRESS ENTER FOR INTERACTIVE MONITOR.\r\n";
+
+const char *const messages[] PROGMEM = {messageHelp, messageBanner};
 
 #define MESSAGE_HELP_IX 0
+#define MESSAGE_BANNER_IX 1
 
 void printMessage(uint8_t messageId);
 
