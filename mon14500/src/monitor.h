@@ -30,7 +30,7 @@ extern void acquireBusForRead();
 extern void releaseBus();
 
 uint8_t processCommand();
-void enterAssembler();
+void enterMonitor();
 void dumpMemory(int start, int end);
 void disassemble(int start, int end);
 void assemble(int address);

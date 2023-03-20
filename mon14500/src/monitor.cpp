@@ -55,11 +55,11 @@ uint8_t processCommand()
     writeMemory(start);
     break;
   case CMD_EXIT:
-    Serial.println("BYE!");
+    Serial.println(F("BYE!"));
     return RES_LEAVE_ASSEMBLER;
     break;
   default:
-    Serial.println("UNKNOWN COMMAD.");
+    Serial.println(F("UNKNOWN COMMAD."));
     return RES_ERR;
   }
 
@@ -129,7 +129,7 @@ void trace()
 
   acquireBusForRead();
 
-  Serial.println("ADDR  DATA  OP   ARG");
+  Serial.println(F("ADDR  DATA  OP   ARG"));
 
   byte lastAddress = 0;
 
@@ -156,7 +156,7 @@ void trace()
 
     if (millis() - lastChangeTime < 100)
     {
-      Serial.println("Too fast, can't keep up. Turn clock to LO or STEP.");
+      Serial.println(F("TOO FAST, CAN’T KEEP UP. TURN CLOCK TO LO OR STEP."));
       return;
     }
 
@@ -282,7 +282,7 @@ void dumpMemory(int start, int end)
   {
     if (ix % 16 == 0)
     {
-      sprintf(printBuffer, "\r\n%04X  ", ix);
+      sprintf(printBuffer, "%04X  ", ix);
       Serial.print(printBuffer);
     }
 
@@ -292,24 +292,19 @@ void dumpMemory(int start, int end)
       continue;
     }
 
-    sprintf(printBuffer, "%02X", EEPROM.read(ix));
-    Serial.print(printBuffer);
-
-    if (ix % 16 != 15)
-    {
-      Serial.print(".");
-    }
+    sprintf(printBuffer, "%02X%s", EEPROM.read(ix), (ix % 16 != 15) ? "." : "\r\n");
+    Serial.print(printBuffer);    
   }
 
   Serial.println("");
 }
 
-void enterAssembler()
+void enterMonitor()
 {
   while (!Serial.available())
   {
     uint8_t ix = 0;
-    Serial.println("14500MON V0.1");
+    Serial.println(F("14500MON V0.1"));
     Serial.print(".");
     unsigned long lastActive = millis();
 

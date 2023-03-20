@@ -6,7 +6,7 @@
 
 const char messageHelp[] PROGMEM =
     "A [START]       ASSEMBLE\r\n"
-    "D [START] [END] DISSASSEMBLE\r\n"
+    "D [START] [END] DISASSEMBLE\r\n"
     "M [START] [END] DUMP MEMORY\r\n"
     "T               TRACE\r\n"
     "W [START]       WRITE MEMORY\r\n"

@@ -76,7 +76,7 @@ void loop()
     {
       if (rxBuffer[0] == '\r')
       {
-        enterAssembler();
+        enterMonitor();
         printMessage(MESSAGE_BANNER_IX);
       }
       return;
