@@ -19,8 +19,9 @@
 #define RX_TIMEOUT_MS 1000
 
 #include <EEPROM.h>
+#include "src/messages.h"
 #include "src/hardware.h"
-#include "src/assembler.h"
+#include "src/monitor.h"
 #include "src/bootloader.h"
 
 byte data_bus[] = {
@@ -54,12 +55,11 @@ void setup()
 
   Serial.begin(9600);
 
-  Serial.println("PLC14500-Nano");
-  Serial.println("Bootloader V0.2");
+  printMessage(MESSAGE_BANNER_IX);
 }
 
 void loop()
-{  
+{
   while (!Serial.available())
   {
   }
@@ -76,7 +76,8 @@ void loop()
     {
       if (rxBuffer[0] == '\r')
       {
-        enterAssembler();
+        enterMonitor();
+        printMessage(MESSAGE_BANNER_IX);
       }
       return;
     }
