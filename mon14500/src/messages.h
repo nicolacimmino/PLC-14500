@@ -6,11 +6,12 @@
 
 const char messageHelp[] PROGMEM =
     "A [START]       ASSEMBLE\r\n"
+    "B               BOOTSTRAP\r\n"
     "D [START] [END] DISASSEMBLE\r\n"
     "M [START] [END] DUMP MEMORY\r\n"
     "T               TRACE\r\n"
     "W [START]       WRITE MEMORY\r\n"
-    "X EXIT\r\n";
+    "X               EXIT\r\n";
 
 const char messageBanner[] PROGMEM =
     "PLC14500-NANO\r\n"
