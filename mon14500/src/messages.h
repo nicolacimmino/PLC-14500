@@ -9,7 +9,7 @@ const char messageHelp[] PROGMEM =
     "D [START] [END] DISSASSEMBLE\r\n"
     "M [START] [END] DUMP MEMORY\r\n"
     "T               TRACE\r\n"
-    "Q [START]       WRITE MEMORY\r\n"
+    "W [START]       WRITE MEMORY\r\n"
     "X EXIT\r\n";
 
 const char messageBanner[] PROGMEM =
