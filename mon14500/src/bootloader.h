@@ -7,8 +7,14 @@
 #include "monitor.h"
 #include "hardware.h"
 
+#define RX_TIMEOUT_MS 1000
+
+#define BOOT_ENTER_MONITOR 1
+#define BOOT_TIMEOUT 2
+#define BOOT_OK 3
+
 void bootstrapPLC14500Board();
-void enterBootloader();
+uint8_t enterBootloader();
 void writeProgramByte(byte address, byte data);
 
 #endif
