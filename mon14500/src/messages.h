@@ -4,6 +4,11 @@
 
 #include <Arduino.h>
 #include "config.h"
+#include "mon14500.h"
+
+#define MESSAGE_HELP_IX 0
+#define MESSAGE_BOOTLOADER_BANNER_IX 1
+#define MESSAGE_MONITOR_BANNER_IX 2
 
 const char messageHelp[] PROGMEM =
     "A [START]       ASSEMBLE\r\n"
@@ -24,10 +29,6 @@ const char monitorBanner[] PROGMEM =
     "14500MON V" STR(__MONITOR_VERSION_MAJOR__) "." STR(__MONITOR_VERSION_MINOR__) "\r\n";
 
 const char *const messages[] PROGMEM = {messageHelp, bootloaderBanner, monitorBanner};
-
-#define MESSAGE_HELP_IX 0
-#define MESSAGE_BOOTLOADER_BANNER_IX 1
-#define MESSAGE_MONITOR_BANNER_IX 2
 
 void printMessage(uint8_t messageId);
 
