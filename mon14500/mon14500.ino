@@ -57,7 +57,7 @@ void setup()
 
   Serial.begin(9600);
 
-  printMessage(MESSAGE_BOOTLOADER_BANNER_IX);
+  enterBootloader();
 }
 
 void loop()

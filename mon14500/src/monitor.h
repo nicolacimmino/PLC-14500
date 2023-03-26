@@ -7,6 +7,7 @@
 #include "hardware.h"
 #include "messages.h"
 #include "bootloader.h"
+#include "mon14500.h"
 
 #define RES_OK 0
 #define RES_ERR 1

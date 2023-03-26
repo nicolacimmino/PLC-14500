@@ -1,7 +1,5 @@
 #include "monitor.h"
 
-char printBuffer[32];
-
 void enterMonitor()
 {
   while (!Serial.available())
