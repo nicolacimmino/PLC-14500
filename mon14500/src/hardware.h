@@ -1,5 +1,8 @@
 #include <Arduino.h>
 
+#ifndef __HARDWARE_H__
+#define __HARDWARE_H__
+
 #define D0_PIN 2
 #define D1_PIN 3
 #define D2_PIN 4
@@ -20,11 +23,6 @@
 
 #define PRG_PIN A4
 #define WEN_PIN A5
-
-#define PROGRAM_MEMOMORY_SIZE 256
-
-#ifndef __HARDWARE_H__
-#define __HARDWARE_H__
 
 extern byte data_bus[];
 extern byte addr_bus[];

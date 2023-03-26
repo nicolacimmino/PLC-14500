@@ -2,6 +2,56 @@
 
 char printBuffer[32];
 
+void enterMonitor()
+{
+  while (!Serial.available())
+  {
+    uint8_t ix = 0;
+    unsigned long lastActive = millis();
+
+    printMessage(MESSAGE_MONITOR_BANNER_IX);
+
+    while (true)
+    {
+      if (millis() - lastActive > MON_MAX_INACTIVE_MS)
+      {
+        Serial.println("");
+        return;
+      }
+
+      while (Serial.available())
+      {
+        lastActive = millis();
+        rxBuffer[ix] = toupper(Serial.read());
+
+        if (rxBuffer[ix] == TERMINAL_KEY_BACKSPACE && ix > 0)
+        {
+          ix--;
+          Serial.print((char)TERMINAL_KEY_BACKSPACE);
+          continue;
+        }
+
+        Serial.print((char)rxBuffer[ix]);
+
+        if (rxBuffer[ix] == '\r')
+        {
+          Serial.println("");
+          if (processCommand() == RES_LEAVE_ASSEMBLER)
+          {
+            return;
+          }
+
+          ix = 0;
+          Serial.print(".");
+          continue;
+        }
+
+        ix++;
+      }
+    }
+  }
+}
+
 uint8_t processCommand()
 {
   char *token = strtok(rxBuffer, " ");
@@ -293,58 +343,8 @@ void dumpMemory(int start, int end)
     }
 
     sprintf(printBuffer, "%02X%s", EEPROM.read(ix), (ix % 16 != 15) ? "." : "\r\n");
-    Serial.print(printBuffer);    
+    Serial.print(printBuffer);
   }
 
   Serial.println("");
-}
-
-void enterMonitor()
-{
-  while (!Serial.available())
-  {
-    uint8_t ix = 0;
-    Serial.println(F("14500MON V0.1"));
-    Serial.print(".");
-    unsigned long lastActive = millis();
-
-    while (true)
-    {
-      if (millis() - lastActive > MON_MAX_INACTIVE_MS)
-      {
-        Serial.println("");
-        return;
-      }
-
-      while (Serial.available())
-      {
-        lastActive = millis();
-        rxBuffer[ix] = toupper(Serial.read());
-
-        if (rxBuffer[ix] == TERMINAL_KEY_BACKSPACE && ix > 0)
-        {
-          ix--;
-          Serial.print((char)TERMINAL_KEY_BACKSPACE);
-          continue;
-        }
-
-        Serial.print((char)rxBuffer[ix]);
-
-        if (rxBuffer[ix] == '\r')
-        {
-          Serial.println("");
-          if (processCommand() == RES_LEAVE_ASSEMBLER)
-          {
-            return;
-          }
-
-          ix = 0;
-          Serial.print(".");
-          continue;
-        }
-
-        ix++;
-      }
-    }
-  }
 }

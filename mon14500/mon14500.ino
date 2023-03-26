@@ -19,10 +19,12 @@
 #define RX_TIMEOUT_MS 1000
 
 #include <EEPROM.h>
-#include "src/messages.h"
+
+#include "src/config.h"
 #include "src/hardware.h"
 #include "src/monitor.h"
 #include "src/bootloader.h"
+#include "src/messages.h"
 
 byte data_bus[] = {
     D0_PIN,
@@ -55,7 +57,7 @@ void setup()
 
   Serial.begin(9600);
 
-  printMessage(MESSAGE_BANNER_IX);
+  printMessage(MESSAGE_BOOTLOADER_BANNER_IX);
 }
 
 void loop()
@@ -77,7 +79,7 @@ void loop()
       if (rxBuffer[0] == '\r')
       {
         enterMonitor();
-        printMessage(MESSAGE_BANNER_IX);
+        printMessage(MESSAGE_BOOTLOADER_BANNER_IX);
       }
       return;
     }

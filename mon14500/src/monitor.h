@@ -3,6 +3,7 @@
 
 #include <Arduino.h>
 #include <EEPROM.h>
+#include "config.h"
 #include "hardware.h"
 #include "messages.h"
 #include "bootloader.h"
