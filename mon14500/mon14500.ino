@@ -16,8 +16,6 @@
 //
 //
 
-#define RX_TIMEOUT_MS 1000
-
 #include <EEPROM.h>
 
 #include "src/config.h"
@@ -56,46 +54,25 @@ void setup()
   bootstrapPLC14500Board();
 
   Serial.begin(9600);
-
-  enterBootloader();
 }
 
 void loop()
 {
-  while (!Serial.available())
+  byte result = enterBootloader();
+
+  if (result == BOOT_ENTER_MONITOR)
   {
+    enterMonitor();
   }
 
-  // Wait for PROGRAM_MEMOMORY_SIZE (or timeout). We need to
-  //  store the program in RAM first as writing it to the board
-  //  and local EEPROM would cause the Arduino serial RX buffer
-  //  to overflow.
-
-  unsigned long rxStartTime = millis();
-  for (int address = 0; address < PROGRAM_MEMOMORY_SIZE;)
+  if (result == BOOT_OK)
   {
-    if (millis() - rxStartTime > RX_TIMEOUT_MS)
+    // Persist the program to the arduino EEPROM so we can bootstrap the board on powerup.
+    for (int address = 0; address < PROGRAM_MEMOMORY_SIZE; address++)
     {
-      if (rxBuffer[0] == '\r')
-      {
-        enterMonitor();
-        printMessage(MESSAGE_BOOTLOADER_BANNER_IX);
-      }
-      return;
+      EEPROM.write(address, rxBuffer[address]);
     }
 
-    if (Serial.available())
-    {
-      rxBuffer[address] = Serial.read();
-      address++;
-    }
+    bootstrapPLC14500Board();
   }
-
-  // Persist the program to the arduino EEPROM so we can bootstrap the board on powerup.
-  for (int address = 0; address < PROGRAM_MEMOMORY_SIZE; address++)
-  {
-    EEPROM.write(address, rxBuffer[address]);
-  }
-
-  bootstrapPLC14500Board();
 }

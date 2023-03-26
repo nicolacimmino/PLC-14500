@@ -20,9 +20,50 @@ void bootstrapPLC14500Board()
 /*
  **********************************************************************/
 
-void enterBootloader()
-{
+/**********************************************************************
+ * Enter the bootloader and wait for PROGRAM_MEMOMORY_SIZE. We need to
+ *  store the program in RAM first as writing it to the board
+ *  and local EEPROM would cause the Arduino serial RX buffer
+ *  to overflow.
+ * 
+ * Returns:
+ * 
+ *  BOOT_OK: All good, new program in rxBuffer can be loaded to the 
+ *            PLC14500 RAM.
+ * 
+ *  BOOT_TIMEOUT: Some data received but timedout before receiving a 
+ *            full program. Restart bootloader.
+ * 
+ *  BOOT_ENTER_MONITOR: User wants to enter the interactive monitor.
+ */
 
+uint8_t enterBootloader()
+{
+  printMessage(MESSAGE_BOOTLOADER_BANNER_IX);
+
+  while (!Serial.available())
+    ;
+
+  unsigned long rxStartTime = millis();
+  for (int address = 0; address < PROGRAM_MEMOMORY_SIZE;)
+  {
+    if (millis() - rxStartTime > RX_TIMEOUT_MS)
+    {
+      if (rxBuffer[0] == '\r')
+      {
+        return BOOT_ENTER_MONITOR;
+      }
+      return BOOT_TIMEOUT;
+    }
+
+    if (Serial.available())
+    {
+      rxBuffer[address] = Serial.read();
+      address++;
+    }
+  }
+
+  return BOOT_OK;
 }
 
 /**********************************************************************
