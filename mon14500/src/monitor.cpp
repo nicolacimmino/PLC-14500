@@ -1,54 +1,72 @@
 #include "monitor.h"
 
+/**********************************************************************
+ * Enter the interactive monitor. 
+ * This function will return either after MON_MAX_INACTIVE_MS, if no
+ * activity, or when the user exits with "X".
+ * 
+ */
+
 void enterMonitor()
 {
-  while (!Serial.available())
+  uint8_t ix = 0;
+  unsigned long lastActive = millis();
+
+  printMessage(MESSAGE_MONITOR_BANNER_IX);
+
+  while (true)
   {
-    uint8_t ix = 0;
-    unsigned long lastActive = millis();
-
-    printMessage(MESSAGE_MONITOR_BANNER_IX);
-
-    while (true)
+    if (millis() - lastActive > MON_MAX_INACTIVE_MS)
     {
-      if (millis() - lastActive > MON_MAX_INACTIVE_MS)
+      Serial.println("");
+      return;
+    }
+
+    while (Serial.available())
+    {
+      lastActive = millis();
+      rxBuffer[ix] = toupper(Serial.read());
+
+      Serial.print((char)rxBuffer[ix]);
+
+      if (rxBuffer[ix] == TERMINAL_KEY_BACKSPACE && ix > 0)
       {
-        Serial.println("");
-        return;
+        ix--;
+        continue;
       }
 
-      while (Serial.available())
+      if (rxBuffer[ix] == '\r')
       {
-        lastActive = millis();
-        rxBuffer[ix] = toupper(Serial.read());
-
-        if (rxBuffer[ix] == TERMINAL_KEY_BACKSPACE && ix > 0)
+        Serial.println(F(""));
+        if (processCommand() == RES_LEAVE_MONITOR)
         {
-          ix--;
-          Serial.print((char)TERMINAL_KEY_BACKSPACE);
-          continue;
+          return;
         }
 
-        Serial.print((char)rxBuffer[ix]);
+        ix = 0;
+        Serial.print(F("\r\n" MONITOR_PROMPT));
+        continue;
+      }
 
-        if (rxBuffer[ix] == '\r')
-        {
-          Serial.println("");
-          if (processCommand() == RES_LEAVE_ASSEMBLER)
-          {
-            return;
-          }
-
-          ix = 0;
-          Serial.print(".");
-          continue;
-        }
-
+      if (ix < RX_BUFFER_SIZE)
+      {
         ix++;
       }
     }
   }
 }
+
+/*
+ **********************************************************************/
+
+/**********************************************************************
+ * Process the user command.
+ * 
+ * Returns:
+ *  RES_OK              Command processed successfully.
+ *  RES_ERR             Error while processing command.
+ *  RES_LEAVE_MONITOR   User wants to leave the monitor.
+ */
 
 uint8_t processCommand()
 {
@@ -104,7 +122,7 @@ uint8_t processCommand()
     break;
   case CMD_EXIT:
     Serial.println(F("BYE!"));
-    return RES_LEAVE_ASSEMBLER;
+    return RES_LEAVE_MONITOR;
     break;
   default:
     Serial.println(F("UNKNOWN COMMAD."));
@@ -114,132 +132,17 @@ uint8_t processCommand()
   return RES_OK;
 }
 
-void writeMemory(int address)
-{
-  byte rxBufferIx = 0;
-  char *token;
+/*
+ **********************************************************************/
 
-  printSingleMemoryLocation(address);
-
-  while (true)
-  {
-
-    while (Serial.available())
-    {
-      rxBuffer[rxBufferIx] = toupper(Serial.read());
-
-      if (rxBuffer[rxBufferIx] == TERMINAL_KEY_BACKSPACE && rxBufferIx > 0)
-      {
-        rxBufferIx--;
-        Serial.print((char)TERMINAL_KEY_BACKSPACE);
-        continue;
-      }
-
-      Serial.print((char)rxBuffer[rxBufferIx]);
-
-      if (rxBuffer[rxBufferIx] == '\r')
-      {
-        token = strtok(rxBuffer, " ");
-
-        if (strncmp(token, "X", 1) == 0)
-        {
-          Serial.println("");
-
-          return;
-        }
-
-        EEPROM.write(address, strtoul(token, NULL, 16));
-
-        rxBufferIx = 0;
-
-        address = (address + 1) % PROGRAM_MEMOMORY_SIZE;
-        Serial.println("");
-
-        printSingleMemoryLocation(address);
-
-        continue;
-      }
-
-      rxBufferIx++;
-    }
-  }
-}
-
-void printSingleMemoryLocation(int address)
-{
-  sprintf(printBuffer, "%04X  %02X .", address, EEPROM.read(address));
-  Serial.print(printBuffer);
-}
-
-void trace()
-{
-  unsigned long lastChangeTime = 0;
-
-  acquireBusForRead();
-
-  Serial.println(F("ADDR  DATA  OP   ARG"));
-
-  byte lastAddress = 0;
-
-  while (true)
-  {
-    byte address = readAddressFromBus();
-
-    printDisassemblyLine(address, true);
-
-    lastAddress = address;
-
-    while (lastAddress == readAddressFromBus())
-    {
-      if (Serial.available())
-      {
-        while (Serial.available())
-        {
-          Serial.read();
-        }
-
-        return;
-      }
-    }
-
-    if (millis() - lastChangeTime < 100)
-    {
-      Serial.println(F("TOO FAST, CAN’T KEEP UP. TURN CLOCK TO LO OR STEP."));
-      return;
-    }
-
-    lastChangeTime = millis();
-  }
-
-  releaseBus();
-}
-
-void disassemble(int address, int end)
-{
-  for (; address < end + 1; address++)
-  {
-    printDisassemblyLine(address, true);
-  }
-}
-
-void printDisassemblyLine(int address, bool printNewLine = false)
-{
-  byte byteCode = EEPROM.read(address);
-  byte opcode = byteCode & 0xF;
-
-  sprintf(printBuffer, "%04X  %02X    %s", address, byteCode, mnemonics + (5 * opcode));
-  Serial.print(printBuffer);
-
-  if (opcode == 0 || opcode > 12)
-  {
-    Serial.print(printNewLine ? "    \r\n" : "    ");
-
-    return;
-  }
-
-  sprintf(printBuffer, " %02X%s", byteCode >> 4, (printNewLine ? " \r\n" : " "));
-  Serial.print(printBuffer);
-}
+/**********************************************************************
+ * Assemble user input to bytecode.
+ * 
+ * NOTE: this writes the Arduino EEPROM section that acts as a hardcopy
+ *  of the program and not directly to the PLC14500 RAM. The changes
+ *  will not be reflected in the PLC14500 RAM until the board is 
+ *  bootstrapped.
+ */
 
 void assemble(int address)
 {
@@ -249,7 +152,7 @@ void assemble(int address)
   while (true)
   {
     printDisassemblyLine(address);
-    Serial.print(".");
+    Serial.print(MONITOR_PROMPT);
 
     while (true)
     {
@@ -313,7 +216,7 @@ void assemble(int address)
             Serial.println("\r\nERROR");
           }
           printDisassemblyLine(address);
-          Serial.print(".");
+          Serial.print(MONITOR_PROMPT);
 
           break;
         }
@@ -324,11 +227,91 @@ void assemble(int address)
   }
 }
 
+/*
+ **********************************************************************/
+
+/**********************************************************************
+ * Write the program memory.
+ * 
+ * NOTE: this writes the Arduino EEPROM section that acts as a hardcopy
+ *  of the program and not directly to the PLC14500 RAM. The changes
+ *  will not be reflected in the PLC14500 RAM until the board is 
+ *  bootstrapped.
+ */
+
+void writeMemory(int address)
+{
+  byte rxBufferIx = 0;
+  char *token;
+
+  printSingleMemoryLocation(address);
+
+  while (true)
+  {
+
+    while (Serial.available())
+    {
+      rxBuffer[rxBufferIx] = toupper(Serial.read());
+
+      Serial.print((char)rxBuffer[rxBufferIx]);
+
+      if (rxBuffer[rxBufferIx] == TERMINAL_KEY_BACKSPACE && rxBufferIx == 0)
+      {
+        continue;
+      }
+
+      if (rxBuffer[rxBufferIx] == TERMINAL_KEY_BACKSPACE && rxBufferIx > 0)
+      {
+        rxBufferIx--;
+        continue;
+      }
+
+      if (rxBuffer[rxBufferIx] == '\r')
+      {
+        Serial.println(F(""));
+
+        token = strtok(rxBuffer, " ");
+
+        if (strncmp(token, "X", 1) == 0)
+        {
+          return;
+        }
+
+        if (rxBufferIx > 0)
+        {
+          EEPROM.write(address, strtoul(token, NULL, 16));
+        }
+
+        rxBufferIx = 0;
+
+        address = (address + 1) % PROGRAM_MEMOMORY_SIZE;
+
+        printSingleMemoryLocation(address);
+
+        continue;
+      }
+
+      if (rxBufferIx < RX_BUFFER_SIZE)
+      {
+        rxBufferIx++;
+      }
+    }
+  }
+}
+
+/*
+ **********************************************************************/
+
+/**********************************************************************
+ * Dump program memory MON_DUMP_PER_LINE bytes per line.
+ * 
+ */
+
 void dumpMemory(int start, int end)
 {
-  for (int ix = start - (start % 16); ix < end + 1; ix++)
+  for (int ix = start - (start % MON_DUMP_PER_LINE); ix < end + 1; ix++)
   {
-    if (ix % 16 == 0)
+    if (ix % MON_DUMP_PER_LINE == 0)
     {
       sprintf(printBuffer, "%04X  ", ix);
       Serial.print(printBuffer);
@@ -340,9 +323,129 @@ void dumpMemory(int start, int end)
       continue;
     }
 
-    sprintf(printBuffer, "%02X%s", EEPROM.read(ix), (ix % 16 != 15) ? "." : "\r\n");
+    sprintf(printBuffer, "%02X%s", EEPROM.read(ix), (ix % MON_DUMP_PER_LINE != MON_DUMP_PER_LINE - 1) ? "." : "\r\n");
     Serial.print(printBuffer);
   }
 
   Serial.println("");
 }
+
+/*
+ **********************************************************************/
+
+/**********************************************************************
+ * Dump the program being executed in real time.
+ * 
+ */
+
+void trace()
+{
+  unsigned long lastChangeTime = 0;
+  bool inTooFastAlarm = false;
+
+  acquireBusForRead();
+
+  Serial.println(F("ADDR  DATA  OP   ARG"));
+
+  byte lastAddress = 0;
+
+  while (true)
+  {
+    byte address = readAddressFromBus();
+
+    if (!inTooFastAlarm)
+    {
+      printDisassemblyLine(address, true);
+    }
+
+    lastAddress = address;
+
+    while (lastAddress == readAddressFromBus())
+    {
+      if (Serial.available())
+      {
+        while (Serial.available())
+        {
+          Serial.read();
+        }
+
+        return;
+      }
+    }
+
+    if (millis() - lastChangeTime < 100)
+    {
+      if (!inTooFastAlarm)
+      {
+        Serial.println(F("TOO FAST, CAN’T KEEP UP. TURN CLOCK TO LO OR STEP."));
+        inTooFastAlarm = true;
+      }
+    }
+    else
+    {
+      inTooFastAlarm = false;
+    }
+
+    lastChangeTime = millis();
+  }
+
+  releaseBus();
+}
+
+void disassemble(int address, int end)
+{
+  for (; address < end + 1; address++)
+  {
+    printDisassemblyLine(address, true);
+  }
+}
+
+/*
+ **********************************************************************/
+
+/**********************************************************************
+ * Helper to print a single memory location formatted.
+ * 
+ */
+
+void printSingleMemoryLocation(int address, bool printNewLine = false)
+{
+  sprintf(printBuffer, "%04X  %02X .", address, EEPROM.read(address));
+  Serial.print(printBuffer);
+
+  if (printNewLine)
+  {
+    Serial.println(F(""));
+  }
+}
+
+/*
+ **********************************************************************/
+
+/**********************************************************************
+ * Helper to print a single memory location with raw content and
+ *  dissassembled code.
+ * 
+ */
+
+void printDisassemblyLine(int address, bool printNewLine = false)
+{
+  byte byteCode = EEPROM.read(address);
+  byte opcode = byteCode & 0xF;
+
+  sprintf(printBuffer, "%04X  %02X    %s", address, byteCode, mnemonics + (5 * opcode));
+  Serial.print(printBuffer);
+
+  if (opcode == 0 || opcode > 12)
+  {
+    Serial.print(printNewLine ? "    \r\n" : "    ");
+
+    return;
+  }
+
+  sprintf(printBuffer, " %02X%s", byteCode >> 4, (printNewLine ? " \r\n" : " "));
+  Serial.print(printBuffer);
+}
+
+/*
+ **********************************************************************/

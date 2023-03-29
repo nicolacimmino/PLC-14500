@@ -11,7 +11,7 @@
 
 #define RES_OK 0
 #define RES_ERR 1
-#define RES_LEAVE_ASSEMBLER 2
+#define RES_LEAVE_MONITOR 2
 
 #define CMD_ASSEMBLE 0
 #define CMD_DISSASEMBLE 1
@@ -27,6 +27,8 @@
 
 #define MON_MAX_INACTIVE_MS 30000
 
+#define MON_DUMP_PER_LINE 8
+
 extern byte rxBuffer[];
 extern void acquireBusForRead();
 extern void releaseBus();
@@ -39,7 +41,7 @@ void assemble(int address);
 void writeMemory(int address);
 void trace();
 void printDisassemblyLine(int address, bool printNewLine = false);
-void printSingleMemoryLocation(int address);
+void printSingleMemoryLocation(int address, bool printNewLine = false);
 
 const char mnemonics[] = "NOP0\0LD  \0LDC \0AND \0ANDC\0OR  \0ORC \0XNOR\0STO \0STOC\0IEN \0OEN \0JMP \0RTN \0SKZ \0NOPF";
 const char commands[] = "ADBMHTWX";
