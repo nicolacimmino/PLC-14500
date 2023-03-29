@@ -13,7 +13,8 @@
 #define BOOT_TIMEOUT 2
 #define BOOT_OK 3
 
-void bootstrapPLC14500Board();
+void loadBlockIntoProgramMemory(byte block);
+void savePrgoramMemoryToBlock(byte block);
 uint8_t enterBootloader();
 void writeProgramByte(byte address, byte data);
 
