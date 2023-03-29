@@ -44,7 +44,7 @@ byte addr_bus[] = {
     A6_PIN,
     A7_PIN};
 
-byte rxBuffer[PROGRAM_MEMOMORY_SIZE];
+byte rxBuffer[RX_BUFFER_SIZE];
 
 void setup()
 {

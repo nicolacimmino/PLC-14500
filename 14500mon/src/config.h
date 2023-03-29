@@ -12,5 +12,6 @@
 #define __BOOTLOADER_VERSION_MINOR__ 1
 
 #define PROGRAM_MEMOMORY_SIZE 256
+#define RX_BUFFER_SIZE 256
 
 #endif
