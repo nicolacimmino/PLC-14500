@@ -5,16 +5,53 @@
  * program stored in EEPROM.
  */
 
-void bootstrapPLC14500Board()
+void loadBlockIntoProgramMemory(byte block)
 {
+  Serial.print(F("LOADING"));
+
   acquireBusForWrite();
+
+  uint16_t offset = block * PROGRAM_MEMOMORY_SIZE;
 
   for (int address = 0; address < PROGRAM_MEMOMORY_SIZE; address++)
   {
-    writeProgramByte(address, EEPROM.read(address));
+    writeProgramByte(address, EEPROM.read(offset + address));
+
+    if (address % 16 == 0)
+    {
+      Serial.print(F("."));
+    }
   }
 
   releaseBus();
+
+  Serial.println(F(""));
+}
+
+/*
+ **********************************************************************/
+
+/**********************************************************************
+ * Persist the PLC14500 program memory to EEPROM.
+ */
+
+void savePrgoramMemoryToBlock(byte block)
+{
+  Serial.print(F("SAVING"));
+
+  uint16_t offset = block * PROGRAM_MEMOMORY_SIZE;
+
+  for (int address = 0; address < PROGRAM_MEMOMORY_SIZE; address++)
+  {
+    EEPROM.write(offset + address, programMemoryShadow[address]);
+
+    if (address % 16 == 0)
+    {
+      Serial.print(F("."));
+    }
+  }
+
+  Serial.println(F(""));
 }
 
 /*
@@ -92,6 +129,8 @@ void writeProgramByte(byte address, byte data)
   // Note: this needs to be 15mS for EEPROMs.
   delay(1);
   digitalWrite(WEN_PIN, HIGH);
+
+  programMemoryShadow[address] = data;
 }
 
 /*

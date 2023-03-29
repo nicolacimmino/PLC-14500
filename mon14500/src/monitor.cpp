@@ -1,5 +1,7 @@
 #include "monitor.h"
 
+unsigned long lastActive;
+
 /**********************************************************************
  * Enter the interactive monitor. 
  * This function will return either after MON_MAX_INACTIVE_MS, if no
@@ -10,10 +12,11 @@
 void enterMonitor()
 {
   uint8_t ix = 0;
-  unsigned long lastActive = millis();
-
+  
   printMessage(MESSAGE_MONITOR_BANNER_IX);
 
+  lastActive = millis();
+  
   while (true)
   {
     if (millis() - lastActive > MON_MAX_INACTIVE_MS)
@@ -69,7 +72,7 @@ void enterMonitor()
  */
 
 uint8_t processCommand()
-{
+{  
   char *token = strtok(rxBuffer, " ");
 
   byte command = CMD_MAX;
@@ -82,34 +85,41 @@ uint8_t processCommand()
     }
   }
 
-  int start = 0;
-  int end = PROGRAM_MEMOMORY_SIZE - 1;
+  int p0 = 0;
+  int p1 = PROGRAM_MEMOMORY_SIZE - 1;
 
   token = strtok(NULL, " ");
   if (token != NULL)
   {
-    start = strtoul(token, NULL, 16);
+    p0 = strtoul(token, NULL, 16);
   }
 
   token = strtok(NULL, " ");
   if (token != NULL)
   {
-    end = strtoul(token, NULL, 16);
+    p1 = strtoul(token, NULL, 16);
+  }
+
+  if(command == CMD_ASSEMBLE || command == CMD_WRITE ) {
+    acquireBusForWrite();
   }
 
   switch (command)
   {
   case CMD_ASSEMBLE:
-    assemble(start);
+    assemble(p0);
     break;
   case CMD_DISSASEMBLE:
-    disassemble(start, end);
+    disassemble(p0,p1);
     break;
-  case CMD_BOOTSTRAP:
-    bootstrapPLC14500Board();
+  case CMD_LOAD:    
+    loadBlockIntoProgramMemory(p0);
+    break;
+  case CMD_SAVE:
+    savePrgoramMemoryToBlock(p0);
     break;
   case CMD_MEMORY:
-    dumpMemory(start, end);
+    dumpMemory(p0,p1);
     break;
   case CMD_HELP:
     printMessage(MESSAGE_HELP_IX);
@@ -118,7 +128,7 @@ uint8_t processCommand()
     trace();
     break;
   case CMD_WRITE:
-    writeMemory(start);
+    writeMemory(p0);
     break;
   case CMD_EXIT:
     Serial.println(F("BYE!"));
@@ -129,6 +139,10 @@ uint8_t processCommand()
     return RES_ERR;
   }
 
+  if(command == CMD_ASSEMBLE || command == CMD_WRITE ) {
+    releaseBus();
+  }
+  
   return RES_OK;
 }
 
@@ -158,6 +172,8 @@ void assemble(int address)
     {
       while (Serial.available())
       {
+        lastActive = millis();
+
         rxBuffer[rxBufferIx] = toupper(Serial.read());
 
         if (rxBuffer[rxBufferIx] == TERMINAL_KEY_BACKSPACE && rxBufferIx > 0)
@@ -192,7 +208,7 @@ void assemble(int address)
                 arg = atoi(token);
               }
 
-              EEPROM.write(address, opcode | (arg << 4));
+              writeProgramByte(address, opcode | (arg << 4));
 
               success = true;
               break;
@@ -251,6 +267,8 @@ void writeMemory(int address)
 
     while (Serial.available())
     {
+      lastActive = millis();
+
       rxBuffer[rxBufferIx] = toupper(Serial.read());
 
       Serial.print((char)rxBuffer[rxBufferIx]);
@@ -279,7 +297,7 @@ void writeMemory(int address)
 
         if (rxBufferIx > 0)
         {
-          EEPROM.write(address, strtoul(token, NULL, 16));
+          writeProgramByte(address, strtoul(token, NULL, 16));
         }
 
         rxBufferIx = 0;
@@ -323,7 +341,7 @@ void dumpMemory(int start, int end)
       continue;
     }
 
-    sprintf(printBuffer, "%02X%s", EEPROM.read(ix), (ix % MON_DUMP_PER_LINE != MON_DUMP_PER_LINE - 1) ? "." : "\r\n");
+    sprintf(printBuffer, "%02X%s", programMemoryShadow[ix], (ix % MON_DUMP_PER_LINE != MON_DUMP_PER_LINE - 1) ? "." : "\r\n");
     Serial.print(printBuffer);
   }
 
@@ -369,6 +387,8 @@ void trace()
           Serial.read();
         }
 
+        lastActive = millis();
+
         return;
       }
     }
@@ -410,7 +430,7 @@ void disassemble(int address, int end)
 
 void printSingleMemoryLocation(int address, bool printNewLine = false)
 {
-  sprintf(printBuffer, "%04X  %02X .", address, EEPROM.read(address));
+  sprintf(printBuffer, "%04X  %02X .", address, programMemoryShadow[address]);
   Serial.print(printBuffer);
 
   if (printNewLine)
@@ -430,7 +450,7 @@ void printSingleMemoryLocation(int address, bool printNewLine = false)
 
 void printDisassemblyLine(int address, bool printNewLine = false)
 {
-  byte byteCode = EEPROM.read(address);
+  byte byteCode = programMemoryShadow[address];
   byte opcode = byteCode & 0xF;
 
   sprintf(printBuffer, "%04X  %02X    %s", address, byteCode, mnemonics + (5 * opcode));

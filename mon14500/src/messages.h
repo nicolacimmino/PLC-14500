@@ -13,10 +13,11 @@
 #define MONITOR_PROMPT "."
 
 const char messageHelp[] PROGMEM =
-    "A [START]       ASSEMBLE\r\n"
-    "B               BOOTSTRAP\r\n"
+    "A [START]       ASSEMBLE\r\n"    
     "D [START] [END] DISASSEMBLE\r\n"
+    "L [BLOCK]       LOAD\r\n"
     "M [START] [END] DUMP MEMORY\r\n"
+    "S [BLOCK]       SAVE\r\n"
     "T               TRACE\r\n"
     "W [START]       WRITE MEMORY\r\n"
     "X               EXIT\r\n";
