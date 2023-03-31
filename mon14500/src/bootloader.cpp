@@ -7,6 +7,13 @@
 
 void loadBlockIntoProgramMemory(byte block)
 {
+  if (block > MAX_PROGRAM_BLOCK)
+  {
+    sprintf(printBuffer, "MAX BLOCK %d", MAX_PROGRAM_BLOCK);
+    Serial.println(printBuffer);
+    return;
+  }
+
   Serial.print(F("LOADING"));
 
   acquireBusForWrite();
@@ -37,6 +44,13 @@ void loadBlockIntoProgramMemory(byte block)
 
 void savePrgoramMemoryToBlock(byte block)
 {
+  if (block > MAX_PROGRAM_BLOCK)
+  {
+    sprintf(printBuffer, "MAX BLOCK %d", MAX_PROGRAM_BLOCK);
+    Serial.println(printBuffer);
+    return;
+  }
+
   Serial.print(F("SAVING"));
 
   uint16_t offset = block * PROGRAM_MEMOMORY_SIZE;

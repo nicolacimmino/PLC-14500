@@ -2,6 +2,7 @@
 #ifndef __MON14500_H__
 #define __MON14500_H__
 
+#include <Arduino.h>
 #include "config.h"
 
 #define PRINT_BUFFER_SIZE 256
@@ -26,7 +27,7 @@ extern char printBuffer[PRINT_BUFFER_SIZE];
  * write.
  */
 
-extern char programMemoryShadow[PROGRAM_MEMOMORY_SIZE];
+extern byte programMemoryShadow[PROGRAM_MEMOMORY_SIZE];
 
 /*
  *********************************************************************/

@@ -3,4 +3,4 @@
 
 char printBuffer[PRINT_BUFFER_SIZE];
 
-char programMemoryShadow[PROGRAM_MEMOMORY_SIZE];
+byte programMemoryShadow[PROGRAM_MEMOMORY_SIZE];

@@ -14,4 +14,6 @@
 #define PROGRAM_MEMOMORY_SIZE 256
 #define RX_BUFFER_SIZE 256
 
+#define MAX_PROGRAM_BLOCK 3
+
 #endif
