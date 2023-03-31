@@ -12,11 +12,11 @@ unsigned long lastActive;
 void enterMonitor()
 {
   uint8_t ix = 0;
-  
+
   printMessage(MESSAGE_MONITOR_BANNER_IX);
 
   lastActive = millis();
-  
+
   while (true)
   {
     if (millis() - lastActive > MON_MAX_INACTIVE_MS)
@@ -72,7 +72,7 @@ void enterMonitor()
  */
 
 uint8_t processCommand()
-{  
+{
   char *token = strtok(rxBuffer, " ");
 
   byte command = CMD_MAX;
@@ -100,7 +100,8 @@ uint8_t processCommand()
     p1 = strtoul(token, NULL, 16);
   }
 
-  if(command == CMD_ASSEMBLE || command == CMD_WRITE ) {
+  if (command == CMD_ASSEMBLE || command == CMD_WRITE)
+  {
     acquireBusForWrite();
   }
 
@@ -110,16 +111,16 @@ uint8_t processCommand()
     assemble(p0);
     break;
   case CMD_DISSASEMBLE:
-    disassemble(p0,p1);
+    disassemble(p0, p1);
     break;
-  case CMD_LOAD:    
+  case CMD_LOAD:
     loadBlockIntoProgramMemory(p0);
     break;
   case CMD_SAVE:
     savePrgoramMemoryToBlock(p0);
     break;
   case CMD_MEMORY:
-    dumpMemory(p0,p1);
+    dumpMemory(p0, p1);
     break;
   case CMD_HELP:
     printMessage(MESSAGE_HELP_IX);
@@ -139,10 +140,11 @@ uint8_t processCommand()
     return RES_ERR;
   }
 
-  if(command == CMD_ASSEMBLE || command == CMD_WRITE ) {
+  if (command == CMD_ASSEMBLE || command == CMD_WRITE)
+  {
     releaseBus();
   }
-  
+
   return RES_OK;
 }
 
@@ -327,25 +329,31 @@ void writeMemory(int address)
 
 void dumpMemory(int start, int end)
 {
-  for (int ix = start - (start % MON_DUMP_PER_LINE); ix < end + 1; ix++)
+  for (int address = start - (start % MON_DUMP_PER_LINE); address < end + 1; address++)
   {
-    if (ix % MON_DUMP_PER_LINE == 0)
+    if (address % MON_DUMP_PER_LINE == 0)
     {
-      sprintf(printBuffer, "%04X  ", ix);
+      sprintf(printBuffer, "%04X  ", address);
       Serial.print(printBuffer);
     }
 
-    if (ix < start)
+    if (address < start)
     {
       Serial.print("   ");
       continue;
     }
 
-    sprintf(printBuffer, "%02X%s", programMemoryShadow[ix], (ix % MON_DUMP_PER_LINE != MON_DUMP_PER_LINE - 1) ? "." : "\r\n");
+    sprintf(printBuffer,
+            "%02X%s",
+            programMemoryShadow[address],
+            ((address % MON_DUMP_PER_LINE) != (MON_DUMP_PER_LINE - 1)) ? "." : "\r\n");
     Serial.print(printBuffer);
   }
 
-  Serial.println("");
+  if (end % MON_DUMP_PER_LINE != (MON_DUMP_PER_LINE - 1))
+  {
+    Serial.println("");
+  }
 }
 
 /*
