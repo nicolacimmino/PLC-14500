@@ -3,8 +3,8 @@
 Your PLC14500 comes preloaded with the 14500MON. This interactive assembler/monitor is an homage, both in the name and
 in the syntax, to the classic C64 monitor 64Mon and other similar implementations.
 
-Note:while 14500MON is compatible with ALL revisions of the board, early REV.B and a batch of REV.C boards were shipped
-without it. You can just use an Arduino IDE to load the sketch on your PLC14500 (Choose Arduino Nano under AVR Boards
+**Note:** while 14500MON is compatible with ALL revisions of the board, early REV.B and a batch of REV.C boards were shipped
+without it (the regular bootloader only was provided). You can just use an Arduino IDE to load the sketch on your PLC14500 (Choose Arduino Nano under AVR Boards
 and make sure you choose the "Old Bootloader" variant).
 
 To verify if you have the 14500MON already installed, open a terminal program (e.g. PuTTY) and connect to the PLC14500
@@ -50,11 +50,6 @@ X EXIT
 
 The built-in assembler is a great way to try small programs and see them immediately running on the board. It also gives
 you a more down to the machine view of how assembly language is converted to bytecode.
-
-**Note:** please keep in mind that programs assembled in this way don’t exist as source code, so you won’t be able to
-save them to your computer. If you plan to preserve a program and want to be able to edit its source later, consider
-editing “.asm” files on your computer and assembling them with “asm14500.exe” as explained in the “Using the Assembler”
-section.
 
 To assemble interactively simply use the “A” command followed by the start address and press enter:
 
