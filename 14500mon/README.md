@@ -7,12 +7,14 @@ in the syntax, to the classic C64 monitor 64Mon and other similar implementation
 without it (the regular bootloader only was provided). You can just use an Arduino IDE to load the sketch on your PLC14500 (Choose Arduino Nano under AVR Boards
 and make sure you choose the "Old Bootloader" variant).
 
+![14500mon](../documentation/14500Mon.png)
+
 To verify if you have the 14500MON already installed, open a terminal program (e.g. PuTTY) and connect to the PLC14500
 serial port (9600 BAUD, no parity, 8bits, 1 stop bit). After a few seconds you should receive the prompt:
 
 ````
 PLC14500-NANO
-BOOTLOADER V0.2
+BOOTLOADER V1.1
 WAITING FOR 256BYTES OF PROGRAM
 PRESS ENTER FOR INTERACTIVE MONITOR.
 ````
