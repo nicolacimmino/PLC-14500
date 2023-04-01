@@ -219,6 +219,8 @@ Remember to always press “RST” after editing the program to ensure your I/O 
 
 ## Trace Program Execution
 
+Thanks to [wrh3c](https://github.com/wrh3c) from whom I got the inspiration to add the Trace mode.
+
 The “Trace Program” mode can be entered using the “T” command. In this mode the monitor will keep outputting the current
 instruction being executed.
 
