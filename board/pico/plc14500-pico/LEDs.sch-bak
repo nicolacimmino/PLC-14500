@@ -1,0 +1,1489 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 2
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L plc14500-pico:WS2812-2020 D?
+U 1 1 643778A7
+P 1425 1400
+AR Path="/643778A7" Ref="D?"  Part="1" 
+AR Path="/64374528/643778A7" Ref="D1"  Part="1" 
+F 0 "D1" H 1175 1650 50  0000 L CNN
+F 1 "WS2812B" H 1475 1150 50  0000 L CNN
+F 2 "plc14500-pico:WS2812-2020" H 1475 1100 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 1525 1025 50  0001 L TNN
+	1    1425 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L plc14500-pico:WS2812-2020 D?
+U 1 1 64378965
+P 2100 1400
+AR Path="/64378965" Ref="D?"  Part="1" 
+AR Path="/64374528/64378965" Ref="D2"  Part="1" 
+F 0 "D2" H 1850 1650 50  0000 L CNN
+F 1 "WS2812B" H 2150 1150 50  0000 L CNN
+F 2 "plc14500-pico:WS2812-2020" H 2150 1100 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 2200 1025 50  0001 L TNN
+	1    2100 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L plc14500-pico:WS2812-2020 D?
+U 1 1 6437E318
+P 2775 1400
+AR Path="/6437E318" Ref="D?"  Part="1" 
+AR Path="/64374528/6437E318" Ref="D3"  Part="1" 
+F 0 "D3" H 2525 1650 50  0000 L CNN
+F 1 "WS2812B" H 2825 1150 50  0000 L CNN
+F 2 "plc14500-pico:WS2812-2020" H 2825 1100 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 2875 1025 50  0001 L TNN
+	1    2775 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L plc14500-pico:WS2812-2020 D?
+U 1 1 6437E31E
+P 3450 1400
+AR Path="/6437E31E" Ref="D?"  Part="1" 
+AR Path="/64374528/6437E31E" Ref="D4"  Part="1" 
+F 0 "D4" H 3200 1650 50  0000 L CNN
+F 1 "WS2812B" H 3500 1150 50  0000 L CNN
+F 2 "plc14500-pico:WS2812-2020" H 3500 1100 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 3550 1025 50  0001 L TNN
+	1    3450 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L plc14500-pico:WS2812-2020 D?
+U 1 1 643805F8
+P 4150 1400
+AR Path="/643805F8" Ref="D?"  Part="1" 
+AR Path="/64374528/643805F8" Ref="D5"  Part="1" 
+F 0 "D5" H 3900 1650 50  0000 L CNN
+F 1 "WS2812B" H 4200 1150 50  0000 L CNN
+F 2 "plc14500-pico:WS2812-2020" H 4200 1100 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 4250 1025 50  0001 L TNN
+	1    4150 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L plc14500-pico:WS2812-2020 D?
+U 1 1 643805FE
+P 4825 1400
+AR Path="/643805FE" Ref="D?"  Part="1" 
+AR Path="/64374528/643805FE" Ref="D6"  Part="1" 
+F 0 "D6" H 4575 1650 50  0000 L CNN
+F 1 "WS2812B" H 4875 1150 50  0000 L CNN
+F 2 "plc14500-pico:WS2812-2020" H 4875 1100 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 4925 1025 50  0001 L TNN
+	1    4825 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L plc14500-pico:WS2812-2020 D?
+U 1 1 64380604
+P 5500 1400
+AR Path="/64380604" Ref="D?"  Part="1" 
+AR Path="/64374528/64380604" Ref="D7"  Part="1" 
+F 0 "D7" H 5250 1650 50  0000 L CNN
+F 1 "WS2812B" H 5550 1150 50  0000 L CNN
+F 2 "plc14500-pico:WS2812-2020" H 5550 1100 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 5600 1025 50  0001 L TNN
+	1    5500 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L plc14500-pico:WS2812-2020 D?
+U 1 1 6438060A
+P 6175 1400
+AR Path="/6438060A" Ref="D?"  Part="1" 
+AR Path="/64374528/6438060A" Ref="D8"  Part="1" 
+F 0 "D8" H 5925 1650 50  0000 L CNN
+F 1 "WS2812B" H 6225 1150 50  0000 L CNN
+F 2 "plc14500-pico:WS2812-2020" H 6225 1100 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 6275 1025 50  0001 L TNN
+	1    6175 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR012
+U 1 1 643809DA
+P 3825 1975
+F 0 "#PWR012" H 3825 1725 50  0001 C CNN
+F 1 "GND" H 3830 1802 50  0000 C CNN
+F 2 "" H 3825 1975 50  0001 C CNN
+F 3 "" H 3825 1975 50  0001 C CNN
+	1    3825 1975
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1425 1700 1425 1800
+Wire Wire Line
+	1425 1800 2100 1800
+Wire Wire Line
+	6175 1800 6175 1700
+Wire Wire Line
+	3825 1975 3825 1800
+Connection ~ 3825 1800
+Wire Wire Line
+	3825 1800 4150 1800
+Wire Wire Line
+	2100 1700 2100 1800
+Connection ~ 2100 1800
+Wire Wire Line
+	2100 1800 2775 1800
+Wire Wire Line
+	2775 1700 2775 1800
+Connection ~ 2775 1800
+Wire Wire Line
+	2775 1800 3450 1800
+Wire Wire Line
+	3450 1700 3450 1800
+Connection ~ 3450 1800
+Wire Wire Line
+	3450 1800 3825 1800
+Wire Wire Line
+	4150 1700 4150 1800
+Connection ~ 4150 1800
+Wire Wire Line
+	4150 1800 4825 1800
+Wire Wire Line
+	4825 1700 4825 1800
+Connection ~ 4825 1800
+Wire Wire Line
+	4825 1800 5500 1800
+Wire Wire Line
+	5500 1700 5500 1800
+Connection ~ 5500 1800
+Wire Wire Line
+	5500 1800 6175 1800
+$Comp
+L power:+5V #PWR010
+U 1 1 64382F24
+P 3825 800
+F 0 "#PWR010" H 3825 650 50  0001 C CNN
+F 1 "+5V" H 3840 973 50  0000 C CNN
+F 2 "" H 3825 800 50  0001 C CNN
+F 3 "" H 3825 800 50  0001 C CNN
+	1    3825 800 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1425 1100 1425 950 
+Wire Wire Line
+	1425 950  2100 950 
+Wire Wire Line
+	6175 950  6175 1100
+Wire Wire Line
+	2100 1100 2100 950 
+Connection ~ 2100 950 
+Wire Wire Line
+	2100 950  2775 950 
+Wire Wire Line
+	2775 1100 2775 950 
+Connection ~ 2775 950 
+Wire Wire Line
+	2775 950  3450 950 
+Wire Wire Line
+	3450 1100 3450 950 
+Connection ~ 3450 950 
+Wire Wire Line
+	3450 950  3825 950 
+Wire Wire Line
+	4150 1100 4150 950 
+Connection ~ 4150 950 
+Wire Wire Line
+	4150 950  4825 950 
+Wire Wire Line
+	4825 1100 4825 950 
+Connection ~ 4825 950 
+Wire Wire Line
+	4825 950  5500 950 
+Wire Wire Line
+	5500 1100 5500 950 
+Connection ~ 5500 950 
+Wire Wire Line
+	5500 950  6175 950 
+Wire Wire Line
+	3825 800  3825 950 
+Connection ~ 3825 950 
+Wire Wire Line
+	3825 950  4150 950 
+Text Notes 5800 825  0    197  ~ 0
+ADDR
+Wire Wire Line
+	1725 1400 1800 1400
+Wire Wire Line
+	2400 1400 2475 1400
+Wire Wire Line
+	3075 1400 3150 1400
+Wire Wire Line
+	3750 1400 3850 1400
+Wire Wire Line
+	4450 1400 4525 1400
+Wire Wire Line
+	5125 1400 5200 1400
+Wire Wire Line
+	5800 1400 5875 1400
+$Comp
+L plc14500-pico:WS2812-2020 D?
+U 1 1 64392B1B
+P 900 3075
+AR Path="/64392B1B" Ref="D?"  Part="1" 
+AR Path="/64374528/64392B1B" Ref="D21"  Part="1" 
+F 0 "D21" H 650 3325 50  0000 L CNN
+F 1 "WS2812B" H 950 2825 50  0000 L CNN
+F 2 "plc14500-pico:WS2812-2020" H 950 2775 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 1000 2700 50  0001 L TNN
+	1    900  3075
+	1    0    0    -1  
+$EndComp
+$Comp
+L plc14500-pico:WS2812-2020 D?
+U 1 1 64392B21
+P 1575 3075
+AR Path="/64392B21" Ref="D?"  Part="1" 
+AR Path="/64374528/64392B21" Ref="D22"  Part="1" 
+F 0 "D22" H 1325 3325 50  0000 L CNN
+F 1 "WS2812B" H 1625 2825 50  0000 L CNN
+F 2 "plc14500-pico:WS2812-2020" H 1625 2775 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 1675 2700 50  0001 L TNN
+	1    1575 3075
+	1    0    0    -1  
+$EndComp
+$Comp
+L plc14500-pico:WS2812-2020 D?
+U 1 1 64392B27
+P 2250 3075
+AR Path="/64392B27" Ref="D?"  Part="1" 
+AR Path="/64374528/64392B27" Ref="D23"  Part="1" 
+F 0 "D23" H 2000 3325 50  0000 L CNN
+F 1 "WS2812B" H 2300 2825 50  0000 L CNN
+F 2 "plc14500-pico:WS2812-2020" H 2300 2775 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 2350 2700 50  0001 L TNN
+	1    2250 3075
+	1    0    0    -1  
+$EndComp
+$Comp
+L plc14500-pico:WS2812-2020 D?
+U 1 1 64392B2D
+P 2925 3075
+AR Path="/64392B2D" Ref="D?"  Part="1" 
+AR Path="/64374528/64392B2D" Ref="D24"  Part="1" 
+F 0 "D24" H 2675 3325 50  0000 L CNN
+F 1 "WS2812B" H 2975 2825 50  0000 L CNN
+F 2 "plc14500-pico:WS2812-2020" H 2975 2775 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 3025 2700 50  0001 L TNN
+	1    2925 3075
+	1    0    0    -1  
+$EndComp
+$Comp
+L plc14500-pico:WS2812-2020 D?
+U 1 1 64392B33
+P 3625 3075
+AR Path="/64392B33" Ref="D?"  Part="1" 
+AR Path="/64374528/64392B33" Ref="D25"  Part="1" 
+F 0 "D25" H 3375 3325 50  0000 L CNN
+F 1 "WS2812B" H 3675 2825 50  0000 L CNN
+F 2 "plc14500-pico:WS2812-2020" H 3675 2775 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 3725 2700 50  0001 L TNN
+	1    3625 3075
+	1    0    0    -1  
+$EndComp
+$Comp
+L plc14500-pico:WS2812-2020 D?
+U 1 1 64392B39
+P 4300 3075
+AR Path="/64392B39" Ref="D?"  Part="1" 
+AR Path="/64374528/64392B39" Ref="D26"  Part="1" 
+F 0 "D26" H 4050 3325 50  0000 L CNN
+F 1 "WS2812B" H 4350 2825 50  0000 L CNN
+F 2 "plc14500-pico:WS2812-2020" H 4350 2775 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 4400 2700 50  0001 L TNN
+	1    4300 3075
+	1    0    0    -1  
+$EndComp
+$Comp
+L plc14500-pico:WS2812-2020 D?
+U 1 1 64392B3F
+P 4975 3075
+AR Path="/64392B3F" Ref="D?"  Part="1" 
+AR Path="/64374528/64392B3F" Ref="D27"  Part="1" 
+F 0 "D27" H 4725 3325 50  0000 L CNN
+F 1 "WS2812B" H 5025 2825 50  0000 L CNN
+F 2 "plc14500-pico:WS2812-2020" H 5025 2775 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 5075 2700 50  0001 L TNN
+	1    4975 3075
+	1    0    0    -1  
+$EndComp
+$Comp
+L plc14500-pico:WS2812-2020 D?
+U 1 1 64392B45
+P 5650 3075
+AR Path="/64392B45" Ref="D?"  Part="1" 
+AR Path="/64374528/64392B45" Ref="D28"  Part="1" 
+F 0 "D28" H 5400 3325 50  0000 L CNN
+F 1 "WS2812B" H 5700 2825 50  0000 L CNN
+F 2 "plc14500-pico:WS2812-2020" H 5700 2775 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 5750 2700 50  0001 L TNN
+	1    5650 3075
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR017
+U 1 1 64392B4B
+P 3300 3650
+F 0 "#PWR017" H 3300 3400 50  0001 C CNN
+F 1 "GND" H 3305 3477 50  0000 C CNN
+F 2 "" H 3300 3650 50  0001 C CNN
+F 3 "" H 3300 3650 50  0001 C CNN
+	1    3300 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	900  3375 900  3475
+Wire Wire Line
+	900  3475 1575 3475
+Wire Wire Line
+	5650 3475 5650 3375
+Wire Wire Line
+	3300 3650 3300 3475
+Connection ~ 3300 3475
+Wire Wire Line
+	3300 3475 3625 3475
+Wire Wire Line
+	1575 3375 1575 3475
+Connection ~ 1575 3475
+Wire Wire Line
+	1575 3475 2250 3475
+Wire Wire Line
+	2250 3375 2250 3475
+Connection ~ 2250 3475
+Wire Wire Line
+	2250 3475 2925 3475
+Wire Wire Line
+	2925 3375 2925 3475
+Connection ~ 2925 3475
+Wire Wire Line
+	2925 3475 3300 3475
+Wire Wire Line
+	3625 3375 3625 3475
+Connection ~ 3625 3475
+Wire Wire Line
+	3625 3475 4300 3475
+Wire Wire Line
+	4300 3375 4300 3475
+Connection ~ 4300 3475
+Wire Wire Line
+	4300 3475 4975 3475
+Wire Wire Line
+	4975 3375 4975 3475
+Connection ~ 4975 3475
+Wire Wire Line
+	4975 3475 5650 3475
+$Comp
+L power:+5V #PWR015
+U 1 1 64392B69
+P 3300 2475
+F 0 "#PWR015" H 3300 2325 50  0001 C CNN
+F 1 "+5V" H 3315 2648 50  0000 C CNN
+F 2 "" H 3300 2475 50  0001 C CNN
+F 3 "" H 3300 2475 50  0001 C CNN
+	1    3300 2475
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	900  2775 900  2625
+Wire Wire Line
+	900  2625 1575 2625
+Wire Wire Line
+	5650 2625 5650 2775
+Wire Wire Line
+	1575 2775 1575 2625
+Connection ~ 1575 2625
+Wire Wire Line
+	1575 2625 2250 2625
+Wire Wire Line
+	2250 2775 2250 2625
+Connection ~ 2250 2625
+Wire Wire Line
+	2250 2625 2925 2625
+Wire Wire Line
+	2925 2775 2925 2625
+Connection ~ 2925 2625
+Wire Wire Line
+	2925 2625 3300 2625
+Wire Wire Line
+	3625 2775 3625 2625
+Connection ~ 3625 2625
+Wire Wire Line
+	3625 2625 4300 2625
+Wire Wire Line
+	4300 2775 4300 2625
+Connection ~ 4300 2625
+Wire Wire Line
+	4300 2625 4975 2625
+Wire Wire Line
+	4975 2775 4975 2625
+Connection ~ 4975 2625
+Wire Wire Line
+	4975 2625 5650 2625
+Wire Wire Line
+	3300 2475 3300 2625
+Connection ~ 3300 2625
+Wire Wire Line
+	3300 2625 3625 2625
+Text Notes 5275 2500 0    197  ~ 0
+DATA
+Wire Wire Line
+	1200 3075 1275 3075
+Wire Wire Line
+	1875 3075 1950 3075
+Wire Wire Line
+	2550 3075 2625 3075
+Wire Wire Line
+	3225 3075 3325 3075
+Wire Wire Line
+	3925 3075 4000 3075
+Wire Wire Line
+	4600 3075 4675 3075
+Wire Wire Line
+	5275 3075 5350 3075
+$Comp
+L plc14500-pico:WS2812-2020 D?
+U 1 1 6439948E
+P 900 4775
+AR Path="/6439948E" Ref="D?"  Part="1" 
+AR Path="/64374528/6439948E" Ref="D29"  Part="1" 
+F 0 "D29" H 650 5025 50  0000 L CNN
+F 1 "WS2812B" H 950 4525 50  0000 L CNN
+F 2 "plc14500-pico:WS2812-2020" H 950 4475 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 1000 4400 50  0001 L TNN
+	1    900  4775
+	1    0    0    -1  
+$EndComp
+$Comp
+L plc14500-pico:WS2812-2020 D?
+U 1 1 64399494
+P 1575 4775
+AR Path="/64399494" Ref="D?"  Part="1" 
+AR Path="/64374528/64399494" Ref="D30"  Part="1" 
+F 0 "D30" H 1325 5025 50  0000 L CNN
+F 1 "WS2812B" H 1625 4525 50  0000 L CNN
+F 2 "plc14500-pico:WS2812-2020" H 1625 4475 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 1675 4400 50  0001 L TNN
+	1    1575 4775
+	1    0    0    -1  
+$EndComp
+$Comp
+L plc14500-pico:WS2812-2020 D?
+U 1 1 6439949A
+P 2250 4775
+AR Path="/6439949A" Ref="D?"  Part="1" 
+AR Path="/64374528/6439949A" Ref="D31"  Part="1" 
+F 0 "D31" H 2000 5025 50  0000 L CNN
+F 1 "WS2812B" H 2300 4525 50  0000 L CNN
+F 2 "plc14500-pico:WS2812-2020" H 2300 4475 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 2350 4400 50  0001 L TNN
+	1    2250 4775
+	1    0    0    -1  
+$EndComp
+$Comp
+L plc14500-pico:WS2812-2020 D?
+U 1 1 643994A0
+P 2925 4775
+AR Path="/643994A0" Ref="D?"  Part="1" 
+AR Path="/64374528/643994A0" Ref="D32"  Part="1" 
+F 0 "D32" H 2675 5025 50  0000 L CNN
+F 1 "WS2812B" H 2975 4525 50  0000 L CNN
+F 2 "plc14500-pico:WS2812-2020" H 2975 4475 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 3025 4400 50  0001 L TNN
+	1    2925 4775
+	1    0    0    -1  
+$EndComp
+$Comp
+L plc14500-pico:WS2812-2020 D?
+U 1 1 643994A6
+P 3625 4775
+AR Path="/643994A6" Ref="D?"  Part="1" 
+AR Path="/64374528/643994A6" Ref="D33"  Part="1" 
+F 0 "D33" H 3375 5025 50  0000 L CNN
+F 1 "WS2812B" H 3675 4525 50  0000 L CNN
+F 2 "plc14500-pico:WS2812-2020" H 3675 4475 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 3725 4400 50  0001 L TNN
+	1    3625 4775
+	1    0    0    -1  
+$EndComp
+$Comp
+L plc14500-pico:WS2812-2020 D?
+U 1 1 643994AC
+P 4300 4775
+AR Path="/643994AC" Ref="D?"  Part="1" 
+AR Path="/64374528/643994AC" Ref="D34"  Part="1" 
+F 0 "D34" H 4050 5025 50  0000 L CNN
+F 1 "WS2812B" H 4350 4525 50  0000 L CNN
+F 2 "plc14500-pico:WS2812-2020" H 4350 4475 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 4400 4400 50  0001 L TNN
+	1    4300 4775
+	1    0    0    -1  
+$EndComp
+$Comp
+L plc14500-pico:WS2812-2020 D?
+U 1 1 643994B2
+P 4975 4775
+AR Path="/643994B2" Ref="D?"  Part="1" 
+AR Path="/64374528/643994B2" Ref="D35"  Part="1" 
+F 0 "D35" H 4725 5025 50  0000 L CNN
+F 1 "WS2812B" H 5025 4525 50  0000 L CNN
+F 2 "plc14500-pico:WS2812-2020" H 5025 4475 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 5075 4400 50  0001 L TNN
+	1    4975 4775
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR020
+U 1 1 643994BE
+P 3300 5350
+F 0 "#PWR020" H 3300 5100 50  0001 C CNN
+F 1 "GND" H 3305 5177 50  0000 C CNN
+F 2 "" H 3300 5350 50  0001 C CNN
+F 3 "" H 3300 5350 50  0001 C CNN
+	1    3300 5350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	900  5075 900  5175
+Wire Wire Line
+	900  5175 1575 5175
+Wire Wire Line
+	3300 5350 3300 5175
+Connection ~ 3300 5175
+Wire Wire Line
+	3300 5175 3625 5175
+Wire Wire Line
+	1575 5075 1575 5175
+Connection ~ 1575 5175
+Wire Wire Line
+	1575 5175 2250 5175
+Wire Wire Line
+	2250 5075 2250 5175
+Connection ~ 2250 5175
+Wire Wire Line
+	2250 5175 2925 5175
+Wire Wire Line
+	2925 5075 2925 5175
+Connection ~ 2925 5175
+Wire Wire Line
+	2925 5175 3300 5175
+Wire Wire Line
+	3625 5075 3625 5175
+Connection ~ 3625 5175
+Wire Wire Line
+	3625 5175 4300 5175
+Wire Wire Line
+	4300 5075 4300 5175
+Connection ~ 4300 5175
+Wire Wire Line
+	4300 5175 4975 5175
+Wire Wire Line
+	4975 5075 4975 5175
+$Comp
+L power:+5V #PWR018
+U 1 1 643994DC
+P 3300 4175
+F 0 "#PWR018" H 3300 4025 50  0001 C CNN
+F 1 "+5V" H 3315 4348 50  0000 C CNN
+F 2 "" H 3300 4175 50  0001 C CNN
+F 3 "" H 3300 4175 50  0001 C CNN
+	1    3300 4175
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	900  4475 900  4325
+Wire Wire Line
+	900  4325 1575 4325
+Wire Wire Line
+	1575 4475 1575 4325
+Connection ~ 1575 4325
+Wire Wire Line
+	1575 4325 2250 4325
+Wire Wire Line
+	2250 4475 2250 4325
+Connection ~ 2250 4325
+Wire Wire Line
+	2250 4325 2925 4325
+Wire Wire Line
+	2925 4475 2925 4325
+Connection ~ 2925 4325
+Wire Wire Line
+	2925 4325 3300 4325
+Wire Wire Line
+	3625 4475 3625 4325
+Connection ~ 3625 4325
+Wire Wire Line
+	3625 4325 4300 4325
+Wire Wire Line
+	4300 4475 4300 4325
+Connection ~ 4300 4325
+Wire Wire Line
+	4300 4325 4975 4325
+Wire Wire Line
+	4975 4475 4975 4325
+Wire Wire Line
+	3300 4175 3300 4325
+Connection ~ 3300 4325
+Wire Wire Line
+	3300 4325 3625 4325
+Text Notes 5200 4200 0    197  ~ 0
+SPR
+Wire Wire Line
+	1200 4775 1275 4775
+Wire Wire Line
+	1875 4775 1950 4775
+Wire Wire Line
+	2550 4775 2625 4775
+Wire Wire Line
+	3225 4775 3325 4775
+Wire Wire Line
+	3925 4775 4000 4775
+Wire Wire Line
+	4600 4775 4675 4775
+$Comp
+L plc14500-pico:WS2812-2020 D?
+U 1 1 643C5FC0
+P 900 6425
+AR Path="/643C5FC0" Ref="D?"  Part="1" 
+AR Path="/64374528/643C5FC0" Ref="D44"  Part="1" 
+F 0 "D44" H 650 6675 50  0000 L CNN
+F 1 "WS2812B" H 950 6175 50  0000 L CNN
+F 2 "plc14500-pico:WS2812-2020" H 950 6125 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 1000 6050 50  0001 L TNN
+	1    900  6425
+	1    0    0    -1  
+$EndComp
+$Comp
+L plc14500-pico:WS2812-2020 D?
+U 1 1 643C5FC6
+P 1575 6425
+AR Path="/643C5FC6" Ref="D?"  Part="1" 
+AR Path="/64374528/643C5FC6" Ref="D45"  Part="1" 
+F 0 "D45" H 1325 6675 50  0000 L CNN
+F 1 "WS2812B" H 1625 6175 50  0000 L CNN
+F 2 "plc14500-pico:WS2812-2020" H 1625 6125 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 1675 6050 50  0001 L TNN
+	1    1575 6425
+	1    0    0    -1  
+$EndComp
+$Comp
+L plc14500-pico:WS2812-2020 D?
+U 1 1 643C5FCC
+P 2250 6425
+AR Path="/643C5FCC" Ref="D?"  Part="1" 
+AR Path="/64374528/643C5FCC" Ref="D46"  Part="1" 
+F 0 "D46" H 2000 6675 50  0000 L CNN
+F 1 "WS2812B" H 2300 6175 50  0000 L CNN
+F 2 "plc14500-pico:WS2812-2020" H 2300 6125 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 2350 6050 50  0001 L TNN
+	1    2250 6425
+	1    0    0    -1  
+$EndComp
+$Comp
+L plc14500-pico:WS2812-2020 D?
+U 1 1 643C5FD2
+P 2925 6425
+AR Path="/643C5FD2" Ref="D?"  Part="1" 
+AR Path="/64374528/643C5FD2" Ref="D47"  Part="1" 
+F 0 "D47" H 2675 6675 50  0000 L CNN
+F 1 "WS2812B" H 2975 6175 50  0000 L CNN
+F 2 "plc14500-pico:WS2812-2020" H 2975 6125 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 3025 6050 50  0001 L TNN
+	1    2925 6425
+	1    0    0    -1  
+$EndComp
+$Comp
+L plc14500-pico:WS2812-2020 D?
+U 1 1 643C5FD8
+P 3625 6425
+AR Path="/643C5FD8" Ref="D?"  Part="1" 
+AR Path="/64374528/643C5FD8" Ref="D48"  Part="1" 
+F 0 "D48" H 3375 6675 50  0000 L CNN
+F 1 "WS2812B" H 3675 6175 50  0000 L CNN
+F 2 "plc14500-pico:WS2812-2020" H 3675 6125 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 3725 6050 50  0001 L TNN
+	1    3625 6425
+	1    0    0    -1  
+$EndComp
+$Comp
+L plc14500-pico:WS2812-2020 D?
+U 1 1 643C5FDE
+P 4300 6425
+AR Path="/643C5FDE" Ref="D?"  Part="1" 
+AR Path="/64374528/643C5FDE" Ref="D49"  Part="1" 
+F 0 "D49" H 4050 6675 50  0000 L CNN
+F 1 "WS2812B" H 4350 6175 50  0000 L CNN
+F 2 "plc14500-pico:WS2812-2020" H 4350 6125 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 4400 6050 50  0001 L TNN
+	1    4300 6425
+	1    0    0    -1  
+$EndComp
+$Comp
+L plc14500-pico:WS2812-2020 D?
+U 1 1 643C5FE4
+P 4975 6425
+AR Path="/643C5FE4" Ref="D?"  Part="1" 
+AR Path="/64374528/643C5FE4" Ref="D50"  Part="1" 
+F 0 "D50" H 4725 6675 50  0000 L CNN
+F 1 "WS2812B" H 5025 6175 50  0000 L CNN
+F 2 "plc14500-pico:WS2812-2020" H 5025 6125 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 5075 6050 50  0001 L TNN
+	1    4975 6425
+	1    0    0    -1  
+$EndComp
+$Comp
+L plc14500-pico:WS2812-2020 D?
+U 1 1 643C5FEA
+P 5650 6425
+AR Path="/643C5FEA" Ref="D?"  Part="1" 
+AR Path="/64374528/643C5FEA" Ref="D51"  Part="1" 
+F 0 "D51" H 5400 6675 50  0000 L CNN
+F 1 "WS2812B" H 5700 6175 50  0000 L CNN
+F 2 "plc14500-pico:WS2812-2020" H 5700 6125 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 5750 6050 50  0001 L TNN
+	1    5650 6425
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR023
+U 1 1 643C5FF0
+P 3300 7000
+F 0 "#PWR023" H 3300 6750 50  0001 C CNN
+F 1 "GND" H 3305 6827 50  0000 C CNN
+F 2 "" H 3300 7000 50  0001 C CNN
+F 3 "" H 3300 7000 50  0001 C CNN
+	1    3300 7000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	900  6725 900  6825
+Wire Wire Line
+	900  6825 1575 6825
+Wire Wire Line
+	5650 6825 5650 6725
+Wire Wire Line
+	3300 7000 3300 6825
+Connection ~ 3300 6825
+Wire Wire Line
+	3300 6825 3625 6825
+Wire Wire Line
+	1575 6725 1575 6825
+Connection ~ 1575 6825
+Wire Wire Line
+	1575 6825 2250 6825
+Wire Wire Line
+	2250 6725 2250 6825
+Connection ~ 2250 6825
+Wire Wire Line
+	2250 6825 2925 6825
+Wire Wire Line
+	2925 6725 2925 6825
+Connection ~ 2925 6825
+Wire Wire Line
+	2925 6825 3300 6825
+Wire Wire Line
+	3625 6725 3625 6825
+Connection ~ 3625 6825
+Wire Wire Line
+	3625 6825 4300 6825
+Wire Wire Line
+	4300 6725 4300 6825
+Connection ~ 4300 6825
+Wire Wire Line
+	4300 6825 4975 6825
+Wire Wire Line
+	4975 6725 4975 6825
+Connection ~ 4975 6825
+Wire Wire Line
+	4975 6825 5650 6825
+$Comp
+L power:+5V #PWR022
+U 1 1 643C600E
+P 3300 5825
+F 0 "#PWR022" H 3300 5675 50  0001 C CNN
+F 1 "+5V" H 3315 5998 50  0000 C CNN
+F 2 "" H 3300 5825 50  0001 C CNN
+F 3 "" H 3300 5825 50  0001 C CNN
+	1    3300 5825
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	900  6125 900  5975
+Wire Wire Line
+	900  5975 1575 5975
+Wire Wire Line
+	5650 5975 5650 6125
+Wire Wire Line
+	1575 6125 1575 5975
+Connection ~ 1575 5975
+Wire Wire Line
+	1575 5975 2250 5975
+Wire Wire Line
+	2250 6125 2250 5975
+Connection ~ 2250 5975
+Wire Wire Line
+	2250 5975 2925 5975
+Wire Wire Line
+	2925 6125 2925 5975
+Connection ~ 2925 5975
+Wire Wire Line
+	2925 5975 3300 5975
+Wire Wire Line
+	3625 6125 3625 5975
+Connection ~ 3625 5975
+Wire Wire Line
+	3625 5975 4300 5975
+Wire Wire Line
+	4300 6125 4300 5975
+Connection ~ 4300 5975
+Wire Wire Line
+	4300 5975 4975 5975
+Wire Wire Line
+	4975 6125 4975 5975
+Connection ~ 4975 5975
+Wire Wire Line
+	4975 5975 5650 5975
+Wire Wire Line
+	3300 5825 3300 5975
+Connection ~ 3300 5975
+Wire Wire Line
+	3300 5975 3625 5975
+Text Notes 5275 5850 0    197  ~ 0
+IN
+Wire Wire Line
+	1200 6425 1275 6425
+Wire Wire Line
+	1875 6425 1950 6425
+Wire Wire Line
+	2550 6425 2625 6425
+Wire Wire Line
+	3225 6425 3325 6425
+Wire Wire Line
+	3925 6425 4000 6425
+Wire Wire Line
+	4600 6425 4675 6425
+Wire Wire Line
+	5275 6425 5350 6425
+$Comp
+L plc14500-pico:WS2812-2020 D?
+U 1 1 643DB70F
+P 5775 4775
+AR Path="/643DB70F" Ref="D?"  Part="1" 
+AR Path="/64374528/643DB70F" Ref="D36"  Part="1" 
+F 0 "D36" H 5525 5025 50  0000 L CNN
+F 1 "WS2812B" H 5825 4525 50  0000 L CNN
+F 2 "plc14500-pico:WS2812-2020" H 5825 4475 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 5875 4400 50  0001 L TNN
+	1    5775 4775
+	1    0    0    -1  
+$EndComp
+$Comp
+L plc14500-pico:WS2812-2020 D?
+U 1 1 643DB715
+P 6450 4775
+AR Path="/643DB715" Ref="D?"  Part="1" 
+AR Path="/64374528/643DB715" Ref="D37"  Part="1" 
+F 0 "D37" H 6200 5025 50  0000 L CNN
+F 1 "WS2812B" H 6500 4525 50  0000 L CNN
+F 2 "plc14500-pico:WS2812-2020" H 6500 4475 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 6550 4400 50  0001 L TNN
+	1    6450 4775
+	1    0    0    -1  
+$EndComp
+$Comp
+L plc14500-pico:WS2812-2020 D?
+U 1 1 643DB71B
+P 7125 4775
+AR Path="/643DB71B" Ref="D?"  Part="1" 
+AR Path="/64374528/643DB71B" Ref="D38"  Part="1" 
+F 0 "D38" H 6875 5025 50  0000 L CNN
+F 1 "WS2812B" H 7175 4525 50  0000 L CNN
+F 2 "plc14500-pico:WS2812-2020" H 7175 4475 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 7225 4400 50  0001 L TNN
+	1    7125 4775
+	1    0    0    -1  
+$EndComp
+$Comp
+L plc14500-pico:WS2812-2020 D?
+U 1 1 643DB721
+P 7800 4775
+AR Path="/643DB721" Ref="D?"  Part="1" 
+AR Path="/64374528/643DB721" Ref="D39"  Part="1" 
+F 0 "D39" H 7550 5025 50  0000 L CNN
+F 1 "WS2812B" H 7850 4525 50  0000 L CNN
+F 2 "plc14500-pico:WS2812-2020" H 7850 4475 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 7900 4400 50  0001 L TNN
+	1    7800 4775
+	1    0    0    -1  
+$EndComp
+$Comp
+L plc14500-pico:WS2812-2020 D?
+U 1 1 643DB727
+P 8500 4775
+AR Path="/643DB727" Ref="D?"  Part="1" 
+AR Path="/64374528/643DB727" Ref="D40"  Part="1" 
+F 0 "D40" H 8250 5025 50  0000 L CNN
+F 1 "WS2812B" H 8550 4525 50  0000 L CNN
+F 2 "plc14500-pico:WS2812-2020" H 8550 4475 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 8600 4400 50  0001 L TNN
+	1    8500 4775
+	1    0    0    -1  
+$EndComp
+$Comp
+L plc14500-pico:WS2812-2020 D?
+U 1 1 643DB72D
+P 9175 4775
+AR Path="/643DB72D" Ref="D?"  Part="1" 
+AR Path="/64374528/643DB72D" Ref="D41"  Part="1" 
+F 0 "D41" H 8925 5025 50  0000 L CNN
+F 1 "WS2812B" H 9225 4525 50  0000 L CNN
+F 2 "plc14500-pico:WS2812-2020" H 9225 4475 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 9275 4400 50  0001 L TNN
+	1    9175 4775
+	1    0    0    -1  
+$EndComp
+$Comp
+L plc14500-pico:WS2812-2020 D?
+U 1 1 643DB733
+P 9850 4775
+AR Path="/643DB733" Ref="D?"  Part="1" 
+AR Path="/64374528/643DB733" Ref="D42"  Part="1" 
+F 0 "D42" H 9600 5025 50  0000 L CNN
+F 1 "WS2812B" H 9900 4525 50  0000 L CNN
+F 2 "plc14500-pico:WS2812-2020" H 9900 4475 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 9950 4400 50  0001 L TNN
+	1    9850 4775
+	1    0    0    -1  
+$EndComp
+$Comp
+L plc14500-pico:WS2812-2020 D?
+U 1 1 643DB739
+P 10525 4775
+AR Path="/643DB739" Ref="D?"  Part="1" 
+AR Path="/64374528/643DB739" Ref="D43"  Part="1" 
+F 0 "D43" H 10275 5025 50  0000 L CNN
+F 1 "WS2812B" H 10575 4525 50  0000 L CNN
+F 2 "plc14500-pico:WS2812-2020" H 10575 4475 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 10625 4400 50  0001 L TNN
+	1    10525 4775
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR021
+U 1 1 643DB73F
+P 8175 5350
+F 0 "#PWR021" H 8175 5100 50  0001 C CNN
+F 1 "GND" H 8180 5177 50  0000 C CNN
+F 2 "" H 8175 5350 50  0001 C CNN
+F 3 "" H 8175 5350 50  0001 C CNN
+	1    8175 5350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5775 5075 5775 5175
+Wire Wire Line
+	5775 5175 6450 5175
+Wire Wire Line
+	10525 5175 10525 5075
+Wire Wire Line
+	8175 5350 8175 5175
+Connection ~ 8175 5175
+Wire Wire Line
+	8175 5175 8500 5175
+Wire Wire Line
+	6450 5075 6450 5175
+Connection ~ 6450 5175
+Wire Wire Line
+	6450 5175 7125 5175
+Wire Wire Line
+	7125 5075 7125 5175
+Connection ~ 7125 5175
+Wire Wire Line
+	7125 5175 7800 5175
+Wire Wire Line
+	7800 5075 7800 5175
+Connection ~ 7800 5175
+Wire Wire Line
+	7800 5175 8175 5175
+Wire Wire Line
+	8500 5075 8500 5175
+Connection ~ 8500 5175
+Wire Wire Line
+	8500 5175 9175 5175
+Wire Wire Line
+	9175 5075 9175 5175
+Connection ~ 9175 5175
+Wire Wire Line
+	9175 5175 9850 5175
+Wire Wire Line
+	9850 5075 9850 5175
+Connection ~ 9850 5175
+Wire Wire Line
+	9850 5175 10525 5175
+$Comp
+L power:+5V #PWR019
+U 1 1 643DB75D
+P 8175 4175
+F 0 "#PWR019" H 8175 4025 50  0001 C CNN
+F 1 "+5V" H 8190 4348 50  0000 C CNN
+F 2 "" H 8175 4175 50  0001 C CNN
+F 3 "" H 8175 4175 50  0001 C CNN
+	1    8175 4175
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5775 4475 5775 4325
+Wire Wire Line
+	5775 4325 6450 4325
+Wire Wire Line
+	10525 4325 10525 4475
+Wire Wire Line
+	6450 4475 6450 4325
+Connection ~ 6450 4325
+Wire Wire Line
+	6450 4325 7125 4325
+Wire Wire Line
+	7125 4475 7125 4325
+Connection ~ 7125 4325
+Wire Wire Line
+	7125 4325 7800 4325
+Wire Wire Line
+	7800 4475 7800 4325
+Connection ~ 7800 4325
+Wire Wire Line
+	7800 4325 8175 4325
+Wire Wire Line
+	8500 4475 8500 4325
+Connection ~ 8500 4325
+Wire Wire Line
+	8500 4325 9175 4325
+Wire Wire Line
+	9175 4475 9175 4325
+Connection ~ 9175 4325
+Wire Wire Line
+	9175 4325 9850 4325
+Wire Wire Line
+	9850 4475 9850 4325
+Connection ~ 9850 4325
+Wire Wire Line
+	9850 4325 10525 4325
+Wire Wire Line
+	8175 4175 8175 4325
+Connection ~ 8175 4325
+Wire Wire Line
+	8175 4325 8500 4325
+Text Notes 10150 4200 0    197  ~ 0
+OUT
+Wire Wire Line
+	6075 4775 6150 4775
+Wire Wire Line
+	6750 4775 6825 4775
+Wire Wire Line
+	7425 4775 7500 4775
+Wire Wire Line
+	8100 4775 8200 4775
+Wire Wire Line
+	8800 4775 8875 4775
+Wire Wire Line
+	9475 4775 9550 4775
+Wire Wire Line
+	10150 4775 10225 4775
+$Comp
+L plc14500-pico:WS2812-2020 D?
+U 1 1 643EF6B2
+P 7050 1400
+AR Path="/643EF6B2" Ref="D?"  Part="1" 
+AR Path="/64374528/643EF6B2" Ref="D9"  Part="1" 
+F 0 "D9" H 6800 1650 50  0000 L CNN
+F 1 "WS2812B" H 7100 1150 50  0000 L CNN
+F 2 "plc14500-pico:WS2812-2020" H 7100 1100 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 7150 1025 50  0001 L TNN
+	1    7050 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L plc14500-pico:WS2812-2020 D?
+U 1 1 643EF6B8
+P 7725 1400
+AR Path="/643EF6B8" Ref="D?"  Part="1" 
+AR Path="/64374528/643EF6B8" Ref="D10"  Part="1" 
+F 0 "D10" H 7475 1650 50  0000 L CNN
+F 1 "WS2812B" H 7775 1150 50  0000 L CNN
+F 2 "plc14500-pico:WS2812-2020" H 7775 1100 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 7825 1025 50  0001 L TNN
+	1    7725 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L plc14500-pico:WS2812-2020 D?
+U 1 1 643EF6BE
+P 8400 1400
+AR Path="/643EF6BE" Ref="D?"  Part="1" 
+AR Path="/64374528/643EF6BE" Ref="D11"  Part="1" 
+F 0 "D11" H 8150 1650 50  0000 L CNN
+F 1 "WS2812B" H 8450 1150 50  0000 L CNN
+F 2 "plc14500-pico:WS2812-2020" H 8450 1100 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 8500 1025 50  0001 L TNN
+	1    8400 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L plc14500-pico:WS2812-2020 D?
+U 1 1 643EF6C4
+P 9075 1400
+AR Path="/643EF6C4" Ref="D?"  Part="1" 
+AR Path="/64374528/643EF6C4" Ref="D12"  Part="1" 
+F 0 "D12" H 8825 1650 50  0000 L CNN
+F 1 "WS2812B" H 9125 1150 50  0000 L CNN
+F 2 "plc14500-pico:WS2812-2020" H 9125 1100 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 9175 1025 50  0001 L TNN
+	1    9075 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L plc14500-pico:WS2812-2020 D?
+U 1 1 643EF6CA
+P 9775 1400
+AR Path="/643EF6CA" Ref="D?"  Part="1" 
+AR Path="/64374528/643EF6CA" Ref="D13"  Part="1" 
+F 0 "D13" H 9525 1650 50  0000 L CNN
+F 1 "WS2812B" H 9825 1150 50  0000 L CNN
+F 2 "plc14500-pico:WS2812-2020" H 9825 1100 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 9875 1025 50  0001 L TNN
+	1    9775 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR013
+U 1 1 643EF6DC
+P 9450 1975
+F 0 "#PWR013" H 9450 1725 50  0001 C CNN
+F 1 "GND" H 9455 1802 50  0000 C CNN
+F 2 "" H 9450 1975 50  0001 C CNN
+F 3 "" H 9450 1975 50  0001 C CNN
+	1    9450 1975
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7050 1700 7050 1800
+Wire Wire Line
+	7050 1800 7725 1800
+Wire Wire Line
+	9450 1975 9450 1800
+Connection ~ 9450 1800
+Wire Wire Line
+	9450 1800 9775 1800
+Wire Wire Line
+	7725 1700 7725 1800
+Connection ~ 7725 1800
+Wire Wire Line
+	7725 1800 8400 1800
+Wire Wire Line
+	8400 1700 8400 1800
+Connection ~ 8400 1800
+Wire Wire Line
+	8400 1800 9075 1800
+Wire Wire Line
+	9075 1700 9075 1800
+Connection ~ 9075 1800
+Wire Wire Line
+	9075 1800 9450 1800
+Wire Wire Line
+	9775 1700 9775 1800
+$Comp
+L power:+5V #PWR011
+U 1 1 643EF6F7
+P 9450 800
+F 0 "#PWR011" H 9450 650 50  0001 C CNN
+F 1 "+5V" H 9465 973 50  0000 C CNN
+F 2 "" H 9450 800 50  0001 C CNN
+F 3 "" H 9450 800 50  0001 C CNN
+	1    9450 800 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7050 1100 7050 950 
+Wire Wire Line
+	7050 950  7725 950 
+Wire Wire Line
+	7725 1100 7725 950 
+Connection ~ 7725 950 
+Wire Wire Line
+	7725 950  8400 950 
+Wire Wire Line
+	8400 1100 8400 950 
+Connection ~ 8400 950 
+Wire Wire Line
+	8400 950  9075 950 
+Wire Wire Line
+	9075 1100 9075 950 
+Connection ~ 9075 950 
+Wire Wire Line
+	9075 950  9450 950 
+Wire Wire Line
+	9775 1100 9775 950 
+Wire Wire Line
+	9450 800  9450 950 
+Connection ~ 9450 950 
+Wire Wire Line
+	9450 950  9775 950 
+Text Notes 10175 1000 0    79   ~ 0
+SPR
+Wire Wire Line
+	7350 1400 7425 1400
+Wire Wire Line
+	8025 1400 8100 1400
+Wire Wire Line
+	8700 1400 8775 1400
+Wire Wire Line
+	9375 1400 9475 1400
+Wire Wire Line
+	10075 1400 10150 1400
+$Comp
+L plc14500-pico:WS2812-2020 D?
+U 1 1 64401CDB
+P 6525 3050
+AR Path="/64401CDB" Ref="D?"  Part="1" 
+AR Path="/64374528/64401CDB" Ref="D14"  Part="1" 
+F 0 "D14" H 6275 3300 50  0000 L CNN
+F 1 "WS2812B" H 6575 2800 50  0000 L CNN
+F 2 "plc14500-pico:WS2812-2020" H 6575 2750 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 6625 2675 50  0001 L TNN
+	1    6525 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L plc14500-pico:WS2812-2020 D?
+U 1 1 64401CE1
+P 7200 3050
+AR Path="/64401CE1" Ref="D?"  Part="1" 
+AR Path="/64374528/64401CE1" Ref="D15"  Part="1" 
+F 0 "D15" H 6950 3300 50  0000 L CNN
+F 1 "WS2812B" H 7250 2800 50  0000 L CNN
+F 2 "plc14500-pico:WS2812-2020" H 7250 2750 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 7300 2675 50  0001 L TNN
+	1    7200 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L plc14500-pico:WS2812-2020 D?
+U 1 1 64401CE7
+P 7875 3050
+AR Path="/64401CE7" Ref="D?"  Part="1" 
+AR Path="/64374528/64401CE7" Ref="D16"  Part="1" 
+F 0 "D16" H 7625 3300 50  0000 L CNN
+F 1 "WS2812B" H 7925 2800 50  0000 L CNN
+F 2 "plc14500-pico:WS2812-2020" H 7925 2750 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 7975 2675 50  0001 L TNN
+	1    7875 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L plc14500-pico:WS2812-2020 D?
+U 1 1 64401CED
+P 8550 3050
+AR Path="/64401CED" Ref="D?"  Part="1" 
+AR Path="/64374528/64401CED" Ref="D17"  Part="1" 
+F 0 "D17" H 8300 3300 50  0000 L CNN
+F 1 "WS2812B" H 8600 2800 50  0000 L CNN
+F 2 "plc14500-pico:WS2812-2020" H 8600 2750 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 8650 2675 50  0001 L TNN
+	1    8550 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L plc14500-pico:WS2812-2020 D?
+U 1 1 64401CF3
+P 9250 3050
+AR Path="/64401CF3" Ref="D?"  Part="1" 
+AR Path="/64374528/64401CF3" Ref="D18"  Part="1" 
+F 0 "D18" H 9000 3300 50  0000 L CNN
+F 1 "WS2812B" H 9300 2800 50  0000 L CNN
+F 2 "plc14500-pico:WS2812-2020" H 9300 2750 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 9350 2675 50  0001 L TNN
+	1    9250 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L plc14500-pico:WS2812-2020 D?
+U 1 1 64401CF9
+P 9925 3050
+AR Path="/64401CF9" Ref="D?"  Part="1" 
+AR Path="/64374528/64401CF9" Ref="D19"  Part="1" 
+F 0 "D19" H 9675 3300 50  0000 L CNN
+F 1 "WS2812B" H 9975 2800 50  0000 L CNN
+F 2 "plc14500-pico:WS2812-2020" H 9975 2750 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 10025 2675 50  0001 L TNN
+	1    9925 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L plc14500-pico:WS2812-2020 D?
+U 1 1 64401CFF
+P 10600 3050
+AR Path="/64401CFF" Ref="D?"  Part="1" 
+AR Path="/64374528/64401CFF" Ref="D20"  Part="1" 
+F 0 "D20" H 10350 3300 50  0000 L CNN
+F 1 "WS2812B" H 10650 2800 50  0000 L CNN
+F 2 "plc14500-pico:WS2812-2020" H 10650 2750 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 10700 2675 50  0001 L TNN
+	1    10600 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR016
+U 1 1 64401D05
+P 8850 3625
+F 0 "#PWR016" H 8850 3375 50  0001 C CNN
+F 1 "GND" H 8855 3452 50  0000 C CNN
+F 2 "" H 8850 3625 50  0001 C CNN
+F 3 "" H 8850 3625 50  0001 C CNN
+	1    8850 3625
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6525 3350 6525 3450
+Wire Wire Line
+	6525 3450 7200 3450
+Wire Wire Line
+	8925 3625 8925 3450
+Connection ~ 8925 3450
+Wire Wire Line
+	8925 3450 9250 3450
+Wire Wire Line
+	7200 3350 7200 3450
+Connection ~ 7200 3450
+Wire Wire Line
+	7200 3450 7875 3450
+Wire Wire Line
+	7875 3350 7875 3450
+Connection ~ 7875 3450
+Wire Wire Line
+	7875 3450 8550 3450
+Wire Wire Line
+	8550 3350 8550 3450
+Connection ~ 8550 3450
+Wire Wire Line
+	8550 3450 8925 3450
+Wire Wire Line
+	9250 3350 9250 3450
+Connection ~ 9250 3450
+Wire Wire Line
+	9250 3450 9925 3450
+Wire Wire Line
+	9925 3350 9925 3450
+Connection ~ 9925 3450
+Wire Wire Line
+	9925 3450 10600 3450
+Wire Wire Line
+	10600 3350 10600 3450
+$Comp
+L power:+5V #PWR014
+U 1 1 64401D20
+P 8925 2450
+F 0 "#PWR014" H 8925 2300 50  0001 C CNN
+F 1 "+5V" H 8940 2623 50  0000 C CNN
+F 2 "" H 8925 2450 50  0001 C CNN
+F 3 "" H 8925 2450 50  0001 C CNN
+	1    8925 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6525 2750 6525 2600
+Wire Wire Line
+	6525 2600 7200 2600
+Wire Wire Line
+	7200 2750 7200 2600
+Connection ~ 7200 2600
+Wire Wire Line
+	7200 2600 7875 2600
+Wire Wire Line
+	7875 2750 7875 2600
+Connection ~ 7875 2600
+Wire Wire Line
+	7875 2600 8550 2600
+Wire Wire Line
+	8550 2750 8550 2600
+Connection ~ 8550 2600
+Wire Wire Line
+	8550 2600 8925 2600
+Wire Wire Line
+	9250 2750 9250 2600
+Connection ~ 9250 2600
+Wire Wire Line
+	9250 2600 9925 2600
+Wire Wire Line
+	9925 2750 9925 2600
+Connection ~ 9925 2600
+Wire Wire Line
+	9925 2600 10600 2600
+Wire Wire Line
+	10600 2750 10600 2600
+Wire Wire Line
+	8925 2450 8925 2600
+Connection ~ 8925 2600
+Wire Wire Line
+	8925 2600 9250 2600
+Text Notes 10425 2450 0    197  ~ 0
+SPR
+Wire Wire Line
+	6825 3050 6900 3050
+Wire Wire Line
+	7500 3050 7575 3050
+Wire Wire Line
+	8175 3050 8250 3050
+Wire Wire Line
+	8850 3050 8950 3050
+Wire Wire Line
+	9550 3050 9625 3050
+Wire Wire Line
+	10225 3050 10300 3050
+Wire Wire Line
+	10900 3050 10975 3050
+Wire Wire Line
+	6475 1400 6750 1400
+Wire Wire Line
+	10150 1400 10150 2200
+Wire Wire Line
+	525  2200 525  3075
+Wire Wire Line
+	525  3075 600  3075
+Wire Wire Line
+	5275 4775 5475 4775
+Wire Wire Line
+	10850 4775 11025 4775
+Wire Wire Line
+	11025 4775 11025 5575
+Wire Wire Line
+	11025 5575 475  5575
+Wire Wire Line
+	475  5575 475  6425
+Wire Wire Line
+	475  6425 600  6425
+Wire Wire Line
+	525  2200 10150 2200
+Text GLabel 975  1400 0    50   Input ~ 0
+LED_D
+Wire Wire Line
+	975  1400 1125 1400
+$EndSCHEMATC

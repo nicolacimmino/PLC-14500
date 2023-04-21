@@ -1,0 +1,618 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 2
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Switch:SW_Push_DPDT SW1
+U 1 1 6434046E
+P 1425 1700
+F 0 "SW1" H 1425 1267 50  0000 C CNN
+F 1 "SW_Push_DPDT" H 1425 1266 50  0001 C CNN
+F 2 "plc14500-pico:DPDT_SMD" H 1425 1900 50  0001 C CNN
+F 3 "~" H 1425 1900 50  0001 C CNN
+	1    1425 1700
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+5V #PWR01
+U 1 1 64341708
+P 850 925
+F 0 "#PWR01" H 850 775 50  0001 C CNN
+F 1 "+5V" H 865 1098 50  0000 C CNN
+F 2 "" H 850 925 50  0001 C CNN
+F 3 "" H 850 925 50  0001 C CNN
+	1    850  925 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 64341D97
+P 1025 1850
+F 0 "#PWR02" H 1025 1600 50  0001 C CNN
+F 1 "GND" H 1150 1750 50  0000 C CNN
+F 2 "" H 1025 1850 50  0001 C CNN
+F 3 "" H 1025 1850 50  0001 C CNN
+	1    1025 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1225 2000 850  2000
+Wire Wire Line
+	1225 1400 850  1400
+Wire Wire Line
+	850  1400 850  925 
+Wire Wire Line
+	1025 1850 1025 1800
+Wire Wire Line
+	1025 1800 1225 1800
+Wire Wire Line
+	1225 1600 1025 1600
+Wire Wire Line
+	1025 1600 1025 1800
+Connection ~ 1025 1800
+$Comp
+L Device:R R1
+U 1 1 643435ED
+P 1950 1500
+F 0 "R1" V 1743 1500 50  0000 C CNN
+F 1 "R" V 1834 1500 50  0000 C CNN
+F 2 "Resistor_SMD:R_1210_3225Metric_Pad1.42x2.65mm_HandSolder" V 1880 1500 50  0001 C CNN
+F 3 "~" H 1950 1500 50  0001 C CNN
+	1    1950 1500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1625 1500 1800 1500
+$Comp
+L Switch:SW_MEC_5G SW2
+U 1 1 64344361
+P 1950 1900
+F 0 "SW2" H 1950 1825 50  0000 C CNN
+F 1 "SW_MEC_5G" H 1950 2094 50  0001 C CNN
+F 2 "plc14500-pico:TACTILE_SWITCH_SMD_3_3" H 1950 2100 50  0001 C CNN
+F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" H 1950 2100 50  0001 C CNN
+	1    1950 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1625 1900 1750 1900
+Wire Wire Line
+	2100 1500 2150 1500
+Wire Wire Line
+	2150 1500 2150 1900
+$Comp
+L Switch:SW_Push_DPDT SW3
+U 1 1 6434C176
+P 1425 2600
+F 0 "SW3" H 1425 2167 50  0000 C CNN
+F 1 "SW_Push_DPDT" H 1425 2166 50  0001 C CNN
+F 2 "plc14500-pico:DPDT_SMD" H 1425 2800 50  0001 C CNN
+F 3 "~" H 1425 2800 50  0001 C CNN
+	1    1425 2600
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR03
+U 1 1 6434C17C
+P 1025 2750
+F 0 "#PWR03" H 1025 2500 50  0001 C CNN
+F 1 "GND" H 1150 2650 50  0000 C CNN
+F 2 "" H 1025 2750 50  0001 C CNN
+F 3 "" H 1025 2750 50  0001 C CNN
+	1    1025 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1225 2900 850  2900
+Wire Wire Line
+	1225 2300 850  2300
+Wire Wire Line
+	1025 2750 1025 2700
+Wire Wire Line
+	1025 2700 1225 2700
+Wire Wire Line
+	1225 2500 1025 2500
+Wire Wire Line
+	1025 2500 1025 2700
+Connection ~ 1025 2700
+$Comp
+L Device:R R2
+U 1 1 6434C18C
+P 1950 2400
+F 0 "R2" V 1743 2400 50  0000 C CNN
+F 1 "R" V 1834 2400 50  0000 C CNN
+F 2 "Resistor_SMD:R_1210_3225Metric_Pad1.42x2.65mm_HandSolder" V 1880 2400 50  0001 C CNN
+F 3 "~" H 1950 2400 50  0001 C CNN
+	1    1950 2400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1625 2400 1800 2400
+$Comp
+L Switch:SW_MEC_5G SW4
+U 1 1 6434C193
+P 1950 2800
+F 0 "SW4" H 1950 2725 50  0000 C CNN
+F 1 "SW_MEC_5G" H 1950 2994 50  0001 C CNN
+F 2 "plc14500-pico:TACTILE_SWITCH_SMD_3_3" H 1950 3000 50  0001 C CNN
+F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" H 1950 3000 50  0001 C CNN
+	1    1950 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1625 2800 1750 2800
+Wire Wire Line
+	2100 2400 2150 2400
+Wire Wire Line
+	2150 2400 2150 2800
+$Comp
+L Switch:SW_Push_DPDT SW5
+U 1 1 6434F33D
+P 1425 3525
+F 0 "SW5" H 1425 3092 50  0000 C CNN
+F 1 "SW_Push_DPDT" H 1425 3091 50  0001 C CNN
+F 2 "plc14500-pico:DPDT_SMD" H 1425 3725 50  0001 C CNN
+F 3 "~" H 1425 3725 50  0001 C CNN
+	1    1425 3525
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR05
+U 1 1 6434F343
+P 1025 3675
+F 0 "#PWR05" H 1025 3425 50  0001 C CNN
+F 1 "GND" H 1150 3575 50  0000 C CNN
+F 2 "" H 1025 3675 50  0001 C CNN
+F 3 "" H 1025 3675 50  0001 C CNN
+	1    1025 3675
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1225 3825 850  3825
+Wire Wire Line
+	1225 3225 850  3225
+Wire Wire Line
+	1025 3675 1025 3625
+Wire Wire Line
+	1025 3625 1225 3625
+Wire Wire Line
+	1225 3425 1025 3425
+Wire Wire Line
+	1025 3425 1025 3625
+Connection ~ 1025 3625
+$Comp
+L Device:R R3
+U 1 1 6434F351
+P 1950 3325
+F 0 "R3" V 1743 3325 50  0000 C CNN
+F 1 "R" V 1834 3325 50  0000 C CNN
+F 2 "Resistor_SMD:R_1210_3225Metric_Pad1.42x2.65mm_HandSolder" V 1880 3325 50  0001 C CNN
+F 3 "~" H 1950 3325 50  0001 C CNN
+	1    1950 3325
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1625 3325 1800 3325
+$Comp
+L Switch:SW_MEC_5G SW6
+U 1 1 6434F358
+P 1950 3725
+F 0 "SW6" H 1950 3650 50  0000 C CNN
+F 1 "SW_MEC_5G" H 1950 3919 50  0001 C CNN
+F 2 "plc14500-pico:TACTILE_SWITCH_SMD_3_3" H 1950 3925 50  0001 C CNN
+F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" H 1950 3925 50  0001 C CNN
+	1    1950 3725
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1625 3725 1750 3725
+Wire Wire Line
+	2100 3325 2150 3325
+Wire Wire Line
+	2150 3325 2150 3725
+$Comp
+L Switch:SW_Push_DPDT SW7
+U 1 1 64351537
+P 1425 4425
+F 0 "SW7" H 1425 3992 50  0000 C CNN
+F 1 "SW_Push_DPDT" H 1425 3991 50  0001 C CNN
+F 2 "plc14500-pico:DPDT_SMD" H 1425 4625 50  0001 C CNN
+F 3 "~" H 1425 4625 50  0001 C CNN
+	1    1425 4425
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR06
+U 1 1 6435153D
+P 1025 4575
+F 0 "#PWR06" H 1025 4325 50  0001 C CNN
+F 1 "GND" H 1150 4475 50  0000 C CNN
+F 2 "" H 1025 4575 50  0001 C CNN
+F 3 "" H 1025 4575 50  0001 C CNN
+	1    1025 4575
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1225 4725 850  4725
+Wire Wire Line
+	1225 4125 850  4125
+Wire Wire Line
+	1025 4575 1025 4525
+Wire Wire Line
+	1025 4525 1225 4525
+Wire Wire Line
+	1225 4325 1025 4325
+Wire Wire Line
+	1025 4325 1025 4525
+Connection ~ 1025 4525
+$Comp
+L Device:R R4
+U 1 1 6435154B
+P 1950 4225
+F 0 "R4" V 1743 4225 50  0000 C CNN
+F 1 "R" V 1834 4225 50  0000 C CNN
+F 2 "Resistor_SMD:R_1210_3225Metric_Pad1.42x2.65mm_HandSolder" V 1880 4225 50  0001 C CNN
+F 3 "~" H 1950 4225 50  0001 C CNN
+	1    1950 4225
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1625 4225 1800 4225
+$Comp
+L Switch:SW_MEC_5G SW8
+U 1 1 64351552
+P 1950 4625
+F 0 "SW8" H 1950 4550 50  0000 C CNN
+F 1 "SW_MEC_5G" H 1950 4819 50  0001 C CNN
+F 2 "plc14500-pico:TACTILE_SWITCH_SMD_3_3" H 1950 4825 50  0001 C CNN
+F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" H 1950 4825 50  0001 C CNN
+	1    1950 4625
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1625 4625 1750 4625
+Wire Wire Line
+	2100 4225 2150 4225
+Wire Wire Line
+	2150 4225 2150 4625
+$Comp
+L Switch:SW_Push_DPDT SW9
+U 1 1 6435354F
+P 1425 5375
+F 0 "SW9" H 1425 4942 50  0000 C CNN
+F 1 "SW_Push_DPDT" H 1425 4941 50  0001 C CNN
+F 2 "plc14500-pico:DPDT_SMD" H 1425 5575 50  0001 C CNN
+F 3 "~" H 1425 5575 50  0001 C CNN
+	1    1425 5375
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR07
+U 1 1 64353555
+P 1025 5525
+F 0 "#PWR07" H 1025 5275 50  0001 C CNN
+F 1 "GND" H 1150 5425 50  0000 C CNN
+F 2 "" H 1025 5525 50  0001 C CNN
+F 3 "" H 1025 5525 50  0001 C CNN
+	1    1025 5525
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1225 5675 850  5675
+Wire Wire Line
+	1225 5075 850  5075
+Wire Wire Line
+	1025 5525 1025 5475
+Wire Wire Line
+	1025 5475 1225 5475
+Wire Wire Line
+	1225 5275 1025 5275
+Wire Wire Line
+	1025 5275 1025 5475
+Connection ~ 1025 5475
+$Comp
+L Device:R R5
+U 1 1 64353563
+P 1950 5175
+F 0 "R5" V 1743 5175 50  0000 C CNN
+F 1 "R" V 1834 5175 50  0000 C CNN
+F 2 "Resistor_SMD:R_1210_3225Metric_Pad1.42x2.65mm_HandSolder" V 1880 5175 50  0001 C CNN
+F 3 "~" H 1950 5175 50  0001 C CNN
+	1    1950 5175
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1625 5175 1800 5175
+$Comp
+L Switch:SW_MEC_5G SW10
+U 1 1 6435356A
+P 1950 5575
+F 0 "SW10" H 1950 5500 50  0000 C CNN
+F 1 "SW_MEC_5G" H 1950 5769 50  0001 C CNN
+F 2 "plc14500-pico:TACTILE_SWITCH_SMD_3_3" H 1950 5775 50  0001 C CNN
+F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" H 1950 5775 50  0001 C CNN
+	1    1950 5575
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1625 5575 1750 5575
+Wire Wire Line
+	2100 5175 2150 5175
+Wire Wire Line
+	2150 5175 2150 5575
+$Comp
+L Switch:SW_Push_DPDT SW11
+U 1 1 643556F2
+P 1425 6300
+F 0 "SW11" H 1425 5867 50  0000 C CNN
+F 1 "SW_Push_DPDT" H 1425 5866 50  0001 C CNN
+F 2 "plc14500-pico:DPDT_SMD" H 1425 6500 50  0001 C CNN
+F 3 "~" H 1425 6500 50  0001 C CNN
+	1    1425 6300
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR08
+U 1 1 643556F8
+P 1025 6450
+F 0 "#PWR08" H 1025 6200 50  0001 C CNN
+F 1 "GND" H 1150 6350 50  0000 C CNN
+F 2 "" H 1025 6450 50  0001 C CNN
+F 3 "" H 1025 6450 50  0001 C CNN
+	1    1025 6450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1225 6600 850  6600
+Wire Wire Line
+	1225 6000 850  6000
+Wire Wire Line
+	1025 6450 1025 6400
+Wire Wire Line
+	1025 6400 1225 6400
+Wire Wire Line
+	1225 6200 1025 6200
+Wire Wire Line
+	1025 6200 1025 6400
+Connection ~ 1025 6400
+$Comp
+L Device:R R6
+U 1 1 64355706
+P 1950 6100
+F 0 "R6" V 1743 6100 50  0000 C CNN
+F 1 "R" V 1834 6100 50  0000 C CNN
+F 2 "Resistor_SMD:R_1210_3225Metric_Pad1.42x2.65mm_HandSolder" V 1880 6100 50  0001 C CNN
+F 3 "~" H 1950 6100 50  0001 C CNN
+	1    1950 6100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1625 6100 1800 6100
+$Comp
+L Switch:SW_MEC_5G SW12
+U 1 1 6435570D
+P 1950 6500
+F 0 "SW12" H 1950 6425 50  0000 C CNN
+F 1 "SW_MEC_5G" H 1950 6694 50  0001 C CNN
+F 2 "plc14500-pico:TACTILE_SWITCH_SMD_3_3" H 1950 6700 50  0001 C CNN
+F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" H 1950 6700 50  0001 C CNN
+	1    1950 6500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1625 6500 1750 6500
+Wire Wire Line
+	2100 6100 2150 6100
+Wire Wire Line
+	2150 6100 2150 6500
+$Comp
+L Switch:SW_Push_DPDT SW13
+U 1 1 64357B2A
+P 1425 7200
+F 0 "SW13" H 1425 6767 50  0000 C CNN
+F 1 "SW_Push_DPDT" H 1425 6766 50  0001 C CNN
+F 2 "plc14500-pico:DPDT_SMD" H 1425 7400 50  0001 C CNN
+F 3 "~" H 1425 7400 50  0001 C CNN
+	1    1425 7200
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR09
+U 1 1 64357B30
+P 1025 7350
+F 0 "#PWR09" H 1025 7100 50  0001 C CNN
+F 1 "GND" H 1150 7250 50  0000 C CNN
+F 2 "" H 1025 7350 50  0001 C CNN
+F 3 "" H 1025 7350 50  0001 C CNN
+	1    1025 7350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1225 7500 850  7500
+Wire Wire Line
+	1225 6900 850  6900
+Wire Wire Line
+	1025 7350 1025 7300
+Wire Wire Line
+	1025 7300 1225 7300
+Wire Wire Line
+	1225 7100 1025 7100
+Wire Wire Line
+	1025 7100 1025 7300
+Connection ~ 1025 7300
+$Comp
+L Device:R R7
+U 1 1 64357B3E
+P 1950 7000
+F 0 "R7" V 1743 7000 50  0000 C CNN
+F 1 "R" V 1834 7000 50  0000 C CNN
+F 2 "Resistor_SMD:R_1210_3225Metric_Pad1.42x2.65mm_HandSolder" V 1880 7000 50  0001 C CNN
+F 3 "~" H 1950 7000 50  0001 C CNN
+	1    1950 7000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1625 7000 1800 7000
+$Comp
+L Switch:SW_MEC_5G SW14
+U 1 1 64357B45
+P 1950 7400
+F 0 "SW14" H 1950 7325 50  0000 C CNN
+F 1 "SW_MEC_5G" H 1950 7594 50  0001 C CNN
+F 2 "plc14500-pico:TACTILE_SWITCH_SMD_3_3" H 1950 7600 50  0001 C CNN
+F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" H 1950 7600 50  0001 C CNN
+	1    1950 7400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1625 7400 1750 7400
+Wire Wire Line
+	2100 7000 2150 7000
+Wire Wire Line
+	2150 7000 2150 7400
+Wire Wire Line
+	850  7475 850  6900
+Connection ~ 850  6600
+Wire Wire Line
+	850  6600 850  6000
+Connection ~ 850  6900
+Wire Wire Line
+	850  6900 850  6600
+Wire Wire Line
+	850  6000 850  5675
+Connection ~ 850  6000
+Connection ~ 850  4725
+Wire Wire Line
+	850  4725 850  4125
+Connection ~ 850  5075
+Wire Wire Line
+	850  5075 850  4725
+Connection ~ 850  5675
+Wire Wire Line
+	850  5675 850  5075
+Wire Wire Line
+	850  4125 850  3825
+Connection ~ 850  4125
+Connection ~ 850  2900
+Wire Wire Line
+	850  2900 850  2300
+Connection ~ 850  3225
+Wire Wire Line
+	850  3225 850  2900
+Connection ~ 850  3825
+Wire Wire Line
+	850  3825 850  3225
+Wire Wire Line
+	850  2300 850  2000
+Connection ~ 850  2300
+Connection ~ 850  1400
+Connection ~ 850  2000
+Wire Wire Line
+	850  2000 850  1400
+$Sheet
+S 8625 4825 1825 1075
+U 64374528
+F0 "LEDs" 50
+F1 "LEDs.sch" 50
+$EndSheet
+$Comp
+L plc14500-pico:MC14500 U1
+U 1 1 64507B70
+P 8000 2200
+F 0 "U1" H 8175 2331 50  0000 C CNN
+F 1 "MC14500" H 8175 2240 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm_LongPads" H 8000 2200 50  0001 C CNN
+F 3 "" H 8000 2200 50  0001 C CNN
+	1    8000 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Crystal_Small Y1
+U 1 1 64510C78
+P 4275 2775
+F 0 "Y1" V 4229 2863 50  0000 L CNN
+F 1 "16MHz" V 4325 2850 50  0000 L CNN
+F 2 "" H 4275 2775 50  0001 C CNN
+F 3 "~" H 4275 2775 50  0001 C CNN
+	1    4275 2775
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 64519D52
+P 4000 3100
+F 0 "C1" H 3885 3054 50  0000 R CNN
+F 1 "C" H 3885 3145 50  0000 R CNN
+F 2 "" H 4038 2950 50  0001 C CNN
+F 3 "~" H 4000 3100 50  0001 C CNN
+	1    4000 3100
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 64522BFB
+P 4275 3100
+F 0 "C2" H 4390 3146 50  0000 L CNN
+F 1 "C" H 4390 3055 50  0000 L CNN
+F 2 "" H 4313 2950 50  0001 C CNN
+F 3 "~" H 4275 3100 50  0001 C CNN
+	1    4275 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L plc14500-pico:ATmega328P-AU-Edited U2
+U 1 1 64533B1F
+P 5300 3250
+F 0 "U2" H 5300 1661 50  0000 C CNN
+F 1 "ATmega328P-AU-Edited" H 5300 1570 50  0000 C CNN
+F 2 "Package_QFP:TQFP-32_7x7mm_P0.8mm" H 5300 3250 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-8025-8-bit-AVR-Microcontroller-ATmega48P-88P-168P_Datasheet.pdf" H 5300 3250 50  0001 C CNN
+	1    5300 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4275 2650 4275 2675
+Wire Wire Line
+	4275 2875 4275 2900
+Wire Wire Line
+	4000 2950 4000 2650
+Wire Wire Line
+	4000 2650 4275 2650
+Connection ~ 4275 2650
+Wire Wire Line
+	4275 2950 4275 2900
+Connection ~ 4275 2900
+$Comp
+L power:GND #PWR04
+U 1 1 645461BC
+P 4150 3325
+F 0 "#PWR04" H 4150 3075 50  0001 C CNN
+F 1 "GND" H 4155 3152 50  0000 C CNN
+F 2 "" H 4150 3325 50  0001 C CNN
+F 3 "" H 4150 3325 50  0001 C CNN
+	1    4150 3325
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 3250 4150 3250
+Wire Wire Line
+	4150 3325 4150 3250
+Connection ~ 4150 3250
+Wire Wire Line
+	4150 3250 4275 3250
+Wire Wire Line
+	4275 2650 4700 2650
+Wire Wire Line
+	4275 2900 4700 2900
+$EndSCHEMATC
