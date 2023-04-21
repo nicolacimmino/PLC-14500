@@ -28,7 +28,7 @@ bootloader, with a convenient USB interface that surely is easy to connect to mo
 to not spoil the illusion, the Arduino is mounted on the bottom side of the PCB, so it won't be visible when 
 using the board.
 
-![Board](documentation/board.png)
+![Board](documentation/board_black_revc.png)
 
 This project is Open Source Hardware [Certified](https://certification.oshwa.org/pl000011.html)
 
