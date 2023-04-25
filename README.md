@@ -31,6 +31,15 @@ This project is Open Source Hardware [Certified](https://certification.oshwa.org
 
 ![oshw_PL000011](documentation/oshw_cert_small.png)
 
+# Toolchain
+
+You can find all the tools to assemble and transfer programs ready built for Windows in the [releases](https://github.com/nicolacimmino/PLC-14500/releases) section.
+
+In addition to the tools in this repo, Hein Pragt was so kind to build a workbench that you can use to simulate your programs while waiting to build the board. See an in-depth explanation of the MC14500 and of the tool on his [website](https://www.heinpragt.nl/?p=2749).
+
+![image](https://user-images.githubusercontent.com/5907879/234340077-9307bb3f-74ad-4d0b-85ad-713950b1f200.png)
+
+
 # Assembling the board
 
 To keep the assembled board visually free from clutter, and to give more prominence to the labels
