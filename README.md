@@ -1,8 +1,5 @@
 **NEW!** You can now buy this as a ready to assemble kit on [tindie.com](https://www.tindie.com/products/nicola_cimmino/plc14500-nano-1-bit-single-board-computer-kit).
 
-**NOTE!** When assembling the board make sure the Arduino is installed correctly with its square
-pad matching the square pad on the PCB. Refer to this [photo](documentation/arduino_installation.png) for correct orientation.
-
 # Introduction
 
 The PLC14500 Nano is a retro-style trainer board intended for the user to familiarize with the Motorola MC14500 1-bit
