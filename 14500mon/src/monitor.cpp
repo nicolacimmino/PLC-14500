@@ -207,7 +207,7 @@ void assemble(int address)
               token = strtok(NULL, " ");
               if (token != NULL)
               {
-                arg = atoi(token);
+                arg = strtoul(token, NULL, 16);
               }
 
               writeProgramByte(address, opcode | (arg << 4));
