@@ -28,6 +28,22 @@ will replace SPR7 input signal with RR so that you can control IEN/OEN registers
 - Connect the **pad** of pin 1 of U13 to pin 15 of U10 (thus connecting the MC14500 RR to what used to be SPR7 input)
 - If having the SPR7 LED confuses you, cut LED D50
 
+## REV_C -> REV_D
+
+- Corrected clock source to feed into X2 and used X1 to drive the counter.
+	This fixes a timing issue on the write line that was, incorrectly, addressed by adding conditioning
+	with a pulse generator (C15, R59, U3C, U3D) which has now been removed as a consequence.
+
+- Added LEDs also for RTN, FLAG0, FLAGF. Even though these signals are not relevant for the board config
+	many asked to have them visible for educational purpuses.
+
+- Rearranged ADDR, DATA, SPR LEDs to have lsb on the right.
+
+- Rearranged OUT LEDs in a more compact layout like the others.
+
+
+
+
 ## REV_C Artifacts
 
 ![Silk](/documentation/rev_c-silk.svg)

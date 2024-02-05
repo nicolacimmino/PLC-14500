@@ -6,10 +6,10 @@
 
   (title_block
     (title "PLC14500 - Nano")
-    (date "2022-11-09")
-    (rev "0.5")
+    (date "2024-01-22")
+    (rev "0.6")
     (company "Nicola Cimmino")
-    (comment 1 "REV.C")
+    (comment 1 "REV.D")
   )
 
   (lib_symbols
@@ -1447,7 +1447,7 @@
           (reference "U?") (unit 5)
         )
         (path "/e5c24396-229a-4727-a88d-8f28d7f70179"
-          (reference "U12") (unit 4)
+          (reference "U12") (unit 5)
         )
       )
     )
