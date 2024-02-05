@@ -1,5 +1,4 @@
 (sym_lib_table
   (version 7)
-  (lib (name "plc14500")(type "Legacy")(uri "${KIPRJMOD}/plc14500.lib")(options "")(descr ""))
-  (lib (name "plc14500-rescue")(type "KiCad")(uri "${KIPRJMOD}/plc14500-rescue.kicad_sym")(options "")(descr ""))
+  (lib (name "plc14500")(type "KiCad")(uri "${KIPRJMOD}/plc14500.kicad_sym")(options "")(descr ""))
 )
