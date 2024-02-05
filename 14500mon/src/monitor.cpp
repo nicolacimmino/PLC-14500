@@ -136,7 +136,7 @@ uint8_t processCommand()
     return RES_LEAVE_MONITOR;
     break;
   default:
-    Serial.println(F("UNKNOWN COMMAD."));
+    Serial.println(F("UNKNOWN COMMAND."));
     return RES_ERR;
   }
 
