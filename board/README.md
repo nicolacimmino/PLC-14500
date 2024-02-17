@@ -41,7 +41,11 @@ will replace SPR7 input signal with RR so that you can control IEN/OEN registers
 
 - Rearranged OUT LEDs in a more compact layout like the others.
 
+- Added an expansion connector to use external inputs/outputs.
 
+- Swapped around the wiring of input switches so that right is on left is off.
+
+- Swapped around the wiring of the clock switches so that HI and RUN are on the right.
 
 
 ## REV_C Artifacts

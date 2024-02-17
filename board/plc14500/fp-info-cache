@@ -1,4 +1,4 @@
-22215604706880573
+22217312473011577
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -91895,6 +91895,13 @@ LED diameter 5.0mm 2 pins
 0
 2
 2
+plc14500
+PLCNANO-IO
+
+
+0
+0
+0
 plc14500
 SWITCH_DPDT
 
