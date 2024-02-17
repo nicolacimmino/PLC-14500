@@ -35,13 +35,13 @@ STO OUT7  ; use it to trigger TMR0.
 ; *************************************************
 ; Test: Scratchpad RAM is working correctly.
 
-LD  IN3    ; Copy IN3 to SPR2
-STO SPR2
+LD  IN3    ; Copy IN3 to SPR0
+STO SPR0
 
-LD  SPR2   ; Copy SPR2 to SPR1
+LD  SPR0   ; Copy SPR0 to SPR1
 STO SPR1
 
-; Expect: Clicking IN3 turns on SPR2 and SPR1
+; Expect: Clicking IN3 turns on SPR0 and SPR0
 ; *************************************************
 
 JMP 0     ; Repeat.
