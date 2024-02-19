@@ -1048,7 +1048,7 @@
         (name "A7" (effects (font (size 1.27 1.27))))
         (number "26" (effects (font (size 1.27 1.27))))
       )
-      (pin power_out line (at 5.08 25.4 270) (length 2.54)
+      (pin power_in line (at 5.08 25.4 270) (length 2.54)
         (name "+5V" (effects (font (size 1.27 1.27))))
         (number "27" (effects (font (size 1.27 1.27))))
       )
@@ -1912,6 +1912,14 @@
       (pin passive line (at 5.08 -2.54 180) (length 2.54)
         (name "7" (effects (font (size 1.016 1.016))))
         (number "7" (effects (font (size 1.016 1.016))))
+      )
+      (pin power_in line (at -11.43 -20.32 270) (length 2.54) hide
+        (name "GND" (effects (font (size 1.27 1.27))))
+        (number "8" (effects (font (size 1.27 1.27))))
+      )
+      (pin power_in line (at -8.89 -20.32 270) (length 2.54) hide
+        (name "GND" (effects (font (size 1.27 1.27))))
+        (number "9" (effects (font (size 1.27 1.27))))
       )
     )
   )
