@@ -906,7 +906,7 @@
     (uuid f8dde31d-6dd3-4bcb-a6c4-75fc5411a5bd)
   )
 
-  (text "The programmer asserts the PRG line to take control of the bus. This causes the PC address lines to go to HiZ.\n\n!WEN is cleared by the programmer once each program byte value and address is stable. This triggers a write in RAM.\n\nThe programmer, or the user, can assert the RST line to cause a reset of the PC and of the lataches."
+  (text "The programmer asserts the PRG line to take control of the bus. This causes the PC address lines to go to HiZ.\n\n!WEN is cleared by the programmer once each program byte value and address is stable. This triggers a write in RAM.\n\nThe programmer, or the user, can assert the RES line to cause a reset of the PC and of the lataches."
     (at 123.825 54.61 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid ef23336c-e71d-4fcf-b3cd-a648434255c5)
@@ -928,7 +928,7 @@
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid 39424065-a8d2-489d-90be-f847672db667)
   )
-  (hierarchical_label "!RST" (shape output) (at 175.26 84.455 0) (fields_autoplaced)
+  (hierarchical_label "!RES" (shape output) (at 175.26 84.455 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 470e8b4f-8531-4dac-b91b-d350592264a6)
   )
@@ -988,7 +988,7 @@
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid e39a164c-6bc2-4fd5-a0bc-0094b4967eaa)
   )
-  (hierarchical_label "RST" (shape bidirectional) (at 174.625 103.505 0) (fields_autoplaced)
+  (hierarchical_label "RES" (shape bidirectional) (at 174.625 103.505 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid e6bfdfd1-d5a4-40d4-b5dd-ff11787ea87b)
   )

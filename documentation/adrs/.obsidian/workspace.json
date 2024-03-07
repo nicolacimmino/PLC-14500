@@ -44,6 +44,16 @@
             }
           },
           {
+            "id": "7773851111cc09dd",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.5.8"
+              }
+            }
+          },
+          {
             "id": "284a7d25b46c503e",
             "type": "leaf",
             "state": {
@@ -68,7 +78,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -203,7 +213,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "c8a7919c81a8a0b9",
+  "active": "7773851111cc09dd",
   "lastOpenFiles": [
     "ADR-002 Silk Screen in Nano.md",
     "ADR-003 Onboard timer TMR0.md",
