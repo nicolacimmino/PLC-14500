@@ -1,0 +1,11 @@
+
+U5 RST not connected to board RES, just to expansion
+
+D7 dangling on the RAM/PROG connection
+
+A1/A2 swapped in program interface.
+
+Clock to counter needs to be from X1 but conditioned to a short pulse
+because of MC14500 Tphl on the W line.
+A pulse generator with 100n/820R and double schmitt trigger not works.
+
