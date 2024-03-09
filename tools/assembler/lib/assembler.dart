@@ -1,10 +1,15 @@
 import 'package:assembler/assembly_source.dart';
 import 'package:assembler/board.dart';
 import 'package:assembler/byte_code.dart';
+import 'package:sprintf/sprintf.dart';
+
+import 'dump.dart';
 
 class Assembler {
   AssemblySource source;
   ByteCode byteCode = ByteCode();
+  Dump dump = Dump();
+
   late Board _board;
 
   final Map<String, int> _opcodes = {
@@ -31,23 +36,40 @@ class Assembler {
   void assemble() {
     _board = Board.fromName(source.metaData['BOARD'] ?? '');
 
+    dump.content.clear();
+    dump.content.add(sprintf("SOURCE: %s", [source.filename.toUpperCase()]));
+    dump.content.add(sprintf("TARGET: %s", [source.metaData['BOARD']]));
+    dump.content
+        .add(sprintf("PRG MEMORY: %d BYTES", [_board.getPaddedProgramSize()]));
+    dump.content.add("----------------------------");
+    dump.content.add("ADDR    BYTECODE INSTR ARG");
+    dump.content.add("----------------------------");
+
     for (var line in source.source) {
       var tokens = line.split(' ');
-      int result = _getOpCode(tokens[0]);
+      var instruction = tokens[0];
+      var argument = (tokens.length == 2) ? tokens[1] : "";
+
+      int result = _getOpCode(instruction);
 
       if (tokens.length == 2) {
-        result = result | _argToIOAddress(tokens[1]) << 4;
+        result = result | _argToIOAddress(argument) << 4;
       }
 
       _board.validateBytecode(result);
 
       byteCode.content.add(result);
+      dump.content.add(sprintf("%04x    %02x       %-5s %s",
+          [byteCode.content.length - 1, result, instruction, argument]));
 
       if (byteCode.content.length > _board.getPaddedProgramSize()) {
         throw Exception(
             "Program too long, max ${_board.getPaddedProgramSize()} bytes");
       }
     }
+
+    dump.content.add("----------------------------");
+    dump.content.add(sprintf("SIZE: %d BYTES", [byteCode.content.length]));
 
     if (byteCode.content.length < _board.getPaddedProgramSize()) {
       byteCode.content.addAll(List.generate(
