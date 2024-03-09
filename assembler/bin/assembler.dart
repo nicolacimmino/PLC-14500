@@ -17,6 +17,7 @@ void main(List<String> arguments) {
   }
 
   var outFile = sourceFile.replaceAll(".asm", ".bin");
+  var dumpFile = sourceFile.replaceAll(".asm", ".dump.txt");
   var source = AssemblySource();
   var assembler = Assembler(source);
 
@@ -24,6 +25,8 @@ void main(List<String> arguments) {
     source.load(sourceFile);
     assembler.assemble();
     assembler.byteCode.save(outFile);
+    assembler.dump.save(dumpFile);
+    print("Done. Output in: $outFile");
   } catch (e) {
     print(e.toString().replaceFirst("Exception: ", ""));
   }

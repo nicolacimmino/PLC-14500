@@ -6,7 +6,8 @@ environment:
   sdk: '>=2.18.2 <3.0.0'
 
 dependencies: 
-  libserialport: ^0.3.0+1 
+  libserialport: ^0.3.0+1
+  sprintf: ^7.0.0
 
 dev_dependencies:
   lints: ^2.0.0

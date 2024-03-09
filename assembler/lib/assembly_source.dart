@@ -1,16 +1,21 @@
 import 'dart:io' as io;
 
+import 'package:path/path.dart';
+
 class AssemblySource {
   List<String> content = [];
   List<String> source = [];
   Map<String, String> metaData = {};
+  String filename = "";
 
-  load(String filename) {
-    if (!io.File(filename).existsSync()) {
-      throw Exception("$filename not found");
+  load(String filePath) {
+    if (!io.File(filePath).existsSync()) {
+      throw Exception("$filePath not found");
     }
 
-    content = io.File(filename).readAsLinesSync();
+    filename = basename(filePath);
+
+    content = io.File(filePath).readAsLinesSync();
 
     _extractSource();
     _extractMetadata();
@@ -25,7 +30,7 @@ class AssemblySource {
     // Remove comments from lines
     metaDataLines = metaDataLines
         .map((line) =>
-    line.indexOf(";") > 0 ? line.substring(0, line.indexOf(";")) : line)
+            line.indexOf(";") > 0 ? line.substring(0, line.indexOf(";")) : line)
         .toList();
 
     // Trim
@@ -59,7 +64,8 @@ class AssemblySource {
     source = source.map((line) => line.trim()).toList();
 
     // Get rid of multiple spaces
-    source = source.map((line) => line.replaceAll(RegExp(r"\s+"), " ")).toList();
+    source =
+        source.map((line) => line.replaceAll(RegExp(r"\s+"), " ")).toList();
 
     // All uppercase
     source = source.map((line) => line.toUpperCase()).toList();
