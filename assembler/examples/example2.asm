@@ -4,8 +4,9 @@
 
 .board=PLC14500-Nano
 
-IEN  IN6
-OEN  IN6
+ORC  RR
+IEN  RR
+OEN  RR
 
 LD   IN0
 AND  IN1
