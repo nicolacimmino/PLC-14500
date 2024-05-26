@@ -207,7 +207,41 @@ void assemble(int address)
               token = strtok(NULL, " ");
               if (token != NULL)
               {
-                arg = strtoul(token, NULL, 16);
+                errno = 0;
+                if (strncmp("IN", token, 2) == 0)
+                {
+                  arg = 8 + strtoul(token + 2, NULL, 10);
+                }
+                else if (strncmp("OUT", token, 3) == 0)
+                {
+                  arg = 8 + strtoul(token + 3, NULL, 10);
+                }
+                else if (strncmp("SPR", token, 3) == 0)
+                {
+                  arg = strtoul(token + 3, NULL, 10);
+                }
+                else if (strncmp("RR", token, 2) == 0)
+                {
+                  arg = 7;
+                }
+                else if (strncmp("TMR0-TRIG", token, 9) == 0)
+                {
+                  arg = 15;
+                }
+                else if (strncmp("TMR0-OUT", token, 8) == 0)
+                {
+                  arg = 15;
+                }
+                else
+                {
+                  arg = strtoul(token, NULL, 16);
+                }
+              }
+
+              if (errno != 0)
+              {
+                Serial.println("\r\nERROR");
+                break;
               }
 
               writeProgramByte(address, opcode | (arg << 4));
@@ -464,6 +498,7 @@ void printDisassemblyLine(int address, bool printNewLine = false)
   sprintf(printBuffer, "%04X  %02X    %s", address, byteCode, mnemonics + (5 * opcode));
   Serial.print(printBuffer);
 
+  // NOPO and all instructions after JMP take no argument.
   if (opcode == 0 || opcode > 12)
   {
     Serial.print(printNewLine ? "    \r\n" : "    ");
@@ -471,7 +506,56 @@ void printDisassemblyLine(int address, bool printNewLine = false)
     return;
   }
 
-  sprintf(printBuffer, " %02X%s", byteCode >> 4, (printNewLine ? " \r\n" : " "));
+  if (opcode == 12)
+  {
+    // JMP doesn't address I/O.
+    sprintf(printBuffer, " %02X%s", byteCode >> 4, (printNewLine ? " \r\n" : " "));
+  }
+  else
+  {
+    // Print readable label.
+    uint8_t op = byteCode >> 4;
+
+    if (op < 7)
+    {
+      sprintf(printBuffer, " %s%01X%s", "SPR", op, (printNewLine ? " \r\n" : " "));
+    }
+    else if (op == 7)
+    {
+      sprintf(printBuffer, " %s%s", "RR", (printNewLine ? " \r\n" : " "));
+    }
+    else if (op > 7 && op < 15)
+    {
+      // STO/STOC are the only write operations. A write always writes to the output block
+      // which is shadowed at the same addresses of read.
+      if (opcode == 8 || opcode == 9)
+      {
+        sprintf(printBuffer, " %s%01X%s", "OUT", op - 8, (printNewLine ? " \r\n" : " "));
+      }
+      else
+      {
+        sprintf(printBuffer, " %s%01X%s", "IN", op - 8, (printNewLine ? " \r\n" : " "));
+      }
+    }
+    else if (op == 15)
+    {
+      // STO/STOC are the only write operations. A write always writes to the timer trigger
+      // which is shadowed at the same addresses of the timer output.
+      if (opcode == 8 || opcode == 9)
+      {
+        sprintf(printBuffer, " %s%s", "TMR0-TRIG", (printNewLine ? " \r\n" : " "));
+      }
+      else
+      {
+        sprintf(printBuffer, " %s%s", "TMR0-OUT", (printNewLine ? " \r\n" : " "));
+      }
+    }
+    else
+    {
+      sprintf(printBuffer, " %01X%s", op, (printNewLine ? " \r\n" : " "));
+    }
+  }
+
   Serial.print(printBuffer);
 }
 

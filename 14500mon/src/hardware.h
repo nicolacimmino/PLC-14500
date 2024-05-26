@@ -23,6 +23,7 @@
 
 #define PRG_PIN A4
 #define WEN_PIN A5
+#define RST_PIN A6
 
 extern byte data_bus[];
 extern byte addr_bus[];

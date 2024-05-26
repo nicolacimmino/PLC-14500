@@ -47,6 +47,8 @@ byte addr_bus[] = {
 
 byte rxBuffer[RX_BUFFER_SIZE];
 
+bool demoMode = false;
+
 void setup()
 {
   pinMode(WEN_PIN, OUTPUT);
@@ -55,10 +57,31 @@ void setup()
   loadBlockIntoProgramMemory(0);
 
   Serial.begin(9600);
+
+  pinMode(RST_PIN, INPUT);
+  if (analogRead(RST_PIN) > 500)
+  {
+    demoMode = true;
+    Serial.println("DEMO MODE");
+  }  
 }
 
 void loop()
 {
+  if (demoMode)
+  {
+    static unsigned long lastProgramChange = 0;
+    static uint8_t demoIndex = 0;
+    if (millis() - lastProgramChange > 3000)
+    {
+      demoIndex = (demoIndex + 1) % 4;
+      loadBlockIntoProgramMemory(demoIndex);
+      lastProgramChange = millis();
+    }
+
+    return;
+  }
+
   byte result = enterBootloader();
 
   if (result == BOOT_ENTER_MONITOR)
