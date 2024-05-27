@@ -56,6 +56,18 @@ void bootloaderSetup()
   acquireBusForWrite();
   while (true)
   {
+    while (analogRead(RST_PIN) < RST_BUTTON_LOW_THRESHOLD)
+    {
+      digitalWrite(data_bus[0], (millis() % 600) < 200);
+      if (millis() - lastResetPress > BOOT_CONFIG_TIMEOUT_MS)
+      {
+        releaseBus();
+        return;
+      }
+    }
+
+    delay(200);
+
     if (analogRead(RST_PIN) < RST_BUTTON_LOW_THRESHOLD)
     {
       bootConfig = (bootConfig + 1) % 8;
@@ -70,16 +82,6 @@ void bootloaderSetup()
     }
 
     digitalWrite(data_bus[0], (millis() % 600) < 200);
-
-    while (analogRead(RST_PIN) < RST_BUTTON_LOW_THRESHOLD)
-    {
-      digitalWrite(data_bus[0], (millis() % 600) < 200);
-      if (millis() - lastResetPress > BOOT_CONFIG_TIMEOUT_MS)
-      {
-        releaseBus();
-        return;
-      }
-    }
   }
 }
 
@@ -106,10 +108,10 @@ void loop()
   {
     static unsigned long lastProgramChange = 0;
     static uint8_t demoIndex = 0;
-    if (millis() - lastProgramChange > 3000)
+    if (millis() - lastProgramChange > DEMO_MODE_CHANGE_INTERVAL)
     {
       // BIT0 and BIT1 are the amount of programs in demo mode.
-      demoIndex = (demoIndex + 1) % (bootConfig & 0b00000011);
+      demoIndex = (demoIndex + 1) % ((bootConfig & 0b00000011) + 1);
       loadBlockIntoProgramMemory(demoIndex);
       lastProgramChange = millis();
     }
