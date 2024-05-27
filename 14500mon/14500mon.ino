@@ -47,34 +47,69 @@ byte addr_bus[] = {
 
 byte rxBuffer[RX_BUFFER_SIZE];
 
-bool demoMode = false;
+uint8_t bootConfig = 0;
+
+void bootloaderSetup()
+{
+  unsigned long lastResetPress = millis();
+
+  acquireBusForWrite();
+  while (true)
+  {
+    if (analogRead(RST_PIN) < RST_BUTTON_LOW_THRESHOLD)
+    {
+      bootConfig = (bootConfig + 1) % 8;
+      Serial.print("BOOT CONFIG ");
+      Serial.println(bootConfig);
+      lastResetPress = millis();
+
+      for (int ix = 0; ix < 8; ix++)
+      {
+        digitalWrite(addr_bus[ix], (bootConfig >> ix) & 1);
+      }
+    }
+
+    digitalWrite(data_bus[0], (millis() % 600) < 200);
+
+    while (analogRead(RST_PIN) < RST_BUTTON_LOW_THRESHOLD)
+    {
+      digitalWrite(data_bus[0], (millis() % 600) < 200);
+      if (millis() - lastResetPress > BOOT_CONFIG_TIMEOUT_MS)
+      {
+        releaseBus();
+        return;
+      }
+    }
+  }
+}
 
 void setup()
 {
   pinMode(WEN_PIN, OUTPUT);
   pinMode(PRG_PIN, OUTPUT);
 
-  loadBlockIntoProgramMemory(0);
-
   Serial.begin(9600);
 
   pinMode(RST_PIN, INPUT);
-  if (analogRead(RST_PIN) > 500)
+  if (analogRead(RST_PIN) > RST_BUTTON_LOW_THRESHOLD)
   {
-    demoMode = true;
-    Serial.println("DEMO MODE");
-  }  
+    bootloaderSetup();
+  }
+
+  loadBlockIntoProgramMemory(bootConfig & 0b00000011);
 }
 
 void loop()
 {
-  if (demoMode)
+  // Demo mode if anything is set in BIT2
+  if (bootConfig & 0b00000100)
   {
     static unsigned long lastProgramChange = 0;
     static uint8_t demoIndex = 0;
     if (millis() - lastProgramChange > 3000)
     {
-      demoIndex = (demoIndex + 1) % 4;
+      // BIT0 and BIT1 are the amount of programs in demo mode.
+      demoIndex = (demoIndex + 1) % (bootConfig & 0b00000011);
       loadBlockIntoProgramMemory(demoIndex);
       lastProgramChange = millis();
     }
@@ -97,6 +132,7 @@ void loop()
       EEPROM.write(address, rxBuffer[address]);
     }
 
+    // Here we always enter program 0 because we just came out of a successful upload.
     loadBlockIntoProgramMemory(0);
   }
 }
