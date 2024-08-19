@@ -20,8 +20,7 @@ The output will be a `.bin` file of the same name. The output file is always 256
 will be starting from offset 0x00 and will be padded to 256 with 0x0Fs (`NOPF`).
 
 If you find the options of the assembler too crude I don't blame you. I recently came across this work by Yaroslav Veremenko
-( https://github.com/veremenko-y/mc14500-programs ), that inspired me into using the cc65 assembler instead. Check the folder
-[assembler-cc65](../assembler-cc65/README.md) for a build command and further information on how to use cc65 to compile programs for the PLC-14500.
+( https://github.com/veremenko-y/mc14500-programs ), that inspired me into using the cc65 assembler instead. Check the repo https://github.com/nicolacimmino/plc-14500-assembler for a build command and further information on how to use cc65 to compile programs for the PLC-14500.
 
 ## Source format
 
