@@ -1,5 +1,6 @@
 use std::env;
-use std::io::{Read, Write};
+use std::io::{BufRead, BufReader, Read, Write};
+use std::time::Duration;
 use log::error;
 use serialport::available_ports;
 
@@ -14,15 +15,19 @@ fn main() {
     let port_name = &*args[1];
 
     let mut serial_port = serialport::new(port_name, 9600)
+        .timeout(Duration::from_millis(1000))
         .open()
-        .expect(&*format!("Failed to open port {}", &*port_name));
+        .expect("Failed to open serial port");
 
-    serial_port.write("\n\n".as_bytes()).expect("Cannot write to port.");
+    let output = "\rD 0 10\n".as_bytes();
+    serial_port.write(output).expect("Write failed!");
+    serial_port.flush().unwrap();
+    let mut reader = BufReader::new(serial_port);
 
-    let mut buf: String = "".to_string();
+    while true {
+        let mut my_str = String::new();
+        reader.read_line(&mut my_str).unwrap();
 
-    serial_port.read_to_string(&mut buf)
-        .expect("Cannot read from port.");
-
-    println!("{}", buf);
+        println!("{}", my_str);
+    }
 }
