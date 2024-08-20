@@ -1,0 +1,4072 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>C:\Users\nicola\git\PLC-14500\board\plc14500\plc14500.kicad_sch</source>
+    <date>20/08/2024 14:37:09</date>
+    <tool>Eeschema 7.0.7</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>PLC14500 - Nano</title>
+        <company>Nicola Cimmino</company>
+        <rev>0.6</rev>
+        <date>2024-01-22</date>
+        <source>plc14500.kicad_sch</source>
+        <comment number="1" value="REV.D"/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="2" name="/Input-Output/" tstamps="/00000000-0000-0000-0000-000063b4bda9/">
+      <title_block>
+        <title>PLC14500 - Nano</title>
+        <company>Nicola Cimmino</company>
+        <rev>0.6</rev>
+        <date>2024-01-22</date>
+        <source>IO.kicad_sch</source>
+        <comment number="1" value="REV.D"/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="3" name="/SPRAM/" tstamps="/00000000-0000-0000-0000-000067425b3b/">
+      <title_block>
+        <title>PLC14500 - Nano</title>
+        <company>Nicola Cimmino</company>
+        <rev>0.6</rev>
+        <date>2024-01-22</date>
+        <source>SPRAM.kicad_sch</source>
+        <comment number="1" value="REV.D"/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="4" name="/CPU/" tstamps="/00000000-0000-0000-0000-00006394a5b3/">
+      <title_block>
+        <title>PLC14500 - Nano</title>
+        <company>Nicola Cimmino</company>
+        <rev>0.6</rev>
+        <date>2024-01-22</date>
+        <source>CPU.kicad_sch</source>
+        <comment number="1" value="REV.D"/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="5" name="/Programming Interface/" tstamps="/8308f4d3-970f-416c-a310-08d544e11abe/">
+      <title_block>
+        <title>PLC14500 - Nano</title>
+        <company>Nicola Cimmino</company>
+        <rev>0.6</rev>
+        <date>2024-01-22</date>
+        <source>programming_if.kicad_sch</source>
+        <comment number="1" value="REV.D"/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C1">
+      <value>100nF</value>
+      <footprint>Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2</footprint>
+      <fields>
+        <field name="Price">0.02</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Price" value="0.02"/>
+      <property name="Sheetname" value="Input-Output"/>
+      <property name="Sheetfile" value="IO.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/Input-Output/" tstamps="/00000000-0000-0000-0000-000063b4bda9/"/>
+      <tstamps>b0de41f7-9fde-416d-a982-fe69b4a42b97</tstamps>
+    </comp>
+    <comp ref="C2">
+      <value>100nF</value>
+      <footprint>Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2</footprint>
+      <fields>
+        <field name="Price">0.02</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Price" value="0.02"/>
+      <property name="Sheetname" value="Input-Output"/>
+      <property name="Sheetfile" value="IO.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/Input-Output/" tstamps="/00000000-0000-0000-0000-000063b4bda9/"/>
+      <tstamps>0edec75d-80c7-4eac-b6f2-b5b5bd88540b</tstamps>
+    </comp>
+    <comp ref="C3">
+      <value>100nF</value>
+      <footprint>Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2</footprint>
+      <fields>
+        <field name="Price">0.02</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Price" value="0.02"/>
+      <property name="Sheetname" value="Input-Output"/>
+      <property name="Sheetfile" value="IO.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/Input-Output/" tstamps="/00000000-0000-0000-0000-000063b4bda9/"/>
+      <tstamps>00000000-0000-0000-0000-000063908915</tstamps>
+    </comp>
+    <comp ref="C4">
+      <value>10uF</value>
+      <footprint>Capacitor_THT:CP_Radial_D5.0mm_P2.50mm</footprint>
+      <libsource lib="plc14500" part="CP-Device" description=""/>
+      <property name="Sheetname" value="Input-Output"/>
+      <property name="Sheetfile" value="IO.kicad_sch"/>
+      <sheetpath names="/Input-Output/" tstamps="/00000000-0000-0000-0000-000063b4bda9/"/>
+      <tstamps>00000000-0000-0000-0000-00006376cd92</tstamps>
+    </comp>
+    <comp ref="C5">
+      <value>100nF</value>
+      <footprint>Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2</footprint>
+      <fields>
+        <field name="Price">0.02</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Price" value="0.02"/>
+      <property name="Sheetname" value="Input-Output"/>
+      <property name="Sheetfile" value="IO.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/Input-Output/" tstamps="/00000000-0000-0000-0000-000063b4bda9/"/>
+      <tstamps>00000000-0000-0000-0000-00006525796b</tstamps>
+    </comp>
+    <comp ref="C6">
+      <value>100nF</value>
+      <footprint>Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2</footprint>
+      <fields>
+        <field name="Price">0.02</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Price" value="0.02"/>
+      <property name="Sheetname" value="Input-Output"/>
+      <property name="Sheetfile" value="IO.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/Input-Output/" tstamps="/00000000-0000-0000-0000-000063b4bda9/"/>
+      <tstamps>00000000-0000-0000-0000-000063664919</tstamps>
+    </comp>
+    <comp ref="D1">
+      <value>LED 3MM Red</value>
+      <footprint>plc14500:LED_3MM</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="plc14500" part="LED" description=""/>
+      <property name="Field4" value=""/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="Input-Output"/>
+      <property name="Sheetfile" value="IO.kicad_sch"/>
+      <sheetpath names="/Input-Output/" tstamps="/00000000-0000-0000-0000-000063b4bda9/"/>
+      <tstamps>00000000-0000-0000-0000-00006373c762</tstamps>
+    </comp>
+    <comp ref="D2">
+      <value>LED 3MM Red</value>
+      <footprint>plc14500:LED_3MM</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="plc14500" part="LED" description=""/>
+      <property name="Field4" value=""/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="Input-Output"/>
+      <property name="Sheetfile" value="IO.kicad_sch"/>
+      <sheetpath names="/Input-Output/" tstamps="/00000000-0000-0000-0000-000063b4bda9/"/>
+      <tstamps>00000000-0000-0000-0000-000067f00bc1</tstamps>
+    </comp>
+    <comp ref="D3">
+      <value>LED 3MM Red</value>
+      <footprint>plc14500:LED_3MM</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="plc14500" part="LED" description=""/>
+      <property name="Field4" value=""/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="Input-Output"/>
+      <property name="Sheetfile" value="IO.kicad_sch"/>
+      <sheetpath names="/Input-Output/" tstamps="/00000000-0000-0000-0000-000063b4bda9/"/>
+      <tstamps>00000000-0000-0000-0000-000067f0fcbb</tstamps>
+    </comp>
+    <comp ref="D4">
+      <value>LED 3MM Red</value>
+      <footprint>plc14500:LED_3MM</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="plc14500" part="LED" description=""/>
+      <property name="Field4" value=""/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="Input-Output"/>
+      <property name="Sheetfile" value="IO.kicad_sch"/>
+      <sheetpath names="/Input-Output/" tstamps="/00000000-0000-0000-0000-000063b4bda9/"/>
+      <tstamps>00000000-0000-0000-0000-000067f20b69</tstamps>
+    </comp>
+    <comp ref="D5">
+      <value>LED 3MM Red</value>
+      <footprint>plc14500:LED_3MM</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="plc14500" part="LED" description=""/>
+      <property name="Field4" value=""/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="Input-Output"/>
+      <property name="Sheetfile" value="IO.kicad_sch"/>
+      <sheetpath names="/Input-Output/" tstamps="/00000000-0000-0000-0000-000063b4bda9/"/>
+      <tstamps>00000000-0000-0000-0000-000067f36755</tstamps>
+    </comp>
+    <comp ref="D6">
+      <value>LED 3MM Red</value>
+      <footprint>plc14500:LED_3MM</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="plc14500" part="LED" description=""/>
+      <property name="Field4" value=""/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="Input-Output"/>
+      <property name="Sheetfile" value="IO.kicad_sch"/>
+      <sheetpath names="/Input-Output/" tstamps="/00000000-0000-0000-0000-000063b4bda9/"/>
+      <tstamps>00000000-0000-0000-0000-000067f4ead2</tstamps>
+    </comp>
+    <comp ref="D7">
+      <value>LED 3MM Red</value>
+      <footprint>plc14500:LED_3MM</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="plc14500" part="LED" description=""/>
+      <property name="Field4" value=""/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="Input-Output"/>
+      <property name="Sheetfile" value="IO.kicad_sch"/>
+      <sheetpath names="/Input-Output/" tstamps="/00000000-0000-0000-0000-000063b4bda9/"/>
+      <tstamps>00000000-0000-0000-0000-000067f6a41d</tstamps>
+    </comp>
+    <comp ref="D8">
+      <value>LED 3MM Red</value>
+      <footprint>plc14500:LED_3MM</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="plc14500" part="LED" description=""/>
+      <property name="Field4" value=""/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="Input-Output"/>
+      <property name="Sheetfile" value="IO.kicad_sch"/>
+      <sheetpath names="/Input-Output/" tstamps="/00000000-0000-0000-0000-000063b4bda9/"/>
+      <tstamps>00000000-0000-0000-0000-0000655c29a5</tstamps>
+    </comp>
+    <comp ref="D9">
+      <value>LED 3MM Red</value>
+      <footprint>plc14500:LED_3MM</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="plc14500" part="LED" description=""/>
+      <property name="Field4" value=""/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="Input-Output"/>
+      <property name="Sheetfile" value="IO.kicad_sch"/>
+      <sheetpath names="/Input-Output/" tstamps="/00000000-0000-0000-0000-000063b4bda9/"/>
+      <tstamps>00000000-0000-0000-0000-000063b7b5f6</tstamps>
+    </comp>
+    <comp ref="D10">
+      <value>LED 3MM Red</value>
+      <footprint>plc14500:LED_3MM</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="plc14500" part="LED" description=""/>
+      <property name="Field4" value=""/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="Input-Output"/>
+      <property name="Sheetfile" value="IO.kicad_sch"/>
+      <sheetpath names="/Input-Output/" tstamps="/00000000-0000-0000-0000-000063b4bda9/"/>
+      <tstamps>00000000-0000-0000-0000-000063b7b5fd</tstamps>
+    </comp>
+    <comp ref="D11">
+      <value>LED 3MM Red</value>
+      <footprint>plc14500:LED_3MM</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="plc14500" part="LED" description=""/>
+      <property name="Field4" value=""/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="Input-Output"/>
+      <property name="Sheetfile" value="IO.kicad_sch"/>
+      <sheetpath names="/Input-Output/" tstamps="/00000000-0000-0000-0000-000063b4bda9/"/>
+      <tstamps>00000000-0000-0000-0000-000063b7b604</tstamps>
+    </comp>
+    <comp ref="D12">
+      <value>LED 3MM Red</value>
+      <footprint>plc14500:LED_3MM</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="plc14500" part="LED" description=""/>
+      <property name="Field4" value=""/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="Input-Output"/>
+      <property name="Sheetfile" value="IO.kicad_sch"/>
+      <sheetpath names="/Input-Output/" tstamps="/00000000-0000-0000-0000-000063b4bda9/"/>
+      <tstamps>00000000-0000-0000-0000-000063b7b60b</tstamps>
+    </comp>
+    <comp ref="D13">
+      <value>LED 3MM Red</value>
+      <footprint>plc14500:LED_3MM</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="plc14500" part="LED" description=""/>
+      <property name="Field4" value=""/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="Input-Output"/>
+      <property name="Sheetfile" value="IO.kicad_sch"/>
+      <sheetpath names="/Input-Output/" tstamps="/00000000-0000-0000-0000-000063b4bda9/"/>
+      <tstamps>00000000-0000-0000-0000-000063b7b612</tstamps>
+    </comp>
+    <comp ref="D14">
+      <value>LED 3MM Red</value>
+      <footprint>plc14500:LED_3MM</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="plc14500" part="LED" description=""/>
+      <property name="Field4" value=""/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="Input-Output"/>
+      <property name="Sheetfile" value="IO.kicad_sch"/>
+      <sheetpath names="/Input-Output/" tstamps="/00000000-0000-0000-0000-000063b4bda9/"/>
+      <tstamps>00000000-0000-0000-0000-000063b7b619</tstamps>
+    </comp>
+    <comp ref="D15">
+      <value>LED 3MM Red</value>
+      <footprint>plc14500:LED_3MM</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="plc14500" part="LED" description=""/>
+      <property name="Field4" value=""/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="Input-Output"/>
+      <property name="Sheetfile" value="IO.kicad_sch"/>
+      <sheetpath names="/Input-Output/" tstamps="/00000000-0000-0000-0000-000063b4bda9/"/>
+      <tstamps>00000000-0000-0000-0000-000063b7b620</tstamps>
+    </comp>
+    <comp ref="D16">
+      <value>LED 3MM Red</value>
+      <footprint>plc14500:LED_3MM</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="plc14500" part="LED" description=""/>
+      <property name="Field4" value=""/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="Input-Output"/>
+      <property name="Sheetfile" value="IO.kicad_sch"/>
+      <sheetpath names="/Input-Output/" tstamps="/00000000-0000-0000-0000-000063b4bda9/"/>
+      <tstamps>00000000-0000-0000-0000-00006364a55c</tstamps>
+    </comp>
+    <comp ref="J1">
+      <value>~</value>
+      <footprint>plc14500:PLC14500-Expansion</footprint>
+      <libsource lib="plc14500" part="PLC14500-Expansion" description=""/>
+      <property name="Sheetname" value="Input-Output"/>
+      <property name="Sheetfile" value="IO.kicad_sch"/>
+      <sheetpath names="/Input-Output/" tstamps="/00000000-0000-0000-0000-000063b4bda9/"/>
+      <tstamps>1093146a-4ff9-4d38-9e8c-031d69398eae</tstamps>
+    </comp>
+    <comp ref="R1">
+      <value>47K</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="Input-Output"/>
+      <property name="Sheetfile" value="IO.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Input-Output/" tstamps="/00000000-0000-0000-0000-000063b4bda9/"/>
+      <tstamps>00000000-0000-0000-0000-0000637178d2</tstamps>
+    </comp>
+    <comp ref="R2">
+      <value>47K</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="Input-Output"/>
+      <property name="Sheetfile" value="IO.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Input-Output/" tstamps="/00000000-0000-0000-0000-000063b4bda9/"/>
+      <tstamps>00000000-0000-0000-0000-000067f00ba5</tstamps>
+    </comp>
+    <comp ref="R3">
+      <value>47K</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="Input-Output"/>
+      <property name="Sheetfile" value="IO.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Input-Output/" tstamps="/00000000-0000-0000-0000-000063b4bda9/"/>
+      <tstamps>00000000-0000-0000-0000-000067f0fc9f</tstamps>
+    </comp>
+    <comp ref="R4">
+      <value>47K</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="Input-Output"/>
+      <property name="Sheetfile" value="IO.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Input-Output/" tstamps="/00000000-0000-0000-0000-000063b4bda9/"/>
+      <tstamps>00000000-0000-0000-0000-000067f20b4d</tstamps>
+    </comp>
+    <comp ref="R5">
+      <value>820R</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="Input-Output"/>
+      <property name="Sheetfile" value="IO.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Input-Output/" tstamps="/00000000-0000-0000-0000-000063b4bda9/"/>
+      <tstamps>00000000-0000-0000-0000-00006373cf06</tstamps>
+    </comp>
+    <comp ref="R6">
+      <value>820R</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="Input-Output"/>
+      <property name="Sheetfile" value="IO.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Input-Output/" tstamps="/00000000-0000-0000-0000-000063b4bda9/"/>
+      <tstamps>00000000-0000-0000-0000-000067f00bc7</tstamps>
+    </comp>
+    <comp ref="R7">
+      <value>820R</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="Input-Output"/>
+      <property name="Sheetfile" value="IO.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Input-Output/" tstamps="/00000000-0000-0000-0000-000063b4bda9/"/>
+      <tstamps>00000000-0000-0000-0000-000067f0fcc1</tstamps>
+    </comp>
+    <comp ref="R8">
+      <value>820R</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="Input-Output"/>
+      <property name="Sheetfile" value="IO.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Input-Output/" tstamps="/00000000-0000-0000-0000-000063b4bda9/"/>
+      <tstamps>00000000-0000-0000-0000-000067f20b6f</tstamps>
+    </comp>
+    <comp ref="R9">
+      <value>47K</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="Input-Output"/>
+      <property name="Sheetfile" value="IO.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Input-Output/" tstamps="/00000000-0000-0000-0000-000063b4bda9/"/>
+      <tstamps>00000000-0000-0000-0000-000067f36739</tstamps>
+    </comp>
+    <comp ref="R10">
+      <value>47K</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="Input-Output"/>
+      <property name="Sheetfile" value="IO.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Input-Output/" tstamps="/00000000-0000-0000-0000-000063b4bda9/"/>
+      <tstamps>00000000-0000-0000-0000-000067f4eab6</tstamps>
+    </comp>
+    <comp ref="R11">
+      <value>47K</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="Input-Output"/>
+      <property name="Sheetfile" value="IO.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Input-Output/" tstamps="/00000000-0000-0000-0000-000063b4bda9/"/>
+      <tstamps>00000000-0000-0000-0000-000067f6a401</tstamps>
+    </comp>
+    <comp ref="R12">
+      <value>820R</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="Input-Output"/>
+      <property name="Sheetfile" value="IO.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Input-Output/" tstamps="/00000000-0000-0000-0000-000063b4bda9/"/>
+      <tstamps>00000000-0000-0000-0000-000067f3675b</tstamps>
+    </comp>
+    <comp ref="R13">
+      <value>820R</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="Input-Output"/>
+      <property name="Sheetfile" value="IO.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Input-Output/" tstamps="/00000000-0000-0000-0000-000063b4bda9/"/>
+      <tstamps>00000000-0000-0000-0000-000067f4ead8</tstamps>
+    </comp>
+    <comp ref="R14">
+      <value>820R</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="Input-Output"/>
+      <property name="Sheetfile" value="IO.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Input-Output/" tstamps="/00000000-0000-0000-0000-000063b4bda9/"/>
+      <tstamps>00000000-0000-0000-0000-000067f6a423</tstamps>
+    </comp>
+    <comp ref="R15">
+      <value>2K2</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="Input-Output"/>
+      <property name="Sheetfile" value="IO.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Input-Output/" tstamps="/00000000-0000-0000-0000-000063b4bda9/"/>
+      <tstamps>00000000-0000-0000-0000-0000652cd7e8</tstamps>
+    </comp>
+    <comp ref="R16">
+      <value>820R</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="Input-Output"/>
+      <property name="Sheetfile" value="IO.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Input-Output/" tstamps="/00000000-0000-0000-0000-000063b4bda9/"/>
+      <tstamps>00000000-0000-0000-0000-0000655c3647</tstamps>
+    </comp>
+    <comp ref="R17">
+      <value>820R</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="Input-Output"/>
+      <property name="Sheetfile" value="IO.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Input-Output/" tstamps="/00000000-0000-0000-0000-000063b4bda9/"/>
+      <tstamps>00000000-0000-0000-0000-000063b7b62d</tstamps>
+    </comp>
+    <comp ref="R18">
+      <value>820R</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="Input-Output"/>
+      <property name="Sheetfile" value="IO.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Input-Output/" tstamps="/00000000-0000-0000-0000-000063b4bda9/"/>
+      <tstamps>00000000-0000-0000-0000-000063b7b633</tstamps>
+    </comp>
+    <comp ref="R19">
+      <value>820R</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="Input-Output"/>
+      <property name="Sheetfile" value="IO.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Input-Output/" tstamps="/00000000-0000-0000-0000-000063b4bda9/"/>
+      <tstamps>00000000-0000-0000-0000-000063b7b639</tstamps>
+    </comp>
+    <comp ref="R20">
+      <value>820R</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="Input-Output"/>
+      <property name="Sheetfile" value="IO.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Input-Output/" tstamps="/00000000-0000-0000-0000-000063b4bda9/"/>
+      <tstamps>00000000-0000-0000-0000-000063b7b63f</tstamps>
+    </comp>
+    <comp ref="R21">
+      <value>820R</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="Input-Output"/>
+      <property name="Sheetfile" value="IO.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Input-Output/" tstamps="/00000000-0000-0000-0000-000063b4bda9/"/>
+      <tstamps>00000000-0000-0000-0000-000063b7b645</tstamps>
+    </comp>
+    <comp ref="R22">
+      <value>47K</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="Input-Output"/>
+      <property name="Sheetfile" value="IO.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Input-Output/" tstamps="/00000000-0000-0000-0000-000063b4bda9/"/>
+      <tstamps>00000000-0000-0000-0000-000063a98c1f</tstamps>
+    </comp>
+    <comp ref="R23">
+      <value>820R</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="Input-Output"/>
+      <property name="Sheetfile" value="IO.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Input-Output/" tstamps="/00000000-0000-0000-0000-000063b4bda9/"/>
+      <tstamps>00000000-0000-0000-0000-000063b7b64b</tstamps>
+    </comp>
+    <comp ref="R24">
+      <value>820R</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="Input-Output"/>
+      <property name="Sheetfile" value="IO.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Input-Output/" tstamps="/00000000-0000-0000-0000-000063b4bda9/"/>
+      <tstamps>00000000-0000-0000-0000-000063b7b651</tstamps>
+    </comp>
+    <comp ref="R25">
+      <value>820R</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="Input-Output"/>
+      <property name="Sheetfile" value="IO.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Input-Output/" tstamps="/00000000-0000-0000-0000-000063b4bda9/"/>
+      <tstamps>00000000-0000-0000-0000-00006364a8e8</tstamps>
+    </comp>
+    <comp ref="RV1">
+      <value>1M</value>
+      <footprint>plc14500:HORIZONTAL_POT</footprint>
+      <fields>
+        <field name="Order">https://www.aliexpress.com/item/1005002935520232.html?spm=a2g0o.productlist.0.0.7a175d89PQda4t&amp;algo_pvid=cfb4e09e-1f4a-43cf-8ff1-6fc20f5cfef2&amp;algo_exp_id=cfb4e09e-1f4a-43cf-8ff1-6fc20f5cfef2-21&amp;pdp_ext_f=%7B%22sku_id%22%3A%2212000022869515902%22%7D&amp;pdp_npi=2%40dis%21EUR%211.49%210.96%21%21%210.35%21%21%400b0a187916678365874186066efa27%2112000022869515902%21sea&amp;curPageLogUid=goQ0aTpXJyrn</field>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="plc14500" part="Trimmer" description=""/>
+      <property name="Order" value="https://www.aliexpress.com/item/1005002935520232.html?spm=a2g0o.productlist.0.0.7a175d89PQda4t&amp;algo_pvid=cfb4e09e-1f4a-43cf-8ff1-6fc20f5cfef2&amp;algo_exp_id=cfb4e09e-1f4a-43cf-8ff1-6fc20f5cfef2-21&amp;pdp_ext_f=%7B%22sku_id%22%3A%2212000022869515902%22%7D&amp;pdp_npi=2%40dis%21EUR%211.49%210.96%21%21%210.35%21%21%400b0a187916678365874186066efa27%2112000022869515902%21sea&amp;curPageLogUid=goQ0aTpXJyrn"/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="Input-Output"/>
+      <property name="Sheetfile" value="IO.kicad_sch"/>
+      <sheetpath names="/Input-Output/" tstamps="/00000000-0000-0000-0000-000063b4bda9/"/>
+      <tstamps>00000000-0000-0000-0000-0000659a0786</tstamps>
+    </comp>
+    <comp ref="S1">
+      <value>Push Button</value>
+      <footprint>plc14500:SW_Tactile_THT</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="Input-Output"/>
+      <property name="Sheetfile" value="IO.kicad_sch"/>
+      <property name="ki_description" value="Push button switch, generic, two pins"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/Input-Output/" tstamps="/00000000-0000-0000-0000-000063b4bda9/"/>
+      <tstamps>00000000-0000-0000-0000-00006371688e</tstamps>
+    </comp>
+    <comp ref="S2">
+      <value>Push Button</value>
+      <footprint>plc14500:SW_Tactile_THT</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="Input-Output"/>
+      <property name="Sheetfile" value="IO.kicad_sch"/>
+      <property name="ki_description" value="Push button switch, generic, two pins"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/Input-Output/" tstamps="/00000000-0000-0000-0000-000063b4bda9/"/>
+      <tstamps>00000000-0000-0000-0000-000067f00bab</tstamps>
+    </comp>
+    <comp ref="S3">
+      <value>Push Button</value>
+      <footprint>plc14500:SW_Tactile_THT</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="Input-Output"/>
+      <property name="Sheetfile" value="IO.kicad_sch"/>
+      <property name="ki_description" value="Push button switch, generic, two pins"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/Input-Output/" tstamps="/00000000-0000-0000-0000-000063b4bda9/"/>
+      <tstamps>00000000-0000-0000-0000-000067f0fca5</tstamps>
+    </comp>
+    <comp ref="S4">
+      <value>Push Button</value>
+      <footprint>plc14500:SW_Tactile_THT</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="Input-Output"/>
+      <property name="Sheetfile" value="IO.kicad_sch"/>
+      <property name="ki_description" value="Push button switch, generic, two pins"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/Input-Output/" tstamps="/00000000-0000-0000-0000-000063b4bda9/"/>
+      <tstamps>00000000-0000-0000-0000-000067f20b53</tstamps>
+    </comp>
+    <comp ref="S5">
+      <value>Switch DPDT</value>
+      <footprint>plc14500:SWITCH_DPDT</footprint>
+      <fields>
+        <field name="Field4">SWCH-10554</field>
+        <field name="Price">0.69</field>
+      </fields>
+      <libsource lib="plc14500" part="SWITCH-DPDT" description=""/>
+      <property name="Field4" value="SWCH-10554"/>
+      <property name="Price" value="0.69"/>
+      <property name="Sheetname" value="Input-Output"/>
+      <property name="Sheetfile" value="IO.kicad_sch"/>
+      <sheetpath names="/Input-Output/" tstamps="/00000000-0000-0000-0000-000063b4bda9/"/>
+      <tstamps>00000000-0000-0000-0000-000063712537</tstamps>
+    </comp>
+    <comp ref="S6">
+      <value>Switch DPDT</value>
+      <footprint>plc14500:SWITCH_DPDT</footprint>
+      <fields>
+        <field name="Field4">SWCH-10554</field>
+        <field name="Price">0.69</field>
+      </fields>
+      <libsource lib="plc14500" part="SWITCH-DPDT" description=""/>
+      <property name="Field4" value="SWCH-10554"/>
+      <property name="Price" value="0.69"/>
+      <property name="Sheetname" value="Input-Output"/>
+      <property name="Sheetfile" value="IO.kicad_sch"/>
+      <sheetpath names="/Input-Output/" tstamps="/00000000-0000-0000-0000-000063b4bda9/"/>
+      <tstamps>00000000-0000-0000-0000-000067f00b9f</tstamps>
+    </comp>
+    <comp ref="S7">
+      <value>Switch DPDT</value>
+      <footprint>plc14500:SWITCH_DPDT</footprint>
+      <fields>
+        <field name="Field4">SWCH-10554</field>
+        <field name="Price">0.69</field>
+      </fields>
+      <libsource lib="plc14500" part="SWITCH-DPDT" description=""/>
+      <property name="Field4" value="SWCH-10554"/>
+      <property name="Price" value="0.69"/>
+      <property name="Sheetname" value="Input-Output"/>
+      <property name="Sheetfile" value="IO.kicad_sch"/>
+      <sheetpath names="/Input-Output/" tstamps="/00000000-0000-0000-0000-000063b4bda9/"/>
+      <tstamps>00000000-0000-0000-0000-000067f0fc99</tstamps>
+    </comp>
+    <comp ref="S8">
+      <value>Switch DPDT</value>
+      <footprint>plc14500:SWITCH_DPDT</footprint>
+      <fields>
+        <field name="Field4">SWCH-10554</field>
+        <field name="Price">0.69</field>
+      </fields>
+      <libsource lib="plc14500" part="SWITCH-DPDT" description=""/>
+      <property name="Field4" value="SWCH-10554"/>
+      <property name="Price" value="0.69"/>
+      <property name="Sheetname" value="Input-Output"/>
+      <property name="Sheetfile" value="IO.kicad_sch"/>
+      <sheetpath names="/Input-Output/" tstamps="/00000000-0000-0000-0000-000063b4bda9/"/>
+      <tstamps>00000000-0000-0000-0000-000067f20b47</tstamps>
+    </comp>
+    <comp ref="S9">
+      <value>Push Button</value>
+      <footprint>plc14500:SW_Tactile_THT</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="Input-Output"/>
+      <property name="Sheetfile" value="IO.kicad_sch"/>
+      <property name="ki_description" value="Push button switch, generic, two pins"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/Input-Output/" tstamps="/00000000-0000-0000-0000-000063b4bda9/"/>
+      <tstamps>00000000-0000-0000-0000-000067f3673f</tstamps>
+    </comp>
+    <comp ref="S10">
+      <value>Push Button</value>
+      <footprint>plc14500:SW_Tactile_THT</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="Input-Output"/>
+      <property name="Sheetfile" value="IO.kicad_sch"/>
+      <property name="ki_description" value="Push button switch, generic, two pins"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/Input-Output/" tstamps="/00000000-0000-0000-0000-000063b4bda9/"/>
+      <tstamps>00000000-0000-0000-0000-000067f4eabc</tstamps>
+    </comp>
+    <comp ref="S11">
+      <value>Push Button</value>
+      <footprint>plc14500:SW_Tactile_THT</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="Input-Output"/>
+      <property name="Sheetfile" value="IO.kicad_sch"/>
+      <property name="ki_description" value="Push button switch, generic, two pins"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/Input-Output/" tstamps="/00000000-0000-0000-0000-000063b4bda9/"/>
+      <tstamps>00000000-0000-0000-0000-000067f6a407</tstamps>
+    </comp>
+    <comp ref="S12">
+      <value>Switch DPDT</value>
+      <footprint>plc14500:SWITCH_DPDT</footprint>
+      <fields>
+        <field name="Field4">SWCH-10554</field>
+        <field name="Price">0.69</field>
+      </fields>
+      <libsource lib="plc14500" part="SWITCH-DPDT" description=""/>
+      <property name="Field4" value="SWCH-10554"/>
+      <property name="Price" value="0.69"/>
+      <property name="Sheetname" value="Input-Output"/>
+      <property name="Sheetfile" value="IO.kicad_sch"/>
+      <sheetpath names="/Input-Output/" tstamps="/00000000-0000-0000-0000-000063b4bda9/"/>
+      <tstamps>00000000-0000-0000-0000-000067f36733</tstamps>
+    </comp>
+    <comp ref="S13">
+      <value>Switch DPDT</value>
+      <footprint>plc14500:SWITCH_DPDT</footprint>
+      <fields>
+        <field name="Field4">SWCH-10554</field>
+        <field name="Price">0.69</field>
+      </fields>
+      <libsource lib="plc14500" part="SWITCH-DPDT" description=""/>
+      <property name="Field4" value="SWCH-10554"/>
+      <property name="Price" value="0.69"/>
+      <property name="Sheetname" value="Input-Output"/>
+      <property name="Sheetfile" value="IO.kicad_sch"/>
+      <sheetpath names="/Input-Output/" tstamps="/00000000-0000-0000-0000-000063b4bda9/"/>
+      <tstamps>00000000-0000-0000-0000-000067f4eab0</tstamps>
+    </comp>
+    <comp ref="S14">
+      <value>Switch DPDT</value>
+      <footprint>plc14500:SWITCH_DPDT</footprint>
+      <fields>
+        <field name="Field4">SWCH-10554</field>
+        <field name="Price">0.69</field>
+      </fields>
+      <libsource lib="plc14500" part="SWITCH-DPDT" description=""/>
+      <property name="Field4" value="SWCH-10554"/>
+      <property name="Price" value="0.69"/>
+      <property name="Sheetname" value="Input-Output"/>
+      <property name="Sheetfile" value="IO.kicad_sch"/>
+      <sheetpath names="/Input-Output/" tstamps="/00000000-0000-0000-0000-000063b4bda9/"/>
+      <tstamps>00000000-0000-0000-0000-000067f6a3fb</tstamps>
+    </comp>
+    <comp ref="U1">
+      <value>74HC14</value>
+      <footprint>Package_DIP:DIP-14_W7.62mm_LongPads</footprint>
+      <datasheet>http://www.ti.com/lit/gpn/sn74HC14</datasheet>
+      <fields>
+        <field name="Price">0.16</field>
+      </fields>
+      <libsource lib="plc14500" part="74HC14" description="Hex inverter schmitt trigger"/>
+      <property name="Price" value="0.16"/>
+      <property name="Sheetname" value="Input-Output"/>
+      <property name="Sheetfile" value="IO.kicad_sch"/>
+      <property name="ki_description" value="Hex inverter schmitt trigger"/>
+      <property name="ki_keywords" value="HCMOS not inverter"/>
+      <sheetpath names="/Input-Output/" tstamps="/00000000-0000-0000-0000-000063b4bda9/"/>
+      <tstamps>701d90f2-be8a-4703-98ff-910c577764fc 00000000-0000-0000-0000-000067f20b7d 00000000-0000-0000-0000-000067f0fccf 00000000-0000-0000-0000-000067f00bd5 00000000-0000-0000-0000-000067f4eae6 00000000-0000-0000-0000-000067f36769 00000000-0000-0000-0000-0000637328b2</tstamps>
+    </comp>
+    <comp ref="U2">
+      <value>4051</value>
+      <footprint>Package_DIP:DIP-16_W7.62mm_LongPads</footprint>
+      <datasheet>http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4051bms-52bms-53bms.pdf</datasheet>
+      <fields>
+        <field name="Order">https://www.aliexpress.com/item/1005003598992135.html?spm=a2g0o.productlist.0.0.111d366cbwmWHm&amp;algo_pvid=a91b1842-6656-452a-a6d6-2be33e56e6bf&amp;algo_exp_id=a91b1842-6656-452a-a6d6-2be33e56e6bf-0&amp;pdp_ext_f=%7B%22sku_id%22%3A%2212000026440840531%22%7D&amp;pdp_npi=2%40dis%21EUR%210.99%210.85%21%21%21%21%21%402100bddf16678171990697546eca97%2112000026440840531%21sea&amp;curPageLogUid=EzaQ9aKwDR6g</field>
+        <field name="Price">0.85</field>
+      </fields>
+      <libsource lib="plc14500" part="4051" description="Analog Multiplexer 8 to 1 lins"/>
+      <property name="Order" value="https://www.aliexpress.com/item/1005003598992135.html?spm=a2g0o.productlist.0.0.111d366cbwmWHm&amp;algo_pvid=a91b1842-6656-452a-a6d6-2be33e56e6bf&amp;algo_exp_id=a91b1842-6656-452a-a6d6-2be33e56e6bf-0&amp;pdp_ext_f=%7B%22sku_id%22%3A%2212000026440840531%22%7D&amp;pdp_npi=2%40dis%21EUR%210.99%210.85%21%21%21%21%21%402100bddf16678171990697546eca97%2112000026440840531%21sea&amp;curPageLogUid=EzaQ9aKwDR6g"/>
+      <property name="Price" value="0.85"/>
+      <property name="Sheetname" value="Input-Output"/>
+      <property name="Sheetfile" value="IO.kicad_sch"/>
+      <property name="ki_description" value="Analog Multiplexer 8 to 1 lins"/>
+      <property name="ki_keywords" value="CMOS MUX MUX8"/>
+      <sheetpath names="/Input-Output/" tstamps="/00000000-0000-0000-0000-000063b4bda9/"/>
+      <tstamps>00000000-0000-0000-0000-00006368ebff</tstamps>
+    </comp>
+    <comp ref="U3">
+      <value>74HC14</value>
+      <footprint>Package_DIP:DIP-14_W7.62mm_LongPads</footprint>
+      <datasheet>http://www.ti.com/lit/gpn/sn74HC14</datasheet>
+      <fields>
+        <field name="Price">0.16</field>
+      </fields>
+      <libsource lib="plc14500" part="74HC14" description="Hex inverter schmitt trigger"/>
+      <property name="Price" value="0.16"/>
+      <property name="Sheetname" value="Input-Output"/>
+      <property name="Sheetfile" value="IO.kicad_sch"/>
+      <property name="ki_description" value="Hex inverter schmitt trigger"/>
+      <property name="ki_keywords" value="HCMOS not inverter"/>
+      <sheetpath names="/Input-Output/" tstamps="/00000000-0000-0000-0000-000063b4bda9/"/>
+      <tstamps>9180fa96-2f11-47d7-a12f-ff059ed1a87b 0c5bc0ef-e6b0-47bd-984b-7ba6bf3344ee 00000000-0000-0000-0000-000067f6a431</tstamps>
+    </comp>
+    <comp ref="U4">
+      <value>NE555</value>
+      <footprint>Package_DIP:DIP-8_W7.62mm</footprint>
+      <fields>
+        <field name="Price">0.07</field>
+      </fields>
+      <libsource lib="plc14500" part="555" description=""/>
+      <property name="Field4" value=""/>
+      <property name="Price" value="0.07"/>
+      <property name="Sheetname" value="Input-Output"/>
+      <property name="Sheetfile" value="IO.kicad_sch"/>
+      <sheetpath names="/Input-Output/" tstamps="/00000000-0000-0000-0000-000063b4bda9/"/>
+      <tstamps>00000000-0000-0000-0000-000065241b0b</tstamps>
+    </comp>
+    <comp ref="U5">
+      <value>4099</value>
+      <footprint>Package_DIP:DIP-16_W7.62mm_LongPads</footprint>
+      <fields>
+        <field name="Price">0.57</field>
+      </fields>
+      <libsource lib="plc14500" part="CD4099" description=""/>
+      <property name="Price" value="0.57"/>
+      <property name="Sheetname" value="Input-Output"/>
+      <property name="Sheetfile" value="IO.kicad_sch"/>
+      <sheetpath names="/Input-Output/" tstamps="/00000000-0000-0000-0000-000063b4bda9/"/>
+      <tstamps>00000000-0000-0000-0000-000063645519</tstamps>
+    </comp>
+    <comp ref="U11">
+      <value>74HC14</value>
+      <footprint>Package_DIP:DIP-14_W7.62mm_LongPads</footprint>
+      <datasheet>http://www.ti.com/lit/gpn/sn74HC14</datasheet>
+      <fields>
+        <field name="Price">0.16</field>
+      </fields>
+      <libsource lib="plc14500" part="74HC14" description="Hex inverter schmitt trigger"/>
+      <property name="Price" value="0.16"/>
+      <property name="Sheetname" value="Input-Output"/>
+      <property name="Sheetfile" value="IO.kicad_sch"/>
+      <property name="ki_description" value="Hex inverter schmitt trigger"/>
+      <property name="ki_keywords" value="HCMOS not inverter"/>
+      <sheetpath names="/Input-Output/" tstamps="/00000000-0000-0000-0000-000063b4bda9/"/>
+      <tstamps>02370901-671b-4865-a10f-bf7cb2860df6 00000000-0000-0000-0000-00006389547c</tstamps>
+    </comp>
+    <comp ref="C15">
+      <value>100nF</value>
+      <footprint>Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2</footprint>
+      <fields>
+        <field name="Price">0.02</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Price" value="0.02"/>
+      <property name="Sheetname" value="SPRAM"/>
+      <property name="Sheetfile" value="SPRAM.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/SPRAM/" tstamps="/00000000-0000-0000-0000-000067425b3b/"/>
+      <tstamps>23d13862-e105-42f1-9b5f-1386c34ca4eb</tstamps>
+    </comp>
+    <comp ref="C16">
+      <value>100nF</value>
+      <footprint>Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2</footprint>
+      <fields>
+        <field name="Price">0.02</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Price" value="0.02"/>
+      <property name="Sheetname" value="SPRAM"/>
+      <property name="Sheetfile" value="SPRAM.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/SPRAM/" tstamps="/00000000-0000-0000-0000-000067425b3b/"/>
+      <tstamps>00000000-0000-0000-0000-00006748fdd2</tstamps>
+    </comp>
+    <comp ref="C17">
+      <value>100nF</value>
+      <footprint>Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2</footprint>
+      <fields>
+        <field name="Price">0.02</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Price" value="0.02"/>
+      <property name="Sheetname" value="SPRAM"/>
+      <property name="Sheetfile" value="SPRAM.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/SPRAM/" tstamps="/00000000-0000-0000-0000-000067425b3b/"/>
+      <tstamps>00000000-0000-0000-0000-0000675faf3f</tstamps>
+    </comp>
+    <comp ref="C18">
+      <value>100nF</value>
+      <footprint>Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2</footprint>
+      <fields>
+        <field name="Price">0.02</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Price" value="0.02"/>
+      <property name="Sheetname" value="SPRAM"/>
+      <property name="Sheetfile" value="SPRAM.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/SPRAM/" tstamps="/00000000-0000-0000-0000-000067425b3b/"/>
+      <tstamps>890bd8ff-97b0-4c7e-ac80-d058f3858778</tstamps>
+    </comp>
+    <comp ref="C19">
+      <value>100nF</value>
+      <footprint>Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2</footprint>
+      <fields>
+        <field name="Price">0.02</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Price" value="0.02"/>
+      <property name="Sheetname" value="SPRAM"/>
+      <property name="Sheetfile" value="SPRAM.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/SPRAM/" tstamps="/00000000-0000-0000-0000-000067425b3b/"/>
+      <tstamps>8c0a6707-2517-4365-8206-91bb9e01817c</tstamps>
+    </comp>
+    <comp ref="D43">
+      <value>LED 3MM Red</value>
+      <footprint>plc14500:LED_3MM</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="plc14500" part="LED" description=""/>
+      <property name="Field4" value=""/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="SPRAM"/>
+      <property name="Sheetfile" value="SPRAM.kicad_sch"/>
+      <sheetpath names="/SPRAM/" tstamps="/00000000-0000-0000-0000-000067425b3b/"/>
+      <tstamps>00000000-0000-0000-0000-0000674297c9</tstamps>
+    </comp>
+    <comp ref="D44">
+      <value>LED 3MM Red</value>
+      <footprint>plc14500:LED_3MM</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="plc14500" part="LED" description=""/>
+      <property name="Field4" value=""/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="SPRAM"/>
+      <property name="Sheetfile" value="SPRAM.kicad_sch"/>
+      <sheetpath names="/SPRAM/" tstamps="/00000000-0000-0000-0000-000067425b3b/"/>
+      <tstamps>00000000-0000-0000-0000-0000674297d0</tstamps>
+    </comp>
+    <comp ref="D45">
+      <value>LED 3MM Red</value>
+      <footprint>plc14500:LED_3MM</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="plc14500" part="LED" description=""/>
+      <property name="Field4" value=""/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="SPRAM"/>
+      <property name="Sheetfile" value="SPRAM.kicad_sch"/>
+      <sheetpath names="/SPRAM/" tstamps="/00000000-0000-0000-0000-000067425b3b/"/>
+      <tstamps>00000000-0000-0000-0000-0000674297d7</tstamps>
+    </comp>
+    <comp ref="D46">
+      <value>LED 3MM Red</value>
+      <footprint>plc14500:LED_3MM</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="plc14500" part="LED" description=""/>
+      <property name="Field4" value=""/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="SPRAM"/>
+      <property name="Sheetfile" value="SPRAM.kicad_sch"/>
+      <sheetpath names="/SPRAM/" tstamps="/00000000-0000-0000-0000-000067425b3b/"/>
+      <tstamps>00000000-0000-0000-0000-0000674297de</tstamps>
+    </comp>
+    <comp ref="D47">
+      <value>LED 3MM Red</value>
+      <footprint>plc14500:LED_3MM</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="plc14500" part="LED" description=""/>
+      <property name="Field4" value=""/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="SPRAM"/>
+      <property name="Sheetfile" value="SPRAM.kicad_sch"/>
+      <sheetpath names="/SPRAM/" tstamps="/00000000-0000-0000-0000-000067425b3b/"/>
+      <tstamps>00000000-0000-0000-0000-0000674297e5</tstamps>
+    </comp>
+    <comp ref="D48">
+      <value>LED 3MM Red</value>
+      <footprint>plc14500:LED_3MM</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="plc14500" part="LED" description=""/>
+      <property name="Field4" value=""/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="SPRAM"/>
+      <property name="Sheetfile" value="SPRAM.kicad_sch"/>
+      <sheetpath names="/SPRAM/" tstamps="/00000000-0000-0000-0000-000067425b3b/"/>
+      <tstamps>00000000-0000-0000-0000-0000674297ec</tstamps>
+    </comp>
+    <comp ref="D49">
+      <value>LED 3MM Red</value>
+      <footprint>plc14500:LED_3MM</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="plc14500" part="LED" description=""/>
+      <property name="Field4" value=""/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="SPRAM"/>
+      <property name="Sheetfile" value="SPRAM.kicad_sch"/>
+      <sheetpath names="/SPRAM/" tstamps="/00000000-0000-0000-0000-000067425b3b/"/>
+      <tstamps>00000000-0000-0000-0000-0000674297f3</tstamps>
+    </comp>
+    <comp ref="R59">
+      <value>820R</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="SPRAM"/>
+      <property name="Sheetfile" value="SPRAM.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/SPRAM/" tstamps="/00000000-0000-0000-0000-000067425b3b/"/>
+      <tstamps>c6cab0f0-8bb3-408d-aa76-0326d1ffbf8c</tstamps>
+    </comp>
+    <comp ref="R60">
+      <value>820R</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="SPRAM"/>
+      <property name="Sheetfile" value="SPRAM.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/SPRAM/" tstamps="/00000000-0000-0000-0000-000067425b3b/"/>
+      <tstamps>00000000-0000-0000-0000-0000674297f9</tstamps>
+    </comp>
+    <comp ref="R61">
+      <value>820R</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="SPRAM"/>
+      <property name="Sheetfile" value="SPRAM.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/SPRAM/" tstamps="/00000000-0000-0000-0000-000067425b3b/"/>
+      <tstamps>00000000-0000-0000-0000-0000674297ff</tstamps>
+    </comp>
+    <comp ref="R62">
+      <value>820R</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="SPRAM"/>
+      <property name="Sheetfile" value="SPRAM.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/SPRAM/" tstamps="/00000000-0000-0000-0000-000067425b3b/"/>
+      <tstamps>00000000-0000-0000-0000-000067429805</tstamps>
+    </comp>
+    <comp ref="R63">
+      <value>820R</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="SPRAM"/>
+      <property name="Sheetfile" value="SPRAM.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/SPRAM/" tstamps="/00000000-0000-0000-0000-000067425b3b/"/>
+      <tstamps>00000000-0000-0000-0000-00006742980b</tstamps>
+    </comp>
+    <comp ref="R64">
+      <value>820R</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="SPRAM"/>
+      <property name="Sheetfile" value="SPRAM.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/SPRAM/" tstamps="/00000000-0000-0000-0000-000067425b3b/"/>
+      <tstamps>00000000-0000-0000-0000-000067429811</tstamps>
+    </comp>
+    <comp ref="R65">
+      <value>820R</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="SPRAM"/>
+      <property name="Sheetfile" value="SPRAM.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/SPRAM/" tstamps="/00000000-0000-0000-0000-000067425b3b/"/>
+      <tstamps>00000000-0000-0000-0000-000067429817</tstamps>
+    </comp>
+    <comp ref="R66">
+      <value>820R</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="SPRAM"/>
+      <property name="Sheetfile" value="SPRAM.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/SPRAM/" tstamps="/00000000-0000-0000-0000-000067425b3b/"/>
+      <tstamps>00000000-0000-0000-0000-00006742981d</tstamps>
+    </comp>
+    <comp ref="U12">
+      <value>4011</value>
+      <footprint>Package_DIP:DIP-14_W7.62mm_LongPads</footprint>
+      <datasheet>http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4011bms-12bms-23bms.pdf</datasheet>
+      <fields>
+        <field name="Price">0.2</field>
+      </fields>
+      <libsource lib="plc14500" part="4011" description="Quad Nand 2 inputs"/>
+      <property name="Price" value="0.2"/>
+      <property name="Sheetname" value="SPRAM"/>
+      <property name="Sheetfile" value="SPRAM.kicad_sch"/>
+      <property name="ki_description" value="Quad Nand 2 inputs"/>
+      <property name="ki_keywords" value="CMOS Nand2"/>
+      <sheetpath names="/SPRAM/" tstamps="/00000000-0000-0000-0000-000067425b3b/"/>
+      <tstamps>e6ea03f8-1501-4ca0-9178-745b8ee7612f 00000000-0000-0000-0000-000067af2b18 00000000-0000-0000-0000-000067af2b12 00000000-0000-0000-0000-000067af2af8 00000000-0000-0000-0000-000067af2af2</tstamps>
+    </comp>
+    <comp ref="U13">
+      <value>4099</value>
+      <footprint>Package_DIP:DIP-16_W7.62mm_LongPads</footprint>
+      <datasheet>http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4011bms-12bms-23bms.pdf</datasheet>
+      <fields>
+        <field name="Price">0.57</field>
+      </fields>
+      <libsource lib="plc14500" part="CD4099" description=""/>
+      <property name="Price" value="0.57"/>
+      <property name="Sheetname" value="SPRAM"/>
+      <property name="Sheetfile" value="SPRAM.kicad_sch"/>
+      <sheetpath names="/SPRAM/" tstamps="/00000000-0000-0000-0000-000067425b3b/"/>
+      <tstamps>00000000-0000-0000-0000-00006748fde2</tstamps>
+    </comp>
+    <comp ref="U14">
+      <value>4051</value>
+      <footprint>Package_DIP:DIP-16_W7.62mm_LongPads</footprint>
+      <datasheet>http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4051bms-52bms-53bms.pdf</datasheet>
+      <fields>
+        <field name="Order">https://www.aliexpress.com/item/1005003598992135.html?spm=a2g0o.productlist.0.0.111d366cbwmWHm&amp;algo_pvid=a91b1842-6656-452a-a6d6-2be33e56e6bf&amp;algo_exp_id=a91b1842-6656-452a-a6d6-2be33e56e6bf-0&amp;pdp_ext_f=%7B%22sku_id%22%3A%2212000026440840531%22%7D&amp;pdp_npi=2%40dis%21EUR%210.99%210.85%21%21%21%21%21%402100bddf16678171990697546eca97%2112000026440840531%21sea&amp;curPageLogUid=EzaQ9aKwDR6g</field>
+        <field name="Price">0.85</field>
+      </fields>
+      <libsource lib="plc14500" part="4051" description="Analog Multiplexer 8 to 1 lins"/>
+      <property name="Order" value="https://www.aliexpress.com/item/1005003598992135.html?spm=a2g0o.productlist.0.0.111d366cbwmWHm&amp;algo_pvid=a91b1842-6656-452a-a6d6-2be33e56e6bf&amp;algo_exp_id=a91b1842-6656-452a-a6d6-2be33e56e6bf-0&amp;pdp_ext_f=%7B%22sku_id%22%3A%2212000026440840531%22%7D&amp;pdp_npi=2%40dis%21EUR%210.99%210.85%21%21%21%21%21%402100bddf16678171990697546eca97%2112000026440840531%21sea&amp;curPageLogUid=EzaQ9aKwDR6g"/>
+      <property name="Price" value="0.85"/>
+      <property name="Sheetname" value="SPRAM"/>
+      <property name="Sheetfile" value="SPRAM.kicad_sch"/>
+      <property name="ki_description" value="Analog Multiplexer 8 to 1 lins"/>
+      <property name="ki_keywords" value="CMOS MUX MUX8"/>
+      <sheetpath names="/SPRAM/" tstamps="/00000000-0000-0000-0000-000067425b3b/"/>
+      <tstamps>00000000-0000-0000-0000-00006748fe08</tstamps>
+    </comp>
+    <comp ref="C7">
+      <value>470uF</value>
+      <footprint>Capacitor_THT:CP_Radial_D5.0mm_P2.50mm</footprint>
+      <libsource lib="plc14500" part="CP-Device" description=""/>
+      <property name="Sheetname" value="CPU"/>
+      <property name="Sheetfile" value="CPU.kicad_sch"/>
+      <sheetpath names="/CPU/" tstamps="/00000000-0000-0000-0000-00006394a5b3/"/>
+      <tstamps>00000000-0000-0000-0000-000063766840</tstamps>
+    </comp>
+    <comp ref="C8">
+      <value>100nF</value>
+      <footprint>Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2</footprint>
+      <fields>
+        <field name="Price">0.02</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Price" value="0.02"/>
+      <property name="Sheetname" value="CPU"/>
+      <property name="Sheetfile" value="CPU.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/CPU/" tstamps="/00000000-0000-0000-0000-00006394a5b3/"/>
+      <tstamps>00000000-0000-0000-0000-00006398067e</tstamps>
+    </comp>
+    <comp ref="C9">
+      <value>100nF</value>
+      <footprint>Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2</footprint>
+      <fields>
+        <field name="Price">0.02</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Price" value="0.02"/>
+      <property name="Sheetname" value="CPU"/>
+      <property name="Sheetfile" value="CPU.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/CPU/" tstamps="/00000000-0000-0000-0000-00006394a5b3/"/>
+      <tstamps>00000000-0000-0000-0000-0000639808d5</tstamps>
+    </comp>
+    <comp ref="C10">
+      <value>100nF</value>
+      <footprint>Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2</footprint>
+      <fields>
+        <field name="Price">0.02</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Price" value="0.02"/>
+      <property name="Sheetname" value="CPU"/>
+      <property name="Sheetfile" value="CPU.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/CPU/" tstamps="/00000000-0000-0000-0000-00006394a5b3/"/>
+      <tstamps>00000000-0000-0000-0000-000063980610</tstamps>
+    </comp>
+    <comp ref="C11">
+      <value>100nF</value>
+      <footprint>Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2</footprint>
+      <fields>
+        <field name="Price">0.02</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Price" value="0.02"/>
+      <property name="Sheetname" value="CPU"/>
+      <property name="Sheetfile" value="CPU.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/CPU/" tstamps="/00000000-0000-0000-0000-00006394a5b3/"/>
+      <tstamps>00000000-0000-0000-0000-000063980616</tstamps>
+    </comp>
+    <comp ref="C12">
+      <value>100nF</value>
+      <footprint>Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2</footprint>
+      <fields>
+        <field name="Price">0.02</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Price" value="0.02"/>
+      <property name="Sheetname" value="CPU"/>
+      <property name="Sheetfile" value="CPU.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/CPU/" tstamps="/00000000-0000-0000-0000-00006394a5b3/"/>
+      <tstamps>00000000-0000-0000-0000-000063980737</tstamps>
+    </comp>
+    <comp ref="C13">
+      <value>100nF</value>
+      <footprint>Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2</footprint>
+      <fields>
+        <field name="Price">0.02</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Price" value="0.02"/>
+      <property name="Sheetname" value="CPU"/>
+      <property name="Sheetfile" value="CPU.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/CPU/" tstamps="/00000000-0000-0000-0000-00006394a5b3/"/>
+      <tstamps>00000000-0000-0000-0000-00006398077f</tstamps>
+    </comp>
+    <comp ref="C14">
+      <value>100nF</value>
+      <footprint>Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2</footprint>
+      <fields>
+        <field name="Price">0.02</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Price" value="0.02"/>
+      <property name="Sheetname" value="CPU"/>
+      <property name="Sheetfile" value="CPU.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/CPU/" tstamps="/00000000-0000-0000-0000-00006394a5b3/"/>
+      <tstamps>00000000-0000-0000-0000-000063980951</tstamps>
+    </comp>
+    <comp ref="D18">
+      <value>LED 3MM Yellow</value>
+      <footprint>plc14500:LED_3MM</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="plc14500" part="LED" description=""/>
+      <property name="Field4" value=""/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="CPU"/>
+      <property name="Sheetfile" value="CPU.kicad_sch"/>
+      <sheetpath names="/CPU/" tstamps="/00000000-0000-0000-0000-00006394a5b3/"/>
+      <tstamps>00000000-0000-0000-0000-0000639807ef</tstamps>
+    </comp>
+    <comp ref="D19">
+      <value>LED 3MM Yellow</value>
+      <footprint>plc14500:LED_3MM</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="plc14500" part="LED" description=""/>
+      <property name="Field4" value=""/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="CPU"/>
+      <property name="Sheetfile" value="CPU.kicad_sch"/>
+      <sheetpath names="/CPU/" tstamps="/00000000-0000-0000-0000-00006394a5b3/"/>
+      <tstamps>00000000-0000-0000-0000-0000639807f6</tstamps>
+    </comp>
+    <comp ref="D20">
+      <value>LED 3MM Red</value>
+      <footprint>plc14500:LED_3MM</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="plc14500" part="LED" description=""/>
+      <property name="Field4" value=""/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="CPU"/>
+      <property name="Sheetfile" value="CPU.kicad_sch"/>
+      <sheetpath names="/CPU/" tstamps="/00000000-0000-0000-0000-00006394a5b3/"/>
+      <tstamps>00000000-0000-0000-0000-00006398068b</tstamps>
+    </comp>
+    <comp ref="D21">
+      <value>LED 3MM Red</value>
+      <footprint>plc14500:LED_3MM</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="plc14500" part="LED" description=""/>
+      <property name="Field4" value=""/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="CPU"/>
+      <property name="Sheetfile" value="CPU.kicad_sch"/>
+      <sheetpath names="/CPU/" tstamps="/00000000-0000-0000-0000-00006394a5b3/"/>
+      <tstamps>00000000-0000-0000-0000-0000639808b0</tstamps>
+    </comp>
+    <comp ref="D22">
+      <value>LED 3MM Red</value>
+      <footprint>plc14500:LED_3MM</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="plc14500" part="LED" description=""/>
+      <property name="Field4" value=""/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="CPU"/>
+      <property name="Sheetfile" value="CPU.kicad_sch"/>
+      <sheetpath names="/CPU/" tstamps="/00000000-0000-0000-0000-00006394a5b3/"/>
+      <tstamps>00000000-0000-0000-0000-000063980692</tstamps>
+    </comp>
+    <comp ref="D23">
+      <value>LED 3MM Red</value>
+      <footprint>plc14500:LED_3MM</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="plc14500" part="LED" description=""/>
+      <property name="Field4" value=""/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="CPU"/>
+      <property name="Sheetfile" value="CPU.kicad_sch"/>
+      <sheetpath names="/CPU/" tstamps="/00000000-0000-0000-0000-00006394a5b3/"/>
+      <tstamps>00000000-0000-0000-0000-0000639808a9</tstamps>
+    </comp>
+    <comp ref="D24">
+      <value>LED 3MM Red</value>
+      <footprint>plc14500:LED_3MM</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="plc14500" part="LED" description=""/>
+      <property name="Field4" value=""/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="CPU"/>
+      <property name="Sheetfile" value="CPU.kicad_sch"/>
+      <sheetpath names="/CPU/" tstamps="/00000000-0000-0000-0000-00006394a5b3/"/>
+      <tstamps>00000000-0000-0000-0000-000063980699</tstamps>
+    </comp>
+    <comp ref="D25">
+      <value>LED 3MM Red</value>
+      <footprint>plc14500:LED_3MM</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="plc14500" part="LED" description=""/>
+      <property name="Field4" value=""/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="CPU"/>
+      <property name="Sheetfile" value="CPU.kicad_sch"/>
+      <sheetpath names="/CPU/" tstamps="/00000000-0000-0000-0000-00006394a5b3/"/>
+      <tstamps>00000000-0000-0000-0000-0000639808a2</tstamps>
+    </comp>
+    <comp ref="D26">
+      <value>LED 3MM Red</value>
+      <footprint>plc14500:LED_3MM</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="plc14500" part="LED" description=""/>
+      <property name="Field4" value=""/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="CPU"/>
+      <property name="Sheetfile" value="CPU.kicad_sch"/>
+      <sheetpath names="/CPU/" tstamps="/00000000-0000-0000-0000-00006394a5b3/"/>
+      <tstamps>00000000-0000-0000-0000-0000639806a0</tstamps>
+    </comp>
+    <comp ref="D27">
+      <value>LED 3MM Red</value>
+      <footprint>plc14500:LED_3MM</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="plc14500" part="LED" description=""/>
+      <property name="Field4" value=""/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="CPU"/>
+      <property name="Sheetfile" value="CPU.kicad_sch"/>
+      <sheetpath names="/CPU/" tstamps="/00000000-0000-0000-0000-00006394a5b3/"/>
+      <tstamps>00000000-0000-0000-0000-00006398089b</tstamps>
+    </comp>
+    <comp ref="D28">
+      <value>LED 3MM Yellow</value>
+      <footprint>plc14500:LED_3MM</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="plc14500" part="LED" description=""/>
+      <property name="Field4" value=""/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="CPU"/>
+      <property name="Sheetfile" value="CPU.kicad_sch"/>
+      <sheetpath names="/CPU/" tstamps="/00000000-0000-0000-0000-00006394a5b3/"/>
+      <tstamps>00000000-0000-0000-0000-00006398074e</tstamps>
+    </comp>
+    <comp ref="D29">
+      <value>LED 3MM Red</value>
+      <footprint>plc14500:LED_3MM</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="plc14500" part="LED" description=""/>
+      <property name="Field4" value=""/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="CPU"/>
+      <property name="Sheetfile" value="CPU.kicad_sch"/>
+      <sheetpath names="/CPU/" tstamps="/00000000-0000-0000-0000-00006394a5b3/"/>
+      <tstamps>00000000-0000-0000-0000-0000639806a7</tstamps>
+    </comp>
+    <comp ref="D30">
+      <value>LED 3MM Red</value>
+      <footprint>plc14500:LED_3MM</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="plc14500" part="LED" description=""/>
+      <property name="Field4" value=""/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="CPU"/>
+      <property name="Sheetfile" value="CPU.kicad_sch"/>
+      <sheetpath names="/CPU/" tstamps="/00000000-0000-0000-0000-00006394a5b3/"/>
+      <tstamps>00000000-0000-0000-0000-000063980894</tstamps>
+    </comp>
+    <comp ref="D31">
+      <value>LED 3MM Red</value>
+      <footprint>plc14500:LED_3MM</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="plc14500" part="LED" description=""/>
+      <property name="Field4" value=""/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="CPU"/>
+      <property name="Sheetfile" value="CPU.kicad_sch"/>
+      <sheetpath names="/CPU/" tstamps="/00000000-0000-0000-0000-00006394a5b3/"/>
+      <tstamps>00000000-0000-0000-0000-0000639806ae</tstamps>
+    </comp>
+    <comp ref="D32">
+      <value>LED 3MM Red</value>
+      <footprint>plc14500:LED_3MM</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="plc14500" part="LED" description=""/>
+      <property name="Field4" value=""/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="CPU"/>
+      <property name="Sheetfile" value="CPU.kicad_sch"/>
+      <sheetpath names="/CPU/" tstamps="/00000000-0000-0000-0000-00006394a5b3/"/>
+      <tstamps>00000000-0000-0000-0000-00006398088d</tstamps>
+    </comp>
+    <comp ref="D33">
+      <value>LED 3MM Yellow</value>
+      <footprint>plc14500:LED_3MM</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="plc14500" part="LED" description=""/>
+      <property name="Field4" value=""/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="CPU"/>
+      <property name="Sheetfile" value="CPU.kicad_sch"/>
+      <sheetpath names="/CPU/" tstamps="/00000000-0000-0000-0000-00006394a5b3/"/>
+      <tstamps>00000000-0000-0000-0000-000063980763</tstamps>
+    </comp>
+    <comp ref="D34">
+      <value>LED 3MM Red</value>
+      <footprint>plc14500:LED_3MM</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="plc14500" part="LED" description=""/>
+      <property name="Field4" value=""/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="CPU"/>
+      <property name="Sheetfile" value="CPU.kicad_sch"/>
+      <sheetpath names="/CPU/" tstamps="/00000000-0000-0000-0000-00006394a5b3/"/>
+      <tstamps>00000000-0000-0000-0000-0000639806b5</tstamps>
+    </comp>
+    <comp ref="D35">
+      <value>LED 3MM Red</value>
+      <footprint>plc14500:LED_3MM</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="plc14500" part="LED" description=""/>
+      <property name="Field4" value=""/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="CPU"/>
+      <property name="Sheetfile" value="CPU.kicad_sch"/>
+      <sheetpath names="/CPU/" tstamps="/00000000-0000-0000-0000-00006394a5b3/"/>
+      <tstamps>00000000-0000-0000-0000-000063980886</tstamps>
+    </comp>
+    <comp ref="D36">
+      <value>LED 3MM Red</value>
+      <footprint>plc14500:LED_3MM</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="plc14500" part="LED" description=""/>
+      <property name="Field4" value=""/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="CPU"/>
+      <property name="Sheetfile" value="CPU.kicad_sch"/>
+      <sheetpath names="/CPU/" tstamps="/00000000-0000-0000-0000-00006394a5b3/"/>
+      <tstamps>00000000-0000-0000-0000-0000639806bc</tstamps>
+    </comp>
+    <comp ref="D37">
+      <value>LED 3MM Red</value>
+      <footprint>plc14500:LED_3MM</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="plc14500" part="LED" description=""/>
+      <property name="Field4" value=""/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="CPU"/>
+      <property name="Sheetfile" value="CPU.kicad_sch"/>
+      <sheetpath names="/CPU/" tstamps="/00000000-0000-0000-0000-00006394a5b3/"/>
+      <tstamps>00000000-0000-0000-0000-00006817902a</tstamps>
+    </comp>
+    <comp ref="D38">
+      <value>LED 3MM Yellow</value>
+      <footprint>plc14500:LED_3MM</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="plc14500" part="LED" description=""/>
+      <property name="Field4" value=""/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="CPU"/>
+      <property name="Sheetfile" value="CPU.kicad_sch"/>
+      <sheetpath names="/CPU/" tstamps="/00000000-0000-0000-0000-00006394a5b3/"/>
+      <tstamps>00000000-0000-0000-0000-000064d892ff</tstamps>
+    </comp>
+    <comp ref="D39">
+      <value>LED 3MM Orange</value>
+      <footprint>plc14500:LED_3MM</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="plc14500" part="LED" description=""/>
+      <property name="Field4" value=""/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="CPU"/>
+      <property name="Sheetfile" value="CPU.kicad_sch"/>
+      <sheetpath names="/CPU/" tstamps="/00000000-0000-0000-0000-00006394a5b3/"/>
+      <tstamps>00000000-0000-0000-0000-000063b91cbf</tstamps>
+    </comp>
+    <comp ref="D40">
+      <value>1N4148</value>
+      <footprint>Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal</footprint>
+      <datasheet>https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf</datasheet>
+      <libsource lib="Diode" part="1N4148" description="100V 0.15A standard switching diode, DO-35"/>
+      <property name="Sheetname" value="CPU"/>
+      <property name="Sheetfile" value="CPU.kicad_sch"/>
+      <property name="ki_description" value="100V 0.15A standard switching diode, DO-35"/>
+      <property name="ki_keywords" value="diode"/>
+      <sheetpath names="/CPU/" tstamps="/00000000-0000-0000-0000-00006394a5b3/"/>
+      <tstamps>00000000-0000-0000-0000-0000637ecca3</tstamps>
+    </comp>
+    <comp ref="D41">
+      <value>LED 3MM Orange</value>
+      <footprint>plc14500:LED_3MM</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="plc14500" part="LED" description=""/>
+      <property name="Field4" value=""/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="CPU"/>
+      <property name="Sheetfile" value="CPU.kicad_sch"/>
+      <sheetpath names="/CPU/" tstamps="/00000000-0000-0000-0000-00006394a5b3/"/>
+      <tstamps>00000000-0000-0000-0000-000063b91ccd</tstamps>
+    </comp>
+    <comp ref="D42">
+      <value>LED 3MM Orange</value>
+      <footprint>plc14500:LED_3MM</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="plc14500" part="LED" description=""/>
+      <property name="Field4" value=""/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="CPU"/>
+      <property name="Sheetfile" value="CPU.kicad_sch"/>
+      <sheetpath names="/CPU/" tstamps="/00000000-0000-0000-0000-00006394a5b3/"/>
+      <tstamps>00000000-0000-0000-0000-000063b91cd4</tstamps>
+    </comp>
+    <comp ref="D50">
+      <value>LED 3MM Orange</value>
+      <footprint>plc14500:LED_3MM</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="plc14500" part="LED" description=""/>
+      <property name="Field4" value=""/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="CPU"/>
+      <property name="Sheetfile" value="CPU.kicad_sch"/>
+      <sheetpath names="/CPU/" tstamps="/00000000-0000-0000-0000-00006394a5b3/"/>
+      <tstamps>6be7b397-8a42-4c94-8ab4-5811d8f1ddbf</tstamps>
+    </comp>
+    <comp ref="D51">
+      <value>1N4148</value>
+      <footprint>Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal</footprint>
+      <datasheet>https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf</datasheet>
+      <libsource lib="Diode" part="1N4148" description="100V 0.15A standard switching diode, DO-35"/>
+      <property name="Sheetname" value="CPU"/>
+      <property name="Sheetfile" value="CPU.kicad_sch"/>
+      <property name="ki_description" value="100V 0.15A standard switching diode, DO-35"/>
+      <property name="ki_keywords" value="diode"/>
+      <sheetpath names="/CPU/" tstamps="/00000000-0000-0000-0000-00006394a5b3/"/>
+      <tstamps>00000000-0000-0000-0000-0000637eea46</tstamps>
+    </comp>
+    <comp ref="D52">
+      <value>LED 3MM Orange</value>
+      <footprint>plc14500:LED_3MM</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="plc14500" part="LED" description=""/>
+      <property name="Field4" value=""/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="CPU"/>
+      <property name="Sheetfile" value="CPU.kicad_sch"/>
+      <sheetpath names="/CPU/" tstamps="/00000000-0000-0000-0000-00006394a5b3/"/>
+      <tstamps>c1a1f926-0750-4beb-aa4a-e437603d81a7</tstamps>
+    </comp>
+    <comp ref="D53">
+      <value>LED 3MM Orange</value>
+      <footprint>plc14500:LED_3MM</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="plc14500" part="LED" description=""/>
+      <property name="Field4" value=""/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="CPU"/>
+      <property name="Sheetfile" value="CPU.kicad_sch"/>
+      <sheetpath names="/CPU/" tstamps="/00000000-0000-0000-0000-00006394a5b3/"/>
+      <tstamps>56b1670f-be82-42f7-bf43-e16b66df9758</tstamps>
+    </comp>
+    <comp ref="R28">
+      <value>820R</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="CPU"/>
+      <property name="Sheetfile" value="CPU.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/CPU/" tstamps="/00000000-0000-0000-0000-00006394a5b3/"/>
+      <tstamps>00000000-0000-0000-0000-0000639807fc</tstamps>
+    </comp>
+    <comp ref="R29">
+      <value>820R</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="CPU"/>
+      <property name="Sheetfile" value="CPU.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/CPU/" tstamps="/00000000-0000-0000-0000-00006394a5b3/"/>
+      <tstamps>00000000-0000-0000-0000-000063980802</tstamps>
+    </comp>
+    <comp ref="R30">
+      <value>1K</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="CPU"/>
+      <property name="Sheetfile" value="CPU.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/CPU/" tstamps="/00000000-0000-0000-0000-00006394a5b3/"/>
+      <tstamps>00000000-0000-0000-0000-0000639805ff</tstamps>
+    </comp>
+    <comp ref="R31">
+      <value>1K</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="CPU"/>
+      <property name="Sheetfile" value="CPU.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/CPU/" tstamps="/00000000-0000-0000-0000-00006394a5b3/"/>
+      <tstamps>00000000-0000-0000-0000-0000639805f9</tstamps>
+    </comp>
+    <comp ref="R32">
+      <value>820R</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="CPU"/>
+      <property name="Sheetfile" value="CPU.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/CPU/" tstamps="/00000000-0000-0000-0000-00006394a5b3/"/>
+      <tstamps>00000000-0000-0000-0000-0000639806ca</tstamps>
+    </comp>
+    <comp ref="R33">
+      <value>820R</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="CPU"/>
+      <property name="Sheetfile" value="CPU.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/CPU/" tstamps="/00000000-0000-0000-0000-00006394a5b3/"/>
+      <tstamps>00000000-0000-0000-0000-00006398087f</tstamps>
+    </comp>
+    <comp ref="R34">
+      <value>820R</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="CPU"/>
+      <property name="Sheetfile" value="CPU.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/CPU/" tstamps="/00000000-0000-0000-0000-00006394a5b3/"/>
+      <tstamps>00000000-0000-0000-0000-0000639806d0</tstamps>
+    </comp>
+    <comp ref="R35">
+      <value>820R</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="CPU"/>
+      <property name="Sheetfile" value="CPU.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/CPU/" tstamps="/00000000-0000-0000-0000-00006394a5b3/"/>
+      <tstamps>00000000-0000-0000-0000-000063980879</tstamps>
+    </comp>
+    <comp ref="R36">
+      <value>820R</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="CPU"/>
+      <property name="Sheetfile" value="CPU.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/CPU/" tstamps="/00000000-0000-0000-0000-00006394a5b3/"/>
+      <tstamps>00000000-0000-0000-0000-0000639806d6</tstamps>
+    </comp>
+    <comp ref="R37">
+      <value>820R</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="CPU"/>
+      <property name="Sheetfile" value="CPU.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/CPU/" tstamps="/00000000-0000-0000-0000-00006394a5b3/"/>
+      <tstamps>00000000-0000-0000-0000-000063980873</tstamps>
+    </comp>
+    <comp ref="R38">
+      <value>820R</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="CPU"/>
+      <property name="Sheetfile" value="CPU.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/CPU/" tstamps="/00000000-0000-0000-0000-00006394a5b3/"/>
+      <tstamps>00000000-0000-0000-0000-0000639806dc</tstamps>
+    </comp>
+    <comp ref="R39">
+      <value>820R</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="CPU"/>
+      <property name="Sheetfile" value="CPU.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/CPU/" tstamps="/00000000-0000-0000-0000-00006394a5b3/"/>
+      <tstamps>00000000-0000-0000-0000-00006398086d</tstamps>
+    </comp>
+    <comp ref="R40">
+      <value>820R</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="CPU"/>
+      <property name="Sheetfile" value="CPU.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/CPU/" tstamps="/00000000-0000-0000-0000-00006394a5b3/"/>
+      <tstamps>00000000-0000-0000-0000-000063980754</tstamps>
+    </comp>
+    <comp ref="R41">
+      <value>820R</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="CPU"/>
+      <property name="Sheetfile" value="CPU.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/CPU/" tstamps="/00000000-0000-0000-0000-00006394a5b3/"/>
+      <tstamps>00000000-0000-0000-0000-0000639806e2</tstamps>
+    </comp>
+    <comp ref="R42">
+      <value>820R</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="CPU"/>
+      <property name="Sheetfile" value="CPU.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/CPU/" tstamps="/00000000-0000-0000-0000-00006394a5b3/"/>
+      <tstamps>00000000-0000-0000-0000-000063980867</tstamps>
+    </comp>
+    <comp ref="R43">
+      <value>820R</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="CPU"/>
+      <property name="Sheetfile" value="CPU.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/CPU/" tstamps="/00000000-0000-0000-0000-00006394a5b3/"/>
+      <tstamps>00000000-0000-0000-0000-0000639806e8</tstamps>
+    </comp>
+    <comp ref="R44">
+      <value>820R</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="CPU"/>
+      <property name="Sheetfile" value="CPU.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/CPU/" tstamps="/00000000-0000-0000-0000-00006394a5b3/"/>
+      <tstamps>00000000-0000-0000-0000-000063980861</tstamps>
+    </comp>
+    <comp ref="R45">
+      <value>820R</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="CPU"/>
+      <property name="Sheetfile" value="CPU.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/CPU/" tstamps="/00000000-0000-0000-0000-00006394a5b3/"/>
+      <tstamps>00000000-0000-0000-0000-000063980769</tstamps>
+    </comp>
+    <comp ref="R46">
+      <value>820R</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="CPU"/>
+      <property name="Sheetfile" value="CPU.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/CPU/" tstamps="/00000000-0000-0000-0000-00006394a5b3/"/>
+      <tstamps>00000000-0000-0000-0000-0000639806ee</tstamps>
+    </comp>
+    <comp ref="R47">
+      <value>820R</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="CPU"/>
+      <property name="Sheetfile" value="CPU.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/CPU/" tstamps="/00000000-0000-0000-0000-00006394a5b3/"/>
+      <tstamps>00000000-0000-0000-0000-00006398085b</tstamps>
+    </comp>
+    <comp ref="R48">
+      <value>820R</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="CPU"/>
+      <property name="Sheetfile" value="CPU.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/CPU/" tstamps="/00000000-0000-0000-0000-00006394a5b3/"/>
+      <tstamps>00000000-0000-0000-0000-0000639806f4</tstamps>
+    </comp>
+    <comp ref="R49">
+      <value>820R</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="CPU"/>
+      <property name="Sheetfile" value="CPU.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/CPU/" tstamps="/00000000-0000-0000-0000-00006394a5b3/"/>
+      <tstamps>00000000-0000-0000-0000-000068179590</tstamps>
+    </comp>
+    <comp ref="R50">
+      <value>10K</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="CPU"/>
+      <property name="Sheetfile" value="CPU.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/CPU/" tstamps="/00000000-0000-0000-0000-00006394a5b3/"/>
+      <tstamps>00000000-0000-0000-0000-00006398078b</tstamps>
+    </comp>
+    <comp ref="R51">
+      <value>10K</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="CPU"/>
+      <property name="Sheetfile" value="CPU.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/CPU/" tstamps="/00000000-0000-0000-0000-00006394a5b3/"/>
+      <tstamps>00000000-0000-0000-0000-000063980785</tstamps>
+    </comp>
+    <comp ref="R52">
+      <value>820R</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="CPU"/>
+      <property name="Sheetfile" value="CPU.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/CPU/" tstamps="/00000000-0000-0000-0000-00006394a5b3/"/>
+      <tstamps>00000000-0000-0000-0000-000064d8a141</tstamps>
+    </comp>
+    <comp ref="R53">
+      <value>820R</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="CPU"/>
+      <property name="Sheetfile" value="CPU.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/CPU/" tstamps="/00000000-0000-0000-0000-00006394a5b3/"/>
+      <tstamps>13c46a8e-8b8d-44ef-b841-4070d9b0352e</tstamps>
+    </comp>
+    <comp ref="R54">
+      <value>10K</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="CPU"/>
+      <property name="Sheetfile" value="CPU.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/CPU/" tstamps="/00000000-0000-0000-0000-00006394a5b3/"/>
+      <tstamps>00000000-0000-0000-0000-0000637ffb15</tstamps>
+    </comp>
+    <comp ref="R55">
+      <value>820R</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="CPU"/>
+      <property name="Sheetfile" value="CPU.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/CPU/" tstamps="/00000000-0000-0000-0000-00006394a5b3/"/>
+      <tstamps>00000000-0000-0000-0000-000063b91cda</tstamps>
+    </comp>
+    <comp ref="R56">
+      <value>820R</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="CPU"/>
+      <property name="Sheetfile" value="CPU.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/CPU/" tstamps="/00000000-0000-0000-0000-00006394a5b3/"/>
+      <tstamps>ca2a0f91-e42c-47ba-a625-559d044fcf93</tstamps>
+    </comp>
+    <comp ref="R57">
+      <value>820R</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="CPU"/>
+      <property name="Sheetfile" value="CPU.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/CPU/" tstamps="/00000000-0000-0000-0000-00006394a5b3/"/>
+      <tstamps>00000000-0000-0000-0000-000063b91ce6</tstamps>
+    </comp>
+    <comp ref="R58">
+      <value>820R</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="CPU"/>
+      <property name="Sheetfile" value="CPU.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/CPU/" tstamps="/00000000-0000-0000-0000-00006394a5b3/"/>
+      <tstamps>00000000-0000-0000-0000-000063b91cec</tstamps>
+    </comp>
+    <comp ref="R67">
+      <value>820R</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="CPU"/>
+      <property name="Sheetfile" value="CPU.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/CPU/" tstamps="/00000000-0000-0000-0000-00006394a5b3/"/>
+      <tstamps>760bfde0-addd-46c0-8c3a-037be13677da</tstamps>
+    </comp>
+    <comp ref="S16">
+      <value>Switch DPDT</value>
+      <footprint>plc14500:SWITCH_DPDT</footprint>
+      <fields>
+        <field name="Field4">SWCH-10554</field>
+        <field name="Price">0.69</field>
+      </fields>
+      <libsource lib="plc14500" part="SWITCH-DPDT" description=""/>
+      <property name="Field4" value="SWCH-10554"/>
+      <property name="Price" value="0.69"/>
+      <property name="Sheetname" value="CPU"/>
+      <property name="Sheetfile" value="CPU.kicad_sch"/>
+      <sheetpath names="/CPU/" tstamps="/00000000-0000-0000-0000-00006394a5b3/"/>
+      <tstamps>00000000-0000-0000-0000-0000639807d9</tstamps>
+    </comp>
+    <comp ref="S17">
+      <value>Push Button</value>
+      <footprint>plc14500:SW_Tactile_THT</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="CPU"/>
+      <property name="Sheetfile" value="CPU.kicad_sch"/>
+      <property name="ki_description" value="Push button switch, generic, two pins"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/CPU/" tstamps="/00000000-0000-0000-0000-00006394a5b3/"/>
+      <tstamps>00000000-0000-0000-0000-000063980791</tstamps>
+    </comp>
+    <comp ref="S18">
+      <value>Switch DPDT</value>
+      <footprint>plc14500:SWITCH_DPDT</footprint>
+      <fields>
+        <field name="Field4">SWCH-10554</field>
+        <field name="Price">0.69</field>
+      </fields>
+      <libsource lib="plc14500" part="SWITCH-DPDT" description=""/>
+      <property name="Field4" value="SWCH-10554"/>
+      <property name="Price" value="0.69"/>
+      <property name="Sheetname" value="CPU"/>
+      <property name="Sheetfile" value="CPU.kicad_sch"/>
+      <sheetpath names="/CPU/" tstamps="/00000000-0000-0000-0000-00006394a5b3/"/>
+      <tstamps>00000000-0000-0000-0000-000063980747</tstamps>
+    </comp>
+    <comp ref="U7">
+      <value>74HC590A</value>
+      <footprint>Package_DIP:DIP-16_W7.62mm_LongPads</footprint>
+      <datasheet>http://www.ti.com/lit/ds/symlink/sn74hc590a.pdf</datasheet>
+      <fields>
+        <field name="Price">0.43</field>
+      </fields>
+      <libsource lib="plc14500" part="74HC590A" description="8-bit Binary Counter with Output Register 3-State Outputs, DIP-16/SOIC-16/SOIC-16W"/>
+      <property name="Price" value="0.43"/>
+      <property name="Sheetname" value="CPU"/>
+      <property name="Sheetfile" value="CPU.kicad_sch"/>
+      <property name="ki_description" value="8-bit Binary Counter with Output Register 3-State Outputs, DIP-16/SOIC-16/SOIC-16W"/>
+      <property name="ki_keywords" value="HCMOS Counter 3State"/>
+      <sheetpath names="/CPU/" tstamps="/00000000-0000-0000-0000-00006394a5b3/"/>
+      <tstamps>00000000-0000-0000-0000-00006398063a</tstamps>
+    </comp>
+    <comp ref="U8">
+      <value>LH5168</value>
+      <footprint>Package_DIP:DIP-28_W15.24mm</footprint>
+      <datasheet>https://www.futurlec.com/Datasheet/Memory/62256.pdf</datasheet>
+      <fields>
+        <field name="Price">1.2</field>
+      </fields>
+      <libsource lib="plc14500" part="KM62256CLP" description="32Kx8 bit Low Power CMOS Static RAM, 55/70ns, DIP-28"/>
+      <property name="Price" value="1.2"/>
+      <property name="Sheetname" value="CPU"/>
+      <property name="Sheetfile" value="CPU.kicad_sch"/>
+      <property name="ki_description" value="32Kx8 bit Low Power CMOS Static RAM, 55/70ns, DIP-28"/>
+      <property name="ki_keywords" value="RAM SRAM CMOS MEMORY"/>
+      <sheetpath names="/CPU/" tstamps="/00000000-0000-0000-0000-00006394a5b3/"/>
+      <tstamps>00000000-0000-0000-0000-000063980925</tstamps>
+    </comp>
+    <comp ref="U9">
+      <value>NE555</value>
+      <footprint>Package_DIP:DIP-8_W7.62mm</footprint>
+      <fields>
+        <field name="Price">0.07</field>
+      </fields>
+      <libsource lib="plc14500" part="555" description=""/>
+      <property name="Field4" value=""/>
+      <property name="Price" value="0.07"/>
+      <property name="Sheetname" value="CPU"/>
+      <property name="Sheetfile" value="CPU.kicad_sch"/>
+      <sheetpath names="/CPU/" tstamps="/00000000-0000-0000-0000-00006394a5b3/"/>
+      <tstamps>00000000-0000-0000-0000-000063980606</tstamps>
+    </comp>
+    <comp ref="U10">
+      <value>MC14500</value>
+      <footprint>Package_DIP:DIP-16_W7.62mm_LongPads</footprint>
+      <fields>
+        <field name="Price">2.6</field>
+      </fields>
+      <libsource lib="plc14500" part="MC14500" description=""/>
+      <property name="Price" value="2.6"/>
+      <property name="Sheetname" value="CPU"/>
+      <property name="Sheetfile" value="CPU.kicad_sch"/>
+      <sheetpath names="/CPU/" tstamps="/00000000-0000-0000-0000-00006394a5b3/"/>
+      <tstamps>00000000-0000-0000-0000-000063980933</tstamps>
+    </comp>
+    <comp ref="C20">
+      <value>1uF NP</value>
+      <footprint>Capacitor_THT:C_Radial_D6.3mm_H5.0mm_P2.50mm</footprint>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <property name="Sheetname" value="Programming Interface"/>
+      <property name="Sheetfile" value="programming_if.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
+      <property name="ki_keywords" value="capacitor cap"/>
+      <sheetpath names="/Programming Interface/" tstamps="/8308f4d3-970f-416c-a310-08d544e11abe/"/>
+      <tstamps>3497e1ce-0302-4310-9e1b-bea65f82b07d</tstamps>
+    </comp>
+    <comp ref="D17">
+      <value>LED 3MM Red</value>
+      <footprint>plc14500:LED_3MM</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="plc14500" part="LED" description=""/>
+      <property name="Field4" value=""/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="Programming Interface"/>
+      <property name="Sheetfile" value="programming_if.kicad_sch"/>
+      <sheetpath names="/Programming Interface/" tstamps="/8308f4d3-970f-416c-a310-08d544e11abe/"/>
+      <tstamps>97902190-2436-4f1c-8588-cd03678dad67</tstamps>
+    </comp>
+    <comp ref="R26">
+      <value>47K</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="Programming Interface"/>
+      <property name="Sheetfile" value="programming_if.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Programming Interface/" tstamps="/8308f4d3-970f-416c-a310-08d544e11abe/"/>
+      <tstamps>1bc7d5f2-d021-4c09-bfcb-a5a689c3ae8b</tstamps>
+    </comp>
+    <comp ref="R27">
+      <value>820R</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="Programming Interface"/>
+      <property name="Sheetfile" value="programming_if.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Programming Interface/" tstamps="/8308f4d3-970f-416c-a310-08d544e11abe/"/>
+      <tstamps>881fc30f-f6ec-41ec-af04-cd9fbe1ebcfa</tstamps>
+    </comp>
+    <comp ref="S15">
+      <value>Push Button</value>
+      <footprint>plc14500:SW_Tactile_THT</footprint>
+      <fields>
+        <field name="Price">0.01</field>
+      </fields>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Price" value="0.01"/>
+      <property name="Sheetname" value="Programming Interface"/>
+      <property name="Sheetfile" value="programming_if.kicad_sch"/>
+      <property name="ki_description" value="Push button switch, generic, two pins"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/Programming Interface/" tstamps="/8308f4d3-970f-416c-a310-08d544e11abe/"/>
+      <tstamps>a4a8cb77-90a9-4ec3-a512-c720cce6f314</tstamps>
+    </comp>
+    <comp ref="U6">
+      <value>Arduino Nano</value>
+      <footprint>Module:Arduino_Nano</footprint>
+      <datasheet>https://www.arduino.cc/en/uploads/Main/ArduinoNanoManual23.pdf</datasheet>
+      <libsource lib="plc14500" part="ArduinoNanoBoard" description="Arduino Nano v2.x"/>
+      <property name="Sheetname" value="Programming Interface"/>
+      <property name="Sheetfile" value="programming_if.kicad_sch"/>
+      <property name="ki_description" value="Arduino Nano v2.x"/>
+      <property name="ki_keywords" value="Arduino nano microcontroller module USB"/>
+      <sheetpath names="/Programming Interface/" tstamps="/8308f4d3-970f-416c-a310-08d544e11abe/"/>
+      <tstamps>09b2e0d0-1da9-4c1a-9e7d-0bfe0d138bb7</tstamps>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Device" part="C">
+      <description>Unpolarized capacitor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C_Small">
+      <description>Unpolarized capacitor, small symbol</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C_Small</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Diode" part="1N4148">
+      <description>100V 0.15A standard switching diode, DO-35</description>
+      <docs>https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf</docs>
+      <footprints>
+        <fp>D*DO?35*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">1N4148</field>
+        <field name="Footprint">Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal</field>
+        <field name="Datasheet">https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf</field>
+        <field name="Sim.Device">D</field>
+        <field name="Sim.Pins">1=K 2=A</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Switch" part="SW_Push">
+      <description>Push button switch, generic, two pins</description>
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">SW</field>
+        <field name="Value">SW_Push</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="plc14500" part="4011">
+      <description>Quad Nand 2 inputs</description>
+      <docs>http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4011bms-12bms-23bms.pdf</docs>
+      <footprints>
+        <fp>DIP?14*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U12</field>
+        <field name="Value">4011</field>
+        <field name="Footprint">Package_DIP:DIP-14_W7.62mm_LongPads</field>
+        <field name="Datasheet">http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4011bms-12bms-23bms.pdf</field>
+        <field name="Price">0.2</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="input"/>
+        <pin num="2" name="" type="input"/>
+        <pin num="3" name="" type="output"/>
+        <pin num="4" name="" type="output"/>
+        <pin num="5" name="" type="input"/>
+        <pin num="6" name="" type="input"/>
+        <pin num="7" name="VSS" type="power_in"/>
+        <pin num="8" name="" type="input"/>
+        <pin num="9" name="" type="input"/>
+        <pin num="10" name="" type="output"/>
+        <pin num="11" name="" type="output"/>
+        <pin num="12" name="" type="input"/>
+        <pin num="13" name="" type="input"/>
+        <pin num="14" name="VDD" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="plc14500" part="4051">
+      <description>Analog Multiplexer 8 to 1 lins</description>
+      <docs>http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4051bms-52bms-53bms.pdf</docs>
+      <footprints>
+        <fp>DIP?16*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U14</field>
+        <field name="Value">4051</field>
+        <field name="Footprint">Package_DIP:DIP-16_W7.62mm_LongPads</field>
+        <field name="Datasheet">http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4051bms-52bms-53bms.pdf</field>
+        <field name="Price">0.85</field>
+        <field name="Order">https://www.aliexpress.com/item/1005003598992135.html?spm=a2g0o.productlist.0.0.111d366cbwmWHm&amp;algo_pvid=a91b1842-6656-452a-a6d6-2be33e56e6bf&amp;algo_exp_id=a91b1842-6656-452a-a6d6-2be33e56e6bf-0&amp;pdp_ext_f=%7B%22sku_id%22%3A%2212000026440840531%22%7D&amp;pdp_npi=2%40dis%21EUR%210.99%210.85%21%21%21%21%21%402100bddf16678171990697546eca97%2112000026440840531%21sea&amp;curPageLogUid=EzaQ9aKwDR6g</field>
+      </fields>
+      <pins>
+        <pin num="1" name="X4" type="passive"/>
+        <pin num="2" name="X6" type="passive"/>
+        <pin num="3" name="X" type="passive"/>
+        <pin num="4" name="X7" type="passive"/>
+        <pin num="5" name="X5" type="passive"/>
+        <pin num="6" name="Inh" type="input"/>
+        <pin num="7" name="VEE" type="power_in"/>
+        <pin num="8" name="VSS" type="power_in"/>
+        <pin num="9" name="C" type="input"/>
+        <pin num="10" name="B" type="input"/>
+        <pin num="11" name="A" type="input"/>
+        <pin num="12" name="X3" type="passive"/>
+        <pin num="13" name="X0" type="passive"/>
+        <pin num="14" name="X1" type="passive"/>
+        <pin num="15" name="X2" type="passive"/>
+        <pin num="16" name="VDD" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="plc14500" part="555">
+      <footprints>
+        <fp>*SO08*</fp>
+        <fp>*DIP08-KIT*</fp>
+        <fp>*DIP08*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U9</field>
+        <field name="Value">NE555</field>
+        <field name="Footprint">Package_DIP:DIP-8_W7.62mm</field>
+        <field name="Price">0.07</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="power_in"/>
+        <pin num="2" name="TRI" type="input"/>
+        <pin num="3" name="OUT" type="output"/>
+        <pin num="4" name="/RES" type="input"/>
+        <pin num="5" name="CON" type="input"/>
+        <pin num="6" name="TRE" type="input"/>
+        <pin num="7" name="DIS" type="input"/>
+        <pin num="8" name="VCC+" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="plc14500" part="74HC14">
+      <description>Hex inverter schmitt trigger</description>
+      <docs>http://www.ti.com/lit/gpn/sn74HC14</docs>
+      <footprints>
+        <fp>DIP*W7.62mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">74HC14</field>
+        <field name="Datasheet">http://www.ti.com/lit/gpn/sn74HC14</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="input"/>
+        <pin num="2" name="" type="output"/>
+        <pin num="3" name="" type="input"/>
+        <pin num="4" name="" type="output"/>
+        <pin num="5" name="" type="input"/>
+        <pin num="6" name="" type="output"/>
+        <pin num="7" name="GND" type="power_in"/>
+        <pin num="8" name="" type="output"/>
+        <pin num="9" name="" type="input"/>
+        <pin num="10" name="" type="output"/>
+        <pin num="11" name="" type="input"/>
+        <pin num="12" name="" type="output"/>
+        <pin num="13" name="" type="input"/>
+        <pin num="14" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="plc14500" part="74HC590A">
+      <description>8-bit Binary Counter with Output Register 3-State Outputs, DIP-16/SOIC-16/SOIC-16W</description>
+      <docs>http://www.ti.com/lit/ds/symlink/sn74hc590a.pdf</docs>
+      <footprints>
+        <fp>DIP*W7.62mm*</fp>
+        <fp>SOIC*3.9x9.9mm*P1.27mm*</fp>
+        <fp>TSSOP*4.4x5mm*P0.65mm*</fp>
+        <fp>SOIC*5.3x10.2mm*P1.27mm*</fp>
+        <fp>SOIC*7.5x10.3mm*P1.27mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U7</field>
+        <field name="Value">74HC590A</field>
+        <field name="Footprint">Package_DIP:DIP-16_W7.62mm_LongPads</field>
+        <field name="Datasheet">http://www.ti.com/lit/ds/symlink/sn74hc590a.pdf</field>
+        <field name="Price">0.43</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Q1" type="tri_state"/>
+        <pin num="2" name="Q2" type="tri_state"/>
+        <pin num="3" name="Q3" type="tri_state"/>
+        <pin num="4" name="Q4" type="tri_state"/>
+        <pin num="5" name="Q5" type="tri_state"/>
+        <pin num="6" name="Q6" type="tri_state"/>
+        <pin num="7" name="Q7" type="tri_state"/>
+        <pin num="8" name="GND" type="power_in"/>
+        <pin num="9" name="~{RCO}" type="output"/>
+        <pin num="10" name="~{MRC}" type="input"/>
+        <pin num="11" name="CPC" type="input"/>
+        <pin num="12" name="~{CE}" type="input"/>
+        <pin num="13" name="CPR" type="input"/>
+        <pin num="14" name="~{OE}" type="input"/>
+        <pin num="15" name="Q0" type="tri_state"/>
+        <pin num="16" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="plc14500" part="ArduinoNanoBoard">
+      <description>Arduino Nano v2.x</description>
+      <docs>https://www.arduino.cc/en/uploads/Main/ArduinoNanoManual23.pdf</docs>
+      <footprints>
+        <fp>Arduino*Nano*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U6</field>
+        <field name="Value">Arduino Nano</field>
+        <field name="Footprint">Module:Arduino_Nano</field>
+        <field name="Datasheet">https://www.arduino.cc/en/uploads/Main/ArduinoNanoManual23.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="D1/TX" type="bidirectional"/>
+        <pin num="2" name="D0/RX" type="bidirectional"/>
+        <pin num="3" name="~{RESET}" type="input"/>
+        <pin num="4" name="GND" type="power_in"/>
+        <pin num="5" name="D2" type="bidirectional"/>
+        <pin num="6" name="D3" type="bidirectional"/>
+        <pin num="7" name="D4" type="bidirectional"/>
+        <pin num="8" name="D5" type="bidirectional"/>
+        <pin num="9" name="D6" type="bidirectional"/>
+        <pin num="10" name="D7" type="bidirectional"/>
+        <pin num="11" name="D8" type="bidirectional"/>
+        <pin num="12" name="D9" type="bidirectional"/>
+        <pin num="13" name="D10" type="bidirectional"/>
+        <pin num="14" name="D11" type="bidirectional"/>
+        <pin num="15" name="D12" type="bidirectional"/>
+        <pin num="16" name="D13" type="bidirectional"/>
+        <pin num="17" name="3V3" type="power_out"/>
+        <pin num="18" name="AREF" type="input"/>
+        <pin num="19" name="A0" type="bidirectional"/>
+        <pin num="20" name="A1" type="bidirectional"/>
+        <pin num="21" name="A2" type="bidirectional"/>
+        <pin num="22" name="A3" type="bidirectional"/>
+        <pin num="23" name="A4" type="bidirectional"/>
+        <pin num="24" name="A5" type="bidirectional"/>
+        <pin num="25" name="A6" type="bidirectional"/>
+        <pin num="26" name="A7" type="bidirectional"/>
+        <pin num="27" name="+5V" type="power_in"/>
+        <pin num="28" name="~{RESET}" type="input"/>
+        <pin num="29" name="GND" type="power_in"/>
+        <pin num="30" name="VIN" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="plc14500" part="CD4099">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">CD4099</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Q7" type="output"/>
+        <pin num="2" name="RST" type="input"/>
+        <pin num="3" name="D" type="input"/>
+        <pin num="4" name="WD" type="input"/>
+        <pin num="5" name="A0" type="input"/>
+        <pin num="6" name="A1" type="input"/>
+        <pin num="7" name="A2" type="input"/>
+        <pin num="8" name="GND" type="power_in"/>
+        <pin num="9" name="Q0" type="output"/>
+        <pin num="10" name="Q1" type="output"/>
+        <pin num="11" name="Q2" type="output"/>
+        <pin num="12" name="Q3" type="output"/>
+        <pin num="13" name="Q4" type="output"/>
+        <pin num="14" name="Q5" type="output"/>
+        <pin num="15" name="Q6" type="output"/>
+        <pin num="16" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="plc14500" part="CP-Device">
+      <footprints>
+        <fp>CP_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">Device_CP</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="plc14500" part="KM62256CLP">
+      <description>32Kx8 bit Low Power CMOS Static RAM, 55/70ns, DIP-28</description>
+      <docs>https://www.futurlec.com/Datasheet/Memory/62256.pdf</docs>
+      <footprints>
+        <fp>DIP*W15.24mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U8</field>
+        <field name="Value">LH5168</field>
+        <field name="Footprint">Package_DIP:DIP-28_W15.24mm</field>
+        <field name="Datasheet">https://www.futurlec.com/Datasheet/Memory/62256.pdf</field>
+        <field name="Price">1.2</field>
+      </fields>
+      <pins>
+        <pin num="1" name="A14" type="input"/>
+        <pin num="2" name="A12" type="input"/>
+        <pin num="3" name="A7" type="input"/>
+        <pin num="4" name="A6" type="input"/>
+        <pin num="5" name="A5" type="input"/>
+        <pin num="6" name="A4" type="input"/>
+        <pin num="7" name="A3" type="input"/>
+        <pin num="8" name="A2" type="input"/>
+        <pin num="9" name="A1" type="input"/>
+        <pin num="10" name="A0" type="input"/>
+        <pin num="11" name="Q0" type="tri_state"/>
+        <pin num="12" name="Q1" type="tri_state"/>
+        <pin num="13" name="Q2" type="tri_state"/>
+        <pin num="14" name="GND" type="power_in"/>
+        <pin num="15" name="Q3" type="tri_state"/>
+        <pin num="16" name="Q4" type="tri_state"/>
+        <pin num="17" name="Q5" type="tri_state"/>
+        <pin num="18" name="Q6" type="tri_state"/>
+        <pin num="19" name="Q7" type="tri_state"/>
+        <pin num="20" name="~{CS}" type="input"/>
+        <pin num="21" name="A10" type="input"/>
+        <pin num="22" name="~{OE}" type="input"/>
+        <pin num="23" name="A11" type="input"/>
+        <pin num="24" name="A9" type="input"/>
+        <pin num="25" name="A8" type="input"/>
+        <pin num="26" name="A13" type="input"/>
+        <pin num="27" name="~{WE}" type="input"/>
+        <pin num="28" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="plc14500" part="LED">
+      <footprints>
+        <fp>*LED_5MM*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED</field>
+      </fields>
+      <pins>
+        <pin num="A" name="A" type="passive"/>
+        <pin num="K" name="C" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="plc14500" part="MC14500">
+      <fields>
+        <field name="Reference">U10</field>
+        <field name="Value">MC14500</field>
+        <field name="Footprint">Package_DIP:DIP-16_W7.62mm_LongPads</field>
+        <field name="Price">2.6</field>
+      </fields>
+      <pins>
+        <pin num="1" name="RST" type="input"/>
+        <pin num="2" name="WRITE" type="output"/>
+        <pin num="3" name="D" type="input"/>
+        <pin num="4" name="I3" type="input"/>
+        <pin num="5" name="I2" type="input"/>
+        <pin num="6" name="I1" type="input"/>
+        <pin num="7" name="I0" type="input"/>
+        <pin num="8" name="GND" type="power_in"/>
+        <pin num="9" name="FLAGF" type="output"/>
+        <pin num="10" name="FLAG0" type="output"/>
+        <pin num="11" name="RTN" type="output"/>
+        <pin num="12" name="JMP" type="output"/>
+        <pin num="13" name="X2" type="input"/>
+        <pin num="14" name="X1" type="output"/>
+        <pin num="15" name="RR" type="output"/>
+        <pin num="16" name="Vcc" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="plc14500" part="PLC14500-Expansion">
+      <fields>
+        <field name="Reference">J</field>
+      </fields>
+      <pins>
+        <pin num="1" name="EXTIN0" type="output"/>
+        <pin num="2" name="EXTIN1" type="output"/>
+        <pin num="3" name="EXTIN2" type="output"/>
+        <pin num="4" name="EXTIN3" type="output"/>
+        <pin num="5" name="EXTIN4" type="output"/>
+        <pin num="6" name="EXTIN5" type="output"/>
+        <pin num="7" name="EXTIN6" type="output"/>
+        <pin num="8" name="GND" type="power_in"/>
+        <pin num="9" name="OUT0" type="input"/>
+        <pin num="10" name="OUT1" type="input"/>
+        <pin num="11" name="OUT2" type="input"/>
+        <pin num="12" name="OUT3" type="input"/>
+        <pin num="13" name="OUT4" type="input"/>
+        <pin num="14" name="OUT5" type="input"/>
+        <pin num="15" name="OUT6" type="input"/>
+        <pin num="16" name="OUT7" type="input"/>
+        <pin num="17" name="RST" type="bidirectional"/>
+        <pin num="18" name="+5v" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="plc14500" part="SWITCH-DPDT">
+      <footprints>
+        <fp>*SWITCH_DPDT_PTH_GPI-152-3013*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">S</field>
+        <field name="Value">SWITCH-DPDT</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="5" name="5" type="passive"/>
+        <pin num="6" name="6" type="passive"/>
+        <pin num="7" name="7" type="passive"/>
+        <pin num="8" name="GND" type="power_in"/>
+        <pin num="9" name="GND" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="plc14500" part="Trimmer">
+      <docs>~</docs>
+      <footprints>
+        <fp>Potentiometer*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">RV1</field>
+        <field name="Value">1M</field>
+        <field name="Datasheet">~</field>
+        <field name="Price">0.01</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Device">
+      <uri>C:\Program Files\KiCad\7.0\share\kicad\symbols\/Device.kicad_sym</uri>
+    </library>
+    <library logical="Diode">
+      <uri>C:\Program Files\KiCad\7.0\share\kicad\symbols\/Diode.kicad_sym</uri>
+    </library>
+    <library logical="Switch">
+      <uri>C:\Program Files\KiCad\7.0\share\kicad\symbols\/Switch.kicad_sym</uri>
+    </library>
+    <library logical="plc14500">
+      <uri>C:\Users\nicola\git\PLC-14500\board\plc14500/plc14500.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="+5V">
+      <node ref="C1" pin="2" pintype="passive"/>
+      <node ref="C12" pin="2" pintype="passive"/>
+      <node ref="C14" pin="1" pintype="passive"/>
+      <node ref="C16" pin="1" pintype="passive"/>
+      <node ref="C17" pin="1" pintype="passive"/>
+      <node ref="C18" pin="2" pintype="passive"/>
+      <node ref="C19" pin="2" pintype="passive"/>
+      <node ref="C2" pin="2" pintype="passive"/>
+      <node ref="C3" pin="1" pintype="passive"/>
+      <node ref="C5" pin="1" pintype="passive"/>
+      <node ref="C6" pin="1" pintype="passive"/>
+      <node ref="C8" pin="1" pintype="passive"/>
+      <node ref="C9" pin="2" pintype="passive"/>
+      <node ref="J1" pin="18" pinfunction="+5v" pintype="power_in"/>
+      <node ref="R30" pin="2" pintype="passive"/>
+      <node ref="R50" pin="2" pintype="passive"/>
+      <node ref="RV1" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="S1" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="S10" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="S11" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="S15" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="S16" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="S18" pin="6" pinfunction="6" pintype="passive"/>
+      <node ref="S2" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="S3" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="S4" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="S9" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U1" pin="14" pinfunction="VCC" pintype="power_in"/>
+      <node ref="U10" pin="16" pinfunction="Vcc" pintype="power_in"/>
+      <node ref="U11" pin="14" pinfunction="VCC" pintype="power_in"/>
+      <node ref="U12" pin="14" pinfunction="VDD" pintype="power_in"/>
+      <node ref="U13" pin="16" pinfunction="VCC" pintype="power_in"/>
+      <node ref="U14" pin="16" pinfunction="VDD" pintype="power_in"/>
+      <node ref="U2" pin="16" pinfunction="VDD" pintype="power_in"/>
+      <node ref="U3" pin="14" pinfunction="VCC" pintype="power_in"/>
+      <node ref="U4" pin="8" pinfunction="VCC+" pintype="power_in"/>
+      <node ref="U5" pin="16" pinfunction="VCC" pintype="power_in"/>
+      <node ref="U6" pin="27" pinfunction="+5V" pintype="power_in"/>
+      <node ref="U7" pin="16" pinfunction="VCC" pintype="power_in"/>
+      <node ref="U8" pin="26" pinfunction="A13" pintype="input"/>
+      <node ref="U8" pin="28" pinfunction="VCC" pintype="power_in"/>
+      <node ref="U9" pin="4" pinfunction="/RES" pintype="input"/>
+      <node ref="U9" pin="8" pinfunction="VCC+" pintype="power_in"/>
+    </net>
+    <net code="2" name="/!RES">
+      <node ref="U3" pin="4" pintype="output"/>
+      <node ref="U4" pin="4" pinfunction="/RES" pintype="input"/>
+    </net>
+    <net code="3" name="/!WEN">
+      <node ref="U6" pin="24" pinfunction="A5" pintype="bidirectional"/>
+      <node ref="U8" pin="27" pinfunction="~{WE}" pintype="input"/>
+    </net>
+    <net code="4" name="/A0">
+      <node ref="D20" pin="A" pinfunction="A" pintype="passive"/>
+      <node ref="U6" pin="13" pinfunction="D10" pintype="bidirectional"/>
+      <node ref="U7" pin="15" pinfunction="Q0" pintype="tri_state"/>
+      <node ref="U8" pin="10" pinfunction="A0" pintype="input"/>
+    </net>
+    <net code="5" name="/A1">
+      <node ref="D22" pin="A" pinfunction="A" pintype="passive"/>
+      <node ref="U6" pin="14" pinfunction="D11" pintype="bidirectional"/>
+      <node ref="U7" pin="1" pinfunction="Q1" pintype="tri_state"/>
+      <node ref="U8" pin="9" pinfunction="A1" pintype="input"/>
+    </net>
+    <net code="6" name="/A2">
+      <node ref="D24" pin="A" pinfunction="A" pintype="passive"/>
+      <node ref="U6" pin="15" pinfunction="D12" pintype="bidirectional"/>
+      <node ref="U7" pin="2" pinfunction="Q2" pintype="tri_state"/>
+      <node ref="U8" pin="8" pinfunction="A2" pintype="input"/>
+    </net>
+    <net code="7" name="/A3">
+      <node ref="D26" pin="A" pinfunction="A" pintype="passive"/>
+      <node ref="U6" pin="16" pinfunction="D13" pintype="bidirectional"/>
+      <node ref="U7" pin="3" pinfunction="Q3" pintype="tri_state"/>
+      <node ref="U8" pin="7" pinfunction="A3" pintype="input"/>
+    </net>
+    <net code="8" name="/A4">
+      <node ref="D29" pin="A" pinfunction="A" pintype="passive"/>
+      <node ref="U6" pin="19" pinfunction="A0" pintype="bidirectional"/>
+      <node ref="U7" pin="4" pinfunction="Q4" pintype="tri_state"/>
+      <node ref="U8" pin="6" pinfunction="A4" pintype="input"/>
+    </net>
+    <net code="9" name="/A5">
+      <node ref="D31" pin="A" pinfunction="A" pintype="passive"/>
+      <node ref="U6" pin="20" pinfunction="A1" pintype="bidirectional"/>
+      <node ref="U7" pin="5" pinfunction="Q5" pintype="tri_state"/>
+      <node ref="U8" pin="5" pinfunction="A5" pintype="input"/>
+    </net>
+    <net code="10" name="/A6">
+      <node ref="D34" pin="A" pinfunction="A" pintype="passive"/>
+      <node ref="U6" pin="21" pinfunction="A2" pintype="bidirectional"/>
+      <node ref="U7" pin="6" pinfunction="Q6" pintype="tri_state"/>
+      <node ref="U8" pin="4" pinfunction="A6" pintype="input"/>
+    </net>
+    <net code="11" name="/A7">
+      <node ref="D36" pin="A" pinfunction="A" pintype="passive"/>
+      <node ref="U6" pin="22" pinfunction="A3" pintype="bidirectional"/>
+      <node ref="U7" pin="7" pinfunction="Q7" pintype="tri_state"/>
+      <node ref="U8" pin="3" pinfunction="A7" pintype="input"/>
+    </net>
+    <net code="12" name="/CPU/CLK1">
+      <node ref="U10" pin="14" pinfunction="X1" pintype="output"/>
+      <node ref="U7" pin="11" pinfunction="CPC" pintype="input"/>
+      <node ref="U7" pin="13" pinfunction="CPR" pintype="input"/>
+    </net>
+    <net code="13" name="/CPU/CLK2">
+      <node ref="D38" pin="A" pinfunction="A" pintype="passive"/>
+      <node ref="S18" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U10" pin="13" pinfunction="X2" pintype="input"/>
+    </net>
+    <net code="14" name="/CPU/JMP">
+      <node ref="D39" pin="A" pinfunction="A" pintype="passive"/>
+      <node ref="D40" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="U10" pin="12" pinfunction="JMP" pintype="output"/>
+    </net>
+    <net code="15" name="/D">
+      <node ref="R22" pin="2" pintype="passive"/>
+      <node ref="U10" pin="3" pinfunction="D" pintype="input"/>
+      <node ref="U13" pin="3" pinfunction="D" pintype="input"/>
+      <node ref="U14" pin="3" pinfunction="X" pintype="passive"/>
+      <node ref="U5" pin="3" pinfunction="D" pintype="input"/>
+    </net>
+    <net code="16" name="/D0">
+      <node ref="D21" pin="A" pinfunction="A" pintype="passive"/>
+      <node ref="U10" pin="7" pinfunction="I0" pintype="input"/>
+      <node ref="U6" pin="5" pinfunction="D2" pintype="bidirectional"/>
+      <node ref="U8" pin="11" pinfunction="Q0" pintype="tri_state"/>
+    </net>
+    <net code="17" name="/D1">
+      <node ref="D23" pin="A" pinfunction="A" pintype="passive"/>
+      <node ref="U10" pin="6" pinfunction="I1" pintype="input"/>
+      <node ref="U6" pin="6" pinfunction="D3" pintype="bidirectional"/>
+      <node ref="U8" pin="12" pinfunction="Q1" pintype="tri_state"/>
+    </net>
+    <net code="18" name="/D2">
+      <node ref="D25" pin="A" pinfunction="A" pintype="passive"/>
+      <node ref="U10" pin="5" pinfunction="I2" pintype="input"/>
+      <node ref="U6" pin="7" pinfunction="D4" pintype="bidirectional"/>
+      <node ref="U8" pin="13" pinfunction="Q2" pintype="tri_state"/>
+    </net>
+    <net code="19" name="/D3">
+      <node ref="D27" pin="A" pinfunction="A" pintype="passive"/>
+      <node ref="U10" pin="4" pinfunction="I3" pintype="input"/>
+      <node ref="U6" pin="8" pinfunction="D5" pintype="bidirectional"/>
+      <node ref="U8" pin="15" pinfunction="Q3" pintype="tri_state"/>
+    </net>
+    <net code="20" name="/D4">
+      <node ref="D30" pin="A" pinfunction="A" pintype="passive"/>
+      <node ref="U13" pin="5" pinfunction="A0" pintype="input"/>
+      <node ref="U14" pin="11" pinfunction="A" pintype="input"/>
+      <node ref="U2" pin="11" pinfunction="A" pintype="input"/>
+      <node ref="U5" pin="5" pinfunction="A0" pintype="input"/>
+      <node ref="U6" pin="9" pinfunction="D6" pintype="bidirectional"/>
+      <node ref="U8" pin="16" pinfunction="Q4" pintype="tri_state"/>
+    </net>
+    <net code="21" name="/D5">
+      <node ref="D32" pin="A" pinfunction="A" pintype="passive"/>
+      <node ref="U13" pin="6" pinfunction="A1" pintype="input"/>
+      <node ref="U14" pin="10" pinfunction="B" pintype="input"/>
+      <node ref="U2" pin="10" pinfunction="B" pintype="input"/>
+      <node ref="U5" pin="6" pinfunction="A1" pintype="input"/>
+      <node ref="U6" pin="10" pinfunction="D7" pintype="bidirectional"/>
+      <node ref="U8" pin="17" pinfunction="Q5" pintype="tri_state"/>
+    </net>
+    <net code="22" name="/D6">
+      <node ref="D35" pin="A" pinfunction="A" pintype="passive"/>
+      <node ref="U13" pin="7" pinfunction="A2" pintype="input"/>
+      <node ref="U14" pin="9" pinfunction="C" pintype="input"/>
+      <node ref="U2" pin="9" pinfunction="C" pintype="input"/>
+      <node ref="U5" pin="7" pinfunction="A2" pintype="input"/>
+      <node ref="U6" pin="11" pinfunction="D8" pintype="bidirectional"/>
+      <node ref="U8" pin="18" pinfunction="Q6" pintype="tri_state"/>
+    </net>
+    <net code="23" name="/D7">
+      <node ref="D37" pin="A" pinfunction="A" pintype="passive"/>
+      <node ref="U11" pin="1" pintype="input"/>
+      <node ref="U12" pin="1" pintype="input"/>
+      <node ref="U12" pin="8" pintype="input"/>
+      <node ref="U3" pin="11" pintype="input"/>
+      <node ref="U6" pin="12" pinfunction="D9" pintype="bidirectional"/>
+      <node ref="U8" pin="19" pinfunction="Q7" pintype="tri_state"/>
+    </net>
+    <net code="24" name="/IN-INH">
+      <node ref="U12" pin="10" pintype="output"/>
+      <node ref="U2" pin="6" pinfunction="Inh" pintype="input"/>
+    </net>
+    <net code="25" name="/Input-Output/EXTIN0">
+      <node ref="J1" pin="1" pinfunction="EXTIN0" pintype="output"/>
+      <node ref="R1" pin="2" pintype="passive"/>
+      <node ref="S1" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="S5" pin="6" pinfunction="6" pintype="passive"/>
+    </net>
+    <net code="26" name="/Input-Output/EXTIN1">
+      <node ref="J1" pin="2" pinfunction="EXTIN1" pintype="output"/>
+      <node ref="R2" pin="2" pintype="passive"/>
+      <node ref="S2" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="S6" pin="6" pinfunction="6" pintype="passive"/>
+    </net>
+    <net code="27" name="/Input-Output/EXTIN2">
+      <node ref="J1" pin="3" pinfunction="EXTIN2" pintype="output"/>
+      <node ref="R3" pin="2" pintype="passive"/>
+      <node ref="S3" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="S7" pin="6" pinfunction="6" pintype="passive"/>
+    </net>
+    <net code="28" name="/Input-Output/EXTIN3">
+      <node ref="J1" pin="4" pinfunction="EXTIN3" pintype="output"/>
+      <node ref="R4" pin="2" pintype="passive"/>
+      <node ref="S4" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="S8" pin="6" pinfunction="6" pintype="passive"/>
+    </net>
+    <net code="29" name="/Input-Output/EXTIN4">
+      <node ref="J1" pin="5" pinfunction="EXTIN4" pintype="output"/>
+      <node ref="R9" pin="2" pintype="passive"/>
+      <node ref="S12" pin="6" pinfunction="6" pintype="passive"/>
+      <node ref="S9" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="30" name="/Input-Output/EXTIN5">
+      <node ref="J1" pin="6" pinfunction="EXTIN5" pintype="output"/>
+      <node ref="R10" pin="2" pintype="passive"/>
+      <node ref="S10" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="S13" pin="6" pinfunction="6" pintype="passive"/>
+    </net>
+    <net code="31" name="/Input-Output/EXTIN6">
+      <node ref="J1" pin="7" pinfunction="EXTIN6" pintype="output"/>
+      <node ref="R11" pin="2" pintype="passive"/>
+      <node ref="S11" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="S14" pin="6" pinfunction="6" pintype="passive"/>
+    </net>
+    <net code="32" name="/Input-Output/IN0">
+      <node ref="D1" pin="A" pinfunction="A" pintype="passive"/>
+      <node ref="S5" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U2" pin="13" pinfunction="X0" pintype="passive"/>
+    </net>
+    <net code="33" name="/Input-Output/IN1">
+      <node ref="D2" pin="A" pinfunction="A" pintype="passive"/>
+      <node ref="S6" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U2" pin="14" pinfunction="X1" pintype="passive"/>
+    </net>
+    <net code="34" name="/Input-Output/IN2">
+      <node ref="D3" pin="A" pinfunction="A" pintype="passive"/>
+      <node ref="S7" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U2" pin="15" pinfunction="X2" pintype="passive"/>
+    </net>
+    <net code="35" name="/Input-Output/IN3">
+      <node ref="D4" pin="A" pinfunction="A" pintype="passive"/>
+      <node ref="S8" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U2" pin="12" pinfunction="X3" pintype="passive"/>
+    </net>
+    <net code="36" name="/Input-Output/IN4">
+      <node ref="D5" pin="A" pinfunction="A" pintype="passive"/>
+      <node ref="S12" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U2" pin="1" pinfunction="X4" pintype="passive"/>
+    </net>
+    <net code="37" name="/Input-Output/IN5">
+      <node ref="D6" pin="A" pinfunction="A" pintype="passive"/>
+      <node ref="S13" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U2" pin="5" pinfunction="X5" pintype="passive"/>
+    </net>
+    <net code="38" name="/Input-Output/IN6">
+      <node ref="D7" pin="A" pinfunction="A" pintype="passive"/>
+      <node ref="S14" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U2" pin="2" pinfunction="X6" pintype="passive"/>
+    </net>
+    <net code="39" name="/Input-Output/IN7">
+      <node ref="D8" pin="A" pinfunction="A" pintype="passive"/>
+      <node ref="U2" pin="4" pinfunction="X7" pintype="passive"/>
+      <node ref="U4" pin="3" pinfunction="OUT" pintype="output"/>
+    </net>
+    <net code="40" name="/Input-Output/OUT0">
+      <node ref="D16" pin="A" pinfunction="A" pintype="passive"/>
+      <node ref="J1" pin="9" pinfunction="OUT0" pintype="input"/>
+      <node ref="U5" pin="9" pinfunction="Q0" pintype="output"/>
+    </net>
+    <net code="41" name="/Input-Output/OUT1">
+      <node ref="D15" pin="A" pinfunction="A" pintype="passive"/>
+      <node ref="J1" pin="10" pinfunction="OUT1" pintype="input"/>
+      <node ref="U5" pin="10" pinfunction="Q1" pintype="output"/>
+    </net>
+    <net code="42" name="/Input-Output/OUT2">
+      <node ref="D14" pin="A" pinfunction="A" pintype="passive"/>
+      <node ref="J1" pin="11" pinfunction="OUT2" pintype="input"/>
+      <node ref="U5" pin="11" pinfunction="Q2" pintype="output"/>
+    </net>
+    <net code="43" name="/Input-Output/OUT3">
+      <node ref="D13" pin="A" pinfunction="A" pintype="passive"/>
+      <node ref="J1" pin="12" pinfunction="OUT3" pintype="input"/>
+      <node ref="U5" pin="12" pinfunction="Q3" pintype="output"/>
+    </net>
+    <net code="44" name="/Input-Output/OUT4">
+      <node ref="D12" pin="A" pinfunction="A" pintype="passive"/>
+      <node ref="J1" pin="13" pinfunction="OUT4" pintype="input"/>
+      <node ref="U5" pin="13" pinfunction="Q4" pintype="output"/>
+    </net>
+    <net code="45" name="/Input-Output/OUT5">
+      <node ref="D11" pin="A" pinfunction="A" pintype="passive"/>
+      <node ref="J1" pin="14" pinfunction="OUT5" pintype="input"/>
+      <node ref="U5" pin="14" pinfunction="Q5" pintype="output"/>
+    </net>
+    <net code="46" name="/Input-Output/OUT6">
+      <node ref="D10" pin="A" pinfunction="A" pintype="passive"/>
+      <node ref="J1" pin="15" pinfunction="OUT6" pintype="input"/>
+      <node ref="U5" pin="15" pinfunction="Q6" pintype="output"/>
+    </net>
+    <net code="47" name="/OUT-WD">
+      <node ref="U12" pin="3" pintype="output"/>
+      <node ref="U5" pin="4" pinfunction="WD" pintype="input"/>
+    </net>
+    <net code="48" name="/PRG">
+      <node ref="C20" pin="1" pintype="passive"/>
+      <node ref="U6" pin="23" pinfunction="A4" pintype="bidirectional"/>
+      <node ref="U7" pin="14" pinfunction="~{OE}" pintype="input"/>
+      <node ref="U8" pin="22" pinfunction="~{OE}" pintype="input"/>
+    </net>
+    <net code="49" name="/RES">
+      <node ref="C20" pin="2" pintype="passive"/>
+      <node ref="D17" pin="A" pinfunction="A" pintype="passive"/>
+      <node ref="D51" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="J1" pin="17" pinfunction="RST" pintype="bidirectional"/>
+      <node ref="R26" pin="1" pintype="passive"/>
+      <node ref="S15" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U10" pin="1" pinfunction="RST" pintype="input"/>
+      <node ref="U13" pin="2" pinfunction="RST" pintype="input"/>
+      <node ref="U3" pin="3" pintype="input"/>
+      <node ref="U5" pin="2" pinfunction="RST" pintype="input"/>
+      <node ref="U6" pin="25" pinfunction="A6" pintype="bidirectional"/>
+    </net>
+    <net code="50" name="/RR">
+      <node ref="D41" pin="A" pinfunction="A" pintype="passive"/>
+      <node ref="U10" pin="15" pinfunction="RR" pintype="output"/>
+      <node ref="U14" pin="4" pinfunction="X7" pintype="passive"/>
+    </net>
+    <net code="51" name="/SPRAM/SPRAM-INH">
+      <node ref="U12" pin="11" pintype="output"/>
+      <node ref="U14" pin="6" pinfunction="Inh" pintype="input"/>
+    </net>
+    <net code="52" name="/SPRAM/SPRAM-WD">
+      <node ref="U12" pin="4" pintype="output"/>
+      <node ref="U13" pin="4" pinfunction="WD" pintype="input"/>
+    </net>
+    <net code="53" name="/TMR0-TRG">
+      <node ref="D9" pin="A" pinfunction="A" pintype="passive"/>
+      <node ref="J1" pin="16" pinfunction="OUT7" pintype="input"/>
+      <node ref="U11" pin="5" pintype="input"/>
+      <node ref="U5" pin="1" pinfunction="Q7" pintype="output"/>
+    </net>
+    <net code="54" name="/W">
+      <node ref="C15" pin="2" pintype="passive"/>
+      <node ref="D42" pin="A" pinfunction="A" pintype="passive"/>
+      <node ref="U10" pin="2" pinfunction="WRITE" pintype="output"/>
+      <node ref="U3" pin="13" pintype="input"/>
+    </net>
+    <net code="55" name="GND">
+      <node ref="C1" pin="1" pintype="passive"/>
+      <node ref="C10" pin="2" pintype="passive"/>
+      <node ref="C11" pin="2" pintype="passive"/>
+      <node ref="C12" pin="1" pintype="passive"/>
+      <node ref="C13" pin="1" pintype="passive"/>
+      <node ref="C14" pin="2" pintype="passive"/>
+      <node ref="C16" pin="2" pintype="passive"/>
+      <node ref="C17" pin="2" pintype="passive"/>
+      <node ref="C18" pin="1" pintype="passive"/>
+      <node ref="C19" pin="1" pintype="passive"/>
+      <node ref="C2" pin="1" pintype="passive"/>
+      <node ref="C3" pin="2" pintype="passive"/>
+      <node ref="C4" pin="2" pintype="passive"/>
+      <node ref="C5" pin="2" pintype="passive"/>
+      <node ref="C6" pin="2" pintype="passive"/>
+      <node ref="C7" pin="2" pintype="passive"/>
+      <node ref="C8" pin="2" pintype="passive"/>
+      <node ref="C9" pin="1" pintype="passive"/>
+      <node ref="D18" pin="K" pinfunction="C" pintype="passive"/>
+      <node ref="D19" pin="K" pinfunction="C" pintype="passive"/>
+      <node ref="J1" pin="8" pinfunction="GND" pintype="power_in"/>
+      <node ref="R1" pin="1" pintype="passive"/>
+      <node ref="R10" pin="1" pintype="passive"/>
+      <node ref="R11" pin="1" pintype="passive"/>
+      <node ref="R12" pin="1" pintype="passive"/>
+      <node ref="R13" pin="1" pintype="passive"/>
+      <node ref="R14" pin="1" pintype="passive"/>
+      <node ref="R16" pin="2" pintype="passive"/>
+      <node ref="R17" pin="1" pintype="passive"/>
+      <node ref="R18" pin="1" pintype="passive"/>
+      <node ref="R19" pin="1" pintype="passive"/>
+      <node ref="R2" pin="1" pintype="passive"/>
+      <node ref="R20" pin="1" pintype="passive"/>
+      <node ref="R21" pin="1" pintype="passive"/>
+      <node ref="R23" pin="1" pintype="passive"/>
+      <node ref="R24" pin="1" pintype="passive"/>
+      <node ref="R25" pin="1" pintype="passive"/>
+      <node ref="R26" pin="2" pintype="passive"/>
+      <node ref="R27" pin="2" pintype="passive"/>
+      <node ref="R3" pin="1" pintype="passive"/>
+      <node ref="R32" pin="1" pintype="passive"/>
+      <node ref="R33" pin="1" pintype="passive"/>
+      <node ref="R34" pin="1" pintype="passive"/>
+      <node ref="R35" pin="1" pintype="passive"/>
+      <node ref="R36" pin="1" pintype="passive"/>
+      <node ref="R37" pin="1" pintype="passive"/>
+      <node ref="R38" pin="1" pintype="passive"/>
+      <node ref="R39" pin="1" pintype="passive"/>
+      <node ref="R4" pin="1" pintype="passive"/>
+      <node ref="R40" pin="1" pintype="passive"/>
+      <node ref="R41" pin="1" pintype="passive"/>
+      <node ref="R42" pin="1" pintype="passive"/>
+      <node ref="R43" pin="1" pintype="passive"/>
+      <node ref="R44" pin="1" pintype="passive"/>
+      <node ref="R45" pin="1" pintype="passive"/>
+      <node ref="R46" pin="1" pintype="passive"/>
+      <node ref="R47" pin="1" pintype="passive"/>
+      <node ref="R48" pin="1" pintype="passive"/>
+      <node ref="R49" pin="1" pintype="passive"/>
+      <node ref="R5" pin="1" pintype="passive"/>
+      <node ref="R52" pin="1" pintype="passive"/>
+      <node ref="R53" pin="1" pintype="passive"/>
+      <node ref="R54" pin="1" pintype="passive"/>
+      <node ref="R55" pin="1" pintype="passive"/>
+      <node ref="R56" pin="1" pintype="passive"/>
+      <node ref="R57" pin="1" pintype="passive"/>
+      <node ref="R58" pin="1" pintype="passive"/>
+      <node ref="R59" pin="1" pintype="passive"/>
+      <node ref="R6" pin="1" pintype="passive"/>
+      <node ref="R60" pin="1" pintype="passive"/>
+      <node ref="R61" pin="1" pintype="passive"/>
+      <node ref="R62" pin="1" pintype="passive"/>
+      <node ref="R63" pin="1" pintype="passive"/>
+      <node ref="R64" pin="1" pintype="passive"/>
+      <node ref="R65" pin="1" pintype="passive"/>
+      <node ref="R66" pin="1" pintype="passive"/>
+      <node ref="R67" pin="1" pintype="passive"/>
+      <node ref="R7" pin="1" pintype="passive"/>
+      <node ref="R8" pin="1" pintype="passive"/>
+      <node ref="R9" pin="1" pintype="passive"/>
+      <node ref="S12" pin="8" pinfunction="GND" pintype="power_in"/>
+      <node ref="S12" pin="9" pinfunction="GND" pintype="power_in"/>
+      <node ref="S13" pin="8" pinfunction="GND" pintype="power_in"/>
+      <node ref="S13" pin="9" pinfunction="GND" pintype="power_in"/>
+      <node ref="S14" pin="8" pinfunction="GND" pintype="power_in"/>
+      <node ref="S14" pin="9" pinfunction="GND" pintype="power_in"/>
+      <node ref="S16" pin="8" pinfunction="GND" pintype="power_in"/>
+      <node ref="S16" pin="9" pinfunction="GND" pintype="power_in"/>
+      <node ref="S17" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="S18" pin="8" pinfunction="GND" pintype="power_in"/>
+      <node ref="S18" pin="9" pinfunction="GND" pintype="power_in"/>
+      <node ref="S5" pin="8" pinfunction="GND" pintype="power_in"/>
+      <node ref="S5" pin="9" pinfunction="GND" pintype="power_in"/>
+      <node ref="S6" pin="8" pinfunction="GND" pintype="power_in"/>
+      <node ref="S6" pin="9" pinfunction="GND" pintype="power_in"/>
+      <node ref="S7" pin="8" pinfunction="GND" pintype="power_in"/>
+      <node ref="S7" pin="9" pinfunction="GND" pintype="power_in"/>
+      <node ref="S8" pin="8" pinfunction="GND" pintype="power_in"/>
+      <node ref="S8" pin="9" pinfunction="GND" pintype="power_in"/>
+      <node ref="U1" pin="7" pinfunction="GND" pintype="power_in"/>
+      <node ref="U10" pin="8" pinfunction="GND" pintype="power_in"/>
+      <node ref="U11" pin="7" pinfunction="GND" pintype="power_in"/>
+      <node ref="U12" pin="7" pinfunction="VSS" pintype="power_in"/>
+      <node ref="U13" pin="8" pinfunction="GND" pintype="power_in"/>
+      <node ref="U14" pin="7" pinfunction="VEE" pintype="power_in"/>
+      <node ref="U14" pin="8" pinfunction="VSS" pintype="power_in"/>
+      <node ref="U2" pin="7" pinfunction="VEE" pintype="power_in"/>
+      <node ref="U2" pin="8" pinfunction="VSS" pintype="power_in"/>
+      <node ref="U3" pin="7" pinfunction="GND" pintype="power_in"/>
+      <node ref="U4" pin="1" pinfunction="GND" pintype="power_in"/>
+      <node ref="U5" pin="8" pinfunction="GND" pintype="power_in"/>
+      <node ref="U6" pin="29" pinfunction="GND" pintype="power_in"/>
+      <node ref="U6" pin="4" pinfunction="GND" pintype="power_in"/>
+      <node ref="U7" pin="12" pinfunction="~{CE}" pintype="input"/>
+      <node ref="U7" pin="8" pinfunction="GND" pintype="power_in"/>
+      <node ref="U8" pin="1" pinfunction="A14" pintype="input"/>
+      <node ref="U8" pin="14" pinfunction="GND" pintype="power_in"/>
+      <node ref="U8" pin="2" pinfunction="A12" pintype="input"/>
+      <node ref="U8" pin="20" pinfunction="~{CS}" pintype="input"/>
+      <node ref="U8" pin="21" pinfunction="A10" pintype="input"/>
+      <node ref="U8" pin="23" pinfunction="A11" pintype="input"/>
+      <node ref="U8" pin="24" pinfunction="A9" pintype="input"/>
+      <node ref="U8" pin="25" pinfunction="A8" pintype="input"/>
+      <node ref="U9" pin="1" pinfunction="GND" pintype="power_in"/>
+    </net>
+    <net code="56" name="Net-(C7-Pad1)">
+      <node ref="C7" pin="1" pintype="passive"/>
+      <node ref="S16" pin="6" pinfunction="6" pintype="passive"/>
+    </net>
+    <net code="57" name="Net-(C13-Pad2)">
+      <node ref="C13" pin="2" pintype="passive"/>
+      <node ref="R51" pin="1" pintype="passive"/>
+      <node ref="U3" pin="9" pintype="input"/>
+    </net>
+    <net code="58" name="Net-(C15-Pad1)">
+      <node ref="C15" pin="1" pintype="passive"/>
+      <node ref="R59" pin="2" pintype="passive"/>
+      <node ref="U11" pin="9" pintype="input"/>
+    </net>
+    <net code="59" name="Net-(D1-C)">
+      <node ref="D1" pin="K" pinfunction="C" pintype="passive"/>
+      <node ref="R5" pin="2" pintype="passive"/>
+    </net>
+    <net code="60" name="Net-(D2-C)">
+      <node ref="D2" pin="K" pinfunction="C" pintype="passive"/>
+      <node ref="R6" pin="2" pintype="passive"/>
+    </net>
+    <net code="61" name="Net-(D3-C)">
+      <node ref="D3" pin="K" pinfunction="C" pintype="passive"/>
+      <node ref="R7" pin="2" pintype="passive"/>
+    </net>
+    <net code="62" name="Net-(D4-C)">
+      <node ref="D4" pin="K" pinfunction="C" pintype="passive"/>
+      <node ref="R8" pin="2" pintype="passive"/>
+    </net>
+    <net code="63" name="Net-(D5-C)">
+      <node ref="D5" pin="K" pinfunction="C" pintype="passive"/>
+      <node ref="R12" pin="2" pintype="passive"/>
+    </net>
+    <net code="64" name="Net-(D6-C)">
+      <node ref="D6" pin="K" pinfunction="C" pintype="passive"/>
+      <node ref="R13" pin="2" pintype="passive"/>
+    </net>
+    <net code="65" name="Net-(D7-C)">
+      <node ref="D7" pin="K" pinfunction="C" pintype="passive"/>
+      <node ref="R14" pin="2" pintype="passive"/>
+    </net>
+    <net code="66" name="Net-(D8-C)">
+      <node ref="D8" pin="K" pinfunction="C" pintype="passive"/>
+      <node ref="R16" pin="1" pintype="passive"/>
+    </net>
+    <net code="67" name="Net-(D9-C)">
+      <node ref="D9" pin="K" pinfunction="C" pintype="passive"/>
+      <node ref="R17" pin="2" pintype="passive"/>
+    </net>
+    <net code="68" name="Net-(D10-C)">
+      <node ref="D10" pin="K" pinfunction="C" pintype="passive"/>
+      <node ref="R18" pin="2" pintype="passive"/>
+    </net>
+    <net code="69" name="Net-(D11-C)">
+      <node ref="D11" pin="K" pinfunction="C" pintype="passive"/>
+      <node ref="R19" pin="2" pintype="passive"/>
+    </net>
+    <net code="70" name="Net-(D12-C)">
+      <node ref="D12" pin="K" pinfunction="C" pintype="passive"/>
+      <node ref="R20" pin="2" pintype="passive"/>
+    </net>
+    <net code="71" name="Net-(D13-C)">
+      <node ref="D13" pin="K" pinfunction="C" pintype="passive"/>
+      <node ref="R21" pin="2" pintype="passive"/>
+    </net>
+    <net code="72" name="Net-(D14-C)">
+      <node ref="D14" pin="K" pinfunction="C" pintype="passive"/>
+      <node ref="R23" pin="2" pintype="passive"/>
+    </net>
+    <net code="73" name="Net-(D15-C)">
+      <node ref="D15" pin="K" pinfunction="C" pintype="passive"/>
+      <node ref="R24" pin="2" pintype="passive"/>
+    </net>
+    <net code="74" name="Net-(D16-C)">
+      <node ref="D16" pin="K" pinfunction="C" pintype="passive"/>
+      <node ref="R25" pin="2" pintype="passive"/>
+    </net>
+    <net code="75" name="Net-(D17-C)">
+      <node ref="D17" pin="K" pinfunction="C" pintype="passive"/>
+      <node ref="R27" pin="1" pintype="passive"/>
+    </net>
+    <net code="76" name="Net-(D18-PadA)">
+      <node ref="D18" pin="A" pinfunction="A" pintype="passive"/>
+      <node ref="R29" pin="2" pintype="passive"/>
+    </net>
+    <net code="77" name="Net-(D19-PadA)">
+      <node ref="D19" pin="A" pinfunction="A" pintype="passive"/>
+      <node ref="R28" pin="2" pintype="passive"/>
+    </net>
+    <net code="78" name="Net-(D20-C)">
+      <node ref="D20" pin="K" pinfunction="C" pintype="passive"/>
+      <node ref="R32" pin="2" pintype="passive"/>
+    </net>
+    <net code="79" name="Net-(D21-C)">
+      <node ref="D21" pin="K" pinfunction="C" pintype="passive"/>
+      <node ref="R33" pin="2" pintype="passive"/>
+    </net>
+    <net code="80" name="Net-(D22-C)">
+      <node ref="D22" pin="K" pinfunction="C" pintype="passive"/>
+      <node ref="R34" pin="2" pintype="passive"/>
+    </net>
+    <net code="81" name="Net-(D23-C)">
+      <node ref="D23" pin="K" pinfunction="C" pintype="passive"/>
+      <node ref="R35" pin="2" pintype="passive"/>
+    </net>
+    <net code="82" name="Net-(D24-C)">
+      <node ref="D24" pin="K" pinfunction="C" pintype="passive"/>
+      <node ref="R36" pin="2" pintype="passive"/>
+    </net>
+    <net code="83" name="Net-(D25-C)">
+      <node ref="D25" pin="K" pinfunction="C" pintype="passive"/>
+      <node ref="R37" pin="2" pintype="passive"/>
+    </net>
+    <net code="84" name="Net-(D26-C)">
+      <node ref="D26" pin="K" pinfunction="C" pintype="passive"/>
+      <node ref="R38" pin="2" pintype="passive"/>
+    </net>
+    <net code="85" name="Net-(D27-C)">
+      <node ref="D27" pin="K" pinfunction="C" pintype="passive"/>
+      <node ref="R39" pin="2" pintype="passive"/>
+    </net>
+    <net code="86" name="Net-(D28-C)">
+      <node ref="D28" pin="K" pinfunction="C" pintype="passive"/>
+      <node ref="R40" pin="2" pintype="passive"/>
+    </net>
+    <net code="87" name="Net-(D28-PadA)">
+      <node ref="D28" pin="A" pinfunction="A" pintype="passive"/>
+      <node ref="S18" pin="5" pinfunction="5" pintype="passive"/>
+    </net>
+    <net code="88" name="Net-(D29-C)">
+      <node ref="D29" pin="K" pinfunction="C" pintype="passive"/>
+      <node ref="R41" pin="2" pintype="passive"/>
+    </net>
+    <net code="89" name="Net-(D30-C)">
+      <node ref="D30" pin="K" pinfunction="C" pintype="passive"/>
+      <node ref="R42" pin="2" pintype="passive"/>
+    </net>
+    <net code="90" name="Net-(D31-C)">
+      <node ref="D31" pin="K" pinfunction="C" pintype="passive"/>
+      <node ref="R43" pin="2" pintype="passive"/>
+    </net>
+    <net code="91" name="Net-(D32-C)">
+      <node ref="D32" pin="K" pinfunction="C" pintype="passive"/>
+      <node ref="R44" pin="2" pintype="passive"/>
+    </net>
+    <net code="92" name="Net-(D33-C)">
+      <node ref="D33" pin="K" pinfunction="C" pintype="passive"/>
+      <node ref="R45" pin="2" pintype="passive"/>
+    </net>
+    <net code="93" name="Net-(D33-PadA)">
+      <node ref="D33" pin="A" pinfunction="A" pintype="passive"/>
+      <node ref="S18" pin="7" pinfunction="7" pintype="passive"/>
+    </net>
+    <net code="94" name="Net-(D34-C)">
+      <node ref="D34" pin="K" pinfunction="C" pintype="passive"/>
+      <node ref="R46" pin="2" pintype="passive"/>
+    </net>
+    <net code="95" name="Net-(D35-C)">
+      <node ref="D35" pin="K" pinfunction="C" pintype="passive"/>
+      <node ref="R47" pin="2" pintype="passive"/>
+    </net>
+    <net code="96" name="Net-(D36-C)">
+      <node ref="D36" pin="K" pinfunction="C" pintype="passive"/>
+      <node ref="R48" pin="2" pintype="passive"/>
+    </net>
+    <net code="97" name="Net-(D37-C)">
+      <node ref="D37" pin="K" pinfunction="C" pintype="passive"/>
+      <node ref="R49" pin="2" pintype="passive"/>
+    </net>
+    <net code="98" name="Net-(D38-C)">
+      <node ref="D38" pin="K" pinfunction="C" pintype="passive"/>
+      <node ref="R52" pin="2" pintype="passive"/>
+    </net>
+    <net code="99" name="Net-(D39-C)">
+      <node ref="D39" pin="K" pinfunction="C" pintype="passive"/>
+      <node ref="R55" pin="2" pintype="passive"/>
+    </net>
+    <net code="100" name="Net-(D40-K)">
+      <node ref="D40" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D51" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="R54" pin="2" pintype="passive"/>
+      <node ref="U11" pin="3" pintype="input"/>
+    </net>
+    <net code="101" name="Net-(D41-C)">
+      <node ref="D41" pin="K" pinfunction="C" pintype="passive"/>
+      <node ref="R57" pin="2" pintype="passive"/>
+    </net>
+    <net code="102" name="Net-(D42-C)">
+      <node ref="D42" pin="K" pinfunction="C" pintype="passive"/>
+      <node ref="R58" pin="2" pintype="passive"/>
+    </net>
+    <net code="103" name="Net-(D43-C)">
+      <node ref="D43" pin="K" pinfunction="C" pintype="passive"/>
+      <node ref="R60" pin="2" pintype="passive"/>
+    </net>
+    <net code="104" name="Net-(D44-C)">
+      <node ref="D44" pin="K" pinfunction="C" pintype="passive"/>
+      <node ref="R61" pin="2" pintype="passive"/>
+    </net>
+    <net code="105" name="Net-(D45-C)">
+      <node ref="D45" pin="K" pinfunction="C" pintype="passive"/>
+      <node ref="R62" pin="2" pintype="passive"/>
+    </net>
+    <net code="106" name="Net-(D46-C)">
+      <node ref="D46" pin="K" pinfunction="C" pintype="passive"/>
+      <node ref="R63" pin="2" pintype="passive"/>
+    </net>
+    <net code="107" name="Net-(D47-C)">
+      <node ref="D47" pin="K" pinfunction="C" pintype="passive"/>
+      <node ref="R64" pin="2" pintype="passive"/>
+    </net>
+    <net code="108" name="Net-(D48-C)">
+      <node ref="D48" pin="K" pinfunction="C" pintype="passive"/>
+      <node ref="R65" pin="2" pintype="passive"/>
+    </net>
+    <net code="109" name="Net-(D49-C)">
+      <node ref="D49" pin="K" pinfunction="C" pintype="passive"/>
+      <node ref="R66" pin="2" pintype="passive"/>
+    </net>
+    <net code="110" name="Net-(D50-C)">
+      <node ref="D50" pin="K" pinfunction="C" pintype="passive"/>
+      <node ref="R53" pin="2" pintype="passive"/>
+    </net>
+    <net code="111" name="Net-(D52-C)">
+      <node ref="D52" pin="K" pinfunction="C" pintype="passive"/>
+      <node ref="R56" pin="2" pintype="passive"/>
+    </net>
+    <net code="112" name="Net-(D53-C)">
+      <node ref="D53" pin="K" pinfunction="C" pintype="passive"/>
+      <node ref="R67" pin="2" pintype="passive"/>
+    </net>
+    <net code="113" name="Net-(R15-Pad1)">
+      <node ref="R15" pin="1" pintype="passive"/>
+      <node ref="RV1" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="114" name="Net-(R28-Pad1)">
+      <node ref="R28" pin="1" pintype="passive"/>
+      <node ref="S16" pin="3" pinfunction="3" pintype="passive"/>
+    </net>
+    <net code="115" name="Net-(R29-Pad1)">
+      <node ref="R29" pin="1" pintype="passive"/>
+      <node ref="S16" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="116" name="Net-(R50-Pad1)">
+      <node ref="R50" pin="1" pintype="passive"/>
+      <node ref="R51" pin="2" pintype="passive"/>
+      <node ref="S17" pin="2" pinfunction="2" pintype="passive"/>
+    </net>
+    <net code="117" name="Net-(S5-Pad1)">
+      <node ref="S5" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="S5" pin="5" pinfunction="5" pintype="passive"/>
+      <node ref="S5" pin="7" pinfunction="7" pintype="passive"/>
+      <node ref="U1" pin="1" pintype="input"/>
+    </net>
+    <net code="118" name="Net-(S5-Pad3)">
+      <node ref="S5" pin="3" pinfunction="3" pintype="passive"/>
+      <node ref="U1" pin="2" pintype="output"/>
+    </net>
+    <net code="119" name="Net-(S6-Pad1)">
+      <node ref="S6" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="S6" pin="5" pinfunction="5" pintype="passive"/>
+      <node ref="S6" pin="7" pinfunction="7" pintype="passive"/>
+      <node ref="U1" pin="3" pintype="input"/>
+    </net>
+    <net code="120" name="Net-(S6-Pad3)">
+      <node ref="S6" pin="3" pinfunction="3" pintype="passive"/>
+      <node ref="U1" pin="4" pintype="output"/>
+    </net>
+    <net code="121" name="Net-(S7-Pad1)">
+      <node ref="S7" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="S7" pin="5" pinfunction="5" pintype="passive"/>
+      <node ref="S7" pin="7" pinfunction="7" pintype="passive"/>
+      <node ref="U1" pin="5" pintype="input"/>
+    </net>
+    <net code="122" name="Net-(S7-Pad3)">
+      <node ref="S7" pin="3" pinfunction="3" pintype="passive"/>
+      <node ref="U1" pin="6" pintype="output"/>
+    </net>
+    <net code="123" name="Net-(S8-Pad1)">
+      <node ref="S8" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="S8" pin="5" pinfunction="5" pintype="passive"/>
+      <node ref="S8" pin="7" pinfunction="7" pintype="passive"/>
+      <node ref="U1" pin="9" pintype="input"/>
+    </net>
+    <net code="124" name="Net-(S8-Pad3)">
+      <node ref="S8" pin="3" pinfunction="3" pintype="passive"/>
+      <node ref="U1" pin="8" pintype="output"/>
+    </net>
+    <net code="125" name="Net-(S12-Pad1)">
+      <node ref="S12" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="S12" pin="5" pinfunction="5" pintype="passive"/>
+    </net>
+    <net code="126" name="Net-(S12-Pad3)">
+      <node ref="S12" pin="3" pinfunction="3" pintype="passive"/>
+      <node ref="U1" pin="10" pintype="output"/>
+    </net>
+    <net code="127" name="Net-(S12-Pad7)">
+      <node ref="S12" pin="7" pinfunction="7" pintype="passive"/>
+      <node ref="U1" pin="11" pintype="input"/>
+    </net>
+    <net code="128" name="Net-(S13-Pad1)">
+      <node ref="S13" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="S13" pin="5" pinfunction="5" pintype="passive"/>
+    </net>
+    <net code="129" name="Net-(S13-Pad3)">
+      <node ref="S13" pin="3" pinfunction="3" pintype="passive"/>
+      <node ref="U1" pin="12" pintype="output"/>
+    </net>
+    <net code="130" name="Net-(S13-Pad7)">
+      <node ref="S13" pin="7" pinfunction="7" pintype="passive"/>
+      <node ref="U1" pin="13" pintype="input"/>
+    </net>
+    <net code="131" name="Net-(S14-Pad1)">
+      <node ref="S14" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="S14" pin="5" pinfunction="5" pintype="passive"/>
+    </net>
+    <net code="132" name="Net-(S14-Pad3)">
+      <node ref="S14" pin="3" pinfunction="3" pintype="passive"/>
+      <node ref="U3" pin="2" pintype="output"/>
+    </net>
+    <net code="133" name="Net-(S14-Pad7)">
+      <node ref="S14" pin="7" pinfunction="7" pintype="passive"/>
+      <node ref="U3" pin="1" pintype="input"/>
+    </net>
+    <net code="134" name="Net-(S18-Pad3)">
+      <node ref="S18" pin="3" pinfunction="3" pintype="passive"/>
+      <node ref="U3" pin="8" pintype="output"/>
+    </net>
+    <net code="135" name="Net-(U2-X)">
+      <node ref="R22" pin="1" pintype="passive"/>
+      <node ref="U2" pin="3" pinfunction="X" pintype="passive"/>
+    </net>
+    <net code="136" name="Net-(U4-DIS)">
+      <node ref="C4" pin="1" pintype="passive"/>
+      <node ref="R15" pin="2" pintype="passive"/>
+      <node ref="U4" pin="6" pinfunction="TRE" pintype="input"/>
+      <node ref="U4" pin="7" pinfunction="DIS" pintype="input"/>
+    </net>
+    <net code="137" name="Net-(U4-TRI)">
+      <node ref="U11" pin="6" pintype="output"/>
+      <node ref="U4" pin="2" pinfunction="TRI" pintype="input"/>
+    </net>
+    <net code="138" name="Net-(U7-~{MRC})">
+      <node ref="U11" pin="4" pintype="output"/>
+      <node ref="U7" pin="10" pinfunction="~{MRC}" pintype="input"/>
+    </net>
+    <net code="139" name="Net-(U9-CON)">
+      <node ref="C11" pin="1" pintype="passive"/>
+      <node ref="U9" pin="5" pinfunction="CON" pintype="input"/>
+    </net>
+    <net code="140" name="Net-(U9-DIS)">
+      <node ref="R30" pin="1" pintype="passive"/>
+      <node ref="R31" pin="2" pintype="passive"/>
+      <node ref="U9" pin="7" pinfunction="DIS" pintype="input"/>
+    </net>
+    <net code="141" name="Net-(U9-OUT)">
+      <node ref="S18" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U9" pin="3" pinfunction="OUT" pintype="output"/>
+    </net>
+    <net code="142" name="Net-(U9-TRE)">
+      <node ref="C10" pin="1" pintype="passive"/>
+      <node ref="R31" pin="1" pintype="passive"/>
+      <node ref="S16" pin="7" pinfunction="7" pintype="passive"/>
+      <node ref="U9" pin="2" pinfunction="TRI" pintype="input"/>
+      <node ref="U9" pin="6" pinfunction="TRE" pintype="input"/>
+    </net>
+    <net code="143" name="Net-(U10-FLAG0)">
+      <node ref="D52" pin="A" pinfunction="A" pintype="passive"/>
+      <node ref="U10" pin="10" pinfunction="FLAG0" pintype="output"/>
+    </net>
+    <net code="144" name="Net-(U10-FLAGF)">
+      <node ref="D53" pin="A" pinfunction="A" pintype="passive"/>
+      <node ref="U10" pin="9" pinfunction="FLAGF" pintype="output"/>
+    </net>
+    <net code="145" name="Net-(U10-RTN)">
+      <node ref="D50" pin="A" pinfunction="A" pintype="passive"/>
+      <node ref="U10" pin="11" pinfunction="RTN" pintype="output"/>
+    </net>
+    <net code="146" name="Net-(U11-Pad2)">
+      <node ref="U11" pin="2" pintype="output"/>
+      <node ref="U12" pin="13" pintype="input"/>
+    </net>
+    <net code="147" name="Net-(U11-Pad10)">
+      <node ref="U11" pin="10" pintype="output"/>
+      <node ref="U12" pin="2" pintype="input"/>
+      <node ref="U12" pin="5" pintype="input"/>
+    </net>
+    <net code="148" name="Net-(U11-Pad11)">
+      <node ref="U11" pin="11" pintype="input"/>
+      <node ref="U11" pin="8" pintype="output"/>
+    </net>
+    <net code="149" name="Net-(U12-Pad6)">
+      <node ref="U12" pin="6" pintype="input"/>
+      <node ref="U3" pin="10" pintype="output"/>
+    </net>
+    <net code="150" name="Net-(U12-Pad12)">
+      <node ref="U12" pin="12" pintype="input"/>
+      <node ref="U12" pin="9" pintype="input"/>
+      <node ref="U3" pin="12" pintype="output"/>
+    </net>
+    <net code="151" name="Net-(U13-Q0)">
+      <node ref="D43" pin="A" pinfunction="A" pintype="passive"/>
+      <node ref="U13" pin="9" pinfunction="Q0" pintype="output"/>
+      <node ref="U14" pin="13" pinfunction="X0" pintype="passive"/>
+    </net>
+    <net code="152" name="Net-(U13-Q1)">
+      <node ref="D44" pin="A" pinfunction="A" pintype="passive"/>
+      <node ref="U13" pin="10" pinfunction="Q1" pintype="output"/>
+      <node ref="U14" pin="14" pinfunction="X1" pintype="passive"/>
+    </net>
+    <net code="153" name="Net-(U13-Q2)">
+      <node ref="D45" pin="A" pinfunction="A" pintype="passive"/>
+      <node ref="U13" pin="11" pinfunction="Q2" pintype="output"/>
+      <node ref="U14" pin="15" pinfunction="X2" pintype="passive"/>
+    </net>
+    <net code="154" name="Net-(U13-Q3)">
+      <node ref="D46" pin="A" pinfunction="A" pintype="passive"/>
+      <node ref="U13" pin="12" pinfunction="Q3" pintype="output"/>
+      <node ref="U14" pin="12" pinfunction="X3" pintype="passive"/>
+    </net>
+    <net code="155" name="Net-(U13-Q4)">
+      <node ref="D47" pin="A" pinfunction="A" pintype="passive"/>
+      <node ref="U13" pin="13" pinfunction="Q4" pintype="output"/>
+      <node ref="U14" pin="1" pinfunction="X4" pintype="passive"/>
+    </net>
+    <net code="156" name="Net-(U13-Q5)">
+      <node ref="D48" pin="A" pinfunction="A" pintype="passive"/>
+      <node ref="U13" pin="14" pinfunction="Q5" pintype="output"/>
+      <node ref="U14" pin="5" pinfunction="X5" pintype="passive"/>
+    </net>
+    <net code="157" name="Net-(U13-Q6)">
+      <node ref="D49" pin="A" pinfunction="A" pintype="passive"/>
+      <node ref="U13" pin="15" pinfunction="Q6" pintype="output"/>
+      <node ref="U14" pin="2" pinfunction="X6" pintype="passive"/>
+    </net>
+    <net code="158" name="unconnected-(RV1-Pad3)">
+      <node ref="RV1" pin="3" pinfunction="3" pintype="passive+no_connect"/>
+    </net>
+    <net code="159" name="unconnected-(S16-Pad5)">
+      <node ref="S16" pin="5" pinfunction="5" pintype="passive+no_connect"/>
+    </net>
+    <net code="160" name="unconnected-(U3-Pad5)">
+      <node ref="U3" pin="5" pintype="input+no_connect"/>
+    </net>
+    <net code="161" name="unconnected-(U3-Pad6)">
+      <node ref="U3" pin="6" pintype="output+no_connect"/>
+    </net>
+    <net code="162" name="unconnected-(U4-CON-Pad5)">
+      <node ref="U4" pin="5" pinfunction="CON" pintype="input+no_connect"/>
+    </net>
+    <net code="163" name="unconnected-(U6-3V3-Pad17)">
+      <node ref="U6" pin="17" pinfunction="3V3" pintype="power_out+no_connect"/>
+    </net>
+    <net code="164" name="unconnected-(U6-A7-Pad26)">
+      <node ref="U6" pin="26" pinfunction="A7" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="165" name="unconnected-(U6-AREF-Pad18)">
+      <node ref="U6" pin="18" pinfunction="AREF" pintype="input+no_connect"/>
+    </net>
+    <net code="166" name="unconnected-(U6-D0{slash}RX-Pad2)">
+      <node ref="U6" pin="2" pinfunction="D0/RX" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="167" name="unconnected-(U6-D1{slash}TX-Pad1)">
+      <node ref="U6" pin="1" pinfunction="D1/TX" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="168" name="unconnected-(U6-VIN-Pad30)">
+      <node ref="U6" pin="30" pinfunction="VIN" pintype="power_in+no_connect"/>
+    </net>
+    <net code="169" name="unconnected-(U6-~{RESET}-Pad3)">
+      <node ref="U6" pin="3" pinfunction="~{RESET}" pintype="input+no_connect"/>
+    </net>
+    <net code="170" name="unconnected-(U6-~{RESET}-Pad28)">
+      <node ref="U6" pin="28" pinfunction="~{RESET}" pintype="input+no_connect"/>
+    </net>
+    <net code="171" name="unconnected-(U7-~{RCO}-Pad9)">
+      <node ref="U7" pin="9" pinfunction="~{RCO}" pintype="output+no_connect"/>
+    </net>
+    <net code="172" name="unconnected-(U11-Pad12)">
+      <node ref="U11" pin="12" pintype="output+no_connect"/>
+    </net>
+    <net code="173" name="unconnected-(U11-Pad13)">
+      <node ref="U11" pin="13" pintype="input+no_connect"/>
+    </net>
+    <net code="174" name="unconnected-(U13-Q7-Pad1)">
+      <node ref="U13" pin="1" pinfunction="Q7" pintype="output+no_connect"/>
+    </net>
+  </nets>
+</export>
