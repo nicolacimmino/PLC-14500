@@ -1,0 +1,24 @@
+{
+   "signal":[
+      { "name":"X1", "wave":"LH..L..H."},
+      { "name":"Instruction", "wave":"x=.....=.", "data": ["STO", "???"] },
+      { "name":"Address", "wave":"x=.....=.", "data": ["Addr", "???"] },
+      { "name": "W", "wave": "0....1..0"},
+      { "name": "WP", "wave": "0....10.." },     
+   ],   
+  "foot": {
+    tick: 1
+  },
+   "head":{
+      "text":[
+         "tspan",
+         [
+            "tspan",
+            {
+               "class":"h4"
+            },
+            "MC14500 W Line Signal Conditioning"
+         ]
+      ]
+   }
+}

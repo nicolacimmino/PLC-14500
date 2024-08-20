@@ -37,9 +37,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ADR-003 Onboard timer TMR0.md",
+                "file": "ADR-001 JMP Support in Nano.md",
                 "mode": "source",
                 "source": false
+              }
+            }
+          },
+          {
+            "id": "7773851111cc09dd",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.5.8"
               }
             }
           },
@@ -68,7 +78,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -113,6 +123,14 @@
               "type": "starred",
               "state": {}
             }
+          },
+          {
+            "id": "338a84708eea52c0",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
           }
         ]
       }
@@ -134,7 +152,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ADR-003 Onboard timer TMR0.md",
+                "file": "ADR-001 JMP Support in Nano.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -151,7 +169,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ADR-003 Onboard timer TMR0.md",
+                "file": "ADR-001 JMP Support in Nano.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -174,7 +192,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ADR-003 Onboard timer TMR0.md"
+                "file": "ADR-001 JMP Support in Nano.md"
               }
             }
           }
@@ -185,7 +203,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "c8a7919c81a8a0b9",
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "7773851111cc09dd",
   "lastOpenFiles": [
     "ADR-002 Silk Screen in Nano.md",
     "ADR-003 Onboard timer TMR0.md",
