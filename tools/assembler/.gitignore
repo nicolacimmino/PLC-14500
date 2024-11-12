@@ -6,3 +6,4 @@
 
 # Conventional directory for build output.
 build/
+examples/*.bin
