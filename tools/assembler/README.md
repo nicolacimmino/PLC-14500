@@ -3,7 +3,7 @@
 
 You can find a precompiled version of the assembler and a batch file to flash the programs into the board in the
 [releases](https://github.com/nicolacimmino/PLC-14500/releases) zip file. If you prefer to build your own, or you want
-to build for something else than Windows, you will need to have a properly configured Dart development environment
+to build for something other than Windows, you will need to have a properly configured [Dart development environment](https://dart.dev/get-dart#install)
 and build with:
 
 ````
