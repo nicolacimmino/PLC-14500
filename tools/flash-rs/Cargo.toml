@@ -8,3 +8,4 @@ edition = "2021"
 [dependencies]
 serialport = "4.3.0"
 log = "0.4.21"
+tokio = { version = "1", features = ["full"]}
